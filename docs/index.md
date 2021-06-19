@@ -1,61 +1,103 @@
 <img src="https://copswiki.org/w/pub/Common/AuditEngine/AuditEngineLogo.png" alt="AuditEngineLogo.png" width='600' />
 # AuditEngine
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+AuditEngine is an election auditing platform which performs "Ballot Image Auditing". Relatively high-resolution ballot images are now captured by voting machine scanners that are now used in the polling places or central count operations. AuditEngine processes these ballot images to create an independent tabulation, and then it compares with the official cast-vote record files and can provide detailed reports which detail any disagreement in how any voters mark should be interpreted.
 
 ## Latest News
 
 ### AuditEngine Case Study Report
 
 AuditEngine was used to audit three counties in Florida: Collier, Volusia, and St. Lucie Counties. Learn about audit engine and its unbelievable accuracy, which is better
-than the official voting systems by 93% on contests where we have located a disagreement (excluding corrupted ballot images). Read the report and watch four videos on this page.<BR>
-**START HERE IF YOU ARE NEW TO AUDIT ENGINE**
+than the official voting systems by 93% on contests where we have located a disagreement (excluding corrupted ballot images). Also exposed in this report is the fact that the Election Systems & Software (ES&S) Election Management System (EMS) uses two internal tabulations that do not agree! This seems like it could be a security risk.
+(Read the report and watch four videos on this page.)
 
-   * (M1970) 2021-05-29 AuditEngine Case Study Report & Videos -- Ray Lutz, Citizens Oversight
+**(START HERE IF YOU ARE NEW TO AUDIT ENGINE)**
+
+   * [(M1970) 2021-05-29 AuditEngine Case Study Report & Videos](https://copswiki.org/Common/M1970)
 
 
 **JUMP DIRECTLY TO THE FIRST VIDEO regarding the Case Study, which is a great introduction:**
-   * Part 1: Introduction and Theory of Operation: https://youtu.be/dDEFGsqdCsg
-<iframe width="560" height="315" src="https://www.youtube.com/embed/dDEFGsqdCsg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+- Part 1: Introduction and Theory of Operation: https://youtu.be/dDEFGsqdCsg
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dDEFGsqdCsg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><BR>
 
 ### AuditEngine Frequently Asked Questions
-We have started to compile the questions that tend to asked on this page: AuditEngineFAQs
+We have started to compile the questions that tend to asked on this page: [Audit Engine FAQs](https://copswiki.org/Common/AuditEngineFAQs)
 
 ### AuditEngine Press and Announcements
 
    * [Press Release AuditEngine Available for 2020 General Election -- 2020-10-04](https://copswiki.org/w/pub/Common/AuditEngine/Press Release AuditEngine Available for 2020 General Election -- 2020-10-02.pdf)<br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/54z2t_wANzA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/54z2t_wANzA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><BR>
 
    * Jennifer Cohn interview on AuditEngine:
-<iframe width="560" height="315" src="https://www.youtube.com/embed/oM0elo5Ad2U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/oM0elo5Ad2U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><BR>
 
    * AuditEngine was first announced and demonstrated at the National Election Integrity Conference in Berkeley, CA on Oct 6, 2019, which was sponsored by the [[https://nvrtf.org/][National Voter Rights Task Force]]. Read press release here: [Press Release](https://copswiki.org/Common/M1928).
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/RHaDzomo0kI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RHaDzomo0kI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><BR>
 
 ## Simplified Block Diagram
 The following block diagram should help your understanding of how AuditEngine works. 
 
 The upper block shows the operation of the voting system, which scans hand-marked paper ballots and creates ballot images, which are then analyzed to extract the vote and create cast-vote records. Those can be totalled up to create the election results.
 
-The lower block shows how AuditEngine accepts ballot images, and then performs style analysis, to provide a map of the contests and options to where the bubbles are. The ballots are then fully processed to extract the vote and then these cast vote records are compared with the official records. Discrepancies can then be reviewed by hand if the election is close enough to require that.
+The lower block shows how AuditEngine accepts ballot images, and then performs style analysis, to provide a map of the contests and options to where the bubbles are. The ballots are then fully processed to extract the vote and then these cast vote records are compared with the official records. Discrepancies can then be reviewed using our Adjudicator App if the election is close enough to require that.
 
 <img src="https://copswiki.org/w/pub/Common/AuditEngine/AuditEngine High level flow chart.png" alt="AuditEngine High level flow chart.png" width='800'/>
 
 ## How you can help
-We need help to apply AuditEngine so as to help improve our confidence in our elections. Can you help? Please complete the form at this link: SignUp
+We need help to apply AuditEngine so as to help improve our confidence in our elections. Can you help? Please complete the form at this link: [SignUp](https://copswiki.org/Common/SignUp)
 
-|  **Role**  |  **What you will do**  |  **Technical Expertise Required**  |
-|------------|------------------------|------------------------------------|
-|  **Public Advocate**  |Contact public officials and insist that election officials should PRESERVE ballot images, and make them available for public review on a routine basis.  |None, but may need attorneys to assist when officials claim that ballot images and cast-vote record files are not public records or cannot be made available for review. |
-|  **Requestor**  |Contact election officials and request that they post ballot image archives and cast-vote record files (See details below for format and various options)  |Limited technical expertise, but requires knowledge of public records requests and the desired file types, flash drives, and zip files. Assistance from attorneys may be required if officials resist.  |
-|  **Uploader**  |After receiving ballot image archives and cast-vote records, create an "Election" and upload these files to Audit Engine  |Limited technical expertise, no legal background required.  |
-|  **Observer**  |Stakeholders and those with specific expertise can participate on the observers panel.  |Common sense  |
-|  **Auditor**  |Once the files have been uploaded, any additional files may need to be created, and settings established for successful style analysis and vote extraction.  |Moderate technical expertise, knowledge of ballot formats and program settings.  |
-|  **Mapper**   |One phase of the audit process involves a manual process we call "Target Mapping" and it uses a browser-based tool called the TargetMapper. Once the styles are understood, there is an opportunity to reduce the number of styles if some are equivalent. Mapping each style means locating the "targets", i.e. the ovals that are marked by voters, and pairing them up with the contest and option of that target.   |Details oriented and able to use a mouse.  |
-|  **Reviewer**   |As audit files are created, members of the public should review redline proofs to insure that the style analysis was completed correctly, and review the results of the comparison  |Must be detail-oriented.  |
-|  **Adjudicator**  |If there are discrepancies, an adjudication team will review them and enter voter intent or indicated votes as appropriate for the state of interst.  |Common sense required.  |
-|  **Subscriber**  |Any member of the public can watch public audits as subscribers, and review the data files produced, redline proofs, discrepancies, adjudications, and results.  |None required.  |
+### Public Advocate
+- **Actions**    
+  Contact public officials and insist that election officials should PRESERVE ballot images, and make them available for public review on a routine basis.  
+- **Background**    
+  None, but may need attorneys to assist when officials claim that ballot images and cast-vote record files are not public records or cannot be made available for review.
+
+### Requestor 
+- **Actions**    
+Contact election officials and request that they post ballot image archives and cast-vote record files (See details below for format and various options)
+- **Background**    
+Limited technical expertise, but requires knowledge of public records requests and the desired file types, flash drives, and zip files. Assistance from attorneys may be required if officials resist.
+    
+### Uploader
+- **Actions**    
+After receiving ballot image archives and cast-vote records, create an "Election" and upload these files to Audit Engine
+- **Background**    
+Limited technical expertise, no legal background required.
+
+### Observer
+- **Actions**    
+Stakeholders and those with specific expertise can participate on the observers panel.
+- **Background**    
+No special requirements.
+
+### Auditor
+- **Actions**    
+Once the files have been uploaded, any additional files may need to be created, and settings established for successful style analysis and vote extraction.
+- **Background**  
+Moderate technical expertise, knowledge of ballot formats and program settings.
+### Mapper
+- **Actions**    
+One phase of the audit process involves a manual process we call "Target Mapping" and it uses a browser-based tool called the TargetMapper. Once the styles are understood, there is an opportunity to reduce the number of styles if some are equivalent. Mapping each style means locating the "targets", i.e. the ovals that are marked by voters, and pairing them up with the contest and option of that target.
+- **Background**  
+Detailed oriented and able to use a mouse.
+### Reviewer
+- **Actions**    
+As audit files are created, members of the public should review redline proofs to insure that the style analysis was completed correctly, and review the results of the comparison
+- **Background**    
+Must be detail-oriented.
+### Adjudicator
+- **Actions**    
+If there are discrepancies, an adjudication team will review them and enter voter intent or indicated votes as appropriate for the state of interst.
+- **Background**     
+Common sense and knowledge of voter intent acceptance standards for the state.
+### Subscriber
+- **Actions**    
+Any member of the public can watch public audits as subscribers, and review the data files produced, redline proofs, discrepancies, adjudications, and results.
+- **Background**  
+None required.
 
 ## How It Works
 ### Getting the data together

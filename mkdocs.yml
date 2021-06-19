@@ -1,5 +1,6 @@
-site_name: MkLorum
+site_name: AuditEngine Docs
+site_url: https://auditengine.org/
 nav:
     - Home: index.md
     - About: about.md
-theme: readthedocs
+theme: windmill
