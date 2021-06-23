@@ -3,6 +3,10 @@
 
 AuditEngine is an election auditing platform which performs "Ballot Image Auditing". Relatively high-resolution ballot images are now captured by voting machine scanners that are now used in the polling places or central count operations. AuditEngine processes these ballot images to create an independent tabulation, and then it compares with the official cast-vote record files and can provide detailed reports which detail any disagreement in how any voters mark should be interpreted.
 
+## Primary Links
+- [Active AuditEngine site: (click to Enter)](https://engine.auditengine.org)
+_ [AuditEngineFAQs: Frequently Asked Questions](https://copswiki.org/Common/AuditEngineFAQs)
+
 ## Latest News
 
 ### AuditEngine Case Study Report
@@ -33,7 +37,7 @@ We have started to compile the questions that tend to asked on this page: [Audit
    * Jennifer Cohn interview on AuditEngine:
 <iframe width="560" height="315" src="https://www.youtube.com/embed/oM0elo5Ad2U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><BR>
 
-   * AuditEngine was first announced and demonstrated at the National Election Integrity Conference in Berkeley, CA on Oct 6, 2019, which was sponsored by the [[https://nvrtf.org/][National Voter Rights Task Force]]. Read press release here: [Press Release](https://copswiki.org/Common/M1928).
+- AuditEngine was first announced and demonstrated at the National Election Integrity Conference in Berkeley, CA on Oct 6, 2019, which was sponsored by the [[https://nvrtf.org/][National Voter Rights Task Force]]. Read press release here: [Press Release](https://copswiki.org/Common/M1928).
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/RHaDzomo0kI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><BR>
 
@@ -85,13 +89,14 @@ To view googledoc for comments, [click here](https://docs.google.com/document/d/
 
 ### Creating an Account
 - **Registration:** You must register on the <https://AuditEngine.org> website to create a user identity
-- **Payment Method:** You must create a payment method that we can use to access funds for the cost of the runs. We accept credit cards or we can invoice you after credit approval.
+
 
 ### Creating a Job
 - **Name the Job:** Create a job with a name for future reference. You must include the district, election date, and election type to distinguish it from other jobs you (and others) might submit.
 - **Image Files:**
-    - *Direct Uploading:* We recommend that you upload your archives directly to our site using our browser interface, which has no limit to the size of each file uploaded.
-    - *Posting Service Uploading:* In the future, we plan to provide transfers from your file posting service, such as Dropbox, Sharefile, Drive, etc. 
+    - **Direct Uploading:** We recommend that you upload your archives directly to our site using our browser interface, which has no limit to the size of each file uploaded.
+    - **Send Files on USB drive or thumbdrive:** It is common that files are very large, and then it may be more convenient to send us the data. However, please use direct uploading if possible.
+
         
 - **Cast Vote Records File(s) (CVR Files):** 
     - A cast-vote record file (CVR) provides the result of the election as determined by the voting system. 
