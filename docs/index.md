@@ -237,31 +237,32 @@ Here is a blank spreadsheet with the columns initialized: [Blank BOF Google Spre
 
 
 ### Processing an Election on AuditEngine
-* Register with the site and create a user name.
-* Once your job has been defined, the job can be launched. There are several phases:
-* Phase 1 -- Uploading files:
-   * The first phase of the process includes uploading ballot images, CVR files and EIF files.
-   * The system will inspect the job specification and the input files for format and consistency.
-   * Precheck: Consistency checks include comparing the number of ballot images with the number of cast-vote records in the CVR files and that the contests as provided in the EIF can be found in the CVR.
-* Phase 2 -- Generate Style Templates:
-   * After the files have been uploaded as provided in Phase 1, Style Templates can be generated.
-   * AuditEngine will visually inspect the ballots and learn the format of ballots that have the same style. Each style has either all or a subset of the contests in the election, and in each style, the location of targets for a given contest option will be in the same location.
-* Phase 3 -- Target Mapping
-   * We now use the helper browser app called TargetMapper. The user will select each style and using a mouse, locate the target for that option.
-   * Similar styles can be copied and pasted, and the system will drop any contests not in the new style, and then the user can add any new contests.
-   * Multiple users will be able to help perform the mapping by splitting up the range of styles.
-   * At the end, the result is exported from TargetMapper. 
-   * The map is imported into AuditEngine, and it performs an additional consistency check.
-   * Redline proofs are created in a styles report. These proofs must be inspected manually to insure accuracy.
-* Phase 4 -- Vote Extraction and reporting:
-   * After generation of Style Templates and approval of the contest mapping, you can launch the extraction phase.
-   * Audit Engine will detect marks on the ballots and create an comprehensive database containing information for each style and each ballot.
-   * During this phase, the work will be split up among many separate virtual machines in the cloud-based computing services, which can provision 10s of thousands of virtual machines that run in parallel in massive data centers. This will allow us to finish your job in minutes instead of many hours or days if run on a single machine.
-* Phase 5 -- Comparison and Discrepancy Report
-   * If a detailed CVR is available detailed to the individual ballot, then the compare-cvr (CMPCVR) process is started to compare all the records and generate a discrepancy report.
-* Phase 6 -- Reporting and Adjudication:
-   * After the processing is complete, Audit Engine provides a comprehensive report, and allows interactive inspection of individual ballots and contest to resolve voter-intent in difficult cases.
-   * The Adjudications File can then be prepared for future runs.  
+- Register with the site and create a user name.
+- Define a Job. You will need to ask an administrator to define a new job and provide access to your account.
+   - Once your job has been defined, the job can be launched. There are several phases:
+- Phase 1 -- Uploading files:
+    - The first phase of the process includes uploading ballot images, CVR files and EIF files.
+    - The system will inspect the job specification and the input files for format and consistency.
+    - Precheck: Consistency checks include comparing the number of ballot images with the number of cast-vote records in the CVR files and that the contests as provided in the EIF can be found in the CVR.
+- Phase 2 -- Generate Style Templates:
+    - After the files have been uploaded as provided in Phase 1, Style Templates can be generated.
+    - AuditEngine will visually inspect the ballots and learn the format of ballots that have the same style. Each style has either all or a subset of the contests in the election, and in each style, the location of targets for a given contest option will be in the same location.
+- Phase 3 -- Target Mapping
+    - We now use the helper browser app called TargetMapper. The user will select each style and using a mouse, locate the target for that option.
+    - Similar styles can be copied and pasted, and the system will drop any contests not in the new style, and then the user can add any new contests.
+    - Multiple users will be able to help perform the mapping by splitting up the range of styles.
+    - At the end, the result is exported from TargetMapper. 
+    - The map is imported into AuditEngine, and it performs an additional consistency check.
+    - Redline proofs are created in a styles report. These proofs must be inspected manually to insure accuracy.
+- Phase 4 -- Vote Extraction and reporting:
+    - After generation of Style Templates and approval of the contest mapping, you can launch the extraction phase.
+    - Audit Engine will detect marks on the ballots and create an comprehensive database containing information for each style and each ballot.
+    - During this phase, the work will be split up among many separate virtual machines in the cloud-based computing services, which can provision 10s of thousands of virtual machines that run in parallel in massive data centers. This will allow us to finish your job in minutes instead of many hours or days if run on a single machine.
+- Phase 5 -- Comparison and Discrepancy Report
+    - If a detailed CVR is available detailed to the individual ballot, then the compare-cvr (CMPCVR) process is started to compare all the records and generate a discrepancy report.
+- Phase 6 -- Reporting and Adjudication:
+    - After the processing is complete, Audit Engine provides a comprehensive report, and allows interactive inspection of individual ballots and contest to resolve voter-intent in difficult cases.
+    - The Adjudications File can then be prepared for future runs.  
 
 ### Additional Notes 
 - We are working to establish a full-ballot image securty standard which is based on the concept of "Trusted Systems" to ensure that we can trust that the ballot images are an accurate representation of the paper ballots.
