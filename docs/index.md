@@ -17,7 +17,7 @@ than the official voting systems by 93% on contests where we have located a disa
 
 **(START HERE IF YOU ARE NEW TO AUDIT ENGINE)**
 
-   * [(M1970) 2021-05-29 AuditEngine Case Study Report & Videos](https://copswiki.org/Common/M1970)
+- [(M1970) 2021-05-29 AuditEngine Case Study Report & Videos](https://copswiki.org/Common/M1970)
 
 
 **JUMP DIRECTLY TO THE FIRST VIDEO regarding the Case Study, which is a great introduction:**
@@ -31,10 +31,10 @@ We have started to compile the questions that tend to asked on this page: [Audit
 
 ### AuditEngine Press and Announcements
 
-   * [Press Release AuditEngine Available for 2020 General Election -- 2020-10-04](https://copswiki.org/w/pub/Common/AuditEngine/Press Release AuditEngine Available for 2020 General Election -- 2020-10-02.pdf)<br>
+- [Press Release AuditEngine Available for 2020 General Election -- 2020-10-04](https://copswiki.org/w/pub/Common/AuditEngine/Press Release AuditEngine Available for 2020 General Election -- 2020-10-02.pdf)<br>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/54z2t_wANzA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><BR>
 
-   * Jennifer Cohn interview on AuditEngine:
+- Jennifer Cohn interview on AuditEngine:
 <iframe width="560" height="315" src="https://www.youtube.com/embed/oM0elo5Ad2U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><BR>
 
 - AuditEngine was first announced and demonstrated at the National Election Integrity Conference in Berkeley, CA on Oct 6, 2019, which was sponsored by the [[https://nvrtf.org/][National Voter Rights Task Force]]. Read press release here: [Press Release](https://copswiki.org/Common/M1928).
