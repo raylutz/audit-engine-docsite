@@ -5,7 +5,7 @@ AuditEngine is an election auditing platform which performs "Ballot Image Auditi
 
 ## Primary Links
 - [Active AuditEngine site: (click to Enter)](https://engine.auditengine.org)
-_ [AuditEngineFAQs: Frequently Asked Questions](https://copswiki.org/Common/AuditEngineFAQs)
+- [AuditEngineFAQs: Frequently Asked Questions](https://copswiki.org/Common/AuditEngineFAQs)
 
 ## Latest News
 
