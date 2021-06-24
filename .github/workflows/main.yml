@@ -32,6 +32,9 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install mkdocs-material
+          
+      - name: Production Build
+        run: mkdocs build
 
       - name: Deploy to S3
         uses: jakejarvis/s3-sync-action@v0.5.1
@@ -40,7 +43,7 @@ jobs:
           # --delete => permanently deletes files in S3 bucket that are not present in latest build
           args: --acl public-read --delete
         env:
-          AWS_S3_BUCKET: docs.auditengine.org # S3 bucket name
+          AWS_S3_BUCKET: auditengine.org # S3 bucket name
           # note: use IAM role with limited role for below access-key-id and secret-access-key
           AWS_ACCESS_KEY_ID: AKIASRGXGUVDFMPJKDZG # Access Key ID
           AWS_SECRET_ACCESS_KEY: 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 # Access Secret Key
