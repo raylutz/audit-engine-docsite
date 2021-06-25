@@ -45,6 +45,6 @@ jobs:
         env:
           AWS_S3_BUCKET: auditengine.org # S3 bucket name
           # note: use IAM role with limited role for below access-key-id and secret-access-key
-          AWS_ACCESS_KEY_ID: AKIASRGXGUVDMEZFZKHK # Access Key ID
-          AWS_SECRET_ACCESS_KEY: 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 # Access Secret Key
+          AWS_ACCESS_KEY_ID: AKIASRGXGUVDFMPJKDZG # Access Key ID
+          AWS_SECRET_ACCESS_KEY: 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 # Access Secret Key
           SOURCE_DIR: "site" # build folder
