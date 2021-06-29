@@ -2,6 +2,8 @@ site_name: AuditEngine Docs
 site_url: https://auditengine.org/
 nav:
     - Home: index.md
+    - Exporting Guide: exporting_guide.md
+    - Uploading Guide: uploading_guide.md
     - How you can help: you_can_help.md
     - Configuration Files: configuration_files.md
     - About: about.md
