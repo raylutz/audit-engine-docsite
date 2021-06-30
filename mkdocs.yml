@@ -2,11 +2,18 @@ site_name: AuditEngine Docs
 site_url: https://auditengine.org/
 nav:
     - Home: index.md
-    - Exporting Guide: exporting_guide.md
-    - Uploading Guide: uploading_guide.md
-    - How you can help: you_can_help.md
-    - Configuration Files: configuration_files.md
-    - About: about.md
+    - User Guide:
+        - Overview: user-guide/index.md
+        - Exporting Guide: user-guide/exporting_guide.md
+        - Uploading Guide: user-guide/uploading_guide.md
+        - Configuration Files: user-guide/configuration_files.md
+    - Community:
+        - How you can help: community/you_can_help.md
+        - Donate: community/donate.md
+    - Audit Results:
+        - Case study: audit-results/case_study.md
+    - About:
+        - About Us: about/about.md
 theme:
   name: material
   #custom_dir: mkdocs-material/material
