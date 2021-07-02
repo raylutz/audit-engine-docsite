@@ -44,6 +44,7 @@ jobs:
 
       - name: Deploy to S3
         uses: jakejarvis/s3-sync-action@v0.5.1
+              aws-actions/configure-aws-credentials@v1
         env:
           AWS_S3_BUCKET: auditengine.org # S3 bucket name
           # note: use IAM role with limited role for below access-key-id and secret-access-key
