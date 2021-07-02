@@ -35,6 +35,10 @@ jobs:
           
       - name: Production Build
         run: mkdocs build
+        
+      - name: Invalidate cloudfront cache
+        run: |
+          aws cloudfront create-invalidation --distribution-id E32B31KDZ2D5YR  --paths "/*"
 
       - name: Deploy to S3
         uses: jakejarvis/s3-sync-action@v0.5.1
