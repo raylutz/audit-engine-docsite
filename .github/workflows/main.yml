@@ -38,12 +38,14 @@ jobs:
         run: mkdocs build
 
           # note: use IAM role with limited role for below access-key-id and secret-access-key
-      - name: Configure AWS Credentials
+    
+        
+      - name: Configure AWS credentials from Test account
         uses: aws-actions/configure-aws-credentials@v1
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }} # Access Key ID
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }} # Access Secret Key
-          aws-region: us-east-2
+        with:
+           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+           aws-region: us-east-1
         
       - name: Invalidate cloudfront cache
         run: |
