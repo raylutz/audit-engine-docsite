@@ -42,12 +42,15 @@ jobs:
         run: |
           aws cloudfront create-invalidation --distribution-id E32B31KDZ2D5YR  --paths "/*"
 
-      - name: Deploy to S3
-        uses: jakejarvis/s3-sync-action@v0.5.1
-              aws-actions/configure-aws-credentials@v1
-        env:
-          AWS_S3_BUCKET: auditengine.org # S3 bucket name
           # note: use IAM role with limited role for below access-key-id and secret-access-key
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }} # Access Key ID
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }} # Access Secret Key
           SOURCE_DIR: "site" # build folder
+          
+      - name: Deploy to S3
+        uses: jakejarvis/s3-sync-action@v0.5.1
+        env:
+          AWS_S3_BUCKET: auditengine.org # S3 bucket name
