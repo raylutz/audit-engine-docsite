@@ -43,7 +43,7 @@ jobs:
         with:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }} # Access Key ID
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }} # Access Secret Key
-          SOURCE_DIR: "site" # build folder
+          aws-region: us-east-1
         
       - name: Invalidate cloudfront cache
         run: |
@@ -52,4 +52,7 @@ jobs:
       - name: Deploy to S3
         uses: jakejarvis/s3-sync-action@v0.5.1
         env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }} # Access Key ID
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }} # Access Secret Key
           AWS_S3_BUCKET: auditengine.org # S3 bucket name
+          SOURCE_DIR: "site" # build folder
