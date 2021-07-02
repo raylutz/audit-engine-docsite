@@ -11,7 +11,7 @@ nav:
         - How you can help: community/you_can_help.md
         - Donate: community/donate.md
     - Audit Results:
-        - Case study: audit-results/case_study.md
+        - Case study: audit-results/case-study.md
     - About:
         - About Us: about/about.md
 theme:
