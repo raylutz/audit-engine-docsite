@@ -1,166 +1,972 @@
-<!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="None">
-  
-  
-  <link rel="shortcut icon" href="img/favicon.ico">
-  <title>MkLorum</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
-  <link rel="stylesheet" href="css/theme.css" />
-  <link rel="stylesheet" href="css/theme_extra.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
-  
-  <script>
-    // Current page data
-    var mkdocs_page_name = "Home";
-    var mkdocs_page_input_path = "index.md";
-    var mkdocs_page_url = null;
-  </script>
-  
-  <script src="js/jquery-2.1.1.min.js" defer></script>
-  <script src="js/modernizr-2.8.3.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script> 
-</head>
-
-<body class="wy-body-for-nav" role="document">
-
-  <div class="wy-grid-for-nav">
-
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
     
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-    <div class="wy-side-scroll">
-      <div class="wy-side-nav-search">
-        <a href="index.html" class="icon icon-home"> MkLorum</a>
-        <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
-  </form>
-</div>
-      </div>
-
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-                <ul class="current">
-                    <li class="toctree-l1 current"><a class="reference internal current" href="index.html">Home</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#commands">Commands</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#project-layout">Project layout</a>
-    </li>
-    </ul>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="about.html">About</a>
-                    </li>
-                </ul>
-      </div>
-    </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">MkLorum</a>
-      </nav>
-
+        <link rel="canonical" href="https://auditengine.org/">
       
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
+      <link rel="icon" href="assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.8">
+    
     
       
+        <title>AuditEngine Docs</title>
+      
     
-    <li>Home</li>
-    <li class="wy-breadcrumbs-aside">
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.ca7ac06f.min.css">
       
-    </li>
-  </ul>
-  
-  <hr/>
-</div>
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.f1a3b89f.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
 
-          <div role="main">
-            <div class="section">
-              
-                <h1 id="welcome-to-mkdocs">Welcome to MkDocs</h1>
-<p>For full documentation visit <a href="https://www.mkdocs.org">mkdocs.org</a>.</p>
-<h2 id="commands">Commands</h2>
-<ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs -h</code> - Print help message and exit.</li>
-</ul>
-<h2 id="project-layout">Project layout</h2>
-<pre><code>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
-</code></pre>
-              
-            </div>
-          </div>
-          <footer>
+
+    
+    
+  </head>
   
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL(".",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
       
-        <a href="about.html" class="btn btn-neutral float-right" title="About">Next <span class="icon icon-circle-arrow-right"></span></a>
-      
+        
+        <a href="#auditengine" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <!-- Copyright etc -->
-    
-  </div>
-
-  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-</footer>
+    <div data-md-component="announce">
       
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="AuditEngine Docs" class="md-header__button md-logo" aria-label="AuditEngine Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AuditEngine Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Home
+            
+          </span>
         </div>
       </div>
-
-    </section>
-
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <div class="rst-versions" role="note" aria-label="versions">
-  <span class="rst-current-version" data-toggle="rst-current-version">
-    
-    
-    
-      <span><a href="about.html" style="color: #fcfcfc">Next &raquo;</a></span>
-    
-  </span>
 </div>
-    <script>var base_url = '.';</script>
-    <script src="js/theme_extra.js" defer></script>
-    <script src="js/theme.js" defer></script>
-      <script src="search/main.js" defer></script>
-    <script defer>
-        window.onload = function () {
-            SphinxRtdTheme.Navigation.enable(true);
-        };
-    </script>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
 
-</body>
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="AuditEngine Docs" class="md-nav__button md-logo" aria-label="AuditEngine Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    AuditEngine Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Home
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        Home
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#primary-links" class="md-nav__link">
+    Primary Links
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#latest-news" class="md-nav__link">
+    Latest News
+  </a>
+  
+    <nav class="md-nav" aria-label="Latest News">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#auditengine-case-study-report" class="md-nav__link">
+    AuditEngine Case Study Report
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auditengine-frequently-asked-questions" class="md-nav__link">
+    AuditEngine Frequently Asked Questions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auditengine-press-and-announcements" class="md-nav__link">
+    AuditEngine Press and Announcements
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simplified-block-diagram" class="md-nav__link">
+    Simplified Block Diagram
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    How It Works
+  </a>
+  
+    <nav class="md-nav" aria-label="How It Works">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getting-the-data-together" class="md-nav__link">
+    Getting the data together
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#guides" class="md-nav__link">
+    Guides:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-an-account" class="md-nav__link">
+    Creating an Account
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-job" class="md-nav__link">
+    Creating a Job
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#processing-an-election-on-auditengine" class="md-nav__link">
+    Processing an Election on AuditEngine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-notes" class="md-nav__link">
+    Additional Notes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        User Guide
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="User Guide" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          User Guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="user-guide/index.md" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="user-guide/exporting_guide/" class="md-nav__link">
+        Exporting Guide
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="user-guide/uploading_guide/" class="md-nav__link">
+        Uploading Guide
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="user-guide/configuration_files/" class="md-nav__link">
+        Configuration Files
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        Community
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Community" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Community
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="community/you_can_help/" class="md-nav__link">
+        How you can help
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="community/donate.md" class="md-nav__link">
+        Donate
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        Audit Results
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Audit Results" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Audit Results
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="audit-results/case_study.md" class="md-nav__link">
+        Case study
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        About
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="About" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          About
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="about/about/" class="md-nav__link">
+        About Us
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#primary-links" class="md-nav__link">
+    Primary Links
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#latest-news" class="md-nav__link">
+    Latest News
+  </a>
+  
+    <nav class="md-nav" aria-label="Latest News">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#auditengine-case-study-report" class="md-nav__link">
+    AuditEngine Case Study Report
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auditengine-frequently-asked-questions" class="md-nav__link">
+    AuditEngine Frequently Asked Questions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#auditengine-press-and-announcements" class="md-nav__link">
+    AuditEngine Press and Announcements
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simplified-block-diagram" class="md-nav__link">
+    Simplified Block Diagram
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    How It Works
+  </a>
+  
+    <nav class="md-nav" aria-label="How It Works">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getting-the-data-together" class="md-nav__link">
+    Getting the data together
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#guides" class="md-nav__link">
+    Guides:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-an-account" class="md-nav__link">
+    Creating an Account
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-job" class="md-nav__link">
+    Creating a Job
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#processing-an-election-on-auditengine" class="md-nav__link">
+    Processing an Election on AuditEngine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-notes" class="md-nav__link">
+    Additional Notes
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <p><img src="https://copswiki.org/w/pub/Common/AuditEngine/AuditEngineLogo.png" alt="AuditEngineLogo.png" width='600' /></p>
+<h1 id="auditengine">AuditEngine</h1>
+<p>AuditEngine is an election auditing platform which performs "Ballot Image Auditing". Relatively high-resolution ballot images are now captured by voting machine scanners that are now used in the polling places or central count operations. AuditEngine processes these ballot images to create an independent tabulation, and then it compares with the official cast-vote record files and can provide detailed reports which detail any disagreement in how any voters mark should be interpreted.</p>
+<h2 id="primary-links">Primary Links</h2>
+<ul>
+<li><a href="https://engine.auditengine.org">Active AuditEngine site: (click to Enter)</a></li>
+<li><a href="https://copswiki.org/Common/AuditEngineFAQs">AuditEngineFAQs: Frequently Asked Questions</a></li>
+</ul>
+<h2 id="latest-news">Latest News</h2>
+<h3 id="auditengine-case-study-report">AuditEngine Case Study Report</h3>
+<p>AuditEngine was used to audit three counties in Florida: Collier, Volusia, and St. Lucie Counties. Learn about audit engine and its unbelievable accuracy, which is better
+than the official voting systems by 93% on contests where we have located a disagreement (excluding corrupted ballot images). Also exposed in this report is the fact that the Election Systems &amp; Software (ES&amp;S) Election Management System (EMS) uses two internal tabulations that do not agree! This seems like it could be a security risk.
+(Read the report and watch four videos on this page.)</p>
+<p><strong>(START HERE IF YOU ARE NEW TO AUDIT ENGINE)</strong></p>
+<ul>
+<li><a href="https://copswiki.org/Common/M1970">(M1970) 2021-05-29 AuditEngine Case Study Report &amp; Videos</a></li>
+</ul>
+<p><strong>JUMP DIRECTLY TO THE FIRST VIDEO regarding the Case Study, which is a great introduction:</strong></p>
+<ul>
+<li>Part 1: Introduction and Theory of Operation: https://youtu.be/dDEFGsqdCsg</li>
+</ul>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dDEFGsqdCsg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p><BR></p>
+<h3 id="auditengine-frequently-asked-questions">AuditEngine Frequently Asked Questions</h3>
+<p>We have started to compile the questions that tend to asked on this page: <a href="https://copswiki.org/Common/AuditEngineFAQs">Audit Engine FAQs</a></p>
+<h3 id="auditengine-press-and-announcements">AuditEngine Press and Announcements</h3>
+<ul>
+<li><a href="https://copswiki.org/w/pub/Common/AuditEngine/Press Release AuditEngine Available for 2020 General Election -- 2020-10-02.pdf">Press Release AuditEngine Available for 2020 General Election -- 2020-10-04</a><br></li>
+</ul>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/54z2t_wANzA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p><BR></p>
+<ul>
+<li>Jennifer Cohn interview on AuditEngine:</li>
+</ul>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/oM0elo5Ad2U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p><BR></p>
+<ul>
+<li>AuditEngine was first announced and demonstrated at the National Election Integrity Conference in Berkeley, CA on Oct 6, 2019, which was sponsored by the [[https://nvrtf.org/][National Voter Rights Task Force]]. Read press release here: <a href="https://copswiki.org/Common/M1928">Press Release</a>.</li>
+</ul>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RHaDzomo0kI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p><BR></p>
+<h2 id="simplified-block-diagram">Simplified Block Diagram</h2>
+<p>The following block diagram should help your understanding of how AuditEngine works. </p>
+<p>The upper block shows the operation of the voting system, which scans hand-marked paper ballots and creates ballot images, which are then analyzed to extract the vote and create cast-vote records. Those can be totalled up to create the election results.</p>
+<p>The lower block shows how AuditEngine accepts ballot images, and then performs style analysis, to provide a map of the contests and options to where the bubbles are. The ballots are then fully processed to extract the vote and then these cast vote records are compared with the official records. Discrepancies can then be reviewed using our Adjudicator App if the election is close enough to require that.</p>
+<p><img src="https://copswiki.org/w/pub/Common/AuditEngine/AuditEngine High level flow chart.png" alt="AuditEngine High level flow chart.png" width='800'/></p>
+<h2 id="how-it-works">How It Works</h2>
+<h3 id="getting-the-data-together">Getting the data together</h3>
+<p>First, the data must be assembled for use by AuditEngine. Most of this is already produced and available by Election Officials.</p>
+<ul>
+<li>
+<p><strong>Ballot Image Creation:</strong> </p>
+<ul>
+<li>Modern voting equipment used in most districts in the U.S. create ballot images as they process the ballots. </li>
+<li>It is essential that this equipment be set so the ballot images are not deleted after they are used to extract the vote. </li>
+<li>These images are then transferred to the Election Management System (EMS)</li>
+<li>The EMS can export the ballot images for use by AuditEngine. These should be placed into ZIP archives with about 30,000 to 50,000 ballots per archive.</li>
+</ul>
+</li>
+<li>
+<p><strong>Election Information File (EIF):</strong> </p>
+<ul>
+<li>Our system requires additional information regarding the information actually printed on the ballots.</li>
+<li>The EIF lists<ul>
+<li>all contest names, as used in the CVR, as printed on hand-marked paper ballots, and as printed on BMD ballots</li>
+<li>the options in each contests, the full-text descriptions of yes/no contests.</li>
+<li>the number of write-ins, and the vote-for number. </li>
+</ul>
+</li>
+<li>This information is available from sample ballots and can be assembled prior to the election.</li>
+<li>This is a spreadsheet file in .xlsx or .csv format. </li>
+<li>The exact format of this file is provided below.</li>
+<li>In rare case, we also need the Ballot Options File (BOF) which lists the actual text of each option if they differ from the official CVR text.</li>
+</ul>
+</li>
+<li>
+<p><strong>Cast Vote Record (CVR):</strong></p>
+<ul>
+<li>Officials can produce cast-vote-record files (CVR) which lists the results of their interpretation of the ballots. </li>
+<li>AuditEngine currently supports the ES&amp;S format and the Dominion format.</li>
+<li>If any ballots are suppressed for privacy reasons, the total number of ballots suppressed and their vote totals should be provided.</li>
+<li>AuditEngine can also be run without the CVR but some additional information is required:</li>
+<li><strong>Results Summary:</strong> The official (or unofficial) results that <em>should</em> match the totals from the cast-vote-records file, but may not if any ballots have been suppressed for privacy concerns.  For some systems, we can scrape the data from the official election website report.</li>
+<li><strong>Style to Contests File:</strong> This is a spreadsheet which can be generated later in the process that lists the contests included in each style. This can be generated by inspecting the ballots or it can be provided by elections officials.</li>
+</ul>
+</li>
+</ul>
+<h3 id="guides">Guides:</h3>
+<ul>
+<li><a href="exporting_guide.md">Exporting Guide</a> -- Guide for election staff to export ballot images and cast-vote records from ES&amp;S or Dominion systems.</li>
+<li><a href="uploading_guide.md">Uploading Guide</a> -- Guide for election staff or affiliates to upload ballot images and cast-vote records to AuditEngine.</li>
+</ul>
+<h3 id="creating-an-account">Creating an Account</h3>
+<ul>
+<li><strong>Registration:</strong> You must register on the <a href="https://AuditEngine.org">https://AuditEngine.org</a> website to create a user identity</li>
+</ul>
+<h3 id="creating-a-job">Creating a Job</h3>
+<ul>
+<li><strong>Name the Job:</strong> Create a job with a name for future reference. You must include the district, election date, and election type to distinguish it from other jobs you (and others) might submit.</li>
+<li>
+<p><strong>Image Files:</strong></p>
+<ul>
+<li><strong>Direct Uploading:</strong> We recommend that you upload your archives directly to our site using our browser interface, which has no limit to the size of each file uploaded.</li>
+<li><strong>Send Files on USB drive or thumbdrive:</strong> It is common that files are very large, and then it may be more convenient to send us the data. However, please use direct uploading if possible.</li>
+</ul>
+</li>
+<li>
+<p><strong>Cast Vote Records File(s) (CVR Files):</strong> </p>
+<ul>
+<li>
+<p>A cast-vote record file (CVR) provides the result of the election as determined by the voting system. </p>
+<ul>
+<li>A CVR can be broken down to the individual ballot (which is preferred) or it can provide results based on higher level groups, such as precincts or batches.</li>
+<li>AuditEngine does not require the CVR file, and it does not rely on the CVR file in its own processing of the ballot images.</li>
+<li>However, AuditEngine will make use of the CVR to a limited extent, if it is available, as follows:<ul>
+<li>To redunce the processing required in the initial pre-scan of the ballots. </li>
+<li>If no CVR is provided, all ballot images are prescanned to extract style information from barcodes on hand-marked paper ballots, i.e. which contests are included on each ballot style.</li>
+<li>If the CVR is provided with style for each ballot, then a full prescan of the ballots is not required. Use of this style information, if incorrect, will be discovered in the style templating and mapping process. Reliance on the style from the CVR does not change the vote extraction process (which is performed without reference to the CVR).</li>
+<li>To locate discrepancies between the voting-system tabulation and the audit system.</li>
+<li>Only after AuditEngine has fully extracted the vote, the voting system CVR is compared with that result to provide the discrepancy report. </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>AuditEngine supports voting-system cast-vote-record (CVR) files in vendor-defined formats and in the new "Common Data Format" as defined by NIST or variants.</p>
+<ul>
+<li>ES&amp;S Legacy Format: <ul>
+<li>This is a table-oriented format which results in a reasonable size and number of files.</li>
+<li>Use CSV (character separated data) or .xlsx format. </li>
+<li>Please limit the size of any single .xlsx file to no more than 99,999 records (100,000) lines by splitting into several files if needed. </li>
+<li>Please compress each file using ZIP.</li>
+</ul>
+</li>
+<li>Dominion Legacy Format:<ul>
+<li>This is a CSV "tidy" format which has only a few columns and many records. </li>
+<li>Each record contains fields that identify the data value, and one data value.</li>
+<li>Please compress each file using ZIP.</li>
+<li>This format has been generally used for batch or precinct level reports and not broken down by ballot.</li>
+</ul>
+</li>
+<li>Dominion JSON CVR format:<ul>
+<li>This format is similar to the NIST standard but is not an exact implementation.</li>
+<li>It results in typically one JSON file per batch on a given tabulator.</li>
+<li>For example, in the 2020 Primary in San Francisco, more than 13,000 files resulted.</li>
+<li>All the files should be combined into a single ZIP file.</li>
+</ul>
+</li>
+<li>Other formats:<ul>
+<li>We can add other formats as needed.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Election Information File (EIF):</strong> AuditEngine generally also requires an Election Information File which provides the contest names, options, and the full-text descriptions found in each language as an .xlsx or CSV file. The format of this file is found below. </p>
+</li>
+<li>
+<p><strong>Ballot Options File (BOF):</strong> This is actually logically part of the EIF dataset but is only rarely needed when the text for ballot options differs from the official option. This might occur in gubinatorial or presidential contests when the option includes two names, one for governor and leiutenant governor, for example. But it may not be required even if that is the case so you may want to try it first without.</p>
+</li>
+<li>
+<p><strong>Results Summary:</strong> The system requires the official or unofficial results eiher in CSV, .xlsx format, or as a link to a web-page report, if we support that format. Even if the full CVR is provided, AuditEngine will compare with the final totals in the contests.</p>
+</li>
+<li>
+<p><strong>Adjudications File:</strong> After you have completed your first run, you may want to also submit and adjudications files, which essentially amends the AuditEngine result to reflect the review of voter intent from the ballot images on any ballots that are a concern.</p>
+</li>
+<li>
+<p><strong>Job Controls:</strong> You can limit the review to given ranges of ballot image numbers or only to certain precincts.</p>
+</li>
+</ul>
+<h3 id="processing-an-election-on-auditengine">Processing an Election on AuditEngine</h3>
+<ul>
+<li>Register with the site and create a user name.</li>
+<li>Define a Job. You will need to ask an administrator to define a new job and provide access to your account.</li>
+<li>Once your job has been defined, the job can be launched. There are several phases:</li>
+<li>Phase 1 -- Uploading files:<ul>
+<li>The first phase of the process includes uploading ballot images, CVR files and EIF files.</li>
+<li>The system will inspect the job specification and the input files for format and consistency.</li>
+<li>Precheck: Consistency checks include comparing the number of ballot images with the number of cast-vote records in the CVR files and that the contests as provided in the EIF can be found in the CVR.</li>
+</ul>
+</li>
+<li>Phase 2 -- Generate Style Templates:<ul>
+<li>After the files have been uploaded as provided in Phase 1, Style Templates can be generated.</li>
+<li>AuditEngine will visually inspect the ballots and learn the format of ballots that have the same style. Each style has either all or a subset of the contests in the election, and in each style, the location of targets for a given contest option will be in the same location.</li>
+</ul>
+</li>
+<li>Phase 3 -- Target Mapping<ul>
+<li>We now use the helper browser app called TargetMapper. The user will select each style and using a mouse, locate the target for that option.</li>
+<li>Similar styles can be copied and pasted, and the system will drop any contests not in the new style, and then the user can add any new contests.</li>
+<li>Multiple users will be able to help perform the mapping by splitting up the range of styles.</li>
+<li>At the end, the result is exported from TargetMapper. </li>
+<li>The map is imported into AuditEngine, and it performs an additional consistency check.</li>
+<li>Redline proofs are created in a styles report. These proofs must be inspected manually to insure accuracy.</li>
+</ul>
+</li>
+<li>Phase 4 -- Vote Extraction and reporting:<ul>
+<li>After generation of Style Templates and approval of the contest mapping, you can launch the extraction phase.</li>
+<li>Audit Engine will detect marks on the ballots and create an comprehensive database containing information for each style and each ballot.</li>
+<li>During this phase, the work will be split up among many separate virtual machines in the cloud-based computing services, which can provision 10s of thousands of virtual machines that run in parallel in massive data centers. This will allow us to finish your job in minutes instead of many hours or days if run on a single machine.</li>
+</ul>
+</li>
+<li>Phase 5 -- Comparison and Discrepancy Report<ul>
+<li>If a detailed CVR is available detailed to the individual ballot, then the compare-cvr (CMPCVR) process is started to compare all the records and generate a discrepancy report.</li>
+</ul>
+</li>
+<li>Phase 6 -- Reporting and Adjudication:<ul>
+<li>After the processing is complete, Audit Engine provides a comprehensive report, and allows interactive inspection of individual ballots and contest to resolve voter-intent in difficult cases.</li>
+<li>The Adjudications File can then be prepared for future runs.  </li>
+</ul>
+</li>
+</ul>
+<h3 id="additional-notes">Additional Notes</h3>
+<ul>
+<li>We are working to establish a full-ballot image securty standard which is based on the concept of "Trusted Systems" to ensure that we can trust that the ballot images are an accurate representation of the paper ballots.</li>
+<li>In addition, <ul>
+<li><strong>Digital Poll Tape Report:</strong> AuditEngine can perform a digital poll tape audit, which compares the "poll tape" from each of the polling place machines (in digital form) with the official report of election day and early voting use of those machines. </li>
+<li>The "Poll List" which provides the totals of all the voters who voted so we can check that all the ballots are represented in the ballot images set. This is an area that needs further standardization.</li>
+<li><strong>Hash Codes File:</strong> This file provides the SHA256 or similar hash for each file uploaded to the posting service. When the files are uploaded to our cloud-based provider (AWS) they use a slightly different method and it is important to generate the hash values the same way. They generate the hash value by taking the MD5 hash value of smaller chunks, of say 8MB each, and then hashing that list.</li>
+</ul>
+</li>
+<li><strong>Computer Code Verification File:</strong> This is at present a proposal to make sure we can trust the scanner hardware. See [[M1936][Securing Digital Ballot Images to Enable Auditing]]</li>
+</ul>
+<p>Copyright (c) Citizens Oversight, Inc.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+      
+        
+        <a href="user-guide/exporting_guide/" class="md-footer__link md-footer__link--next" aria-label="Next: Exporting Guide" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Exporting Guide
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": ".", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.76f349be.min.js"></script>
+      
+    
+  </body>
 </html>
-
-<!--
-MkDocs version : 1.2.1
-Build Date UTC : 2021-06-19 18:31:15.143481+00:00
--->

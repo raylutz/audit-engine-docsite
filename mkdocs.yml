@@ -31,6 +31,6 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
-  favicon: assets/favicon.png
+  favicon: https://mapper.auditengine.org/assets/images/A.png
   icon:
     logo: logo
