@@ -3,7 +3,7 @@ site_url: https://auditengine.org/
 nav:
     - Home: index.md
     - User Guide:
-        - Overview: user-guide/index.md
+        - Overview: user-guide/overview.md
         - Exporting Guide: user-guide/exporting_guide.md
         - Uploading Guide: user-guide/uploading_guide.md
         - Configuration Files: user-guide/configuration_files.md
@@ -11,7 +11,7 @@ nav:
         - How you can help: community/you_can_help.md
         - Donate: community/donate.md
     - Audit Results:
-        - Case study: audit-results/case_study.md
+        - Case study: audit-results/case-study.md
     - About:
         - About Us: about/about.md
 theme:

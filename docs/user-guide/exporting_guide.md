@@ -9,6 +9,6 @@ remote_url: https://docs.google.com/document/d/1qeuAtmNBhLL2KLUUtJPgtq5rzyjq1QTz
 
 
 ### Exporting Guide: Step-by-step instructions
-To view googledoc for comments, please [click here](https://docs.google.com/document/d/1qeuAtmNBhLL2KLUUtJPgtq5rzyjq1QTzBuaO4HlJwDY/edit?usp=sharing")<br>
+To view googledoc for comments, please <a href="https://docs.google.com/document/d/1qeuAtmNBhLL2KLUUtJPgtq5rzyjq1QTzBuaO4HlJwDY/edit?usp=sharing" target="_blank">[click here]</a><br>
 <iframe src="https://docs.google.com/document/d/e/2PACX-1vSkX8tdGY-h-ShL601a7l7Q6s4p2OKlqyjXBatKI7nOMW1Ku3Pbj53SG0B76mKdvscHHuuBIw3HPSkx/pub?embedded=true" width=900 height=700></iframe>
 
