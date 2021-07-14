@@ -19,8 +19,12 @@ We show that the accuracy of AuditEngine is greater than 99.99% and when it diff
 
 ### The Case Study
 The <a href="https://docs.google.com/document/d/e/2PACX-1vQspH7a2ZWvvoVLPidaRmiVzPWicJ--MMq28g75bWJMMNvb8HwvB8AZP7jmflQVRAgpyli0pBbUJu5b/pub" target="_blank">Case Study Report</a> <-- click here to open as googledoc<br>
-<a href="https://docs.google.com/document/d/1Jb5AegEfR2ddjbN5LYjVgrpZtHk19ooSnrb-90N5QTQ/edit?usp=sharing" target="_blank">Case Study Report (open for comments)</a> <-- click here to open googledoc for comments<br>
+<a href="https://docs.google.com/document/d/1Jb5AegEfR2ddjbN5LYjVgrpZtHk19ooSnrb-90N5QTQ/edit?usp=sharing" target="_blank">Case Study Report</a> <-- click here to open googledoc<br>
 <iframe src="https://docs.google.com/document/d/e/2PACX-1vQspH7a2ZWvvoVLPidaRmiVzPWicJ--MMq28g75bWJMMNvb8HwvB8AZP7jmflQVRAgpyli0pBbUJu5b/pub?embedded=true" height=700 width=700></iframe>
+
+### Cover Letter to Volusia County
+-
+<iframe src="https://docs.google.com/document/d/e/2PACX-1vR1vorpV35GBEAANHfFYmROZOWGzt7mecF1oaMoEcnOXURcqmzVSTEDEmmEwZgO6vxgrg97P3m3Fugj/pub?embedded=true" height=700 width=700></iframe>
 
 ### Video Overview of the Case Study
    * Part 1: Introduction and Theory of Operation: https://youtu.be/dDEFGsqdCsg
