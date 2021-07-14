@@ -23,7 +23,7 @@ The <a href="https://docs.google.com/document/d/e/2PACX-1vQspH7a2ZWvvoVLPidaRmiV
 <iframe src="https://docs.google.com/document/d/e/2PACX-1vQspH7a2ZWvvoVLPidaRmiVzPWicJ--MMq28g75bWJMMNvb8HwvB8AZP7jmflQVRAgpyli0pBbUJu5b/pub?embedded=true" height=700 width=700></iframe>
 
 ### Cover Letter to Volusia County
-- <a href="https://docs.google.com/document/d/e/2PACX-1vR1vorpV35GBEAANHfFYmROZOWGzt7mecF1oaMoEcnOXURcqmzVSTEDEmmEwZgO6vxgrg97P3m3Fugj/pub" target="_blank">Click here to open google doc (formats better than the embedded version)</a><br>
+- <a href="https://docs.google.com/document/d/1FcTgKbbusYtICN_78-JcMwaiyQUzsPK_KvAj9JVN57E/edit?usp=sharing" target="_blank">Click here to open google doc (formats better than the embedded version)</a><br>
 <iframe src="https://docs.google.com/document/d/e/2PACX-1vR1vorpV35GBEAANHfFYmROZOWGzt7mecF1oaMoEcnOXURcqmzVSTEDEmmEwZgO6vxgrg97P3m3Fugj/pub?embedded=true" height=700 width=700></iframe>
 
 ### Video Overview of the Case Study
