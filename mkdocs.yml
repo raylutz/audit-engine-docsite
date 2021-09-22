@@ -2,18 +2,31 @@ site_name: AuditEngine Docs
 site_url: https://auditengine.org/
 nav:
     - Home: index.md
+#    - Audit Projects:
+#        - Overview:             audit-projects/overview.md
+#        - Arizona 2020:         audit-projects/AZ_2020.md
+#        - Florida 2020:         audit-projects/FL_2020.md
+#        - Georgia 2020:         audit-projects/GA_2020.md
+#        - Wisconsin 2020:       audit-projects/WI_2020.md
     - User Guide:
-        - Overview: user-guide/overview.md
-        - Exporting Guide: user-guide/exporting_guide.md
-        - Uploading Guide: user-guide/uploading_guide.md
-        - Configuration Files: user-guide/configuration_files.md
+#        - Overview:             user-guide/overview.md
+        - Exporting Guide:      user-guide/exporting_guide.md
+        - Uploading Guide:      user-guide/uploading_guide.md
+        - Configuration Files:  user-guide/configuration_files.md
+#        - Running Audits:       user-guide/running_audits_app.md
+#        - TargetMapper App:     user-guide/targetmapper_app.md
+#        - Adjudicator App:      user-guide/adjudicator_app.md
+#        - Voter Intent Guide:   user-guide/voter_intent_guide.md
+#        - Tally App:            user-guide/tally_app.md
+#        - Glossary:             user-guide/glossary.md
     - Community:
-        - How you can help: community/you_can_help.md
-        - Donate: community/donate.md
+        - In the News:          community/in_the_news.md
+        - How you can help:     community/you_can_help.md
+        - Donate:               community/donate.md
     - Audit Results:
-        - Case study: audit-results/case-study.md
+        - Case study:           audit-results/case-study.md
     - About:
-        - About Us: about/about.md
+        - About Us:             about/about.md
 theme:
   name: material
   #custom_dir: mkdocs-material/material

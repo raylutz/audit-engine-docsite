@@ -11,7 +11,7 @@ remote_url: https://docs.google.com/document/d/e/2PACX-1vQspH7a2ZWvvoVLPidaRmiVz
 This case study shows the performance of AuditEngine peforming ballot image audits when applied to three counties in Florida for the 2020 November Election, Collier County, Volusia County, and St. Lucie County.
 We show that the accuracy of AuditEngine is greater than 99.99% and when it differs with the voting system and the images are not corrupted, AuditEngine correctly interprets voter intent 93% of the time while the voting system interprets it correctly only 7% of the time. (These numbers are from Collier County audit and are slightly corrected from the video).
 
-(The case study report is still undergoing some proofreading and additional findings, but is essentially completed.)
+
 
 ### See Also:
 - <a href="https://copswiki.org/Common/AuditEngineFAQs" target="_blank">AuditEngineFAQs</a> -- frequently asked questions about AuditEngine
