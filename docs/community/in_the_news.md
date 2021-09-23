@@ -5,7 +5,7 @@
 - Ballot auditor: Volusia County supervisor of elections did a good job
     - Noah Hertz, West Volusia Beacon (2021-08-28)
     - [Article in West Volusia Beacon](https://beacononlinenews.com/2021/08/28/ballot-auditor-volusia-county-supervisor-of-elections-did-a-good-job/)
-    [Backup copy](https://copswiki.org/Common/M1979)
+    -- [Backup copy](https://copswiki.org/Common/M1979)
 
 - "Another election audit coming? Arizona Senate considers using new technology for digital recount"
     - Jen Fifield and Robert Anglen, Arizona Republic (2021-05-28)
