@@ -4,8 +4,8 @@
 
 - Ballot auditor: Volusia County supervisor of elections did a good job
     - Noah Hertz, West Volusia Beacon (2021-08-28)
-    - [Article in West Volusia Beacon] (https://beacononlinenews.com/2021/08/28/ballot-auditor-volusia-county-supervisor-of-elections-did-a-good-job/)
-    - [Backup copy](https://copswiki.org/Common/M1979)
+    - [Article in West Volusia Beacon](https://beacononlinenews.com/2021/08/28/ballot-auditor-volusia-county-supervisor-of-elections-did-a-good-job/)
+    [Backup copy](https://copswiki.org/Common/M1979)
 
 - "Another election audit coming? Arizona Senate considers using new technology for digital recount"
     - Jen Fifield and Robert Anglen, Arizona Republic (2021-05-28)
@@ -19,7 +19,7 @@
 
 - Ballot Images: Essential or Worthless?
     - Ray Lutz, CitizensOversight.org (2021-04-13)
-    - https://docs.google.com/document/d/19Q_yIb4fG62Ri9ZMmvsWcHsEMdoVqo76_Iyr7MbfWCM/edit?usp=sharing
+    - [White Paper on Googledocs](https://docs.google.com/document/d/19Q_yIb4fG62Ri9ZMmvsWcHsEMdoVqo76_Iyr7MbfWCM/edit?usp=sharing)
 
 - The Four Fatal Flaws of RLA Audits
     - Ray Lutz, CitizensOversight.org (2019-11-30)
