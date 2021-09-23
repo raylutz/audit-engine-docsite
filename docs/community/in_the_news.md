@@ -3,16 +3,20 @@
 
 ## News Media
 
-- <a href="https://beacononlinenews.com/2021/08/28/ballot-auditor-volusia-county-supervisor-of-elections-did-a-good-job/" target="_blank">**Ballot auditor: Volusia County supervisor of elections did a good job**</a>
-    - Noah Hertz, West Volusia Beacon (2021-08-28) -- <a href="https://copswiki.org/Common/M1979" target="_blank">Backup copy on Copswiki</a>
+- <a href="https://beacononlinenews.com/2021/08/28/ballot-auditor-volusia-county-supervisor-of-elections-did-a-good-job/" target="_blank">
+    **Ballot auditor: Volusia County supervisor of elections did a good job**</a>
+    - Noah Hertz, West Volusia Beacon (2021-08-28) -- <a href="https://copswiki.org/Common/M1979" target="_blank">
+      (Backup copy on Copswiki)</a>
 
-- [**"Another election audit coming? Arizona Senate considers using new technology for digital recount"**](https://www.azcentral.com/story/news/politics/elections/2021/05/28/arizona-senate-considers-using-new-technology-2nd-audit-maricopa-county-election/7478902002/)
+- <a href="https://www.azcentral.com/story/news/politics/elections/2021/05/28/arizona-senate-considers-using-new-technology-2nd-audit-maricopa-county-election/7478902002/" target="_blank">
+  **"Another election audit coming? Arizona Senate considers using new technology for digital recount"**</a>
     - Jen Fifield and Robert Anglen, Arizona Republic (2021-05-28)
 
 
 ## Related White Papers
 
-- [**Critical Review of the paper 'Unclear Ballot'**](https://docs.google.com/document/d/1NudWuO7pD2vU_zQZaYq9-eus6ugaEHqLa688bnZF444/edit?usp=sharing)
+- <a href="https://docs.google.com/document/d/1NudWuO7pD2vU_zQZaYq9-eus6ugaEHqLa688bnZF444/edit?usp=sharing" target="_blank">
+    **Critical Review of the paper 'Unclear Ballot'**</a>
     - Edited by Ray Lutz, CitizensOversight.org (2021-07-22)
 
 - [**Ballot Images: Essential or Worthless?**](https://docs.google.com/document/d/19Q_yIb4fG62Ri9ZMmvsWcHsEMdoVqo76_Iyr7MbfWCM/edit?usp=sharing)
@@ -28,7 +32,7 @@
     - Citizens Oversight (2019-10-05) Ray Lutz
 
 - [**Staff Report and Comments by Ray Lutz at Rhode Island BOE on Audits**](https://copswiki.org/Common/M1926)
-    - At the Rhode Island Board of Elections
+    - At the Rhode Island Board of Elections (2019-09-19)
 
 - [**Comprehensive Risk Estimation in Election Audits -- And why Ballot Image Audits should be our primary goal**](https://www.copswiki.org/Common/M1913)
     - Ray Lutz, Citizens Oversight. 2019-08-15
