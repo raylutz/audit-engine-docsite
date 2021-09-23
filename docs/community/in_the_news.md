@@ -16,7 +16,7 @@
 ## Related White Papers
 
 - <a href="https://docs.google.com/document/d/1NudWuO7pD2vU_zQZaYq9-eus6ugaEHqLa688bnZF444/edit?usp=sharing" target="_blank">
-    **Critical Review of the paper 'Unclear Ballot'**</a>
+**Critical Review of the paper 'Unclear Ballot'**</a>
     - Edited by Ray Lutz, CitizensOversight.org (2021-07-22)
 
 - [**Ballot Images: Essential or Worthless?**](https://docs.google.com/document/d/19Q_yIb4fG62Ri9ZMmvsWcHsEMdoVqo76_Iyr7MbfWCM/edit?usp=sharing)
