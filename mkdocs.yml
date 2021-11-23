@@ -18,15 +18,22 @@ nav:
 #        - Adjudicator App:      user-guide/adjudicator_app.md
 #        - Voter Intent Guide:   user-guide/voter_intent_guide.md
 #        - Tally App:            user-guide/tally_app.md
-	- Glossary:             user-guide/glossary.md
+#        - Pricing Guidelines:   user-guide/prices.md
+	     - Glossary:             user-guide/glossary.md
     - Community:
         - In the News:          community/in_the_news.md
         - How you can help:     community/you_can_help.md
+#        - Forums:               community/forums.md
 #        - Donate:               community/donate.md
     - Audit Results:
         - Case study:           audit-results/case-study.md
     - About:
         - About Us:             about/about.md
+#    - Policies:
+#        - Privacy:             about/privacy.md
+#        - Terms of Use:        about/terms-of-use.md
+#        - EULA:                about/eula.md
+
 theme:
   name: material
   #custom_dir: mkdocs-material/material
