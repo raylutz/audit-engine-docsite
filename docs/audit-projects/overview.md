@@ -1,39 +1,33 @@
 <link rel="icon" type="image/x-icon" href="https://mapper.auditengine.org/assets/images/A.png">
 <img src="https://copswiki.org/w/pub/Common/AuditEngine/AuditEngineLogo.png" alt="AuditEngineLogo.png" width='300' />
 
-# AuditEngine -- Audit Projects -- Overview
+# Audit Projects -- Overview
 
-AuditEngine performs the best type of tabulation audit, because it reviews 100% of the ballot images in the election,
+AuditEngine performs extremely detailed tabulation audits, that evaluates 100% of the ballot images in the election,
 and compares its evaluation of the votes on that ballot image with the official evaluation of the votes on each ballot,
 the "Cast Vote Record" (CVR), when it is available.
 
-It makes sense to group our projects generally by state. In each state, we try to focus on the most populous counties,
-because of their obvious importance. Typically, the 80/20 rule, the "Pareto Principle" holds true on an approximate basis, 
-where a small percentage of the counties will comprise the vast majority of the population in the state. Some states have 
-more concentrated populations than others, so it is not an exact science. Also, we recognize that with the voting machines
-being controlled by just a very small number of corporations, there is a risk that a simple hack could modify the results 
-in many of the smaller counties, and still make a big difference.
+### Organized by State
 
-Each state may have slightly different statutes in terms of how voter intent will be evaluated. Most states provide that
-the marks will be evaluated according to the intent of the voter. So if two bubbles are marked, but one has a big X through it,
-we can conclude that the intent of the voter was to cross-out the one they did not want to vote for. But in other states, like
-Michigan, they use a strict "as the machine would interpret it" approach. If you mark two ovals, it is an overvote, no matter 
-what you might add to it.
+To organize our projects, we find that organizing by state makes sense for several reasons. Each state may have slightly different statutes in terms of how voter intent will be evaluated, and the community of interest generally is concerned with many statewide contests which may not be of interest in other states. Also, for presidential contests, the electoral college is concerned with each state.
 
-To run AuditEngine, we must be able to get to the ballot images. Of the most populous counties in the U.S., 97% use equipment
-that makes ballot images as a part of their normal processing steps. But not all states provide that ballot images are 
-accessible as public records, and some counties routinely delete the ballot images.
+### Concentrate on the most populous counties
+
+In each state, we try to focus on the most populous counties, because of their obvious importance. Typically, the "80/20 rule", also known as the "Pareto Principle" dictates that we focus primarily on the top counties in the state because a small percentage of the counties will comprise the vast majority of the population in the state. Some states have more concentrated populations than others, so it is not an exact science. With this said, we recognize that with the voting machines being controlled by just a very small number of corporations, there is a risk that a simple hack could modify the results in many of the smaller counties, and still make a big difference. Long term, we want our solution to be deployable to many counties with a minimum of effort.
+
+### Ballot images are required
+
+AuditEngine is primarily a ballot image auditing system, and that means the ballot images must be available. Of the most populous counties in the U.S., 97% use equipment that makes ballot images as a part of their normal processing steps. But not all states provide that ballot images are accessible as public records, and some counties routinely delete the ballot images. For those cases when we offer our services directly to county governments, we can keep the ballot images secured for the vast majority of the ballots unless they require adjudication.
 
 ## Current Projects
 
-- Georgia -- top 27 counties out of 159 (17%) includes 70% of the electorate
-    - Recent changes in state law provides that all ballot images are available.
+- [Georgia](GA_2020.md) -- top 27 counties out of 159 (17%) includes 70% of the electorate
+    - Recent changes in state law provides that all ballot images are available, and we have obtained more than half of them as of this writing.
 
-- Wisconsin -- top 18 counties out of 72 (25%) includes 70% of the electorate
+- [Wisconsin](WI_2020.md) -- top 18 counties out of 72 (25%) includes 70% of the electorate
     - Ballot images are public records and counties are cooperative.
-
-- Florida -- top 20 counties out of 67 (29%) includes 80% of the electorate
+- [Florida](FL_2020.md) -- top 20 counties out of 67 (29%) includes 80% of the electorate
     - Ballot images are public records, but many counties do not save them.
-
-- Arizona, Maricopa County -- This single county out of 15 includes 60% of the electorate.
+    - We have conducted a [three-county case study](audit-results/case_study.md), including Volusia, Collier and St. Lucie counties.
+- [Arizona](AZ_2020.md), Maricopa County -- This single county out of 15 includes 60% of the electorate.
     - Ballot images are not easily available but we are still working to get them.
