@@ -1,6 +1,5 @@
 <link rel="icon" type="image/x-icon" href="https://mapper.auditengine.org/assets/images/A.png">
 <img src="https://copswiki.org/w/pub/Common/AuditEngine/AuditEngineLogo.png" alt="AuditEngineLogo.png" width='600' />
-# AuditEngine
 
 AuditEngine is an election auditing platform which performs "Ballot Image Auditing". Relatively high-resolution ballot images are now captured by voting machine scanners that are now used in the polling places or central count operations. AuditEngine processes these ballot images to create an independent tabulation, and then it compares with the official cast-vote record files and can provide detailed reports which detail any disagreement in how any voters mark should be interpreted.
 
@@ -71,7 +70,7 @@ First, the data must be assembled for use by AuditEngine. Most of this is alread
     - This is a spreadsheet file in .xlsx or .csv format. 
     - The exact format of this file is provided below.
     - In rare case, we also need the Ballot Options File (BOF) which lists the actual text of each option if they differ from the official CVR text.
-        
+    
 - **Cast Vote Record (CVR):**
     - Officials can produce cast-vote-record files (CVR) which lists the results of their interpretation of the ballots. 
     - AuditEngine currently supports the ES&S format and the Dominion format.
@@ -94,7 +93,6 @@ First, the data must be assembled for use by AuditEngine. Most of this is alread
     - **Direct Uploading:** We recommend that you upload your archives directly to our site using our browser interface, which has no limit to the size of each file uploaded.
     - **Send Files on USB drive or thumbdrive:** It is common that files are very large, and then it may be more convenient to send us the data. However, please use direct uploading if possible.
 
-        
 - **Cast Vote Records File(s) (CVR Files):** 
     - A cast-vote record file (CVR) provides the result of the election as determined by the voting system. 
         - A CVR can be broken down to the individual ballot (which is preferred) or it can provide results based on higher level groups, such as precincts or batches.
@@ -124,14 +122,14 @@ First, the data must be assembled for use by AuditEngine. Most of this is alread
             - All the files should be combined into a single ZIP file.
         - Other formats:
             - We can add other formats as needed.
-              
+    
 - **Election Information File (EIF):** AuditEngine generally also requires an Election Information File which provides the contest names, options, and the full-text descriptions found in each language as an .xlsx or CSV file. The format of this file is found below. 
 - **Ballot Options File (BOF):** This is actually logically part of the EIF dataset but is only rarely needed when the text for ballot options differs from the official option. This might occur in gubinatorial or presidential contests when the option includes two names, one for governor and leiutenant governor, for example. But it may not be required even if that is the case so you may want to try it first without.
-        
+  
 - **Results Summary:** The system requires the official or unofficial results eiher in CSV, .xlsx format, or as a link to a web-page report, if we support that format. Even if the full CVR is provided, AuditEngine will compare with the final totals in the contests.
-       
+  
 - **Adjudications File:** After you have completed your first run, you may want to also submit and adjudications files, which essentially amends the AuditEngine result to reflect the review of voter intent from the ballot images on any ballots that are a concern.
-     
+  
 - **Job Controls:** You can limit the review to given ranges of ballot image numbers or only to certain precincts.
 
 
