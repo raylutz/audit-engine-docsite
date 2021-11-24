@@ -3,11 +3,11 @@ site_url: https://auditengine.org/
 nav:
     - Home: index.md
     - Audit Projects:
-		- Overview:             audit-projects/overview.md
-		- Arizona 2020:         audit-projects/AZ_2020.md
-		- Florida 2020:         audit-projects/FL_2020.md
-		- Georgia 2020:         audit-projects/GA_2020.md
-		- Wisconsin 2020:       audit-projects/WI_2020.md
+        - Overview:             audit-projects/overview.md
+        - Arizona 2020:         audit-projects/AZ_2020.md
+        - Florida 2020:         audit-projects/FL_2020.md
+        - Georgia 2020:         audit-projects/GA_2020.md
+        - Wisconsin 2020:       audit-projects/WI_2020.md
     - User Guide:
 #        - Overview:             user-guide/overview.md
         - Exporting Guide:      user-guide/exporting_guide.md
@@ -19,7 +19,7 @@ nav:
 #        - Voter Intent Guide:   user-guide/voter_intent_guide.md
 #        - Tally App:            user-guide/tally_app.md
 #        - Pricing Guidelines:   user-guide/prices.md
-	     - Glossary:             user-guide/glossary.md
+        - Glossary:             user-guide/glossary.md
     - Community:
         - In the News:          community/in_the_news.md
         - How you can help:     community/you_can_help.md
