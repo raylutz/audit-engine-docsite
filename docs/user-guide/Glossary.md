@@ -5,7 +5,11 @@
 
 **Adjudication --** This is the process of human review of ballots or ballot images and providing an interpretation of the vote on that ballot.
 
-**Ballot --** Generally a presentation of contests and options for each contest that can be selected by a voter, and the recording of those selections.
+**Archive --** A single file which can contain many smaller files and also may compress them. This saves a lot of space on the disk because the disk requires that files consume at least one block, and the last block in a file is empty. Archives pack all the files together into one file. This also makes it easier to handle many thousands of individual files by grouping them together into archives. We recommend that you use "ZIP" archives, because the files can be individually extracted from the archive without extracting them all. The free application 7-zip from 7-zip.org is a very good tool, but use the conventional zip format and not the 7z format. We recommend that up to about 50,000 ballot images are placed into the same archive, and they should be about 5GB in size for easy handling.
+
+**Ballot --** Generally a presentation of contests and options for each contest that can be selected by a voter, and the recording of those selections. The word "ballot" originally meant "little ball" and these were placed into a box to represent the votes of each person. In practice, a complete ballot may be a number of sheets, each with a front and back side, also called pages.
+
+**Ballot Image --** Election systems today create digital images of both size of each ballot sheet. These images can be exported by the election management system (EMS) in standard formats, such as PDF (generally with both the front and back in the same file), multipage TIFF (Dominion uses these, with three pages in one file, the front, back and "audit mark" graphical image of the voting system evaluation), or PNG (Dominion uses this, with all three pages combined into a single tall image.)
 
 **Ballot Image Audit --** A review of digital images of ballots in a jurisdiction of an election and comparison with the official outcome for each ballot, group of ballots (precincts or batches), or the entire jurisdiction. AuditEngine is a platform that can provide the compute services for such an audit.
 
@@ -15,19 +19,25 @@
 
 **Dominion Voting Systems (Dominion) -- **A major voting system vendor with approximately 37% of the market.
 
+**Election Management System (EMS) --** This is the general term for the suite of software applications that provide all the functions needed to assist election officials to perform elections. Functions include the definition of ballots, configuring voting machines that are used in polling locations, central tabulation, and reporting.
+
 **Election Systems & Software (ES&S) --** A major voting system vendor with approximately 47% of the market.
 
 **Hand-Marked Paper Ballot --** This type of ballot provides all the contests and options that can be voted by specific voter on a set of ballot sheets, with targets that can be marked by the voter using a conventional pen.
 
-**Hart Intercivic --** A voting system vendor with a small footprint nationally.
+**Hart Intercivic --** A voting system vendor with a relatively small footprint nationally.
 
 **Mapping --** One key step in the process of performing a ballot image audit is the mapping of the contests and options to specific target locations on a paper ballot of a specified style.
 
 **Overvoted --** If a voter marks more than the number of options allowed in the contest, it is considered "overvoted" and no vote is awarded to any option. For example, if the "vote-for" number is 1 and the voter votes for three options, it is considered one overvote.
 
+**Pipeline --** The operation of AuditEngine is broken into a series of stages, where each stage has defined inputs (dependencies) and outputs. The set of the stages together is called the pipeline. Each stage cannot be executed unless its dependencies are available from prior stages.
+
 **Poll Tapes / Digital Poll Tapes --** Voting machines that are used in polling places typically have a poll-tape report which is printed out by poll workers during an election, and frequently posted at the site and turned into the election office. Digital Poll Tapes can be produced by ES&S systems which are an exact copy of the report produced by the voting system scanner but provided as a PDF file and can be processed by AuditEngine to provide another check of the results of the election.
 
 **Risk-Limiting Audit --** A method of checking that the outcome of an election is accurate by random selecting ballots or batches of ballots, and continuing to select samples so that the risk that the outcome as determined by a full-hand count could be statistically different, is less than a given risk limit. There are four types based on how the samples are taken (by ballot or by batch) and how those samples are compared (by margin or by sample), resulting in ballot-comparison, ballot-polling, batch-comparison, and batch-polling. RLA audits are difficult to apply to many small contests and when margins get tight.
+
+**Stage --** One set of operations that are logically separated in AuditEngine, with specified input files (dependencies) and output files that result. Each stage commonly also produces reports of the results of those operations. The stages are organized into a pipeline, and are executed sequentially until the pipeline is completed.
 
 **Targets --** The ovals or graphic elements that are completed by the voter to indicate a vote.
 
