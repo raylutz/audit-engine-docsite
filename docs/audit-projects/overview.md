@@ -23,8 +23,7 @@ AuditEngine is primarily a ballot image auditing system, and that means the ball
 
 - [Georgia](GA_2020.md) -- top 27 counties out of 159 (17%) includes 70% of the electorate
     - Recent changes in state law provides that all ballot images are available, and we have obtained more than half of them as of this writing.
-
-- [Wisconsin](WI_2020.md) -- top 18 counties out of 72 (25%) includes 70% of the electorate
+- [Wisconsin](WI_2020.md) -- top 18 counties out of 72 (25%) includes 70% of the electorate.  [Donate to WI audits Now!](https://engine.auditengine.org/projects/WI_20201103)
     - Ballot images are public records and counties are cooperative.
 - [Florida](FL_2020.md) -- top 20 counties out of 67 (29%) includes 80% of the electorate
     - Ballot images are public records, but many counties do not save them.
