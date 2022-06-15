@@ -3,7 +3,14 @@
 
 AuditEngine is an election auditing platform which performs "Ballot Image Auditing". Relatively high-resolution ballot images are now captured by voting machine scanners that are now used in the polling places or central count operations. AuditEngine processes these ballot images to create an independent tabulation, and then it compares with the official cast-vote record files and can provide detailed reports which detail any disagreement in how any voters mark should be interpreted.
 
+## Top Questions
+
+**Q: We already conduct an audit our our county. Why should we use AuditEngine?**
+
+A: Typical audits are performed by the election officials by tallying the votes on a sample of ballots. In contrast, audits by AuditEngine are performed independently, and review all ballot images with a fine level of detail. The sampling audits will require a full hand count audit when the margin of victory is tight, just when we need the audit the most, while ballot image audits. AuditEngine provides another view of the results of the election and is generally more accurate in predicting voter intent than current voting machines.
+
 ## Primary Links
+
 - [Active AuditEngine site: (click to Enter)](https://engine.auditengine.org)
 - [AuditEngineFAQs: Frequently Asked Questions](https://copswiki.org/Common/AuditEngineFAQs)
 
@@ -57,7 +64,7 @@ First, the data must be assembled for use by AuditEngine. Most of this is alread
 - **Ballot Image Creation:** 
     - Modern voting equipment used in most districts in the U.S. create ballot images as they process the ballots. 
     - It is essential that this equipment be set so the ballot images are not deleted after they are used to extract the vote. 
-    - These images are then transferred to the Election Management System (EMS)
+    - These images are then transferred to the Election Management System (EMS) from voter-facing scanners using flash media or from central scan operations using similar methods.
     - The EMS can export the ballot images for use by AuditEngine. These should be placed into ZIP archives with about 30,000 to 50,000 ballots per archive.
 
 - **Election Information File (EIF):** 
@@ -67,8 +74,7 @@ First, the data must be assembled for use by AuditEngine. Most of this is alread
         - the options in each contests, the full-text descriptions of yes/no contests.
         - the number of write-ins, and the vote-for number. 
     - This information is available from sample ballots and can be assembled prior to the election.
-    - This is a spreadsheet file in .xlsx or .csv format. 
-    - The exact format of this file is provided below.
+    - This is a spreadsheet file in .xlsx or .csv format. The exact format of this file is provided below.
     - In rare case, we also need the Ballot Options File (BOF) which lists the actual text of each option if they differ from the official CVR text.
     
 - **Cast Vote Record (CVR):**
