@@ -2,7 +2,9 @@
 
 <img src="https://copswiki.org/w/pub/Common/AuditEngine/AuditEngineLogo.png" alt="AuditEngineLogo.png" width='300' />
 
-# Election Systems & Software (ES&S): Exporting Ballot Images, Cast Vote Records, and Ballot Style Masters
+# Election Systems & Software (ES&S): 
+
+# 	Exporting Guide for AuditEngine
 
 To view googledoc (best format) and  for comments, please <a href="https://docs.google.com/document/d/1rAW6JRnaaP8949ALVcPp0Kg5vd9gjfJVKjL7ZppB2oE/edit?usp=sharing" target="_blank">[click here]</a><br>
 

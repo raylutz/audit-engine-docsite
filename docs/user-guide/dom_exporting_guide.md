@@ -2,7 +2,9 @@
 
 <img src="https://copswiki.org/w/pub/Common/AuditEngine/AuditEngineLogo.png" alt="AuditEngineLogo.png" width='300' />
 
-# Dominion Voting Systems: Exporting Ballot Images, Cast Vote Records, and Ballot Style Masters
+# Dominion Voting Systems: 
+
+# 	Exporting Guide for AuditEngine
 
 To view googledoc (best format) and for comments, please <a href="https://docs.google.com/document/d/1qeuAtmNBhLL2KLUUtJPgtq5rzyjq1QTzBuaO4HlJwDY/edit?usp=sharing" target="_blank">[click here]</a><br>
 
