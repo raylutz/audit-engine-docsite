@@ -3,36 +3,39 @@ site_url: https://auditengine.org/
 nav:
     - Home: index.md
     - Audit Projects:
-        - Overview:             audit-projects/overview.md
-        - Arizona 2020:         audit-projects/AZ_2020.md
-        - Florida 2020:         audit-projects/FL_2020.md
-        - Georgia 2020:         audit-projects/GA_2020.md
-        - Wisconsin 2020:       audit-projects/WI_2020.md
+        - Overview:                       audit-projects/overview.md
+        - Arizona 2020:                   audit-projects/AZ_2020.md
+        - Florida 2020:                   audit-projects/FL_2020.md
+        - Georgia 2020:                   audit-projects/GA_2020.md
+        - Wisconsin 2020:                 audit-projects/WI_2020.md
     - User Guide:
-#        - Overview:             user-guide/overview.md
-        - Exporting Guide:      user-guide/exporting_guide.md
-        - Uploading Guide:      user-guide/uploading_guide.md
-        - Configuration Files:  user-guide/configuration_files.md
-#        - Running Audits:       user-guide/running_audits_app.md
-#        - TargetMapper App:     user-guide/targetmapper_app.md
-#        - Adjudicator App:      user-guide/adjudicator_app.md
-#        - Voter Intent Guide:   user-guide/voter_intent_guide.md
-#        - Tally App:            user-guide/tally_app.md
-#        - Pricing Guidelines:   user-guide/prices.md
-        - Glossary:             user-guide/glossary.md
+#        - Overview:                       user-guide/overview.md
+        - Exporting Guide:                user-guide/exporting_guide.md
+            - Dominion Exporting Guide:   user-guide/dom_exporting_guide.md
+            - ES&S Exporting Guide:       user-guide/ess_exporting_guide.md
+            - Hart Exporting Guide:       user-guide/hart_exporting_guide.md
+        - Uploading Guide:                user-guide/uploading_guide.md
+        - Configuration Files:            user-guide/configuration_files.md
+#        - Running Audits:                 user-guide/running_audits_app.md
+#        - TargetMapper App:               user-guide/targetmapper_app.md
+#        - Adjudicator App:                user-guide/adjudicator_app.md
+#        - Voter Intent Guide:             user-guide/voter_intent_guide.md
+#        - Tally App:                      user-guide/tally_app.md
+#        - Pricing Guidelines:             user-guide/prices.md
+        - Glossary:                       user-guide/glossary.md
     - Community:
-        - In the News:          community/in_the_news.md
-        - How you can help:     community/you_can_help.md
-#        - Forums:               community/forums.md
-#        - Donate:               community/donate.md
+        - In the News:                    community/in_the_news.md
+        - How you can help:               community/you_can_help.md
+#        - Forums:                         community/forums.md
+#        - Donate:                         community/donate.md
     - Audit Results:
-        - Case study:           audit-results/case-study.md
+        - Case study:                     audit-results/case-study.md
     - About:
-        - About Us:             about/about.md
+        - About Us:                       about/about.md
 #    - Policies:
-#        - Privacy:             about/privacy.md
-#        - Terms of Use:        about/terms-of-use.md
-#        - EULA:                about/eula.md
+#        - Privacy:                        about/privacy.md
+#        - Terms of Use:                   about/terms-of-use.md
+#        - EULA:                           about/eula.md
 
 theme:
   name: material
