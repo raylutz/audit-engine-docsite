@@ -19,9 +19,9 @@ remote_url3: https://docs.google.com/document/d/1x_sgk_gcDka9ryzzEWnhKtdy2Z9CGnk
 
 We have compiled step-by-step guides to export data for use by AuditEngine for each of the following vendors
 
-- **[Dominion Voting Systems: Exporting Ballot Images, Cast Vote Records, and Ballot Style Masters](user-guide/dom_exporting_guide.md)**
-- **[Election Systems & Software (ES&S): Exporting Ballot Images and Cast Vote Records](user-guide/ess_exporting_guide.md)**
-- [**Hart Intercivic: Exporting Ballot Images, Cast Vote Records, and Ballot Style Masters**](user-guide/hart_exporting_guide.md)
+- **[Dominion Voting Systems: Exporting Ballot Images, Cast Vote Records, and Ballot Style Masters](dom_exporting_guide.md)**
+- **[Election Systems & Software (ES&S): Exporting Ballot Images and Cast Vote Records](ess_exporting_guide.md)**
+- [**Hart Intercivic: Exporting Ballot Images, Cast Vote Records, and Ballot Style Masters**](hart_exporting_guide.md)
 
 
 
