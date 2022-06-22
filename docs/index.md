@@ -1,13 +1,13 @@
 <link rel="icon" type="image/x-icon" href="https://mapper.auditengine.org/assets/images/A.png">
 <img src="https://copswiki.org/w/pub/Common/AuditEngine/AuditEngineLogo.png" alt="AuditEngineLogo.png" width='600' />
 
-AuditEngine is an election auditing platform which performs "Ballot Image Auditing". Relatively high-resolution ballot images are now captured by voting machine scanners that are now used in the polling places or central count operations. AuditEngine processes these ballot images to create an independent tabulation, and then it compares with the official cast-vote record files and can provide detailed reports which detail any disagreement in how any voters mark should be interpreted.
+AuditEngine is an election auditing platform which performs "Ballot Image Auditing". Relatively high-resolution ballot images are now captured by voting machine scanners used in polling places or central count operations. AuditEngine processes these ballot images to create an independent tabulation, and then it compares with the official cast-vote record files and can provide detailed reports which detail any discrepancy between the official records and our independent tabulation.
 
 ## Top Questions
 
 **Q: We already conduct an audit our our county. Why should we use AuditEngine?**
 
-A: Typical audits are performed by the election officials by tallying the votes on a sample of ballots. In contrast, audits by AuditEngine are performed independently, and review all ballot images with a fine level of detail. The sampling audits will require a full hand count audit when the margin of victory is tight, just when we need the audit the most, while ballot image audits. AuditEngine provides another view of the results of the election and is generally more accurate in predicting voter intent than current voting machines.
+A: Typical audits are performed by the election officials by tallying the votes on a sample of ballots. In contrast, audits by AuditEngine are performed independently reviewing all ballot images with a fine level of detail. Sampling audits will require a full hand count audit when the margin of victory is tight, just when we need the audit the most. While AuditEngine can audit all contests with the same predictable cost regardless of the margines of victory. AuditEngine provides another view of the results of the election and is generally more accurate in predicting voter intent than current voting machines.
 
 ## Primary Links
 
@@ -61,32 +61,38 @@ The lower block shows how AuditEngine accepts ballot images, and then performs s
 ### Getting the data together
 First, the data must be assembled for use by AuditEngine. Most of this is already produced and available by Election Officials.
 
-- **Ballot Image Creation:** 
+- **Ballot Images:** 
     - Modern voting equipment used in most districts in the U.S. create ballot images as they process the ballots. 
     - It is essential that this equipment be set so the ballot images are not deleted after they are used to extract the vote. 
     - These images are then transferred to the Election Management System (EMS) from voter-facing scanners using flash media or from central scan operations using similar methods.
-    - The EMS can export the ballot images for use by AuditEngine. These should be placed into ZIP archives with about 30,000 to 50,000 ballots per archive.
-
-- **Election Information File (EIF):** 
-    - Our system requires additional information regarding the information actually printed on the ballots.
-    - The EIF lists
-        - all contest names, as used in the CVR, as printed on hand-marked paper ballots, and as printed on BMD ballots
-        - the options in each contests, the full-text descriptions of yes/no contests.
-        - the number of write-ins, and the vote-for number. 
-    - This information is available from sample ballots and can be assembled prior to the election.
-    - This is a spreadsheet file in .xlsx or .csv format. The exact format of this file is provided below.
-    - In rare case, we also need the Ballot Options File (BOF) which lists the actual text of each option if they differ from the official CVR text.
-    
-- **Cast Vote Record (CVR):**
-    - Officials can produce cast-vote-record files (CVR) which lists the results of their interpretation of the ballots. 
+    - The EMS can export the ballot images for use by AuditEngine. These should be placed into ZIP archives with about 30,000 to 50,000 ballots per archive. 
+    - Please see [exporting_guide.md](exporting guide) for step-by-step guides for exporting Ballot Images from popular voting systems.
+    - The ballot images are then uploaded to our datacenter so we can process them using thousands of computers in parallel. See [uploading_guilde.md](uploading guide) for instructions.
+- **Cast Vote Records (CVRs):**
+    - Officials can produce cast-vote-record files (CVRs) which lists the results of their interpretation of the ballots. 
     - AuditEngine currently supports the ES&S format and the Dominion format.
     - If any ballots are suppressed for privacy reasons, the total number of ballots suppressed and their vote totals should be provided.
     - AuditEngine can also be run without the CVR but some additional information is required:
        - **Results Summary:** The official (or unofficial) results that _should_ match the totals from the cast-vote-records file, but may not if any ballots have been suppressed for privacy concerns.  For some systems, we can scrape the data from the official election website report.
-       - **Style to Contests File:** This is a spreadsheet which can be generated later in the process that lists the contests included in each style. This can be generated by inspecting the ballots or it can be provided by elections officials.
+
+- **Ballot Style Masters:**
+
+  - It is necessary for us to generate a map of the targets (ovals) on hand-marked paper ballots and what they mean. To do this with the least opportunity for human error, we can parse the ballot style master PDF files. These are the files actually sent to the printing contractor, and must have all barcode information included, and be in "searchable" PDF format. 
+  - Please see [exporting_guide.md](exporting guide) for step-by-step guides for exporting Ballot Style Masters from popular voting systems.
+
+- **Election Information File (EIF):** 
+
+  - Our system requires additional information regarding the information actually printed on the ballots. This we can generally generate by parsing the CVRs files. 
+
+  - The EIF lists
+    - all contest names, as used in the CVR, as printed on hand-marked paper ballots, and as printed on BMD ballots (this is no longer critical if we are using the TargetMapper application to map targets)
+    - the number of write-ins, and the vote-for number. 
+    - The actual text found on BMD ballot summary cards for each contest.
+
+  - This information is available from sample ballots and can be assembled prior to the election.
 
 ### Guides:
-- [Exporting Guide](user-guide/exporting_guide.md) -- Guide for election staff to export ballot images and cast-vote records from ES&S or Dominion systems.
+- [Exporting Guide](user-guide/exporting_guide.md) -- Guide for election staff to export ballot images, Cast-vote records, and Ballot Style Masters from ES&S, Dominion, or Hart systems.
 - [Uploading Guide](user-guide/uploading_guide.md) -- Guide for election staff or affiliates to upload ballot images and cast-vote records to AuditEngine.
 
 ### Creating an Account
@@ -94,7 +100,8 @@ First, the data must be assembled for use by AuditEngine. Most of this is alread
 
 
 ### Creating a Job
-- **Name the Job:** Create a job with a name for future reference. You must include the district, election date, and election type to distinguish it from other jobs you (and others) might submit.
+- **Name the Job:** Create a job with a name for future reference. You must include the district, election date, and election type to distinguish it from other jobs you (and others) might submit. We use the naming convention as follows:
+    	ST_County_YYYYMMDD, like CA_SanDiego_20201103.
 - **Image Files:**
     - **Direct Uploading:** We recommend that you upload your archives directly to our site using our browser interface, which has no limit to the size of each file uploaded.
     - **Send Files on USB drive or thumbdrive:** It is common that files are very large, and then it may be more convenient to send us the data. However, please use direct uploading if possible.
