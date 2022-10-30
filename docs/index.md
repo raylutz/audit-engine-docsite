@@ -24,7 +24,7 @@ than the official voting systems by 93% on contests where we have located a disa
 
 **(START HERE IF YOU ARE NEW TO AUDIT ENGINE)**
 
-- [(M1970) 2021-05-29 AuditEngine Case Study Report & Videos](https://copswiki.org/Common/M1970)
+- [(M1970) 2021-05-29 AuditEngine Case Study Report & Videos](case-study.md)
 
 
 **JUMP DIRECTLY TO THE FIRST VIDEO regarding the Case Study, which is a great introduction:**
