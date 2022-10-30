@@ -22,6 +22,7 @@ nav:
 #        - Voter Intent Guide:             user-guide/voter_intent_guide.md
 #        - Tally App:                      user-guide/tally_app.md
 #        - Pricing Guidelines:             user-guide/prices.md
+        - FAQs:                           user-guide/auditengine_faqs.md
         - Glossary:                       user-guide/glossary.md
     - Community:
         - In the News:                    community/in_the_news.md
