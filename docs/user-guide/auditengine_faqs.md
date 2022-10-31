@@ -1,3 +1,12 @@
+---
+title: AuditEngine FAQs -- Frequently Asked Questions
+summary: List of questions people frequently ask about AuditEngine
+authors:
+    - Ray Lutz
+date: 2021-06-11
+remote_url: https://copswiki.org/Common/AuditEngineFAQs
+---
+
 # Frequently Asked Questions (FAQs) about AuditEngine
 
 ## Q: How does AuditEngine work?
@@ -70,13 +79,4 @@ We believe it is more beneficial that this software is not shared and instead, a
 
 ## Q: How is AuditEngine funded?
 We are pursuing a grass-roots funding model, where we can do fundraising for each audit from the general public, rather than relying on contracts with the same government entities we are auditing. We believe such contracts, unless carefully constructed, will result in the auditors preferably providing high scores to their clients. We believe that the cost of operating AuditEngine is low enough so that the public can fund each audit due to the interest in having an independent review. 
-
----
-title: AuditEngine FAQs -- Frequently Asked Questions
-summary: List of questions people frequently ask about AuditEngine
-authors:
-    - Ray Lutz
-date: 2021-06-11
-copswiki_url: https://copswiki.org/Common/AuditEngineFAQs
----
 
