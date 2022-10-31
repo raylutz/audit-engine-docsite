@@ -3,7 +3,7 @@
 
 # Glossary
 
-**Adjudication --** This is the process of human review of ballots or ballot images and providing an interpretation of the vote on that ballot.
+**Adjudication --** This is the process of human review of ballots or ballot images and providing an interpretation of the vote on that ballot. Dominion Voting Systems has an adjudication module that facilitate adjudication by election staff. AuditEngine also has an Adjudication App that can help fine tune the results obtained by AuditEngine.
 
 **Archive --** A single file which can contain many smaller files and also may compress them. This saves a lot of space on the disk because the disk requires that files consume at least one block, and the last block in a file is partially empty. Archives pack all the files together into one file without any empty space. This also makes it easier to handle many thousands of individual files by grouping them together into archives. We recommend that you use the open source standardized "ZIP" archives, because the files can be individually extracted from the archive without extracting them all. The free application "7-zip" from [7-zip.org](https://7-zip.org) is a very good tool, but <u>use the conventional zip format and not the proprietary 7z format</u>. We recommend that up to about 50,000 ballot images are placed into the same archive, and they should be between about 5GB and 10GB in size for easy handling.
 
@@ -17,7 +17,7 @@
 
 **Ballot Style Masters --** PDF files in "searchable" format that are normally sent to the ballot printer company for printing of ballots in their final useable form. These files are used by AuditEngine to simplify the process of "Mapping" the ballot styles to provide the location of each active target oval or rectangle which is darkened by the voter to express their voting intent.
 
-**Cast Vote Record (CVR) --** A data file or set of files that provides the outcome of an election, typically broken down to the individual ballot. For ES&S ballots, the CVR is typically a set of Excel spreadsheet files, where each record is an individual ballots. For the more recent Dominion voting systems, the CVR uses a variant of the NIST CVR "Common Data Format" and is a set of JSON files. ES&S also uses this term for the pdf file that are the summary of the voting system evaluation of the vote on that ballot, and so we call these "CVR PDF files" while the spreadsheets are "CVR Spreadsheets."
+**Cast Vote Record (CVR) --** A data file or set of files that provides the outcome of an election, typically broken down to the individual ballot. For ES&S ballots, the CVR is typically a set of Excel spreadsheet files, where each record is an individual ballots. For the more recent Dominion voting systems, the CVR uses a variant of the NIST CVR "Common Data Format" and is a set of JSON files or sometimes CSV (comma separated values) files. ES&S also uses this term for the pdf file that are the summary of the voting system evaluation of the vote on that ballot, and so we call these "CVR PDF files" while the spreadsheets are "CVR Spreadsheets."
 
 **Dominion Voting Systems (Dominion) -- **A major voting system vendor with approximately 37% of the market.
 
