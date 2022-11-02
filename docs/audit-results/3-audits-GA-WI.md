@@ -8,7 +8,7 @@ These audits did show consistency between the ballot images and the official res
 <iframe width="560" height="315" src="https://www.youtube.com/embed/hQSbcDsUaPw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Press Release:
-   * PDF: [press rel: Three County Audit in GA and WI.pdf](https://copswiki.org/w/pub/Common/M1986/press+rel_+Three+County+Audit+in+GA+and+WI.pdf)
+   * PDF: [press rel: Three County Audit in GA and WI.pdf](https://copswiki.org/w/pub/Common/M1986/press%20rel_%20Three%20County%20Audit%20in%20GA%20and%20WI.pdf)
    * [Googledoc (best formatting or if you wish to comment)](https://docs.google.com/document/d/18x0lKnQgjZfC2dGrSHJ2lihp96q1IJonbiI4e1uszYA/edit?usp=sharing)
 
 <iframe src="https://docs.google.com/document/d/e/2PACX-1vSnEOS7EIfdeVohQ2oGNCwBjkL4WwZAlqiBkfG__qjHHehtFSJbkHkYwcK_FeG15v_vUwhcbTrs8nFR/pub?embedded=true" width=800 height=500 border=1></iframe>
@@ -16,14 +16,14 @@ These audits did show consistency between the ballot images and the official res
 ## Background Document:
    * [Googledoc: (best formatting or if you wish to comment)](https://docs.google.com/document/d/18A1K8mXXHnhisLqBQigx0ibboz39FAh9hOSykcR-jT4/edit?usp=sharing)
 
-   * PDF: [Auditing Elections Using Ballot Images and AuditEngine -- General Background.pdf](https://copswiki.org/w/pub/Common/M1986/Auditing+Elections+Using+Ballot+Images+and+AuditEngine+--+General+Background.pdf) 
+   * PDF: [Auditing Elections Using Ballot Images and AuditEngine -- General Background.pdf](https://copswiki.org/w/pub/Common/M1986/Auditing%20Elections%20Using%20Ballot%20Images%20and%20AuditEngine%20--%20General%20Background.pdf) 
 
 <iframe src="https://docs.google.com/document/d/e/2PACX-1vRA518G2jYo6yV3oH6mDuoyQ8sSvKVv-Pqmxz_oxg1EgPyjqnMvpMJhQttnSl942Ti0UYf9twTGKiAL/pub?embedded=true" width=800 height=500 border=1></iframe>
 
 ## Bartow, GA:
    * Narrative Report - Audit<nop>Engine 2020 Election Ballot Image Audit of Bartow County GA
    * [Googledoc (best formatting or if you wish to comment)](https://docs.google.com/document/d/1oNyx0v0pNVBtkhF41IB0RWjR9n1sNlfmTYCT93tHXCA/edit?usp=sharing)
-   * PDF: [GA Bartow 20201103 Narrative Report.pdf](https://copswiki.org/w/pub/Common/M1986/GA+Bartow+20201103+Narrative+Report.pdf)
+   * PDF: [GA Bartow 20201103 Narrative Report.pdf](https://copswiki.org/w/pub/Common/M1986/GA%20Bartow%2020201103%20Narrative%20Report.pdf)
    * Embedded report:
 
 <iframe src="https://docs.google.com/document/d/e/2PACX-1vTnSyqBlzfqT34VQfMWC2qUp6QMiYnUakbaC4lTRSmdru8-Cz7WrkgcIdup8cIOPQwynNxHxZKlcRc8/pub?embedded=true" width=800 height=500></iframe>
@@ -31,7 +31,7 @@ These audits did show consistency between the ballot images and the official res
 ## Fulton, GA:
    * Narrative Report - AuditEngine 2020 Election Ballot Image Audit of Fulton County GA
    * [Googledoc (best formatting or if you wish to comment): ](https://docs.google.com/document/d/17glzBMkV7sx7L_Ig_uBp4mOK7HXVP3zlv_2BUOWX63I/edit?usp=sharing)
-   * PDF: [GA Fulton 20201103 Narrative Report.pdf](https://copswiki.org/w/pub/Common/M1986/GA+Fulton+20201103+Narrative+Report.pdf)
+   * PDF: [GA Fulton 20201103 Narrative Report.pdf](https://copswiki.org/w/pub/Common/M1986/GA%20Fulton%2020201103%20Narrative%20Report.pdf)
    * Embedded report:
 
 <iframe src="https://docs.google.com/document/d/e/2PACX-1vRC4Svf3w70XRUlyjLuGCwtXycO51BzXyId7YGYh9EdJ93umzA1qAiPo0rNohdtcNqQx4Rw9IIWTpn5/pub?embedded=true" width=800 height=500></iframe>
@@ -39,7 +39,7 @@ These audits did show consistency between the ballot images and the official res
 ## Dane, WI:
    * Narrative Report - AuditEngine 2020 Election Ballot Image Audit of Dane County WI
    * [Googledoc (best formatting or if you wish to comment)](https://docs.google.com/document/d/1g56YbIkjRSSIXfGrLPqGPxFxHqMhabRUdgChM0FgzRA/edit?usp=sharing)
-   * PDF: [WI Dane 20201103 Narrative Report.pdf](https://copswiki.org/w/pub/Common/M1986/WI+Dane+20201103+Narrative+Report.pdf)
+   * PDF: [WI Dane 20201103 Narrative Report.pdf](https://copswiki.org/w/pub/Common/M1986/WI%20Dane%2020201103%20Narrative%20Report.pdf)
    * Embedded Report:
 
 <iframe src="https://docs.google.com/document/d/e/2PACX-1vSEjk-vfBDvjkKZ7ZUh5vJYZJ26VmFCceeGEIh9qnwOyLBAi41DwT2THNwFwPH8HRke3gLUPXhOM2HI/pub?embedded=true" width=800 height=500></iframe>
