@@ -16,10 +16,11 @@ We show that the accuracy of AuditEngine is greater than 99.99% and when it diff
 
 **See Also:**
 
-- <a href="https://copswiki.org/Common/AuditEngineFAQs" target="_blank">AuditEngineFAQs</a> -- frequently asked questions about AuditEngine
+- [Background Document](user-guide/auditengine-background-doc) -- Review this background document to become acquainted with general concepts and operational principles of AuditEngine 
+- [AuditEngine FAQs](user-guide/auditengine_faqs) -- frequently asked questions about AuditEngine
 - <a href="https://copswiki.org/Common/AuditEngine" target="_blank">AuditEngine</a> -- primary project page for AuditEngine
 
-### The Case Study Report
+### Combined Case Study Report -- 2020 Election Ballot Image Audits in Collier County, Volusia County, and St. Lucie County Florida
 The <a href="https://docs.google.com/document/d/e/2PACX-1vQspH7a2ZWvvoVLPidaRmiVzPWicJ--MMq28g75bWJMMNvb8HwvB8AZP7jmflQVRAgpyli0pBbUJu5b/pub" target="_blank">Case Study Report</a> <-- click here to open as googledoc<br>
 <a href="https://docs.google.com/document/d/1Jb5AegEfR2ddjbN5LYjVgrpZtHk19ooSnrb-90N5QTQ/edit?usp=sharing" target="_blank">Case Study Report</a> <-- click here to open googledoc<br>
 
@@ -35,7 +36,7 @@ https://youtu.be/dDEFGsqdCsg
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/dDEFGsqdCsg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-### Video Part 2: Collier, FL:
+### Part 2: Collier, FL:
 
 https://youtu.be/cOrp87MAuz8
 

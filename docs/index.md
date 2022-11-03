@@ -3,50 +3,20 @@
 
 AuditEngine is an election auditing platform which performs "Ballot Image Auditing". Relatively high-resolution ballot images are now captured by voting machine scanners used in polling places or central count operations. AuditEngine processes these ballot images to create an independent tabulation, and then it compares with the official cast-vote record files and can provide detailed reports which detail any discrepancy between the official records and our independent tabulation.
 
-## Top Questions
-
-**Q: We already conduct an audit our our county. Why should we use AuditEngine?**
-
-A: Typical audits are performed by the election officials by tallying the votes on a sample of ballots. In contrast, audits by AuditEngine are performed independently reviewing all ballot images with a fine level of detail. Sampling audits will require a full hand count audit when the margin of victory is tight, just when we need the audit the most. While AuditEngine can audit all contests with the same predictable cost regardless of the margines of victory. AuditEngine provides another view of the results of the election and is generally more accurate in predicting voter intent than current voting machines.
-
 ## Primary Links
 
+- 
+- [AuditEngine FAQs: Frequently Asked Questions](user-guide/auditengine_faqs)
 - [Active AuditEngine site: (click to Enter)](https://engine.auditengine.org)
-- [AuditEngineFAQs: Frequently Asked Questions](https://copswiki.org/Common/AuditEngineFAQs)
 
 ## Latest News
 
-### AuditEngine Case Study Report
+### AuditEngine Audit Reports
 
-AuditEngine was used to audit three counties in Florida: Collier, Volusia, and St. Lucie Counties. Learn about audit engine and its unbelievable accuracy, which is better
-than the official voting systems by 93% on contests where we have located a disagreement (excluding corrupted ballot images). Also exposed in this report is the fact that the Election Systems & Software (ES&S) Election Management System (EMS) uses two internal tabulations that do not agree! This seems like it could be a security risk.
-(Read the report and watch four videos on this page.)
-
-**(START HERE IF YOU ARE NEW TO AUDIT ENGINE)**
-
-- [(M1970) 2021-05-29 AuditEngine Case Study Report & Videos](case-study.md)
-
-
-**JUMP DIRECTLY TO THE FIRST VIDEO regarding the Case Study, which is a great introduction:**
-
-- Part 1: Introduction and Theory of Operation: https://youtu.be/dDEFGsqdCsg
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/dDEFGsqdCsg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><BR>
-
-### AuditEngine Frequently Asked Questions
-We have started to compile the questions that tend to asked on this page: [Audit Engine FAQs](https://copswiki.org/Common/AuditEngineFAQs)
-
-### AuditEngine Press and Announcements
-
-- [Press Release AuditEngine Available for 2020 General Election -- 2020-10-04](https://copswiki.org/w/pub/Common/AuditEngine/Press Release AuditEngine Available for 2020 General Election -- 2020-10-02.pdf)<br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/54z2t_wANzA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><BR>
-
-- Jennifer Cohn interview on AuditEngine:
-<iframe width="560" height="315" src="https://www.youtube.com/embed/oM0elo5Ad2U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><BR>
-
-- AuditEngine was first announced and demonstrated at the National Election Integrity Conference in Berkeley, CA on Oct 6, 2019, which was sponsored by the [[https://nvrtf.org/][National Voter Rights Task Force]]. Read press release here: [Press Release](https://copswiki.org/Common/M1928).
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/RHaDzomo0kI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><BR>
+- [Audits in Three Counties (2020): GA/WI](audit-results/3-audits-GA-WI) -- AuditEngine was used to audit two counties in GA (Bartow and Fulton) and also Dane, WI. This audit confirmed consistency of results but there were unusual interesting quirks of note.
+- [Three Counties in Florida (2020): Collier, St. Lucie, Volusia](audit-results/case-study) -- AuditEngine was used to audit three counties in Florida: Collier, Volusia, and St. Lucie Counties. Learn about audit engine and its unbelievable accuracy, which is better
+  than the official voting systems by 93% on contests where we have located a disagreement (excluding corrupted ballot images). Also exposed in this report is the fact that the Election Systems & Software (ES&S) Election Management System (EMS) uses two internal tabulations that do not agree! This seems like it could be a security risk.
+  (Read the report and watch four videos on this page.)
 
 ## Simplified Block Diagram
 The following block diagram should help your understanding of how AuditEngine works. 

@@ -14,19 +14,16 @@ These audits did show consistency between the ballot images and the official res
 <iframe src="https://docs.google.com/document/d/e/2PACX-1vSnEOS7EIfdeVohQ2oGNCwBjkL4WwZAlqiBkfG__qjHHehtFSJbkHkYwcK_FeG15v_vUwhcbTrs8nFR/pub?embedded=true" width=800 height=500 border=1></iframe>
 
 ## Background Document:
-   * [Googledoc: (best formatting or if you wish to comment)](https://docs.google.com/document/d/18A1K8mXXHnhisLqBQigx0ibboz39FAh9hOSykcR-jT4/edit?usp=sharing)
-
-   * PDF: [Auditing Elections Using Ballot Images and AuditEngine -- General Background.pdf](https://copswiki.org/w/pub/Common/M1986/Auditing%20Elections%20Using%20Ballot%20Images%20and%20AuditEngine%20--%20General%20Background.pdf) 
-
-<iframe src="https://docs.google.com/document/d/e/2PACX-1vRA518G2jYo6yV3oH6mDuoyQ8sSvKVv-Pqmxz_oxg1EgPyjqnMvpMJhQttnSl942Ti0UYf9twTGKiAL/pub?embedded=true" width=800 height=500 border=1></iframe>
+   * [Background Document](user-guide/auditengine-background-doc) -- Review this background document to become acquainted with general concepts and operational principles of AuditEngine 
 
 ## Bartow, GA:
-   * Narrative Report - Audit<nop>Engine 2020 Election Ballot Image Audit of Bartow County GA
+
+   * Narrative Report - AuditEngine 2020 Election Ballot Image Audit of Bartow County GA
    * [Googledoc (best formatting or if you wish to comment)](https://docs.google.com/document/d/1oNyx0v0pNVBtkhF41IB0RWjR9n1sNlfmTYCT93tHXCA/edit?usp=sharing)
    * PDF: [GA Bartow 20201103 Narrative Report.pdf](https://copswiki.org/w/pub/Common/M1986/GA%20Bartow%2020201103%20Narrative%20Report.pdf)
    * Embedded report:
 
-<iframe src="https://docs.google.com/document/d/e/2PACX-1vTnSyqBlzfqT34VQfMWC2qUp6QMiYnUakbaC4lTRSmdru8-Cz7WrkgcIdup8cIOPQwynNxHxZKlcRc8/pub?embedded=true" width=800 height=500></iframe>
+<iframe src="https://docs.google.com/document/d/e/2PACX-1vTnSyqBlzfqT34VQfMWC2qUp6QMiYnUakbaC4lTRSmdru8-Cz7WrkgcIdup8cIOPQwynNxHxZKlcRc8/pub?embedded=true" width=800 height=500 border=1></iframe>
 
 ## Fulton, GA:
    * Narrative Report - AuditEngine 2020 Election Ballot Image Audit of Fulton County GA
@@ -34,7 +31,7 @@ These audits did show consistency between the ballot images and the official res
    * PDF: [GA Fulton 20201103 Narrative Report.pdf](https://copswiki.org/w/pub/Common/M1986/GA%20Fulton%2020201103%20Narrative%20Report.pdf)
    * Embedded report:
 
-<iframe src="https://docs.google.com/document/d/e/2PACX-1vRC4Svf3w70XRUlyjLuGCwtXycO51BzXyId7YGYh9EdJ93umzA1qAiPo0rNohdtcNqQx4Rw9IIWTpn5/pub?embedded=true" width=800 height=500></iframe>
+<iframe src="https://docs.google.com/document/d/e/2PACX-1vRC4Svf3w70XRUlyjLuGCwtXycO51BzXyId7YGYh9EdJ93umzA1qAiPo0rNohdtcNqQx4Rw9IIWTpn5/pub?embedded=true" width=800 height=500 border=1></iframe>
 
 ## Dane, WI:
    * Narrative Report - AuditEngine 2020 Election Ballot Image Audit of Dane County WI
@@ -42,4 +39,4 @@ These audits did show consistency between the ballot images and the official res
    * PDF: [WI Dane 20201103 Narrative Report.pdf](https://copswiki.org/w/pub/Common/M1986/WI%20Dane%2020201103%20Narrative%20Report.pdf)
    * Embedded Report:
 
-<iframe src="https://docs.google.com/document/d/e/2PACX-1vSEjk-vfBDvjkKZ7ZUh5vJYZJ26VmFCceeGEIh9qnwOyLBAi41DwT2THNwFwPH8HRke3gLUPXhOM2HI/pub?embedded=true" width=800 height=500></iframe>
+<iframe src="https://docs.google.com/document/d/e/2PACX-1vSEjk-vfBDvjkKZ7ZUh5vJYZJ26VmFCceeGEIh9qnwOyLBAi41DwT2THNwFwPH8HRke3gLUPXhOM2HI/pub?embedded=true" width=800 height=500 border=1></iframe>

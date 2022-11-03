@@ -2,14 +2,13 @@ site_name: AuditEngine Docs
 site_url: https://auditengine.org/
 nav:
     - Home: index.md
-    - Audit Projects:
-        - Overview:                       audit-projects/overview.md
-        - Arizona 2020:                   audit-projects/AZ_2020.md
-        - Florida 2020:                   audit-projects/FL_2020.md
-        - Georgia 2020:                   audit-projects/GA_2020.md
-        - Wisconsin 2020:                 audit-projects/WI_2020.md
+    - Audit Results:
+        - Background Document:            user-guide/auditengine-background-doc.md
+        - Case Study, 3 FL Disticts:      audit-results/case-study.md              # https://copswiki.org/Common/M1970
+        - Three Audits GA/WI:             audit-results/3-audits-GA-WI.md          # https://copswiki.org/Common/M1986
     - User Guide:
 #        - Overview:                       user-guide/overview.md
+        - Background Document:            user-guide/auditengine-background-doc.md
         - Exporting Guide:                user-guide/exporting_guide.md
         - Dominion Exporting Guide:       user-guide/dom_exporting_guide.md
         - ES&S Exporting Guide:           user-guide/ess_exporting_guide.md
@@ -22,16 +21,19 @@ nav:
 #        - Voter Intent Guide:             user-guide/voter_intent_guide.md
 #        - Tally App:                      user-guide/tally_app.md
 #        - Pricing Guidelines:             user-guide/prices.md
-        - FAQs:                           user-guide/auditengine_faqs.md
+        - FAQs:                           user-guide/auditengine_faqs.md            # https://copswiki.org/Common/AuditEngineFAQs
         - Glossary:                       user-guide/glossary.md
     - Community:
         - In the News:                    community/in_the_news.md
         - How you can help:               community/you_can_help.md
 #        - Forums:                         community/forums.md
 #        - Donate:                         community/donate.md
-    - Audit Results:
-        - Case study:                     audit-results/case-study.md
-        - Three Audits (GA/WI):           audit-results/3-audits-GA-WI.md
+    - Audit Projects:
+        - Overview:                       audit-projects/overview.md
+        - Arizona 2020:                   audit-projects/AZ_2020.md
+        - Florida 2020:                   audit-projects/FL_2020.md
+        - Georgia 2020:                   audit-projects/GA_2020.md
+        - Wisconsin 2020:                 audit-projects/WI_2020.md
     - About:
         - About Us:                       about/about.md
 #    - Policies:
