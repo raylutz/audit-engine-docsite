@@ -47,23 +47,24 @@ First, the data must be assembled for use by AuditEngine. Most of this is alread
 
 - **Ballot Style Masters:**
 
-  - It is necessary for us to generate a map of the targets (ovals) on hand-marked paper ballots and what they mean. To do this with the least opportunity for human error, we can parse the ballot style master PDF files. These are the files actually sent to the printing contractor, and must have all barcode information included, and be in "searchable" PDF format. 
-  - Please see [exporting_guide.md](exporting guide) for step-by-step guides for exporting Ballot Style Masters from popular voting systems.
+   - It is necessary for us to generate a map of the targets (ovals) on hand-marked paper ballots and what they mean. To do this with the least opportunity for human error, we can parse the ballot style master PDF files. These are the files actually sent to the printing contractor, and must have all barcode information included, and be in "searchable" PDF format. 
+   - Please see [exporting_guide](user-guide/exporting guide.md) for step-by-step guides for exporting Ballot Style Masters from popular voting systems.
 
 - **Election Information File (EIF):** 
-
-  - Our system requires additional information regarding the information actually printed on the ballots. This we can generally generate by parsing the CVRs files. 
-
-  - The EIF lists
-    - all contest names, as used in the CVR, as printed on hand-marked paper ballots, and as printed on BMD ballots (this is no longer critical if we are using the TargetMapper application to map targets)
-    - the number of write-ins, and the vote-for number. 
-    - The actual text found on BMD ballot summary cards for each contest.
-
-  - This information is available from sample ballots and can be assembled prior to the election.
+- Our system requires additional information regarding the information actually printed on the ballots. This we can generally generate automatically by parsing the CVRs files. 
+  
+- The EIF lists
+     - all contest and option (candidate) names, as used in the CVR 
+     - the number of write-ins, and the vote-for number. 
+     - The actual text found on BMD ballot summary cards for each contest and option name.
+   
+- This information is available from sample ballots and can be assembled prior to the election.
 
 ### Guides:
 - [Exporting Guide](user-guide/exporting_guide.md) -- Guide for election staff to export ballot images, Cast-vote records, and Ballot Style Masters from ES&S, Dominion, or Hart systems.
-- [Uploading Guide](user-guide/uploading_guide.md) -- Guide for election staff or affiliates to upload ballot images and cast-vote records to AuditEngine.
+   - [Dominion Exporting Guide](user-guide/dom_exporting_guide.md) -- step-by-step instructions for exporting ballot images, cast vote records, and ballot style masters from the Dominion voting system.
+   - [ES&S Exporting Guide](user-guide/ess_exporting_guide.md) -- step-by-step instructions for exporting ballot images, cast vote records, and ballot style masters from the Election Software & Systems (ES&S) voting system.
+   - [Hart Exporting Guide](user-guide/hart_exporting_guide.md) -- step-by-step instructions for exporting ballot images, cast vote records, and ballot style masters from the Hart InterCivic voting system.
 
 ### Creating an Account
 - **Registration:** You must register on the <https://AuditEngine.org> website to create a user identity
@@ -73,41 +74,40 @@ First, the data must be assembled for use by AuditEngine. Most of this is alread
 - **Name the Job:** Create a job with a name for future reference. You must include the district, election date, and election type to distinguish it from other jobs you (and others) might submit. We use the naming convention as follows:
     	ST_County_YYYYMMDD, like CA_SanDiego_20201103.
 - **Image Files:**
-    - **Direct Uploading:** We recommend that you upload your archives directly to our site using our browser interface, which has no limit to the size of each file uploaded.
-    - **Send Files on USB drive or thumbdrive:** It is common that files are very large, and then it may be more convenient to send us the data. However, please use direct uploading if possible.
+   - **Direct Uploading:** We recommend that you upload your archives directly to our site using our browser interface, which has no limit to the size of each file uploaded.
+   - **Send Files on USB drive or thumbdrive:** It is common that files are very large, and then it may be more convenient to send us the data. However, please use direct uploading if possible.
 
 - **Cast Vote Records File(s) (CVR Files):** 
-    - A cast-vote record file (CVR) provides the result of the election as determined by the voting system. 
-        - A CVR can be broken down to the individual ballot (which is preferred) or it can provide results based on higher level groups, such as precincts or batches.
-        - AuditEngine does not require the CVR file, and it does not rely on the CVR file in its own processing of the ballot images.
-        - However, AuditEngine will make use of the CVR to a limited extent, if it is available, as follows:
-            - To redunce the processing required in the initial pre-scan of the ballots. 
-               - If no CVR is provided, all ballot images are prescanned to extract style information from barcodes on hand-marked paper ballots, i.e. which contests are included on each ballot style.
-               - If the CVR is provided with style for each ballot, then a full prescan of the ballots is not required. Use of this style information, if incorrect, will be discovered in the style templating and mapping process. Reliance on the style from the CVR does not change the vote extraction process (which is performed without reference to the CVR).
-            - To locate discrepancies between the voting-system tabulation and the audit system.
-               - Only after AuditEngine has fully extracted the vote, the voting system CVR is compared with that result to provide the discrepancy report. 
+   - A cast-vote record file (CVR) provides the result of the election as determined by the voting system. 
+      - A CVR can be broken down to the individual ballot (which is preferred) or it can provide results based on higher level groups, such as precincts or batches.
+      - AuditEngine does not require the CVR file, and it does not rely on the CVR file in its own processing of the ballot images.
+      - However, AuditEngine will make use of the CVR to a limited extent, if it is available, as follows:
+         - To redunce the processing required in the initial pre-scan of the ballots. 
+         - If no CVR is provided, all ballot images are prescanned to extract style information from barcodes on hand-marked paper ballots, i.e. which contests are included on each ballot style.
+         - If the CVR is provided with style for each ballot, then a full prescan of the ballots is not required. Use of this style information, if incorrect, will be discovered in the style templating and mapping process. Reliance on the style from the CVR does not change the vote extraction process (which is performed without reference to the CVR).
+         - To locate discrepancies between the voting-system tabulation and the audit system.
+         - Only after AuditEngine has fully extracted the vote, the voting system CVR is compared with that result to provide the discrepancy report. 
 
-    - AuditEngine supports voting-system cast-vote-record (CVR) files in vendor-defined formats and in the new "Common Data Format" as defined by NIST or variants.
-        - ES&S Legacy Format: 
-            - This is a table-oriented format which results in a reasonable size and number of files.
-            - Use CSV (character separated data) or .xlsx format. 
-            - Please limit the size of any single .xlsx file to no more than 99,999 records (100,000) lines by splitting into several files if needed. 
-            - Please compress each file using ZIP.
-        - Dominion Legacy Format:
-            - This is a CSV "tidy" format which has only a few columns and many records. 
-            - Each record contains fields that identify the data value, and one data value.
-            - Please compress each file using ZIP.
-            - This format has been generally used for batch or precinct level reports and not broken down by ballot.
-        - Dominion JSON CVR format:
-            - This format is similar to the NIST standard but is not an exact implementation.
-            - It results in typically one JSON file per batch on a given tabulator.
-            - For example, in the 2020 Primary in San Francisco, more than 13,000 files resulted.
-            - All the files should be combined into a single ZIP file.
-        - Other formats:
-            - We can add other formats as needed.
-    
-- **Election Information File (EIF):** AuditEngine generally also requires an Election Information File which provides the contest names, options, and the full-text descriptions found in each language as an .xlsx or CSV file. The format of this file is found below. 
-- **Ballot Options File (BOF):** This is actually logically part of the EIF dataset but is only rarely needed when the text for ballot options differs from the official option. This might occur in gubinatorial or presidential contests when the option includes two names, one for governor and leiutenant governor, for example. But it may not be required even if that is the case so you may want to try it first without.
+   - AuditEngine supports voting-system cast-vote-record (CVR) files in vendor-defined formats and in the new "Common Data Format" as defined by NIST or variants.
+      - ES&S Legacy Format: 
+         - This is a table-oriented format which results in a reasonable size and number of files.
+         - Use CSV (character separated data) or .xlsx format. 
+         - Please limit the size of any single .xlsx file to no more than 99,999 records (100,000) lines by splitting into several files if needed. 
+         - Please compress each file using ZIP.
+      - Dominion Legacy Format:
+         - This is a CSV "tidy" format which has only a few columns and many records. 
+         - Each record contains fields that identify the data value, and one data value.
+         - Please compress each file using ZIP.
+         - This format has been generally used for batch or precinct level reports and not broken down by ballot.
+     - Dominion JSON CVR format:
+         - This format is similar to the NIST standard but is not an exact implementation.
+         - It results in typically one JSON file per batch on a given tabulator.
+         - For example, in the 2020 Primary in San Francisco, more than 13,000 files resulted.
+         - All the files should be combined into a single ZIP file.
+     - Other formats:
+         - We can add other formats as needed.
+   
+- **Election Information File (EIF):** AuditEngine generally also requires an Election Information File which provides the official contest names, and options.
   
 - **Results Summary:** The system requires the official or unofficial results eiher in CSV, .xlsx format, or as a link to a web-page report, if we support that format. Even if the full CVR is provided, AuditEngine will compare with the final totals in the contests.
   
@@ -117,30 +117,31 @@ First, the data must be assembled for use by AuditEngine. Most of this is alread
 
 
 ### Processing an Election on AuditEngine
-- Register with the site and create a user name.
-- Define a Job. You will need to ask an administrator to define a new job and provide access to your account.
+- **Register** with the site and create a user name.
+- **Define an election.** The election will contain the uploaded ballot images, official results, and other files from the election office staff.
+- **Define an Audit  Job:** You will need to ask an administrator to define a new job and provide access to your account.
    - Once your job has been defined, the job can be launched. There are several phases:
-- Phase 1 -- Uploading files:
+- **Phase 1 -- Uploading files:**
     - The first phase of the process includes uploading ballot images, CVR files and EIF files.
     - The system will inspect the job specification and the input files for format and consistency.
     - Precheck: Consistency checks include comparing the number of ballot images with the number of cast-vote records in the CVR files and that the contests as provided in the EIF can be found in the CVR.
-- Phase 2 -- Generate Style Templates:
+- **Phase 2 -- Generate Style Templates:**
     - After the files have been uploaded as provided in Phase 1, Style Templates can be generated.
     - AuditEngine will visually inspect the ballots and learn the format of ballots that have the same style. Each style has either all or a subset of the contests in the election, and in each style, the location of targets for a given contest option will be in the same location.
-- Phase 3 -- Target Mapping
+- **Phase 3 -- Target Mapping**
     - We now use the helper browser app called TargetMapper. The user will select each style and using a mouse, locate the target for that option.
     - Similar styles can be copied and pasted, and the system will drop any contests not in the new style, and then the user can add any new contests.
     - Multiple users will be able to help perform the mapping by splitting up the range of styles.
     - At the end, the result is exported from TargetMapper. 
     - The map is imported into AuditEngine, and it performs an additional consistency check.
     - Redline proofs are created in a styles report. These proofs must be inspected manually to insure accuracy.
-- Phase 4 -- Vote Extraction and reporting:
+- **Phase 4 -- Vote Extraction and reporting:**
     - After generation of Style Templates and approval of the contest mapping, you can launch the extraction phase.
     - Audit Engine will detect marks on the ballots and create an comprehensive database containing information for each style and each ballot.
     - During this phase, the work will be split up among many separate virtual machines in the cloud-based computing services, which can provision 10s of thousands of virtual machines that run in parallel in massive data centers. This will allow us to finish your job in minutes instead of many hours or days if run on a single machine.
-- Phase 5 -- Comparison and Discrepancy Report
+- **Phase 5 -- Comparison and Discrepancy Report**
     - If a detailed CVR is available detailed to the individual ballot, then the compare-cvr (CMPCVR) process is started to compare all the records and generate a discrepancy report.
-- Phase 6 -- Reporting and Adjudication:
+- **Phase 6 -- Reporting and Adjudication:**
     - After the processing is complete, Audit Engine provides a comprehensive report, and allows interactive inspection of individual ballots and contest to resolve voter-intent in difficult cases.
     - The Adjudications File can then be prepared for future runs.  
 
@@ -149,7 +150,7 @@ First, the data must be assembled for use by AuditEngine. Most of this is alread
 - In addition, 
     - **Digital Poll Tape Report:** AuditEngine can perform a digital poll tape audit, which compares the "poll tape" from each of the polling place machines (in digital form) with the official report of election day and early voting use of those machines. 
     - The "Poll List" which provides the totals of all the voters who voted so we can check that all the ballots are represented in the ballot images set. This is an area that needs further standardization.
-    - **Hash Codes File:** This file provides the SHA256 or similar hash for each file uploaded to the posting service. When the files are uploaded to our cloud-based provider (AWS) they use a slightly different method and it is important to generate the hash values the same way. They generate the hash value by taking the MD5 hash value of smaller chunks, of say 8MB each, and then hashing that list.
-   - **Computer Code Verification File:** This is at present a proposal to make sure we can trust the scanner hardware. See [[M1936][Securing Digital Ballot Images to Enable Auditing]]
+    - **Hash Manifest:** This file provides the SHA256 (or similar) hash for each file uploaded to the posting service. When the files are uploaded to our cloud-based provider (AWS) they use a slightly different method (etags) and it is important to generate the hash values the same way. 
+   - **Computer Code Verification File:** This is at present a proposal to make sure we can trust the scanner hardware. See [Securing Digital Ballot Images to Enable Auditing](https://copswiki.org/Common/M1936)
 
 Copyright (c) Citizens Oversight, Inc.
