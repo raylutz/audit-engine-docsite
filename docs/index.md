@@ -5,16 +5,16 @@ AuditEngine is an election auditing platform which performs "Ballot Image Auditi
 
 ## Primary Links
 
-- [AuditEngine Background -- start here](user-guide/auditengine-background-doc)
-- [AuditEngine FAQs: Frequently Asked Questions](user-guide/auditengine_faqs)
+- [AuditEngine Background -- start here](user-guide/auditengine-background-doc.md)
+- [AuditEngine FAQs: Frequently Asked Questions](user-guide/auditengine_faqs.md)
 - [Active AuditEngine site: (click to Enter)](https://engine.auditengine.org) -- Use this to upload election files and start audits (you must have approval)
 
 ## Latest News
 
 ### AuditEngine Audit Reports
 
-- [Audits in Three Counties (2020): GA/WI](audit-results/3-audits-GA-WI) -- AuditEngine was used to audit two counties in GA (Bartow and Fulton) and also Dane, WI. This audit confirmed consistency of results but there were unusual quirks that were quite interesting.
-- [Three Counties in Florida (2020): Collier, St. Lucie, Volusia](audit-results/case-study) -- AuditEngine was used to audit three counties in Florida: Collier, Volusia, and St. Lucie Counties. Learn about audit engine and its unbelievable accuracy, which is better
+- [Audits in Three Counties (2020): GA/WI](audit-results/3-audits-GA-WI.md) -- AuditEngine was used to audit two counties in GA (Bartow and Fulton) and also Dane, WI. This audit confirmed consistency of results but there were unusual quirks that were quite interesting.
+- [Three Counties in Florida (2020): Collier, St. Lucie, Volusia](audit-results/case-study.md) -- AuditEngine was used to audit three counties in Florida: Collier, Volusia, and St. Lucie Counties. Learn about audit engine and its unbelievable accuracy, which is better
   than the official voting systems by 93% on contests where we have located a disagreement (excluding corrupted ballot images). Also exposed in this report is the fact that the Election Systems & Software (ES&S) Election Management System (EMS) uses two internal tabulations that do not agree! This seems like it could be a security risk.
   (Read the report and watch four videos on this page.)
 
