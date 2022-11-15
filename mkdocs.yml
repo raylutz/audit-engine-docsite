@@ -9,7 +9,7 @@ nav:
     - User Guide:
 #        - Overview:                       user-guide/overview.md
         - Background Document:            user-guide/auditengine-background-doc.md
-        - Requester Guide:                user-guide/requester-guide.md
+        - Requester Guide:                user-guide/requester_guide.md
         - Exporting Guide:                user-guide/exporting_guide.md
         - Dominion Exporting Guide:       user-guide/dom_exporting_guide.md
         - ES&S Exporting Guide:           user-guide/ess_exporting_guide.md
