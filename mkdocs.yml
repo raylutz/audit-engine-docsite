@@ -50,7 +50,7 @@ theme:
     - toc.integrate
     - navigation.instant
   #  - navigation.tabs
-  #  - navigation.indexes
+    - navigation.indexes
 
   # 404 page
   static_templates:
