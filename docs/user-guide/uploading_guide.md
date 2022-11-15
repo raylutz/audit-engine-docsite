@@ -8,6 +8,9 @@ remote_url: https://docs.google.com/document/d/1GyB5-NH3-44pJN4GUH7hjU3MrK36Obea
 ---
 
 <link rel="icon" type="image/x-icon" href="https://mapper.auditengine.org/assets/images/A.png">
+<img src="https://copswiki.org/w/pub/Common/AuditEngine/AuditEngineLogo.png" alt="AuditEngineLogo.png" width='300' />
+
+
 
 ### Uploading Guide: Step-by-step instructions
 

@@ -8,6 +8,9 @@ remote_url: https://copswiki.org/Common/AuditEngineFAQs
 ---
 
 <link rel="icon" type="image/x-icon" href="https://mapper.auditengine.org/assets/images/A.png">
+<img src="https://copswiki.org/w/pub/Common/AuditEngine/AuditEngineLogo.png" alt="AuditEngineLogo.png" width='300' />
+
+
 
 # Frequently Asked Questions (FAQs) about AuditEngine
 

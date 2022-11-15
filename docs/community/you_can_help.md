@@ -1,3 +1,6 @@
+<link rel="icon" type="image/x-icon" href="https://mapper.auditengine.org/assets/images/A.png">
+<img src="https://copswiki.org/w/pub/Common/AuditEngine/AuditEngineLogo.png" alt="AuditEngineLogo.png" width='300' />
+
 We need help to apply AuditEngine so as to help improve our confidence in our elections. Can you help? Please complete the form at this link: [SignUp](https://copswiki.org/Common/SignUp)
 
 ### Public Advocate
@@ -10,8 +13,8 @@ We need help to apply AuditEngine so as to help improve our confidence in our el
 - **Actions**    
 Contact election officials and request that they post ballot image archives and cast-vote record files (See details below for format and various options)
 - **Background**    
-Limited technical expertise, but requires knowledge of public records requests and the desired file types, flash drives, and zip files. Assistance from attorneys may be required if officials resist.
-    
+  Limited technical expertise, but requires knowledge of public records requests and the desired file types, flash drives, and zip files. Assistance from attorneys may be required if officials resist.
+  
 ### Uploader
 - **Actions**    
 After receiving ballot image archives and cast-vote records, create an "Election" and upload these files to Audit Engine

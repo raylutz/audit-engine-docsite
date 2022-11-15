@@ -7,6 +7,9 @@ date: 2021-06-25
 remote_url: https://docs.google.com/document/d/e/2PACX-1vQspH7a2ZWvvoVLPidaRmiVzPWicJ--MMq28g75bWJMMNvb8HwvB8AZP7jmflQVRAgpyli0pBbUJu5b/pub
 ---
 
+<link rel="icon" type="image/x-icon" href="https://mapper.auditengine.org/assets/images/A.png">
+<img src="https://copswiki.org/w/pub/Common/AuditEngine/AuditEngineLogo.png" alt="AuditEngineLogo.png" width='300' />
+
 # Three Counties in Florida: Collier, Port St. Lucie, Volusia (2020 Election)
 
 This case study shows the performance of AuditEngine performing ballot image audits when applied to three counties in Florida for the 2020 November Election, Collier County, Volusia County, and St. Lucie County.

@@ -1,3 +1,5 @@
+<img src="https://copswiki.org/w/pub/Common/AuditEngine/AuditEngineLogo.png" alt="AuditEngineLogo.png" width=300 />
+
 ## Terms of Service
 
 By using our website, mobile site or app (the "Site"), you agree to be bound by these Terms of Service and to use the Site in accordance with these Terms of Service, our [Privacy Notice](privacy.md), and any additional terms and conditions that are referenced herein or that otherwise may apply to specific sections of the Site, or to products and services that we make available to you through the Site (all of which are deemed part of these Terms of Service). Accessing the Site, in any manner, whether automated or otherwise, constitutes use of the Site and your agreement to be bound by these Terms of Service. Your accessing the Site for the limited and exclusive purpose of reviewing these Terms of Service does not constitute your "use" of the Site or agreement to be bound by these Terms of Service unless you further access or use the Site.

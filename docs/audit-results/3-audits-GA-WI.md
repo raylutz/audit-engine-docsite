@@ -1,3 +1,6 @@
+<link rel="icon" type="image/x-icon" href="https://mapper.auditengine.org/assets/images/A.png">
+<img src="https://copswiki.org/w/pub/Common/AuditEngine/AuditEngineLogo.png" alt="AuditEngineLogo.png" width='300' />
+
 # 2020 General Election Audit Reports for Bartow GA, Fulton GA and Dane WI
 
 The volunteers and staff of Citizens' Oversight Projects (COPs) conducted three demonstration audits of the results of the 2020 General Election in two counties in GA (Bartow County and Fulton County), as well as the most populous county in WI (Dane County).

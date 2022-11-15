@@ -1,5 +1,7 @@
 <link rel="icon" type="image/x-icon" href="https://mapper.auditengine.org/assets/images/A.png">
 
+<img src="https://copswiki.org/w/pub/Common/AuditEngine/AuditEngineLogo.png" alt="AuditEngineLogo.png" width='300' />
+
 # Welcome to AuditEngine
 
 AuditEngine is a project by CitizensOversight, a 501(c)3 nonpartisan nonprofit organization
