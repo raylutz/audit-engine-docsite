@@ -9,11 +9,12 @@ nav:
     - User Guide:
 #        - Overview:                       user-guide/overview.md
         - Background Document:            user-guide/auditengine-background-doc.md
+        - Requester Guide:                user-guide/requester-guide.md
         - Exporting Guide:                user-guide/exporting_guide.md
         - Dominion Exporting Guide:       user-guide/dom_exporting_guide.md
         - ES&S Exporting Guide:           user-guide/ess_exporting_guide.md
         - Hart Exporting Guide:           user-guide/hart_exporting_guide.md
-#        - Uploading Guide:                user-guide/uploading_guide.md            DEPRECATED
+        - Sending Data:                   user-guide/sending_data.md
         - Configuration Files:            user-guide/configuration_files.md
 #        - Running Audits:                 user-guide/running_audits_app.md
 #        - TargetMapper App:               user-guide/targetmapper_app.md
@@ -49,7 +50,7 @@ theme:
     - toc.integrate
     - navigation.instant
     - navigation.tabs
-    - navigation.indexes
+  #  - navigation.indexes
 
   # 404 page
   static_templates:
