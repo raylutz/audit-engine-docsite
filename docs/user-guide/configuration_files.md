@@ -1,12 +1,25 @@
 <link rel="icon" type="image/x-icon" href="https://mapper.auditengine.org/assets/images/A.png">
 <img src="https://copswiki.org/w/pub/Common/AuditEngine/AuditEngineLogo.png" alt="AuditEngineLogo.png" width='300' />
 
-## Configuration Files
+# Configuration Files
 
-### Job Settings File
-The Job Settings File is a .csv file that is easy to edit, to provide the various settings of AuditEngine.
+## Job Settings File
+The Job Settings File is a .csv file that is easy to edit, to provide the various settings of AuditEngine. To generate this file, go to **Audits** -- **Job Files** --  and click **[ + Create New Job File]**.
+You will be asked to specify the vendor, and then you will be asked for a number of values that will mainly be used for generating the report, and are not available from the data itself.
 
-### Election Information File
+The settings that typically can be set at this time are as follows:
+ - **vendor** -- either "ES&S" or "Dominion"
+ - **district_bias_desc** -- This is a string description of the district bias, based on the turnout, such as "Dark Red", "Dark Blue", "Leans Red", etc.
+- **district_population** -- The total population of the district in a recent report.
+- **district_population_year** -- The year of the district_population value
+- **election_name** -- This is the longer name of the 
+- **election_name** -- Human readable string that describes the election, like "San Francisco CA Consolidated Presidential Primary, 2020"
+- **district_name** -- Human readable string that describes the district, like "San Francisco CA"
+- election_year_and_type -- Human readable string that describes the election year and type, like: "Consolidated Presidential Primary, 2020"
+- **voter_intent_statement** -- Statement of whether voter intent is used and the appropriate law, like "Georgia is a voter-intent state (O.C.G.A. 21-2-438 (c))."
+- **results_website** -- URL to the website which provides the official results for this county.
+
+## Election Information File
 This file deals with the inconsistencies between various presentations of the same contests and options that are on the ballot. This file is not a standard file from election systems today, but it can be constructed from other data sources, such as the sample ballot, CVR File, Summary report, etc. 
 
 NOTE: Since we are now using TargetMapper to perform computer-aided (rather than fully automated) mapping, many of the fields mentioned below are not required, and are *italicized and noted in the comments as TM-NR*, as not required when using TargetMapper.
