@@ -1,3 +1,5 @@
+<link rel="icon" type="image/x-icon" href="https://mapper.auditengine.org/assets/images/A.png">
+
 # Sending Election Data to AuditEngine
 
 Sending data to be used by AuditEngine is the same regardless of the vendor, and thus we have just one guide for this. Generally, the options are to 

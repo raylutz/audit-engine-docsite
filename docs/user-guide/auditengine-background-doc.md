@@ -1,3 +1,5 @@
+<link rel="icon" type="image/x-icon" href="https://mapper.auditengine.org/assets/images/A.png">
+
 Review this background document to become acquainted with general concepts and operational principles of AuditEngine 
 
    * [Googledoc: (best formatting or if you wish to comment)](https://docs.google.com/document/d/18A1K8mXXHnhisLqBQigx0ibboz39FAh9hOSykcR-jT4/edit?usp=sharing)

@@ -1,3 +1,5 @@
+<link rel="icon" type="image/x-icon" href="https://mapper.auditengine.org/assets/images/A.png">
+
 # Requester Guide
 
 This Requester Guide provides guidance for candidates, campaigns or other interested parties that are working to acquire data so AuditEngine can audit an election in one or more districts.
@@ -36,7 +38,7 @@ The other factor is whether the ballot images are available by state law or rest
 | ----------------------------- | ---------------------------------------------- | --------------------------- |
 | GA, WI, NJ                    | CA (only SF), FL (some counties delete images) | AZ, WA, NC                  |
 
-### Requesting the Data
+## Getting the Data
 
 Some counties may post their data for everyone. This is the case, for example, in San Francisco. We hope that more counties will adopt this methodology to reduce their cost and ours. However, if they do not, you can submit a <u>Public Record Request</u> to the county. Here is a example of a public record request:
 
@@ -44,14 +46,20 @@ Some counties may post their data for everyone. This is the case, for example, i
 | ------------------------------------------------------------ |
 | Dear County Representative:<br /><br />Please provide the following data per this PUBLIC RECORDS REQUEST for the MM/DD/YYYY election in your county:<br /> -- All Ballot Images<br /> -- Cast Vote Records CVRs<br /> -- Ballot Style Masters<br /><br />Please see the following guides for your system:<br />   Dominion: https://AuditEngine.org/user-guide/dom_exporting_guide/<br />   ES&S: https://AuditEngine.org/user-guide/ess_exporting_guide/<br />   Hart: https://AuditEngine.org/user-guide/hart_exporting_guide/<br />Also, sending the data to us is covered by this guide:<br />    https://AuditEngine.org/user-guide/sending_data/<br /><br />If you have any questions, please contact me at (your telephone number)<br />Sincerely, XXXXXX<br /> |
 
-
+### Exporting Guides
 
 We have the following guides to help them export and provide the data to AuditEngine.
 
 - [Dominion Exporting Guide](user-guide/dom_exporting_guide.md)
+
 - [ES&S Exporting Guide](user-guide/ess_exporting_guide.md)
+
 - [Hart Exporting Guide](user-guide/hart_exporting_guide.md)
+
+### Sending the data to AuditEngine
+
 - [Sending Election Data to AuditEngine](sending_data.md) -- Includes:
+
   - Archiving the Data
   - Creating a Hash Manifest File
   - Providing the data:
@@ -60,10 +68,10 @@ We have the following guides to help them export and provide the data to AuditEn
     - Using USB Thumbdrives
     - Using a "Jump Drive"
 
-### Create an Election on AuditEngine
+## Create an Election on AuditEngine
 
 It is necessary to create an "Election" on AuditEngine so that these files can be associated with that election, and so that audits can be performed. Once the files are uploaded, then they are "adopted" to the appropriate election, and the type of each file is tagged to the file. This way, the uploading can proceed without any concern for the election or what type of files are uploaded, and then it is resolved later.
 
-### Create the Audit and process it!
+## Create the Audit and process it!
 
 The next steps are covered in other guides. But briefly, once the data is uploaded and associated with an election by adopting the data, then an Audit is created. After creating the audit settings for the election, the various stages of the audit pipeline can be run.

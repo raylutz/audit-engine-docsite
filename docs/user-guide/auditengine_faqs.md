@@ -7,6 +7,8 @@ date: 2021-06-11
 remote_url: https://copswiki.org/Common/AuditEngineFAQs
 ---
 
+<link rel="icon" type="image/x-icon" href="https://mapper.auditengine.org/assets/images/A.png">
+
 # Frequently Asked Questions (FAQs) about AuditEngine
 
 ## Q: How does AuditEngine work?

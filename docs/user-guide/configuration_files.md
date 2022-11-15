@@ -1,3 +1,5 @@
+<link rel="icon" type="image/x-icon" href="https://mapper.auditengine.org/assets/images/A.png">
+
 ## Configuration Files
 
 ### Job Settings File
