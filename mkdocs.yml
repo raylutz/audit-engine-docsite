@@ -47,6 +47,9 @@ theme:
 
   features:
     - toc.integrate
+    - navigation.instant
+    - navigation.tabs
+    - navigation.indexes
 
   # 404 page
   static_templates:
