@@ -3,7 +3,7 @@ site_url: https://auditengine.org/
 nav:
     - Home: index.md
     - Audit Results:
-        - Background Document:            user-guide/auditengine-background-doc.md
+#        - Background Document:            user-guide/auditengine-background-doc.md
         - Case Study, 3 FL Disticts:      audit-results/case-study.md              # https://copswiki.org/Common/M1970
         - Three Audits GA/WI:             audit-results/3-audits-GA-WI.md          # https://copswiki.org/Common/M1986
     - User Guide:
