@@ -13,13 +13,17 @@ Given that any interested party may be interested in a specific contest or set o
 
 For example, in California, there are 58 counties. The top 5 counties (8.6% of counties) include more than 50% of the electorate; the top 14 counties (24% of the counties) comprise 80%, and the top 24 counties (41% of counties) comprise 92% of the vote. 
 
-Setup costs are roughly fixed on a per-county basis, so leaving out the remaining 34 counties in CA is a prudent approach to audit almost all, (92%) of the vote, but avoid 60% of the setup costs if you were to just do "all counties" without adopting a strategy.
+Setup costs are roughly fixed on a per-county basis, so leaving out the remaining 34 counties in CA is a prudent approach to audit almost all, (92%) of the vote, but avoid 60% of the setup costs if you were to just do "all counties" without adopting a strategy. 
+
+This is particularly important in states like Georgia, which has 159 counties but has about the same electorate as New Jersey, which has only 15 counties. 
+
+Of course, if the margin is extremely close in a state-wide contest, errors or hacking in small counties could still overturn the results.
 
 ## Availability of Ballot Images
 
-### Do the voting systems produce the images?
+### Only available if the voting system uses them
 
-Most districts today produce ballot images (about 93% of the top 500 counties), but some are still using the older DRE-type systems that have no ballot images. Those will not be processable by AuditEngine, but it still may be true that the absentee or vote-by-mail ballots will be hand-marked and may still be available.
+Most districts today produce ballot images (about 93% of the top 500 counties), but some are still using the older DRE-type systems or optical scanners that have no ballot images. Those cannot be processed by AuditEngine, but in the case of DRE systems, absentee or vote-by-mail ballots will be hand-marked and may still be available.
 
 This can be determined by looking that the voting systems used by the districts. You can use the [Verified Voting Verifier](https://verifiedvoting.org/verifier/) tool to look at the equipment used in your district. The equipment listed as "Optical Scan Voting Systems" may provide ballot images, but not all.
 
