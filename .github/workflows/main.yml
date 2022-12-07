@@ -49,7 +49,7 @@ jobs:
         
       - name: Invalidate cloudfront cache
         run: |
-          aws cloudfront create-invalidation --distribution-id E32B31KDZ2D5YR  --paths "/*"
+          aws cloudfront create-invalidation --distribution-id E22Q65O2V7FLS4  --paths "/*"
           
       - name: Deploy to S3
         uses: jakejarvis/s3-sync-action@v0.5.1
