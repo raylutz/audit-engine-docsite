@@ -1,11 +1,3 @@
----
-title: AuditEngine 2020 Case Study - Three Florida Counties
-summary: Results of auditing three Florida counties with AuditEngine, Collier, Volusia and St. Lucie Counties.
-authors:
-    - Ray Lutz
-date: 2021-06-25
-remote_url: https://docs.google.com/document/d/e/2PACX-1vQspH7a2ZWvvoVLPidaRmiVzPWicJ--MMq28g75bWJMMNvb8HwvB8AZP7jmflQVRAgpyli0pBbUJu5b/pub
----
 
 <link rel="icon" type="image/x-icon" href="https://mapper.auditengine.org/assets/images/A.png">
 <img src="https://copswiki.org/w/pub/Common/AuditEngine/AuditEngineLogo.png" alt="AuditEngineLogo.png" width='300' />
