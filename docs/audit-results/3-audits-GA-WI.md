@@ -5,7 +5,9 @@
 
 The volunteers and staff of Citizens' Oversight Projects (COPs) conducted three demonstration audits of the results of the 2020 General Election in two counties in GA (Bartow County and Fulton County), as well as the most populous county in WI (Dane County).
 
-These audits did show consistency between the ballot images and the official result. Each of these counties had some interesting quirks. It seems we learn something from every audit we do. This is a bit different from sampling audits because we audit every ballot and every contest. If there is anything unusual, we will probably find it, even if it is just one ballot.
+These audits did show consistency between the ballot images and the official result. Each of these counties had some interesting quirks. (It seems we learn something from every audit we do.) This is a bit different from sampling audits because we audit every ballot and every contest. If there is anything unusual, we will probably find it, even if it is just one ballot.  
+
+In this case, we of course found that there were many missing ballot images in Fulton County, (380,000) and we found 5 ballots from the preceding primary (which is pretty strange, because the ballots were a little longer physically in that election), and we found 5 ballots from DeKalb county, which is next door.
 
 ## Video Presentation:
 <iframe width="560" height="315" src="https://www.youtube.com/embed/hQSbcDsUaPw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
