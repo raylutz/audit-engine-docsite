@@ -9,7 +9,9 @@
 
 **Ballot --** Generally a presentation of contests and options for each contest that can be selected by a voter, and the recording of those selections. The word "ballot" originally meant "little ball" and these were placed into a box to represent the votes of each person. In practice, a complete ballot may be a number of sheets, each with a front and back side, also called pages.
 
-**Ballot Image --** Election systems today create digital images of both size of each ballot sheet. These images can be exported by the election management system (EMS) in standard formats, such as PDF (generally with both the front and back in the same file), multipage TIFF (Dominion uses these, with three pages in one file, the front, back and "audit mark" graphical image of the voting system evaluation), or PNG (Dominion uses this, with all three pages combined into a single tall image.)
+**Ballot Image --** Election systems today create digital pictures of both size of each ballot sheet. These images can be exported by the election management system (EMS) in standard formats, such as PDF (generally with both the front and back in the same file), multipage TIFF (Dominion uses these, with three pages in one file, the front, back and "audit mark" graphical image of the voting system evaluation), or PNG (Dominion uses this, with all three pages combined into a single tall image.) 
+
+Please note that sometimes the term "Ballot Image" will be used to mean digital inputs by the user at a Direct-Recording Electronic (DRE) machine or other touch-screen machine. The term "image" is used in computer science to sometimes mean an exact copy of digital data. This term is now widely understood to mean the actual digital pictures of the document rather than just a copy of digital data that does not represent a picture.
 
 **Ballot Image Audit --** A review of digital images of ballots in a jurisdiction of an election and comparison with the official outcome for each ballot, group of ballots (precincts or batches), or the entire jurisdiction. AuditEngine is a platform that can provide the compute services for such an audit.
 
