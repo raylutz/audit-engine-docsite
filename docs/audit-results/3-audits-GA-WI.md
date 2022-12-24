@@ -23,13 +23,13 @@ In this case, we of course found that there were many missing ballot images in F
 ## Bartow, GA:
 
    * Narrative Report - AuditEngine 2020 Election Ballot Image Audit of Bartow County GA
+
    * [Googledoc (best formatting or if you wish to comment)](https://docs.google.com/document/d/1oNyx0v0pNVBtkhF41IB0RWjR9n1sNlfmTYCT93tHXCA/edit?usp=sharing)
+
    * PDF: [GA Bartow 20201103 Narrative Report.pdf](https://copswiki.org/w/pub/Common/M1986/GA%20Bartow%2020201103%20Narrative%20Report.pdf)
-   * Embedded report:
 
-<iframe src="https://docs.google.com/document/d/e/2PACX-1vTnSyqBlzfqT34VQfMWC2qUp6QMiYnUakbaC4lTRSmdru8-Cz7WrkgcIdup8cIOPQwynNxHxZKlcRc8/pub?embedded=true" width=800 height=500 border=1></iframe>
+     ## Fulton, GA:
 
-## Fulton, GA:
    * Narrative Report - AuditEngine 2020 Election Ballot Image Audit of Fulton County GA
    * [Googledoc (best formatting or if you wish to comment): ](https://docs.google.com/document/d/17glzBMkV7sx7L_Ig_uBp4mOK7HXVP3zlv_2BUOWX63I/edit?usp=sharing)
    * PDF: [GA Fulton 20201103 Narrative Report.pdf](https://copswiki.org/w/pub/Common/M1986/GA%20Fulton%2020201103%20Narrative%20Report.pdf)

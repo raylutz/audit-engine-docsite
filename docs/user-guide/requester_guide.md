@@ -41,17 +41,19 @@ This can be determined by looking that the voting systems used by the districts.
 
 The other factor is whether the ballot images are available by state law or restricted by procedure. This is a very dynamic area as there are some court cases in process to provide ballot images. Jurisdictions sometimes play it safe and claim that ballot images are the same as paper ballots. Counties may charge for the data, and may use this as a mechanism to block access.
 
+Here is a partial list of availability. Please see a full and dynamically updated list: [here](https://en.wikipedia.org/wiki/File:Ballot-foia.png) and [here](https://en.wikipedia.org/wiki/File:Keepimages.png)
+
 | States will full availability | States with mixed availability                 | States with no availability |
 | ----------------------------- | ---------------------------------------------- | --------------------------- |
 | GA, WI, NJ                    | CA (only SF), FL (some counties delete images) | AZ, WA, NC                  |
 
 ## Getting the Data
 
-Some counties may post their data for everyone. This is the case, for example, in San Francisco. We hope that more counties will adopt this methodology to reduce their cost and ours. However, if they do not, you can submit a <u>Public Record Request</u> to the county. Here is a example of a public record request:
+Some counties may post their data for everyone. This is the case, for example, in San Francisco. We hope that more counties will adopt this methodology to reduce their cost and ours. However, if they do not, you can submit a <u>Public Record Request</u> to the county. Here is a example of a public record request: (Note: Although generally understood, not all states use this term. See [the name of the law in each state](https://www.rcfp.org/open-government-sections/foreword/))
 
 | To: email@county.gov <br />Subject: Public Records Request for Election Data |
 | ------------------------------------------------------------ |
-| Dear County Representative:<br /><br />Please provide the following data per this PUBLIC RECORDS REQUEST for the MM/DD/YYYY election in your county:<br /> -- All Ballot Images<br /> -- Cast Vote Records CVRs<br /> -- Ballot Style Masters<br /><br />Please see the following guides for your system:<br />   Dominion: https://AuditEngine.org/user-guide/dom_exporting_guide/<br />   ES&S: https://AuditEngine.org/user-guide/ess_exporting_guide/<br />   Hart: https://AuditEngine.org/user-guide/hart_exporting_guide/<br />Also, sending the data to us is covered by this guide:<br />    https://AuditEngine.org/user-guide/sending_data/<br /><br />If you have any questions, please contact me at (your telephone number)<br />Sincerely, XXXXXX<br /> |
+| Dear County Representative:<br /><br />Please provide the following data per this PUBLIC RECORDS REQUEST for the MM/DD/YYYY election in your county:<br /> -- All Ballot Images<br /> -- Cast Vote Records CVRs<br /> -- Ballot Style Masters<br /><br />Please see the following guides for your system.<br />   Dominion: https://AuditEngine.org/user-guide/dom_exporting_guide/<br />   ES&S: https://AuditEngine.org/user-guide/ess_exporting_guide/<br />   Hart: https://AuditEngine.org/user-guide/hart_exporting_guide/<br />Please provide the data in electronic format. See the following guide for options for sending the data to us:<br />https://AuditEngine.org/user-guide/sending_data/<br /><br />If you have any questions, please contact me at (your telephone number)<br />Sincerely, XXXXXX<br /> |
 
 ### Exporting Guides
 
