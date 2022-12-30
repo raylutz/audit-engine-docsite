@@ -27,15 +27,15 @@ Most districts today produce ballot images (about 93% of the top 500 counties), 
 
 This can be determined by looking that the voting systems used by the districts. You can use the [Verified Voting Verifier](https://verifiedvoting.org/verifier/) tool to look at the equipment used in your district. The equipment listed as "Optical Scan Voting Systems" may provide ballot images, but not all.
 
-|                                          | Ballot Image Producing                                       | Not Ballot Image Producing                           |
-| ---------------------------------------- | ------------------------------------------------------------ | ---------------------------------------------------- |
-| **Election Systems & Software (ES&S)**   | DS200, DS450, DS850, DS950<br />ExpressVote XL or ExpressVote used with the scanners above.<br />Note: ES&S scanners allow ballot images to be deleted if not set to "Save All" | ExpressTouch, iVotronic, Model 100, Model 150, 550   |
-| **Dominion Voting Systems**              | ImageCast Central, ImageCast Precinct<br />ImageCase X BMD when used with the above scanners | ImageCast X DRE                                      |
-| **Sequoia Voting Systems**               |                                                              | AVC Advantage, AVC Edge                              |
-| **Premier Election Solutions (Diebold)** |                                                              | AccuVote OS Central, Accuvote OS, and Accuvote OSX   |
-| **SmartMatic**                           | Voting Solutions for All People (VSAP) Used in Los Angeles only. |                                                      |
-| **Hart Intercivic**                      | eScan, Verity Scan, Ballot Now, Verity Central               | Hart InterCivic eSlate, Hart InterCivic Verity Touch |
-| **MicroVote**                            |                                                              | Infinity, MV-464                                     |
+|                                          | Ballot Image Producing                                       | Not Ballot Image Producing                                   |
+| ---------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| **Election Systems & Software (ES&S)**   | [DS200](https://verifiedvoting.org/election-system/ess-ds200/), [DS450, DS850, DS950](https://verifiedvoting.org/election-system/ess-ds850-ds450/)<br />[ExpressVote as BMD](https://verifiedvoting.org/election-system/ess-expressvote/) when used with the scanners above.<br />Note: ES&S scanners allow ballot images to be deleted if not set to "Save All" | [ExpressTouch](https://verifiedvoting.org/election-system/ess-expresstouch/), [iVotronic](https://verifiedvoting.org/election-system/ess-ivotronic/), [Model 100](https://verifiedvoting.org/election-system/ess-model-100/), Model 150, 550, [ExpressVote XL](https://verifiedvoting.org/election-system/ess-expressvote-xl/) |
+| **Dominion Voting Systems**              | [ImageCast Central](https://verifiedvoting.org/election-system/dominion-imagecast-central/), [ImageCast Precinct](https://verifiedvoting.org/election-system/dominion-imagecast-precinct/)<br />[ImageCase X BMD](https://verifiedvoting.org/election-system/dominion-imagecast-x/) when used with the above scanners | [ImageCast X DRE](https://verifiedvoting.org/election-system/dominion-imagecast-x/) |
+| **Sequoia Voting Systems**               |                                                              | AVC Advantage, AVC Edge                                      |
+| **Premier Election Solutions (Diebold)** |                                                              | AccuVote OS Central, Accuvote OS, and Accuvote OSX           |
+| **SmartMatic**                           | [Smartmatic Voting Solutions for All People (VSAP)](https://verifiedvoting.org/election-system/smartmatic-lac-vsap/) Used in Los Angeles only. |                                                              |
+| **Hart Intercivic**                      | [eScan](https://verifiedvoting.org/election-system/hart-intercivic-escan/), [Verity Scan](https://verifiedvoting.org/election-system/hart-intercivic-verity-scan/), [Ballot Now](https://verifiedvoting.org/election-system/hart-intercivic-ballot-now/), [Verity Central](https://verifiedvoting.org/election-system/hart-verity-central/) [Verity Touch Writer](https://verifiedvoting.org/election-system/hart-intercivic-verity-touch-writer/) [Verity Duo](https://verifiedvoting.org/election-system/hart-intercivic-verity-touch-writer-duo/) | eSlate, [Verity Touch](https://verifiedvoting.org/election-system/hart-intercivic-verity-touch/) |
+| **MicroVote**                            |                                                              | Infinity, MV-464                                             |
 
 ### Ballot Image Availability by State Law or Procedure	
 
@@ -45,7 +45,7 @@ Here is a partial list of availability. Please see a full and dynamically update
 
 | States will full availability | States with mixed availability                 | States with no availability |
 | ----------------------------- | ---------------------------------------------- | --------------------------- |
-| GA, WI, NJ                    | CA (only SF), FL (some counties delete images) | AZ, WA, NC                  |
+| GA, WI                        | CA (only SF), FL (some counties delete images) | AZ, WA, NC                  |
 
 ## Getting the Data
 
