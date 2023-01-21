@@ -20,19 +20,31 @@ remote_url3: https://docs.google.com/document/d/1x_sgk_gcDka9ryzzEWnhKtdy2Z9CGnk
 
 We have compiled step-by-step guides to export data for use by AuditEngine for each of the following vendors. These step-by-step guides will help election staff to export the data we need to perform our audits.
 
-## Dominion Voting Systems Exporting Guide
+### Dominion Voting Systems Exporting Guide
 
 **[Dominion Voting Systems -- Exporting Guide](dom_exporting_guide.md)**
 
-## Election Systems & Software (ES&S) Exporting Guide
+### Election Systems & Software (ES&S) Exporting Guide
 
 **[Election Systems & Software (ES&S) -- Exporting Guide](ess_exporting_guide.md)**
 
-## Hart Intercivic Exporting Guide
+### Hart Intercivic Exporting Guide
 
 [**Hart Intercivic -- Exporting Guide**](hart_exporting_guide.md)
 
+See also
 
+### Sending the data to AuditEngine
+
+- [Sending Election Data to AuditEngine](sending_data.md) -- Includes:
+
+  - Archiving the Data
+  - Creating a Hash Manifest File
+  - Providing the data:
+    - Posting the data - Election officials are now opting to post the data once for all requesters.
+    - Uploading - We can provide a county-specific upload link so they files can be easily uploaded.
+    - Using USB Thumbdrives
+    - Using a "Jump Drive"
 
 
 

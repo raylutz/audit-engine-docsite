@@ -57,14 +57,18 @@ First, the data must be assembled for use by AuditEngine. Most of this is alread
    - Please see [exporting_guide](user-guide/exporting guide.md) for step-by-step guides for exporting Ballot Style Masters from popular voting systems.
 
 - **Election Information File (EIF):** 
-- Our system requires additional information regarding the information actually printed on the ballots. This we can generally generate automatically by parsing the CVRs files. 
-  
-- The EIF lists
-     - all contest and option (candidate) names, as used in the CVR 
-     - the number of write-ins, and the vote-for number. 
-     - The actual text found on BMD ballot summary cards for each contest and option name.
-   
-- This information is available from sample ballots and can be assembled prior to the election.
+     - Our system requires additional information regarding the information actually printed on the ballots. This we can generally generate automatically by parsing the CVRs files. 
+
+     - The EIF lists
+          - all contest and option (candidate) names, as used in the CVR 
+          - the number of write-ins, and the vote-for number. 
+          - The actual text found on BMD ballot summary cards for each contest and option name.
+
+     - This information is available from sample ballots and can be assembled prior to the election.
+
+- **Logic and Accuracy Test (LAT) Ballot Images and CVR:**
+     - When working with states and counties that want quick turnaround of our audits during the rush of the election period, it is required that we obtain the Ballot Style Master PDFs as well as the ballot images and CVR from the Logic and Accuracy Test (LAT). We require that the CVR is annotated with the "Ballot Style" so we can easily use these images to prepare our target map.
+
 
 ### Guides:
 - [Exporting Guide](user-guide/exporting_guide.md) -- Guide for election staff to export ballot images, Cast-vote records, and Ballot Style Masters from ES&S, Dominion, or Hart systems.

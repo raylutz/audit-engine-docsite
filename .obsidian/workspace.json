@@ -1,0 +1,157 @@
+{
+  "main": {
+    "id": "0361d4a51e1fef55",
+    "type": "split",
+    "children": [
+      {
+        "id": "cedc8bc61d32212a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "21a8596cad5d339b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/user-guide/auditengine_faqs.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "df58b7ab81d19a0b",
+    "type": "split",
+    "children": [
+      {
+        "id": "8cdf2bcf37271dc4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0768af23865d1868",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "8525ac0265d58a1d",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "18d2f2f0726ee55c",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "fd23f2335af82770",
+    "type": "split",
+    "children": [
+      {
+        "id": "694fc493f069234f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6cba137936c16ebc",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "docs/user-guide/auditengine_faqs.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "ebcd3557fe6a4995",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "docs/user-guide/auditengine_faqs.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "155c6554a6941308",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "8969520239e0c94e",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "docs/user-guide/auditengine_faqs.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "0768af23865d1868",
+  "lastOpenFiles": [
+    "docs/index.md",
+    "docs/user-guide/auditengine_faqs.md",
+    "docs/user-guide/configuration_files.md",
+    "docs/user-guide/auditengine-background-doc.md",
+    "docs/about/about.md"
+  ]
+}
