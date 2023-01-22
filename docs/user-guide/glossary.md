@@ -9,7 +9,11 @@
 
 **Adjudicator App** -- This component of AuditEngine is a browser-based app that provides a user interface to check flagged comparison results. It presents the evaluation by AuditEngine and the evaluation by the voting system and that portion of the ballot showing the users marks or BMD card. The AdjudicatorApp can also be used without any voting system results to fine-tune the results by AuditEngine by reviewing any records that have been flagged for further review.
 
-**Archive --** A single file which can contain many smaller files and also may compress them. This saves a lot of space on the disk because the disk requires that files consume at least one block, and the last block in a file is partially empty. Archives pack all the files together into one file without any empty space. This also makes it easier to handle many thousands of individual files by grouping them together into archives. We recommend that you use the open source standardized "ZIP" archives, because the files can be individually extracted from the archive without extracting them all. The free application "7-zip" from [7-zip.org](https://7-zip.org) is a very good tool, but <u>use the conventional zip format and not the proprietary 7z format</u>. We recommend that up to about 50,000 ballot images are placed into the same archive, and they should be between about 5GB and 10GB in size for easy handling.
+**Archive / Zip Archive** -- A single file which can contain many smaller files and also may compress them. This makes it easier to handle a lot of separate small files and also usually saves a lot of space on the disk because files consume at least one block, and the last block in a file is partially empty. Archives pack all the files together into one file without any empty space. 
+
+Most importantly for this application is that archives make it easier to handle many thousands of individual files by grouping them together into a small number of archives. We require that you use the open source standardized "ZIP" archives, because the files can be individually extracted from the archive without extracting them all. The free application "7-zip" from [7-zip.org](https://7-zip.org) is a very good tool, but <u>use the conventional zip format and not the proprietary 7z format</u>. We recommend that up to about 50,000 ballot images are placed into the same archive, and they should be between about 5GB and 10GB in size for easy handling.
+
+**Audit Job** -- For a given election in a given district, there can be one or more Audit Jobs. An audit job tracks the specific *stages* completed in the processing *pipeline.* Each Audit Job for a given election will have a unique *job_name*. 
 
 **Ballot --** Generally a presentation of contests and options for each contest that can be selected by a voter, and the recording of those selections. The word "ballot" originally meant "little ball" and these were placed into a box to represent the votes of each person. In practice, a complete ballot may be a number of sheets, each with a front and back side, also called pages.
 
@@ -39,7 +43,18 @@ For ES&S and Dominion, they use barcodes or QR Codes, which unfortunately cannot
 
 **cmpcvr** -- is the comparison stage of an audit, where the CVR is compared sheet-by-sheet with the tabulation created by AuditEngine. This stage creates a number of comparison records, where there is one record per ballot sheet, and one record per ballot-contest that is classified as a variant. Ballot-contests that are not considered variants do not have their own record but are combined in either a "fully agreed" or "partially agreed" record for that sheet.
 
-**Cooperative Workflow** -- When working with election districts under contract, we can use a cooperative workflow where the data from the Logic and Accuracy Test (LAT) in the form of ballot image archives (BIA) and CVR plus Ballot Style Masters (BSM) can be uploaded to AuditEngine before election day, and as soon as practicable. Then, AuditEngine can be configured, including the completion of the Target Map prior to the election. As soon as ballot images and the CVR are completed in the real election, then these files are uploaded and the Target Map is imported from the LAT audit, to avoid those delays. This results in quick-turnaround of the audit results.
+**Cooperative Workflow** -- When working with election districts under contract, we can use a cooperative workflow to reduce overhead and reduce turnaround delays. The components of the Cooperative Workflow include the following:
+
+- Ballot layouts: 
+  - should include a county name and election name in a standard location to allow ballot images from other counties or from other elections to be detected.
+  - should not use colors that will drop out in the scans.
+- Ballot Image Files should be exported without "COPY" or other watermarks.
+- Each county will prepare a *hash manifest* with hash values of each file. We suggest the use of QuickHash windows app.
+- All data must be directly uploaded to AuditEngine from each county. We can provide an upload link specific to each county which will remain constant from election to election.
+- Ballot Style Masters (BSM) are uploaded as soon as they become available. This should be very early in the cycle.
+- Data from the Logic and Accuracy Test (LAT) in the form of ballot image archives (BIA) and CVR plus are uploaded to AuditEngine as soon as these become available. 
+
+Then, AuditEngine can be configured, including the completion of the Target Map prior to the election using the LAT data. As soon as ballot images and the CVR are completed in the real election, then these files are uploaded and the Target Map is imported from the LAT audit, to avoid those delays. This results in quick-turnaround of the audit results.
 
 **Contest or Ballot-Contest** -- On each ballot cast, there are a number of contests. A single contest on a single cast ballot is a "ballot-contest" and sometimes just "contest" in the context of the comparison report. This is not the entire contest with all votes from all ballots summed, but simply the evaluation of that single contest on that sheet (for that single voter). Frequently, these can be called "votes", except that sometimes a single contest will allow multiple votes.
 
@@ -77,6 +92,8 @@ A single "Hash Manifest File" can be prepared that includes the file name and a 
 
 **Images Missing** -- This is a discrepancy attribute. Sometimes we can't access all the images and so these are accounted for as images missing. AuditEngine does not attempt to sum the contests in terms of the number of contests that are missing on ballot images that are missing.
 
+**job_name** -- This is the name of the job to differentiate it from other jobs, and deteremines where the files are stored. The format of the job_name as been standardized as ST_County_YYYYMMDD, where ST is the two-character state abbreviation, County is the County Name without spaces, and YYYYMMDD is the the data of the election when the polls closed. Thus, **GA_Bartow_20201103** is the job for the 2020 General Election in Bartow County, GA. It is okay to add additional tags to the end, like **_LAT** if it is the job to process the Logic and Accuracy Test ballot images in that same election, or for other purposes. NOTE: The job_name can't be changed very easily once it is set. It cannot have spaces or special characters other than underscore. See also *Audit Job*.
+
 **Lambda** -- AuditEngine is current deployed to Amazon Web Services (AWS) cloud, then we use their Lambda service when we delegate parallel processing. 
 
 **Logic and Accuracy Test (LAT)**  -- Voting systems typically are required to complete a "Logic and Accuracy Test" (LAT) where the voting system is configured and it processes test ballots that check the mapping of *Targets* on *Hand-Marked Paper Ballots* are correctly linked to the *cast vote records (CVR)*. Essentially, the LAT answers the question: *Does the voting system (hardware and software) read and tabulate the marks on a ballot or touches on the screen with 100% accuracy?* 
@@ -111,13 +128,13 @@ Very frequently, overvotes are misinterpreted by the voting system and should be
 
 **Poll Tapes / Digital Poll Tapes --** Voting machines that are used in polling places typically have a poll-tape report which is printed out by poll workers during an election, and frequently posted at the site and turned into the election office. Digital Poll Tapes can be produced by ES&S systems which are an exact copy of the report produced by the voting system scanner but provided as a PDF file and can be processed by AuditEngine to provide another check of the results of the election.
 
+**Public Oversight Workflow** -- AuditEngine has been designed to accommodate a "Public Oversight" workflow where members of the public, candidates, or campaigns can request ballot image and CVR data and conduct audits using AuditEngine. This will likely happen in a slower timeframe, because these are commonly only activated after the election is completed and there is some question of the outcome. This is in contrast to the "Cooperative Workflow" where the election districts are providing data prior to the election to expedite audit turnaround.
+
 **Risk-Limiting Audit --** A method of checking that the outcome of an election is accurate by random selecting ballots or batches of ballots, and continuing to select samples so that the risk that the outcome as determined by a full-hand count could be statistically different, is less than a given risk limit. There are four types based on how the samples are taken (by ballot or by batch) and how those samples are compared (by margin or by sample), resulting in ballot-comparison, ballot-polling, batch-comparison, and batch-polling. RLA audits are difficult to apply to many small contests and when margins get tight.
 
 **S3** -- This stands for Amazon "Simple Storage Service" but it is normally only called S3. This is the secure storage service used by AuditEngine. This service does not allow alteration of files after they are written, and the timestamps cannot be altered. Therefore, it is perfect for storage of AuditEngine results. Also, to use the Lambda service, we must have the files in S3, and in the same datacenter for fastest operation.
 
-**SHA1 / SHA256 / SHA512** -- These are stronger hash algorithms that result in longer hash values, and are approved for cryptographic purposes. If available, use SHA512 in *hash manifest* files.
-
-See also *MD5* and *ETag*, *Hash Manifest*
+**SHA1 / SHA256 / SHA512** -- These are stronger hash algorithms that result in longer hash values, and are approved for cryptographic purposes. If available, use SHA512 in *hash manifest* files. See also *MD5* and *ETag*, *Hash Manifest*
 
 **Sheet** -- Each ballot image is of a single paper sheet, including both sides. This is the case even if multiple sheets are included in the logical ballot. 
 
@@ -135,7 +152,11 @@ The number of sheets as used in the discrepancy reports in tables is not necessa
 
 **Unprocessed** -- Unprocessed sheets are those that were NOT successfully processed by AuditEngine. These are generally due to images that are damaged due to 'stretching' of the image when the sheet is not evenly fed through the scanner, barcodes that were corrupted and unreliable, or BMD ballots that were not perfectly read using OCR. Cleaning the scanner rollers can help to avoid corrupted images. AuditEngine does not track contests on unprocessed sheets. If a large number of ballots are unprocessed by AuditEngine, then it may indicate that one or more voting machine scanner should be retired. Ballots that were Unprocessed were not necessarily improperly evaluated by the voting system.
 
-**Voting System** -- A general term to refer to the system used by the district to conduct the election, including the EMS and voting machines, etc. These systems areElection Systems & Software (ES&S), Dominion Voting Systems (Dominion), Hart Intercivic (Hart), or any others. AuditEngine strives to be compatible with any voting system that can provide adequate data files in the form of ballot images, CVRs, Ballot Style Masters and other related data.
+**Verification Images** -- AuditEngine has an optional capability to process ballot images that are made using non-voting system scanners. We call these "Verification Images, and zip archives with these images are verify-bia archives. We can accept a number of file formats, including a single PDF with many pages, of only the front or both sides, one PDF per two sides, and other options. These images should be of a precinct or batch which corresponds to the CVR exactly for that precinct or batch. These are not run as a separate audit, but as an additional set of stages in the pipeline of the subject audit.
+
+Our position is that the number of batches processed in this way can be minimized, because the only thing being tested is the remote chance that the ballot images were processed prior to being secured by the system. Typically, this can be added if there is any concern by the public of specific contests that are close. It is mainly important that the public knows this option is available because any temptation to attempt to hack the election in this manner will be reduced.
+
+**Voting System** -- A general term to refer to the system used by the district to conduct the election, including the EMS and voting machines, etc. These systems are Election Systems & Software (ES&S), Dominion Voting Systems (Dominion), Hart Intercivic (Hart), or any others. AuditEngine strives to be compatible with any voting system that can provide adequate data files in the form of ballot images, CVRs, Ballot Style Masters and other related data. See also *Election management system (EMS)*
 
 **Write-in** -- If the write-in oval is marked or if the write-in area is filled in, then it is considered that the voter intent is to write-in the name for some other candidate. How this is handled is specific to different states, but most often, the written-in name must also be from a list of qualified write-in candidates. 
 

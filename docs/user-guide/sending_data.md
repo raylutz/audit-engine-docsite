@@ -10,11 +10,7 @@ Sending data to be used by AuditEngine is the same regardless of the vendor, and
 3. Write the data to removable media (AKA Thumbdrives or Flash drives) and deliver that to our office using a delivery service (like UPS, FedEx, or USPS) or, 
 4. For extremely large data transfers, we can have a 5TB jump drive delivered to your office and it will be sent directly to cloud storage service provider and avoid lengthy uploading processes.
 
-# **Sending Election Data to AuditEngine**
-
-Ray Lutz, Citizens' Oversight    V8  2022-11-03
-
-support@citizensoversight.org
+Below are the steps involved.
 
 
 ## Step 1: Archiving the data
@@ -69,29 +65,24 @@ sha512sum *.*  >manifest-sha512.txt
 ```
 
 
-The resulting manifest file for GA_Bartow_20201103, a relatively small county with just over 50K ballots, looks like this in standard unix format. (The hash values here are actually MD5 type). \
- \
-**<code>f664b587aacae05c8aa5c591b8659ec4 *CVR_Export_20201103.zip</code></strong>
+The resulting manifest file for GA_Bartow_20201103, a relatively small county with just over 50K ballots, looks like this in standard unix format. (The hash values here are actually MD5 type). 
 
+    f664b587aacae05c8aa5c591b8659ec4 *CVR_Export_20201103.zip
+    9c25af50cb821a897180c9fc1ade9afb *GA_Bartow_20201103 Official Ballots.zip
+    7880d59840e3b709321d9312482bb7cf *Nov. 2020 Ballot Images.zip
+    0c89d5502de29bd4998b15c354634630 *detailtxt.zip
+    ff4d72b4e0f77b086195c77ca6f6ed00 *detailxls.zip
+    4344e416b3c186da66f57d115a43532c *detailxml.zip
+    9c8fc2b0ebab08c12cc14d3b9a2e95ef *summary.zip
 
-```
-9c25af50cb821a897180c9fc1ade9afb *GA_Bartow_20201103 Official Ballots.zip
-7880d59840e3b709321d9312482bb7cf *Nov. 2020 Ballot Images.zip
-0c89d5502de29bd4998b15c354634630 *detailtxt.zip
-ff4d72b4e0f77b086195c77ca6f6ed00 *detailxls.zip
-4344e416b3c186da66f57d115a43532c *detailxml.zip
-9c8fc2b0ebab08c12cc14d3b9a2e95ef *summary.zip
-```
+In the example above, the first 32 characters are the hexadecimal expression of the 128 bit MD5 hash value, where each character represents 4 bits. This listing took under two minutes to create, but it can be time consuming if the entire folder has many big files.
 
-
-The first 128 characters are the hexadecimal expression of the hash value, where each character represents 4 bits. This listing took under two minutes to create, but it can be time consuming if the entire folder has many big files.
-
-In summary, we need only that the election office create the **manifest-sha512.txt** file using the standard unix format as described above for the folder, and that folder should include only regular files or ZIP files, and not subfolders. Any subfolders should be zipped.
+In summary, we need only that the election office create the **manifest-sha512.txt** file using the standard unix format as described above for the folder, and that folder should include only regular files or ZIP files, and not subfolders. Any subfolders should be zipped. If you use the MD5 hash algorithm, then the file should be named **manifest-md5.txt**.
 
 
 ## **Step 3: Options for providing data**
 
-AuditEngine processes the elections using cloud resources where we can delegate processing to many thousands of computers in parallel. We use the "**us-east-1**" datacenter which is in Northern Virginia for elections in the United States. We also archive data in our San Diego, CA facility.
+AuditEngine processes the elections using cloud resources where we can delegate processing to many thousands of computers in parallel. We use the Amazon Web Services (AWS) "**us-east-1**" datacenter which is in Northern Virginia for elections in the United States. We also archive data in our San Diego, CA facility.
 
 
 ### Option 1: Post Data to a Posting Service
@@ -100,7 +91,7 @@ We recommend that you post the ballot image archives and other data to a public 
 
 The ballot image archives may each be pretty large, and thus they may not be compatible with your official website service provider. The following posting services are just a few of the ones we have encountered, and each has limitations and costs that you should investigate. 
 
-Since AuditEngine is on AWS, we use AWS S3 storage in the same datacenter where our compute service runs. If you use AWS S3, it is very easy for us to transfer the files to the correct region and datacenter for AuditEngine. But the user interface is not as good as with other services, and many of these other services actually use S3 behind the scenes.
+Since AuditEngine is on AWS, we use AWS S3 storage in the same datacenter where our compute service runs. If you use AWS S3, it is very easy for us to transfer the files to the correct region and datacenter for AuditEngine. But the user interface is not as good as with other services. Many of these other services actually use S3 behind the scenes.
 
 We have experience with the following services:
 
@@ -213,8 +204,9 @@ After you have selected some files, the uploading job will be tracked in a table
 
 ![upload_status_dialog](../images/upload_status_dialog.png "upload_status_dialog")
 
-
 Please leave the browser window open for the duration. It can be on a tab you are not using in your browser, or better, use a computer that you are not actively using during the upload. There is no limit to the number of files you can schedule for uploading.Please check that all the files were uploaded properly and if any were not successful, please try again. Normally, we find any issues are with the "last mile" between your office and your Internet Service Provider.
+
+The "Cooperative Workflow" requires that districts upload their files directly to AuditEngine.
 
 
 ### Option 3: Using USB Flash drives
@@ -256,14 +248,6 @@ For extremely large data uploads, we can ship to the election office a 5+ TB USB
 
 Thank you!
 
-
-<!-- Footnotes themselves at the bottom. -->
 ## Notes
 
-[^1]:
-     . For example, a similar function can be downloaded from this site: https://www.pc-tools.net/win32/md5sums/   Use the -u switch to create linux-compatible output.
-
-**Please see the detailed document below.**
-
-To view googledoc (best format) and  for comments, please <a href="https://docs.google.com/document/d/1x_sgk_gcDka9ryzzEWnhKtdy2Z9CGnkzDWVU3r_fEpQ/edit?usp=sharing" target="_blank">[click here]</a><br>
-<iframe src="https://docs.google.com/document/d/e/2PACX-1vSVhqbfd8S40rxQkTkl1Gl3YhY3zU764TXFNdnDi6c4Z9KUhMKNHDoO0Yk50Fukx2Irm-ZR0TRFfr7r/pub?embedded=true" width=900 height=700 style="border: 2px solid black;"></iframe>
+[^1]:For example, a similar function can be downloaded from this site: https://www.pc-tools.net/win32/md5sums/   Use the -u switch to create linux-compatible output.
