@@ -296,3 +296,7 @@ We believe it is more beneficial that this software is not shared and instead, a
 ## Q: How is AuditEngine funded?
 We are pursuing a grass-roots funding model, where we can do fundraising for each audit from the general public, rather than relying on contracts with the same government entities we are auditing. We believe such contracts, unless carefully constructed, will result in the auditors preferably providing high scores to their clients. We believe that the cost of operating AuditEngine is low enough so that the public can fund each audit due to the interest in having an independent review. Please donate today!
 
+
+
+
+
