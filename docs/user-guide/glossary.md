@@ -3,8 +3,6 @@
 
 # Glossary
 
-## AuditEngine Glossary
-
 In the definitions below, lower-case terms are specific to AuditEngine and are not defined elsewhere, whereas Capitalized terms are used by the election integrity field, except for proper names of AuditEngine applications and components. Terms provided here have special or important meaning for AuditEngine. 
 
 A general set of election terminology can be found at this URL: [https://www.eac.gov/sites/default/files/glossary_files/Glossary_of_Election_Terms_EAC.pdf](https://www.eac.gov/sites/default/files/glossary_files/Glossary_of_Election_Terms_EAC.pdf) 
@@ -22,12 +20,17 @@ For some [voting systems](#voting-system), such as _[Dominion](#dominion-voting-
 
 ### Adjudication {#adjudication}
 
-This is the process of human review of ballots or ballot images and providing an interpretation of the vote on that ballot. _[Dominion](#dominion-voting-systems-dominion)_ has an adjudication module that facilitates adjudication by election staff. AuditEngine also has an_ [Adjudicator App](#adjudicator-app)_ that can help fine tune the results obtained by AuditEngine.
+This is the process of human review of ballots or ballot images and providing an interpretation of the vote on that ballot. _[Dominion](#dominion-voting-systems-dominion)_ has an adjudication module that facilitates adjudication by election staff. AuditEngine also has an_ [AdjudiTally App](#adjuditally-app)_ that can help fine tune the results obtained by AuditEngine.
 
 
-### Adjudicator App {#adjudicator-app}
+### AdjudiTally App {#adjuditally-app}
 
-This component of AuditEngine is a browser-based application that provides a user interface to check any ballot, particularly flagged contests or comparison results that are disagreed. It presents the evaluation by AuditEngine and the evaluation by the voting system (per the [CVR](#cast-vote-record-cvr)) and that portion of the ballot showing the users marks or _[BMD](#ballot-marking-device-bmd)_ _[ballot summary card](#ballot-summary-card)_. The Adjudicator App can also be used without any voting system results to fine-tune the results by AuditEngine by reviewing any records that have been [flagged](#flagged) for further review.
+This component of AuditEngine is a browser-based application that provides a user interface to check any ballot, particularly flagged contests or comparison results that are disagreed. The AdjudiTally App has a number of modes that operate from the same interface. It can be used to: 
+
+* select between the evaluation by AuditEngine or the evaluation by the voting system (per the CVR) by selecting the evaluation which is correct or entering it from scratch.
+* fine-tune the results by AuditEngine without any voting system results by reviewing any records that have been [flagged](#flagged) for further review.
+* review ballot images without any results by AuditEngine or the voting system.
+* view ballot images and tally the results either by a single person or by a crowd-sourced team.
 
 
 ### Amazon Web Service (AWS) {#amazon-web-service-aws}
@@ -45,8 +48,6 @@ Most importantly for this application is that archives make it easier to handle 
 ### AuditEngine App {#auditengine-app}
 
 AuditEngine provides a user-friendly application that runs in the user's browser that assists with the aspects of running a job. To use the App, you must have an account and be authorized for the given activities. There are a number of menus that can be summarized as follows:
-
-
 
 * **Districts** -- A district is normally either a County or it may be an organization that wishes to use AuditEngine to process their organizational election. Each district has contacts and a location. Each district can have a common uploading area and a fixed link used for uploading. \
 
@@ -68,8 +69,6 @@ A logical major step in the pipeline, which consists of a number of _stages_, an
 
 The basic phases are:
 
-
-
 1. Setup and Upload Live Election Data, Perform Consistency Checks
 2. Create Style Templates and Map the Styles using live election data.
 3. Vote Extraction -- recognize the votes on all ballots, including BMD ballots primarily with the stage [extractvote](#extractvote)
@@ -77,8 +76,6 @@ The basic phases are:
 5. (optional) Scan Verification Batches and perform extraction and comparison.
 
 If _[Cooperative Workflow](#cooperative-workflow)_ is used, then there are 2 to 4 preliminary phases using [Logic and Accuracy Test (LAT)](#logic-and-accuracy-test-lat) data.
-
-
 
 1. Setup and Upload LAT Election Data, Perform Consistency Checks
 2. Create Style Templates and Map the Styles using LAT data.
@@ -137,17 +134,14 @@ A designation that represents the set of contests on the ballot, the language an
 
 To deal with these many variations, AuditEngine has a number of additional terms:
 
-
-    **_[card_code](#card_code) _**- the actual encoding on the ballot determined by the [Election Management System (EMS)](#election-management-system-ems) and usually unknown to election workers.
-
-
-    **_style_num_** - an integer that represents a given style, and may be either exactly the _card_code _or a deterministic conversion of that code. 
+**_[card_code](#card_code)_**- the actual encoding on the ballot determined by the [Election Management System (EMS)](#election-management-system-ems) and usually unknown to election workers.
 
 
-    **_[hexstyle](#hexstyle)_** - a useful representation that avoids arbitrary numerical assignments of the _style_num_, and represents only the set of contests used on the ballot.
+**_style_num_** - an integer that represents a given style, and may be either exactly the _card_code _or a deterministic conversion of that code. 
 
+**_[hexstyle](#hexstyle)_** - a useful representation that avoids arbitrary numerical assignments of the _style_num_, and represents only the set of contests used on the ballot.
 
-    **_pstyle_num _**- a printed style designation, usually a more human-friendly representation than _style_num_ but with (usually) a 1:1 correspondence with the _style_num_. The _pstyle_num_ can be extracted from the ballot using Optical Character Recognition (OCR) or from a [barcode](#barcode) printed on the ballot. OCR is not perfect and errors may cause critical errors if misread. 
+**_pstyle_num_** - a printed style designation, usually a more human-friendly representation than _style_num_ but with (usually) a 1:1 correspondence with the _style_num_. The _pstyle_num_ can be extracted from the ballot using Optical Character Recognition (OCR) or from a [barcode](#barcode) printed on the ballot. OCR is not perfect and errors may cause critical errors if misread. 
 
 
 ### Ballot Style Masters (BSMs) {#ballot-style-masters-bsms}
@@ -174,19 +168,17 @@ Determining the number of ballots cast by looking at the ballot images can be di
 
 ### Ballot Indexing File (BIF) {#ballot-indexing-file-bif}
 
-This term is used only in AuditEngine to refer to indexing and [metadata](#metadata) files that are generated to fully index the ballot images, cast vote records, and metadata derived from those sources as well as a preliminary examination of ballot image to extract data in barcodes and in specific areas as metadata. Such an index can be compared to the index card system used in libraries to locate a given printed resource, and also provide some _[metadata](#metadata)_ about the resource, such as in a library whether it is a book or video, number of pages, author, etc. \
- \
+This term is used only in AuditEngine to refer to indexing and [metadata](#metadata) files that are generated to fully index the ballot images, cast vote records, and metadata derived from those sources as well as a preliminary examination of ballot image to extract data in barcodes and in specific areas as metadata. Such an index can be compared to the index card system used in libraries to locate a given printed resource, and also provide some _[metadata](#metadata)_ about the resource, such as in a library whether it is a book or video, number of pages, author, etc. 
+
 There are the following forms:
 
+* **bia_bif: **ballot image archive ballot indexing file - this includes the ballot_id, where the ballot image can be found for each sheet (which archive and the path name) and any other metadata that can be derived by reviewing the list of ballots in ballot image [archive](#archive-zip-archive) ZIP files. This includes whether the ballot image was found to be repeated. 
 
+* **cvr_bif: **location of [CVR](#cast-vote-record-cvr) record within CVR files, and metadata available from the CVR record for each ballot sheet. 
 
-* **bia_bif: **ballot image archive ballot indexing file - this includes the ballot_id, where the ballot image can be found for each sheet (which archive and the path name) and any other metadata that can be derived by reviewing the list of ballots in ballot image [archive](#archive-zip-archive) ZIP files. This includes whether the ballot image was found to be repeated. \
+* **biacvr_bif: **These are joined into a single set of indexing records organized by the same order as the ballot image archives. 
 
-* **cvr_bif: **location of [CVR](#cast-vote-record-cvr) record within CVR files, and metadata available from the CVR record for each ballot sheet. \
-
-* **biacvr_bif: **These are joined into a single set of indexing records organized by the same order as the ballot image archives. \
-
-* **blt_bif: **These records are of the data derived by examining the ballot images but not extracting the votes. It includes _[card_code](#card_code),_ _pcounty (printed county name, if available), _and possibly _pstyle - _printed style designation, _pprecinct - _printed precinct designation. This set of records is not always separately saved, but is simply combined with the biacvr_bif to create the full_bif. \
+* **blt_bif: **These records are of the data derived by examining the ballot images but not extracting the votes. It includes _[card_code](#card_code),_ _pcounty (printed county name, if available), _and possibly _pstyle - _printed style designation, _pprecinct - _printed precinct designation. This set of records is not always separately saved, but is simply combined with the biacvr_bif to create the full_bif. 
 
 * **full_bif: **This is the full set of indexing records, which may be the same as the biacvr_bif, if the data from the blt_bif is not included, or it may include the data from the full preliminary ballot image examination (blt_bif). From this set of records, the stage **create_bif_report** can be run so as to provide a full report of the metadata derived across the data available.
 
@@ -413,7 +405,7 @@ This is the primary stage in the audit process where all ballot sheets are indiv
 
 ### Flagged {#flagged}
 
-A contest is _flagged_ by AuditEngine if they include [write-ins](#write-in), are "[Flagged](#flagged)" as ambiguous, that is, if AuditEngine used heuristics to guess on the correct resolution of hesitation marks and cross-outs, in the case of overvotes, or if the ballot images were [unprocessable](#unprocessed-sheets) due to damage to the image. AuditEngine can be used to produce its own canvass of the election, and the Flagged contests can be reviewed using the AuditEngine [Adjudicator App](#adjudicator-app) when the margin of victory is close to resolve the flagged contests using human eye evaluation of the images.
+A contest is _flagged_ by AuditEngine if they include [write-ins](#write-in), are "[Flagged](#flagged)" as ambiguous, that is, if AuditEngine used heuristics to guess on the correct resolution of hesitation marks and cross-outs, in the case of overvotes, or if the ballot images were [unprocessable](#unprocessed-sheets) due to damage to the image. AuditEngine can be used to produce its own canvass of the election, and the Flagged contests can be reviewed using the AuditEngine [AdjudiTallyApp](#adjuditally-app) when the margin of victory is close to resolve the flagged contests using human eye evaluation of the images.
 
 
 ### Fleet {#fleet}
@@ -534,18 +526,14 @@ Thus, **GA_Bartow_20201103** is the job for the 2020 General Election in Bartow 
 
 For each [Audit Job](#audit-job), there is a related _Job Settings File_. It has the name which is the _[job_name](#job_name) _prefixed with the string "JOB_". It is a csv (comma separated values, i.e. spreadsheet) file and can be edited with any spreadsheet program, but is normally edited through the _[AuditEngine App](#auditengine-app)_. There are a vast number of possible settings that can control AuditEngine when it processes an election. Most of these are to allow AuditEngine to handle ballots from various vendors, and variations we find due to differences in how the [Voting Systems](#voting-system) are programmed. We can summarize these settings into a number of categories:
 
-
-
 * **Source Files** -- The locations and names of Ballot Image [Archives](#archive-zip-archive), Verification Archives, [CVR](#cast-vote-record-cvr) files, [BSM](#ballot-style-masters-bsms) Files, and other exports from the [EMS](#election-management-system-ems). These parameters are provided by the _AuditEngine App_ derived from the files that are uploaded. 
-* **Election Info** -- Information about the election district used for reporting, such as the official ballots cast, population, registered voters, registration partisan bias, etc.  \
+* **Election Info** -- Information about the election district used for reporting, such as the official ballots cast, population, registered voters, registration partisan bias, etc.  
 
-* **Layout Info** -- Regions or adjustments to regions where information can be found on the ballot layout, particularly for Hand-Marked Paper Ballot layouts, such as to read the [Ballot Style](#ballot-style), pstyle, pcounty, [Write-in Area](#write-in-area) adjustments, etc. \
+* **Layout Info** -- Regions or adjustments to regions where information can be found on the ballot layout, particularly for Hand-Marked Paper Ballot layouts, such as to read the [Ballot Style](#ballot-style), pstyle, pcounty, [Write-in Area](#write-in-area) adjustments, etc. 
 
-* **File details** -- Information to allow metadata to be extracted from the Archives and CVR files. \
+* **File details** -- Information to allow metadata to be extracted from the Archives and CVR files. 
 
-* **Execution and Reporting Controls** -- Controls used to select specific precincts, styles, groups, contests, etc. to limit execution and reporting. \
-
-
+* **Execution and Reporting Controls** -- Controls used to select specific precincts, styles, groups, contests, etc. to limit execution and reporting. 
 
 ### JSON {#json}
 
@@ -570,8 +558,6 @@ The published list of voters who are registered as eligible to vote in the elect
 ### List of Voters Who Voted {#list-of-voters-who-voted}
 
 This list provides the list of voters that either: 
-
-
 
 * returned an absentee or mail ballot which was accepted for tabulation, or
 * checked in at a polling place, even if they left without casting their ballot.
@@ -781,19 +767,17 @@ A voting system custom designed for Los Angeles County and to date, is only used
 
 How the work will be done in an audit, particularly when working in concert with state and county operations. The following grades are defined:
 
-
-
 * **Public Oversight Workflow** 
-This workflow does not require any special actions by election staff other than publishing data files. This is the default mode of operation when AuditEngine is run by civic groups, candidates or campaigns without much interaction with election staff. This workflow is typically run after [Certification](#certification-election) and is dependent on the availability of ballot images and CVR files, which may be delayed until after certification. Because they are run after certification, audits using this workflow may still impact elections if there are significant findings in local contests but there is typically not a direct route to changing the outcome. But more importantly, they allow the campaigns to have all their questions answered and accept the outcome. This is particularly important for those candidates and their supporters who did not win. This workflow also requires the least amount of data as they don't actually need the [Logic and Accuracy Test (LAT)](#logic-and-accuracy-test-lat) ballot images nor the LAT CVR files, because the turnaround time is not optimized. However, there are two variants based on whether state law allows full public release of the data, as follows: 
+This workflow does not require any special actions by election staff other than publishing data files. This is the default mode of operation when AuditEngine is run by civic groups, candidates or campaigns without much interaction with election staff. This workflow is typically run after [Certification](#certification-election) and is dependent on the availability of ballot images and CVR files, which may be delayed until after certification. Because they are run after certification, audits using this workflow may still impact elections if there are significant findings in local contests but there is typically not a direct route to changing the outcome. But more importantly, they allow the campaigns to have all their questions answered and accept the outcome. This is particularly important for those candidates and their supporters who did not win. This workflow also requires the least amount of data as they don't actually need the [Logic and Accuracy Test (LAT)](#logic-and-accuracy-test-lat) ballot images nor the LAT CVR files, because the turnaround time is not optimized. However, there are two variants based on whether state law allows full public release of the data, as follows:
 
-    * **Public Oversight with Full Data Release** 
-Ballot images and CVR files are all available and the election district provides these. We don't believe that any redaction of additional marks is required on these ballots, because largely, we will only need to view a subset of the ballots in our reports, and it is generally not possible to link the voter to their ballot. 
+    * **Public Oversight with Full Data Release**
+Ballot images and CVR files are all available and the election district provides these. We don't believe that any redaction of additional marks is required on these ballots, because largely, we will only need to view a subset of the ballots in our reports, and it is generally not possible to link the voter to their ballot.
 
-    * **Public Oversight Workflow with Limited NDA** 
-If state law does not embrace full release of ballot images, then we can accept those under a Limited Non-Disclosure Agreement (Limited NDA). The idea is that we would keep the source data on a secure server and when reports are produced, only provide those ballot images that are at issue. 
+    * **Public Oversight Workflow with Limited NDA**
+If state law does not embrace full release of ballot images, then we can accept those under a Limited Non-Disclosure Agreement (Limited NDA). The idea is that we would keep the source data on a secure server and when reports are produced, only provide those ballot images that are at issue.
 
-* **Cooperative Workflow** 
-When audits are run in cooperation with election districts, turnaround time of results prior to [Certification](#certification-election) can be reduced by configuring AuditEngine prior to the start of the election using: 
+* **Cooperative Workflow**
+When audits are run in cooperation with election districts, turnaround time of results prior to [Certification](#certification-election) can be reduced by configuring AuditEngine prior to the start of the election using: \
 
     * the [Logic and Accuracy Test (LAT) ](#logic-and-accuracy-test-lat)ballot images, 
     * the "known good" [CVR](#cast-vote-record-cvr) of those LAT ballots, and
@@ -801,26 +785,26 @@ When audits are run in cooperation with election districts, turnaround time of r
 
     This will allow AuditEngine to be fully configured prior to the election and ready to run when live election data is available without any further time consuming configuration.
 
-* **Jurisdiction-Run Workflow** 
+* **Jurisdiction-Run Workflow**
   To further optimize the workflow and reduce the reliance on personnel outside the control of election districts, the configuration of AuditEngine for audits in each election district can be easily delegated to staff in those districts. This is quite similar to [Cooperative Workflow](#cooperative-workflow) except that the work is being done by staff in each election district rather than by an outside team associated with AuditEngine. In this workflow there must be at least one project manager who is independent from the election districts assigned to each state to provide independent oversight. 
 
     In this workflow, staff in each district will:
 
-    * Cooperate with workers of all the other districts in the state in the design of ballots.  In this way, a common configuration can be used by AuditEngine to recognize the County and Election on each ballot. 
+    * Cooperate with workers of all the other districts in the state in the design of ballots.  In this way, a common configuration can be used by AuditEngine to recognize the County and Election on each ballot.
 
     * Within the AuditEngine frontend app, Create the Election and create two audits for that district. 
         * One audit uses [LAT](#logic-and-accuracy-test-lat) data (the "LAT Audit"), which will allow the full configuration and testing of AuditEngine, for this election, and
-        * the other is for the "live" election data. 
+        * the other is for the "live" election data.
 
     * For the "LAT Audit":
         * The [Ballot Style Masters (BSMs)](#ballot-style-masters-bsms) and [LAT](#logic-and-accuracy-test-lat) ballot images and LAT [CVR](#cast-vote-record-cvr) files are uploaded.
         * Run [Phases](#audit-phase) 1 and 2 with the LAT images to create data for the map.
         * Create the [Target Map](#target-map) using the [TargetMapper App](#targetmapper-app), import the map and check the redline proofs for accuracy
-        * Optionally and preferably run Phases 3 and 4 using the LAT data as an audit to check that mapping. This incurs a nominal cost. 
+        * Optionally and preferably run Phases 3 and 4 using the LAT data as an audit to check that mapping. This incurs a nominal cost.
 
     * Then when live data is available:
         * Upload the ballot images and CVRs to AuditEngine.
-        * Run Phase 1 (Metadata Analysis), but <span style="text-decoration:underline;">skip Phase 2 (Mapping)</span> and move directly to Phase 3 (Vote Extraction) and 4 (Comparison and reporting). Assuming there are no issues, these phases can be run within a day. \
+        * Run Phase 1 (Metadata Analysis), but <span style="text-decoration:underline;">skip Phase 2 (Mapping)</span> and move directly to Phase 3 (Vote Extraction) and 4 (Comparison and reporting). Assuming there are no issues, these phases can be run within a day.
 
     * If a **Verification Phase** is to be used by the jurisdiction, the precincts (or batches) are selected using rolls of ten-sided dice from a list of precincts (or batches). Then the precincts (or batches) are pulled, and without breaking seals from storage, are brought to a secure location where the boxes are opened and the ballots scanned using non-voting system scanners and with public observation. The stages of the Verification Phase include extracting the metadata from the scanned images, and performing extraction, and then comparing the result on an aggregated basis.
 
@@ -841,3 +825,4 @@ Write-ins normally account for about 80% of [Contest Variants](#contest-variant)
 The write-in area is the area set aside for manual entry on[ Hand-Marked Paper Ballots](#hand-marked-paper-ballot). We suggest that there is a square box provided for user entry that does not have any other marks and will be blank if the user does not write anything in the box.
 
 AuditEngine checks to see if there is anything written into the write-in area and if there is, attempts to convert it using [Optical Character Recognition (OCR)](#optical-character-recognition-ocr). The Write-in Area can be adjusted to match the area on the ballot relative to the [Target](#targets).
+
