@@ -11,8 +11,8 @@ We show that the accuracy of AuditEngine is greater than 99.99% and when it diff
 
 **See Also:**
 
-- [Background Document](user-guide/auditengine-background-doc/) -- Review this background document to become acquainted with general concepts and operational principles of AuditEngine 
-- [AuditEngine FAQs](user-guide/auditengine_faqs/) -- frequently asked questions about AuditEngine
+- [Background Document](/user-guide/auditengine-background-doc/) -- Review this background document to become acquainted with general concepts and operational principles of AuditEngine 
+- [AuditEngine FAQs](/user-guide/auditengine_faqs/) -- frequently asked questions about AuditEngine
 - <a href="https://copswiki.org/Common/AuditEngine" target="_blank">AuditEngine</a> -- primary project page for AuditEngine
 
 ### Combined Case Study Report -- 2020 Election Ballot Image Audits in Collier County, Volusia County, and St. Lucie County Florida
