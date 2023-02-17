@@ -17,7 +17,7 @@ We show that the accuracy of AuditEngine is greater than 99.99% and when it diff
 
 ### Combined Case Study Report -- 2020 Election Ballot Image Audits in Collier County, Volusia County, and St. Lucie County Florida
 The <a href="https://docs.google.com/document/d/e/2PACX-1vQspH7a2ZWvvoVLPidaRmiVzPWicJ--MMq28g75bWJMMNvb8HwvB8AZP7jmflQVRAgpyli0pBbUJu5b/pub" target="_blank">Case Study Report</a> <-- click here to open as googledoc<br>
-<a href="https://docs.google.com/document/d/1Jb5AegEfR2ddjbN5LYjVgrpZtHk19ooSnrb-90N5QTQ/edit?usp=sharing" target="_blank">Case Study Report</a> <-- click here to open googledoc<br>
+<a href="https://copswiki.org/w/pub/Common/M1970/Case%20Study%20Report%202020%20General%20Election.pdf" target="_blank">Case Study Report</a> <-- click here for PDF
 
 <iframe src="https://docs.google.com/document/d/e/2PACX-1vQspH7a2ZWvvoVLPidaRmiVzPWicJ--MMq28g75bWJMMNvb8HwvB8AZP7jmflQVRAgpyli0pBbUJu5b/pub?embedded=true" height=700 width=700 style="border: 2px solid black;"></iframe>
 

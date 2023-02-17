@@ -29,7 +29,7 @@ This can be determined by looking that the voting systems used by the districts.
 
 |                                          | Ballot Image Producing                                       | Not Ballot Image Producing                                   |
 | ---------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| **Election Systems & Software (ES&S)**   | [DS200](https://verifiedvoting.org/election-system/ess-ds200/), [DS450, DS850, DS950](https://verifiedvoting.org/election-system/ess-ds850-ds450/)<br />[ExpressVote as BMD](https://verifiedvoting.org/election-system/ess-expressvote/) when used with the scanners above.<br />Note: ES&S scanners allow ballot images to be deleted if not set to "Save All" | [ExpressTouch](https://verifiedvoting.org/election-system/ess-expresstouch/), [iVotronic](https://verifiedvoting.org/election-system/ess-ivotronic/), [Model 100](https://verifiedvoting.org/election-system/ess-model-100/), Model 150, 550, [ExpressVote XL](https://verifiedvoting.org/election-system/ess-expressvote-xl/) |
+| **Election Systems & Software (ES&S)**   | [DS200](https://verifiedvoting.org/election-system/ess-ds200/), [DS450, DS850, DS950](https://verifiedvoting.org/election-system/ess-ds850-ds450/)<br />[ExpressVote as BMD](https://verifiedvoting.org/election-system/ess-expressvote/) when used with the scanners above, [ExpressVote XL](https://verifiedvoting.org/election-system/ess-expressvote-xl/).<br />Note: ES&S scanners allow ballot images to be deleted if not set to "Save All" | [ExpressTouch](https://verifiedvoting.org/election-system/ess-expresstouch/), [iVotronic](https://verifiedvoting.org/election-system/ess-ivotronic/), [Model 100](https://verifiedvoting.org/election-system/ess-model-100/), Model 150, 550 |
 | **Dominion Voting Systems**              | [ImageCast Central](https://verifiedvoting.org/election-system/dominion-imagecast-central/), [ImageCast Precinct](https://verifiedvoting.org/election-system/dominion-imagecast-precinct/)<br />[ImageCase X BMD](https://verifiedvoting.org/election-system/dominion-imagecast-x/) when used with the above scanners | [ImageCast X DRE](https://verifiedvoting.org/election-system/dominion-imagecast-x/) |
 | **Sequoia Voting Systems**               |                                                              | AVC Advantage, AVC Edge                                      |
 | **Premier Election Solutions (Diebold)** |                                                              | AccuVote OS Central, Accuvote OS, and Accuvote OSX           |
@@ -41,11 +41,11 @@ This can be determined by looking that the voting systems used by the districts.
 
 The other factor is whether the ballot images are available by state law or restricted by procedure. This is a very dynamic area as there are some court cases in process to provide ballot images. Jurisdictions sometimes play it safe and claim that ballot images are the same as paper ballots. Counties may charge for the data, and may use this as a mechanism to block access.
 
-Here is a partial list of availability. Please see a full and dynamically updated list: [here](https://en.wikipedia.org/wiki/File:Ballot-foia.png) and [here](https://en.wikipedia.org/wiki/File:Keepimages.png)
+Here is a partial list of availability. Please see a full and dynamically updated list: [here](https://en.wikipedia.org/wiki/File:Ballot-foia.png) and [here](https://en.wikipedia.org/wiki/File:Keepimages.png). Some states are working on making ballot images and cast-vote records public records, such as AZ.
 
-| States will full availability | States with mixed availability                 | States with no availability |
-| ----------------------------- | ---------------------------------------------- | --------------------------- |
-| GA, WI                        | CA (only SF), FL (some counties delete images) | AZ, WA, NC                  |
+| States will full availability | States with mixed availability                     | States with no availability (yet) |
+| ----------------------------- | -------------------------------------------------- | --------------------------------- |
+| GA, WI                        | CA (only SF), FL (some counties delete images), NJ | AZ, WA, NC                        |
 
 ## Getting the Data
 
