@@ -586,7 +586,7 @@ One key _[Phase](#phase)_ in the process of performing a [ballot image audit](#b
 <h3 id="md5">MD5</h3>
 
 
-A popular [hash](#hash-value-hash-manifest-file) algorithm used to detect changes in files due to uploading or downloading errors. It is not strong enough to be used for critical cryptographic purposes, but it continues to be used by cloud storage services in [ETags](#etag) and is generally regarded as "good enough" for those purposes due to the restrictions on file structure. Other stronger algorithms are recommended for critical cryptographic purposes, such as [SHA1 / SHA256 / SHA512](#sha1-sha256-sha512). We suggest using SHA512 for the _[Hash Manifest](#hash-value-hash-manifest-file) _because it is available and is extremely strong, but cloud storage services continue to use MD5.
+A popular [hash](#hash-value-hash-manifest-file) algorithm used to detect changes in files due to uploading or downloading errors. It is not strong enough to be used for critical cryptographic purposes, but it continues to be used by cloud storage services in [ETags](#etag) and is generally regarded as "good enough" for those purposes due to the restrictions on file structure. Other stronger algorithms are recommended for critical cryptographic purposes, such as [SHA1 / SHA256 / SHA512](#sha1-sha256-sha512). We suggest using SHA512 for the *[Hash Manifest](#hash-value-hash-manifest-file)* because it is available and is extremely strong, but cloud storage services continue to use MD5.
 
 An example of an MD5 checksum: **f664b587aacae05c8aa5c591b8659ec4**
 
@@ -663,7 +663,7 @@ A 2-dimensional machine-readable graphical artifact consisting of black squares 
 
 QR Codes are used on BMD [ballot summary cards](#ballot-summary-card) produced by [Dominion](#dominion-voting-systems-dominion) and by the VSAP (Voting System for All People) developed by Los Angeles County, CA. The QR Codes used in the VSAP system can be easily read by a smartphone and the codes compared with annotations on the ballot. The QR Codes used by Dominion are, however, binary in nature and are not readable by a smartphone camera, and are thus not verifiable in the same way that the VSAP codes are.
 
-AuditEngine does not use QR Codes to determine the votes on a BMD ballot summary card, but rather reads the printed strings using _[Optical Character Recognition (OCR)](#optical-character-recognition-ocr)_. Sometimes, the term _[barcode](#barcode) _is used as a generic term to mean any type of linear or 2-d code, such as a QR Code.
+AuditEngine does not use QR Codes to determine the votes on a BMD ballot summary card, but rather reads the printed strings using _[Optical Character Recognition (OCR)](#optical-character-recognition-ocr)_. Sometimes, the term *[barcode](#barcode)* is used as a generic term to mean any type of linear or 2-d code, such as a QR Code.
 
 <h3 id="redline-proofs">Redline Proofs</h3>
 
