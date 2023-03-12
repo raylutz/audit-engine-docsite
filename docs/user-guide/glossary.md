@@ -525,19 +525,19 @@ Thus, **GA_Bartow_20201103** is the job for the 2020 General Election in Bartow 
 For each [Audit Job](#audit-job), there is a related _Job Settings File_. It has the name which is the _[job_name](#job_name) prefixed with the string "JOB\_". It is a csv (comma separated values, i.e. spreadsheet) file and can be edited with any spreadsheet program, but is normally edited through the *[AuditEngine App](#auditengine-app)*. There are a vast number of possible settings that can control AuditEngine when it processes an election. Most of these are to allow AuditEngine to handle ballots from various vendors, and variations we find due to differences in how the [Voting Systems](#voting-system) are programmed. We can summarize these settings into a number of categories:
 
 * **Source Files** -- The locations and names of Ballot Image [Archives](#archive-zip-archive), Verification Archives, [CVR](#cast-vote-record-cvr) files, [BSM](#ballot-style-masters-bsms) Files, and other exports from the [EMS](#election-management-system-ems). These parameters are provided by the _AuditEngine App_ derived from the files that are uploaded. 
-* **Election Info** -- Information about the election district used for reporting, such as the official ballots cast, population, registered voters, registration partisan bias, etc.  \
+* **Election Info** -- Information about the election district used for reporting, such as the official ballots cast, population, registered voters, registration partisan bias, etc. 
 
-* **Layout Info** -- Regions or adjustments to regions where information can be found on the ballot layout, particularly for Hand-Marked Paper Ballot layouts, such as to read the [Ballot Style](#ballot-style), pstyle, pcounty, [Write-in Area](#write-in-area) adjustments, etc. \
+* **Layout Info** -- Regions or adjustments to regions where information can be found on the ballot layout, particularly for Hand-Marked Paper Ballot layouts, such as to read the [Ballot Style](#ballot-style), pstyle, pcounty, [Write-in Area](#write-in-area) adjustments, etc. 
 
-* **File details** -- Information to allow metadata to be extracted from the Archives and CVR files. \
+* **File details** -- Information to allow metadata to be extracted from the Archives and CVR files. 
 
-* **Execution and Reporting Controls** -- Controls used to select specific precincts, styles, groups, contests, etc. to limit execution and reporting. \
+* **Execution and Reporting Controls** -- Controls used to select specific precincts, styles, groups, contests, etc. to limit execution and reporting. 
 
 
 <h3 id="json">JSON</h3>
 
 
-JSON is an acronym that stands for Javascript Object Notation. Although this was originally defined for use in the programming language Javascript, it is now the most widely used export format that can express relatively complex and nested data structures, and has supplanted XML in popularity. AuditEngine can import the *[JSON CVR Export](#json-cvr-export)* and it also produces files in this format as the result of various [stages](#stage).
+JSON is an acronym that stands for "Javascript Object Notation". Although this was originally defined for use in the programming language Javascript, it is now the most widely used export format that can express relatively complex and nested data structures, and has supplanted XML in popularity. AuditEngine can import the *[JSON CVR Export](#json-cvr-export)* and it also produces files in this format as the result of various [stages](#stage).
 
 <h3 id="json-cvr-export">JSON CVR Export</h3>
 
