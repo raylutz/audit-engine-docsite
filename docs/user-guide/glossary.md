@@ -74,8 +74,6 @@ A logical major step in the pipeline, which consists of a number of _stages_, an
 
 The basic phases are:
 
-
-
 1. Setup and Upload Live Election Data, Perform Consistency Checks
 2. Create Style Templates and Map the Styles using live election data.
 3. Vote Extraction -- recognize the votes on all ballots, including BMD ballots primarily with the stage [extractvote](#extractvote)
@@ -83,8 +81,6 @@ The basic phases are:
 5. (optional) Scan Verification Batches and perform extraction and comparison.
 
 If _[Cooperative Workflow](#cooperative-workflow)_ is used, then there are 2 to 4 preliminary phases using [Logic and Accuracy Test (LAT)](#logic-and-accuracy-test-lat) data.
-
-
 
 1. Setup and Upload LAT Election Data, Perform Consistency Checks
 2. Create Style Templates and Map the Styles using LAT data.
@@ -218,6 +214,40 @@ Refers to the official declaration by election officials that the election resul
 
 The name used by AuditEngine for the _[stage](#stage)_ of a _[ballot image audit](#ballot-image-audit-bia)_ where the [CVR](#cast-vote-record-cvr) is compared sheet-by-sheet and contest-by-contest with the tabulation created by AuditEngine. This stage creates a number of comparison records, where there is one record per ballot sheet (either _[Fully Agreed](#fully-agreed-sheets) _or _[Partially Agreed](#partially-agreed-sheets)_), and one record per ballot-contest that is classified as a _[contest variant](#contest-variant)_. Ballot-contests that are not considered variants do not have their own record but are included in their parent sheet record. The comparison records are then used to create the _[Discrepancy Report](#discrepancy-report)_, which is the primary output of AuditEngine.
 
+<h3 id="contest-or-ballot-contest">Contest or Ballot-Contest</h3>
+
+This is a term used in the comparison process. On each ballot cast, there are a number of contests. A single contest on a single cast ballot is a "ballot-contest" and sometimes just "contest" in the context of the comparison report. This is not the entire contest with all votes from all ballots summed, but simply the evaluation of that single contest on that sheet (for that single voter). Frequently, these can be called "votes".
+
+<h3 id="contest-name">Contest Name</h3>
+
+AuditEngine uses the names of contests as defined by the [Cast Vote Record (CVR)](#cast-vote-record-cvr) file when one is available. The [Election Information File (EIF)](#election-information-file-eif) provides these names as used by the CVR and we stick with those when the CVR is available. 
+
+When AuditEngine is used in a state-wide application, counties should cooperate by using the same contest names for statewide or districts that span county boundaries and avoid using the same names when they are specific to one county.
+
+Contest names should differ within the first 50 characters, and we prefer to have contest names differ in more than one character. For example: "Amendment I" and "Amendment II" are hard to tell apart, compared with "Amendment 1" and "Amendment 2" but it would be better to use something like "Amendment 1: Tax Increase" and "Amendment 2: Term Limits" so they differ by more than one character. Avoid long names like: _U.S. Representative in 117th Congress From the 11th Congressional District of Georgia (Vote for One) (NP)_ and consider using a shorter representation like: _U.S. House GA CD-11._
+
+Also please avoid generic names that depend on the ballot style to have meaning. Instead of "Mayor" always add the town, like "Mayor, Town of Albion". True also for positions like Treasurer, Supervisor, Clerk, etc.
+
+<h3 id="contest-options">Contest Options</h3>
+
+
+The list of voting opportunities in a contest are called _Contest Options_. The options can either be candidate names or Yes/No options for ballot measure type contests or approval contests (such as for judges). The options may include [Write-Ins](#write-in). The _Contest Options_ are defined by the _[Election Information File (EIF)](#election-information-file-eif)_ and are preferably the same as the strings used in the _[CVR](#cast-vote-record-cvr)_. Each option on a _[Hand-Marked Paper Ballot](#hand-marked-paper-ballot)_ will have a _[Target](#targets)_, such as an oval, which can be darkened using a pen by the voter. 
+
+Some states require that the order of the Contest Options will rotate to avoid bias. The Yes/No options are always in the same order.
+
+<h3 id="contest-rendition">Contest Rendition</h3>
+
+
+A given graphical expression of a contest on a [Hand-Marked Paper Ballot](#hand-marked-paper-ballot) is called a _Contest Rendition_. Normally, contests are designed as a block with the [Contest Name](#contest-name) at the top, a possible description, followed by the _[Contest Options](#contest-options)_. Normally, such a contest rendition will be the same no matter where it is shown on the ballot, unless a different language or option rotation is used. The TargetMapper App will allow the user to link a given Contest Rendition to a Contest Name and Contest Options as defined by the CVR, and when linked, it will be found no matter where it is located on the ballot.
+
+<h3 id="contest-variant">Contest Variant</h3>
+
+A contest variant is a _[ballot-contest](#contest-or-ballot-contest)_ which has [write-ins](#write-in), [overvotes](#overvote), is [flagged](#flagged), or is _[disagreed](#disagreed-contest)_, i.e. if there is any disagreement between the evaluation of the vote by AuditEngine and the official result. ([Undervotes](#undervote) are not included in the set unless they are disagreed.) Contest Variants can normally be summed by contest. Each contest variant has a separate comparison record for each ballot-contest instance.
+
+### COTS -- Commercial Off the Shelf
+
+This term is used if the equipment or software is not specifically designed for the election data processing, but is largely and more likely used for other purposes. As a result, there is a notion that these systems are also not as likely to have back-doors that can be utilized to maliciously attack the results of the election. For AuditEngine, we commonly specify COTS scanners for the Verification Phase.
+
 <h3 id="cooperative-workflow">Cooperative Workflow</h3>
 
 
@@ -247,41 +277,7 @@ This is in contrast with the _[Public Oversight Workflow](#public-oversight-work
 
 See also "_[Workflow](#workflow)_"
 
-<h3 id="contest-or-ballot-contest">Contest or Ballot-Contest</h3>
-
-
-This is a term used in the comparison process. On each ballot cast, there are a number of contests. A single contest on a single cast ballot is a "ballot-contest" and sometimes just "contest" in the context of the comparison report. This is not the entire contest with all votes from all ballots summed, but simply the evaluation of that single contest on that sheet (for that single voter). Frequently, these can be called "votes".
-
-<h3 id="contest-name">Contest Name</h3>
-
-
-AuditEngine uses the names of contests as defined by the [Cast Vote Record (CVR)](#cast-vote-record-cvr) file when one is available. The [Election Information File (EIF)](#election-information-file-eif) provides these names as used by the CVR and we stick with those when the CVR is available. 
-
-When AuditEngine is used in a state-wide application, counties should cooperate by using the same contest names for statewide or districts that span county boundaries and avoid using the same names when they are specific to one county.
-
-Contest names should differ within the first 50 characters, and we prefer to have contest names differ in more than one character. For example: "Amendment I" and "Amendment II" are hard to tell apart, compared with "Amendment 1" and "Amendment 2" but it would be better to use something like "Amendment 1: Tax Increase" and "Amendment 2: Term Limits" so they differ by more than one character. Avoid long names like: _U.S. Representative in 117th Congress From the 11th Congressional District of Georgia (Vote for One) (NP)_ and consider using a shorter representation like: _U.S. House GA CD-11._
-
-Also please avoid generic names that depend on the ballot style to have meaning. Instead of "Mayor" always add the town, like "Mayor, Town of Albion". True also for positions like Treasurer, Supervisor, Clerk, etc.
-
-<h3 id="contest-options">Contest Options</h3>
-
-
-The list of voting opportunities in a contest are called _Contest Options_. The options can either be candidate names or Yes/No options for ballot measure type contests or approval contests (such as for judges). The options may include [Write-Ins](#write-in). The _Contest Options_ are defined by the _[Election Information File (EIF)](#election-information-file-eif)_ and are preferably the same as the strings used in the _[CVR](#cast-vote-record-cvr)_. Each option on a _[Hand-Marked Paper Ballot](#hand-marked-paper-ballot)_ will have a _[Target](#targets)_, such as an oval, which can be darkened using a pen by the voter. 
-
-Some states require that the order of the Contest Options will rotate to avoid bias. The Yes/No options are always in the same order.
-
-<h3 id="contest-rendition">Contest Rendition</h3>
-
-
-A given graphical expression of a contest on a [Hand-Marked Paper Ballot](#hand-marked-paper-ballot) is called a _Contest Rendition_. Normally, contests are designed as a block with the [Contest Name](#contest-name) at the top, a possible description, followed by the _[Contest Options](#contest-options)_. Normally, such a contest rendition will be the same no matter where it is shown on the ballot, unless a different language or option rotation is used. The TargetMapper App will allow the user to link a given Contest Rendition to a Contest Name and Contest Options as defined by the CVR, and when linked, it will be found no matter where it is located on the ballot.
-
-<h3 id="contest-variant">Contest Variant</h3>
-
-
-A contest variant is a _[ballot-contest](#contest-or-ballot-contest)_ which has [write-ins](#write-in), [overvotes](#overvote), is [flagged](#flagged), or is _[disagreed](#disagreed-contest)_, i.e. if there is any disagreement between the evaluation of the vote by AuditEngine and the official result. ([Undervotes](#undervote) are not included in the set unless they are disagreed.) Contest Variants can normally be summed by contest. Each contest variant has a separate comparison record for each ballot-contest instance.
-
 <h3 id="csv-file">CSV File</h3>
-
 
 A CSV (Character Separated Values) file is the most widely used format to express tabular data, and is frequently used by AuditEngine as the result and inputs to various Stages in the processing Pipeline. AuditEngine uses the most standard format, which uses a comma between data fields and may include double quotes in the field if there are embedded commas. These files can be read by most spreadsheet programs. A CSV file may also include JSON embedded in a given field if the field contains either a list or dictionary.
 
@@ -738,7 +734,9 @@ Sheets that were NOT successfully processed by AuditEngine, generally due to ima
 
 AuditEngine has an optional capability to process ballot images that are made using non-voting system scanners. We call these "Verification Images", and the workflow phase is the "Verification Phase".
 
-Verification images should be of precincts (or batches) that correspond to an aggregated group in the CVR. These are not run as a separate audit, but as an additional 5th phase in the pipeline of the subject audit.
+Verification images should be of precincts (or batches) that correspond to an aggregated group in the CVR or summary report. These are not run as a separate audit, but as an additional 5th phase in the pipeline of the subject audit. If the Paper-Centric workflow is used, then these can be considered to be of primary concern rather than as an optional add-on.
+
+In all cases, non-voting system scanners are used to capture the images of the paper ballots, sometimes called electronic copies.
 
 The number of batches processed in this way can be minimized, because the primary hazard being tested is the remote chance that the ballot images were manipulated prior to being secured by the system after scanning. Therefore, the number of batches can be reduced to a fixed value.
 
@@ -767,22 +765,22 @@ A voting system custom designed for Los Angeles County and to date, is only used
 How the work will be done in an audit, particularly when working in concert with state and county operations. The following grades are defined:
 
 * **Public Oversight Workflow**
-This workflow does not require any special actions by election staff other than publishing data files. This is the default mode of operation when AuditEngine is run by civic groups, candidates or campaigns without much interaction with election staff. This workflow is typically run after [Certification](#certification-election) and is dependent on the availability of ballot images and CVR files, which may be delayed until after certification. Because they are run after certification, audits using this workflow may still impact elections if there are significant findings in local contests but there is typically not a direct route to changing the outcome. But more importantly, they allow the campaigns to have all their questions answered and accept the outcome. This is particularly important for those candidates and their supporters who did not win. This workflow also requires the least amount of data as the [Logic and Accuracy Test (LAT)](#logic-and-accuracy-test-lat) ballot images nor the LAT CVR files are required, because the turnaround time is not optimized. However, there are two variants based on whether state law allows full public release of the data, as follows: 
+  This workflow does not require any special actions by election staff other than publishing data files. This is the default mode of operation when AuditEngine is run by civic groups, candidates or campaigns without much interaction with election staff. This workflow is typically run after [Certification](#certification-election) and is dependent on the availability of ballot images and CVR files, which may be delayed until after certification. Because they are run after certification, audits using this workflow may still impact elections if there are significant findings in local contests but there is typically not a direct route to changing the outcome. But more importantly, they allow the campaigns to have all their questions answered and accept the outcome. This is particularly important for those candidates and their supporters who did not win. This workflow also requires the least amount of data as the [Logic and Accuracy Test (LAT)](#logic-and-accuracy-test-lat) ballot images nor the LAT CVR files are required, because the turnaround time is not optimized. However, there are two variants based on whether state law allows full public release of the data, as follows: 
 
     * **Public Oversight with Full Data Release** 
-Ballot images and CVR files are all available and the election district provides these. We don't believe that any redaction of additional marks is required on these ballots, because largely, we will only need to view a subset of the ballots in our reports, and it is generally not possible to link the voter to their ballot. 
+  Ballot images and CVR files are all available and the election district provides these. We don't believe that any redaction of additional marks is required on these ballots, because largely, we will only need to view a subset of the ballots in our reports, and it is generally not possible to link the voter to their ballot. 
 
     * **Public Oversight Workflow with Limited NDA** 
-If state law does not embrace full release of ballot images, then we can accept those under a Limited Non-Disclosure Agreement (Limited NDA). We would keep the source data on a secure server and when reports are produced, only provide those ballot images that are at issue. 
+  If state law does not embrace full release of ballot images, then we can accept those under a Limited Non-Disclosure Agreement (Limited NDA). We would keep the source data on a secure server and when reports are produced, only provide those ballot images that are at issue. 
 
 * **Cooperative Workflow**
-When audits are run in cooperation with election districts, turnaround time of results prior to [Certification](#certification-election) can be reduced by configuring AuditEngine prior to the start of the election using:
+  When audits are run in cooperation with election districts, turnaround time of results prior to [Certification](#certification-election) can be reduced by configuring AuditEngine prior to the start of the election using:
 
     * the [Logic and Accuracy Test (LAT) ](#logic-and-accuracy-test-lat)ballot images, 
     * the "known good" [CVR](#cast-vote-record-cvr) of those LAT ballots, and
     * the [Ballot Style Masters (BSMs)](#ballot-style-masters-bsms) PDF files
 
-    This will allow AuditEngine to be fully configured prior to the election and ready to run when live election data is available without any further time consuming configuration.
+  This will allow AuditEngine to be fully configured prior to the election and ready to run when live election data is available without any further time consuming configuration. An optional Verification Phase is an optional addition to this workflow, and requires handling of the paper ballots, and may require additional jurisdiction involvement (see details in the "Jurisdiction-Run Workflow", below)
 
 * **Jurisdiction-Run Workflow**
   To further optimize the workflow and reduce the reliance on personnel outside the control of election districts, the configuration of AuditEngine for audits in each election district can be easily delegated to staff in those districts. This is quite similar to [Cooperative Workflow](#cooperative-workflow) except that the work is being done by staff in each election district rather than by an outside team associated with AuditEngine. In this workflow there must be at least one project manager who is independent from the election districts assigned to each state to provide independent oversight. 
@@ -805,7 +803,10 @@ When audits are run in cooperation with election districts, turnaround time of r
         * Upload the ballot images and CVRs to AuditEngine.
         * Run Phase 1 (Metadata Analysis), but <span style="text-decoration:underline;">skip Phase 2 (Mapping)</span> and move directly to Phase 3 (Vote Extraction) and 4 (Comparison and reporting). Assuming there are no issues, these phases can be run within a day.
 
-    * If a **Verification Phase** is to be used by the jurisdiction, the precincts (or batches) are selected using rolls of ten-sided dice from a list of precincts (or batches). Then the precincts (or batches) are pulled, and without breaking seals from storage, are brought to a secure location where the boxes are opened and the ballots scanned using non-voting system scanners and with public observation. The stages of the Verification Phase include extracting the metadata from the scanned images, and performing extraction, and then comparing the result on an aggregated basis.
+    * If a **Verification Phase** is to be used by the jurisdiction, the precincts (or batches) are selected using rolls of ten-sided dice from a list of precincts (or batches). Weighting the batches by the count of ballots in them may be appropriate if there are some batches with significantly more or fewer ballots than the average. Then the precincts (or batches) are pulled, and without breaking seals from storage, are brought to a secure location where the boxes are opened and the ballots scanned using non-voting system scanners and with public observation. The stages of the Verification Phase include extracting the metadata from the scanned images, and performing extraction, and then comparing the result on an aggregated basis.
+
+* **Paper-Centric Workflow**
+  Some jurisdictions may wish to primarily rescan paper ballots in a machine-assisted audit, and simultaneously conduct a ballot-image audit. For example, if existing regulations specifies that there be a review of 3% of the paper ballots and it is allowed to use non-voting system scanners and software to produce an independent result, except for the scanning process itself, AuditEngine can be used in this workflow. The same procedures would be used in the Cooperative Workflow regarding the use of the LAT ballot images and LAT CVR data to configure AuditEngine, and to cover all ballots, the voting system images can be used.
 
 <h3 id="write-in">Write-in</h3>
 
