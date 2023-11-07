@@ -31,7 +31,7 @@ The images are written directly to USB media, hand-carried out of the air-gapped
 1. **Create Batches:** The user separates ballots into batches of a convenient size, of about 200 ballots, for example. This can be commonly done using a counting scale. Each batch should have fewer than half the ballots in the automatic document feeder (ADF), and those typically can handle 500 sheets. If batches are already determined when originally scanned, these can be used as-is. Random selection of batches may be appropriate for verification scan creation.
 2. **Name Batches:** Using *ScanEngine*, the user enters the GROUP and BATCH, like EV_1000. EV is the Group, Early Voting EV. This can be any string. This will be the prefix of the filename.
 3. The workflow can be run with separator sheets or manually.
-   1. **SEPARATOR SHEETS:** 
+   - **SEPARATOR SHEETS:** 
       1. The prefix is expressed on a separator page with a code-39 barcode. This separator page is printed using a co-located laser printer.
       2. The separator page is placed on top of the batch 
       3. The batch is loaded into the ADF feeder (Automatic Document Feeder) of a high-speed scanner, such as the Ricoh fi7090 or Canon DR-G2140, for example.
@@ -39,7 +39,7 @@ The images are written directly to USB media, hand-carried out of the air-gapped
          In normal (non-error) flow, the code from the separator sheet is used to determine the file names in the batch. 
       5. The user can concurrently prepare the next batch and load it into the ADF when convenient. If another separator page is encountered, that will signal the end of the batch. The ability to load the ADF while scanning is not feasible with all scanners.
       6. If there is no error, the scanner would continue onto the next batch without stopping, and start the new batch based on the separator page.
-   2.  **MANUALLY:**
+   -  **MANUALLY:**
       1. The user enters the prefix for the batch manually into the ScanEngine App.
       2. The user places the batch without a separator page into the ADF.
       3. The user waits for the timeout to occur before loading the next batch.
