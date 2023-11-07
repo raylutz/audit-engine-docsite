@@ -20,18 +20,16 @@ The images are written directly to USB media, hand-carried out of the air-gapped
 
 ## Use Cases
 
-- **Primitive Voting Systems:** For any election districts that do not use voting machines that produce ballot images, *ScanEngine* can provide images to perform a ballot image audit of the results. Cover sheets can be produced based on the precinct or batch as they are stored, and thereby provide that additional metadata about the ballots scanned in the images. The ballot images can be scanned with complete chain of custody tracking.
-
+- **Scan-centric workflow:** When state law requires that an automated audit rescans physical ballots, either on a sampling basis (such as 20% of the precincts) or exhaustively (all ballots), *ScanEngine* can support the scanning required. The scanned images must be grouped identically as the groups used in the voting system to be able to compare if not all the ballots are included in the scanning operation. It is important to note that even if ballots are rescanned, the original images from the voting system should be saved and used in a ballot image audit that can resolve issues down to the ballot.
+- **Creating Auditable Images from Legacy Voting Systems:** For any election districts that do not use voting machines that produce ballot images, *ScanEngine* can provide images to perform a ballot image audit of the results. Cover sheets can be produced based on the precinct or batch as they are stored, and thereby provide that additional metadata about the ballots scanned in the images. The ballot images can be scanned with complete chain of custody tracking.
 - **Verification scans:** For election districts that use a voting system that produce ballot images, *ScanEngine* can be used to scan batches as a check that the images were not altered. The scanned images must be grouped identically as the groups used in the voting system to be able to compare, and run by AuditEngine as "Verification Images".
-
-- **Scan-centric workflow:** When state law requires that an automated audit rescans physical ballots, either on a sampling basis (such as 20% of the precincts) or exhaustively (all ballots), *ScanEngine* can support the scanning required. The scanned images must be grouped identically as the groups used in the voting system to be able to compare.
 
 ## Example Workflow
 
 1. **Create Batches:** The user separates ballots into batches of a convenient size, of about 200 ballots, for example. This can be commonly done using a counting scale. Each batch should have fewer than half the ballots in the automatic document feeder (ADF), and those typically can handle 500 sheets. If batches are already determined when originally scanned, these can be used as-is. Random selection of batches may be appropriate for verification scan creation.
 2. **Name Batches:** Using *ScanEngine*, the user enters the GROUP and BATCH, like EV_1000. EV is the Group, Early Voting EV. This can be any string. This will be the prefix of the filename.
 3. The workflow can be run with separator sheets or manually.
-   - **SEPARATOR SHEETS:** 
+   - **Separator Sheets:** 
       1. The prefix is expressed on a separator page with a code-39 barcode. This separator page is printed using a co-located laser printer.
       2. The separator page is placed on top of the batch 
       3. The batch is loaded into the ADF feeder (Automatic Document Feeder) of a high-speed scanner, such as the Ricoh fi7090 or Canon DR-G2140, for example.
@@ -39,18 +37,19 @@ The images are written directly to USB media, hand-carried out of the air-gapped
          In normal (non-error) flow, the code from the separator sheet is used to determine the file names in the batch. 
       5. The user can concurrently prepare the next batch and load it into the ADF when convenient. If another separator page is encountered, that will signal the end of the batch. The ability to load the ADF while scanning is not feasible with all scanners.
       6. If there is no error, the scanner would continue onto the next batch without stopping, and start the new batch based on the separator page.
-   -  **MANUALLY:**
+   -  **Manually:**
       1. The user enters the prefix for the batch manually into the ScanEngine App.
       2. The user places the batch without a separator page into the ADF.
       3. The user waits for the timeout to occur before loading the next batch.
-4. **Staging Area:** The images in the batch are copied to a staging directory, as they are scanned. 
+4. **Image Staging Area:** The images in the batch are copied to a staging directory, as they are scanned. 
 5. **Fully Logged:** A log is produced showing the progress of each ballot in the batch.
-6. **Final Area:** If the batch is completed without error, then the images in the batch are copied to the final area. Signed hashes are provided for each image scanned. These images can be written directly to USB drive so there is no connection to the voting system environment, and there is no connection to the Internet.
-7. **Return Batch:** The operator removes the scanned batch from the output tray of the scanner and the separator page is kept on the top of the batch for identification purposes. We recommend that the operator would seal the batch into a zip-lock bag, and place it in the box holding the ballots. In this way, the batch can be identified later. If any ballots had to be remade, then the batch may need to be put aside so the ballot can be returned to the batch before storage.
-8. **ERROR FLOW.** In the case of an error, the images captured in that batch would be deleted in the staging area, and the user alerted to the failure. Sometimes, it is possible to remove the offending ballot, if it is not scannable due to being damaged, and then run the batch without that ballot. Instructions are provided to the user for error recovery.
+6. **Image Final Area:** If the batch is completed without error, then the images in the batch are copied to the final area. Signed hashes are provided for each image scanned. These images can be written directly to USB drive so there is no connection to the voting system environment, and there is no connection to the Internet.
+7. **Return Batch:** The operator removes the scanned batch from the output tray of the scanner and the separator page is kept on the top of the batch for identification purposes. We recommend that the operator would seal the batch into packaging, such as a tamper-evident zip-lock bag, which can show the cover sheet while also maintaining integrity of the batch, and place it in the box holding the ballots. In this way, the batch can be identified later. If any ballots had to be remade, then the batch may need to be put aside so the ballot can be returned to the batch before storage.
+8. **Error Flow:** In the case of an error, the images captured in that batch would be deleted in the staging area, and the user alerted to the failure. Sometimes, it is possible to remove the offending ballot, if it is not scannable due to being damaged, and then run the batch without that ballot. Instructions are provided to the user for error recovery.
 9. **Remaking ballots:** Any ballots that are damaged and cannot be scanned can be combined into another batch, or they can be scanned on a co-located flatbed scanner and kept with the batch.
 10. **USB Drive:** After all scanning is completed, the USB drive is removed and then hand-carried out of the secure air-gapped environment, and then uploaded to the AuditEngine datacenter for processing.
-11. **Random spot checks.** As the scanning progresses, the user is able to review the fidelity of the images and compare with the paper on a random inspection basis, either as they are being scanned or later, because the batches are identified in storage and in the archives.
+11. **Random spot checks:** As the scanning progresses, the user is able to review the fidelity of the images and compare with the paper on a random inspection basis, either as they are being scanned or later, because the batches are identified in storage and in the archives.
+12. **Public Oversight:** A livestream camera should be positioned to record the activity in the scanning process, and simultaneously show the log as it being generated. If used, random number generation should use ten-sided dice in a public meeting to create the seed of a random number generator or to directly select the batches to be included.
 
 ## Batch Scan Dialog
 
@@ -58,13 +57,13 @@ The images are written directly to USB media, hand-carried out of the air-gapped
 
 ![img](https://lh7-us.googleusercontent.com/YXvokW-U5L7NarnCaZQtFUIiYpW001es5jCXKvTcDRTp89vJ72eJmAi2ODGEDLq5o7vbX0Fl-M-qJt-k3tsA2fEXi3JoDmwRJB6VuoBVeyRrpM23LDENSYtrsab0CJppzyioF90puEWnemjzFL_THV0)
 
-## Recommended Scanners
+## Recommended COTS Scanners
 
-It is recommended that the ScanEngine app be paired with a high-speed scanner that will image both sides of each ballot using an automatic document feeder (ADF). We recommend the following scanners.
+It is recommended that the ScanEngine app be paired with a commercial off-the-shelf high-speed scanner that will image both sides of each ballot (duplexing) using an automatic document feeder (ADF). The following scanners are available for this purpose.
 
 ### Canon DR-G2140
 
-Canon has several similar products in this category, differing by scanning speed. The top speed is obtained by feeding letter sheets in landscape orientation and is not achievable for ballot scanning, as these ballots tend to be larger than letter size, at least 8.5 x 14. Also, the scanning speed can be increased by selecting B&W and 200 dpi to avoid limiting factors caused by the USB interface. List price in 2023: $7,970.00. Replacement rollers are easy to obtain from $29.95 for compatible to $90 for Canon official rollers. Duty Cycle for the rollers is 450K pages. This scanner and other similar products in the same family is our top recommendation due to the easy availability of the rollers and high recommendations.
+Canon has several similar products in this category, differing by scanning speed. The top speed is obtained by feeding letter sheets in landscape orientation and is not achievable for ballot scanning, as these ballots tend to be larger than letter size,  8.5" wide by 14", 17", 19", or 21" in length. so they must be scanned with short-edge first. The scanning speed can be increased by selecting B&W and 200 dpi to avoid limiting factors caused by the USB interface. List price in 2023: $7,970.00. Replacement rollers are easy to obtain from $29.95 for "compatible" vendor to $90 for Canon official rollers. The claimed duty cycle for the rollers is 450K pages. This scanner and other similar products in the same family is our top recommendation due to the easy availability of the rollers and high recommendations by users.
 
 https://www.usa.canon.com/shop/p/imageformula-dr-g2140-production-document-scanner
 
@@ -72,7 +71,7 @@ https://www.usa.canon.com/shop/p/imageformula-dr-g2140-production-document-scann
 
 ### Ricoh fi7090 or fi7800
 
-Ricoh Corporation recently purchased Fujitsu, including their line of high-volume and high-speed production grade scanners, which they have rebranded as Ricoh products but they are keeping the same model names. The fi7090 is a good example of a scanner suitable for scanning verification ballots. However, it appears their current product is the fi7800 series, which is a little slower, at only 110 ppm. List price in 2023, fi7800: $10,425; fi-7900: $15,159. Pickup roller set $45, Brake Rollers $65 from Ricoh website only. ($110 total) Duty cycle: 600K. 
+Ricoh Corporation recently purchased Fujitsu, including their line of high-volume and high-speed production grade scanners, which they have rebranded as Ricoh products but they are keeping the same model names. The fi7090 is a good example of a scanner suitable for scanning verification ballots. However, it appears their current product is the fi7800 series, which is a little slower, at only 110 ppm. List price in 2023, fi7800: $10,425; fi-7900: $15,159. Pickup roller set $45, Brake Rollers $65 from Ricoh website only. ($110 total) Roller duty cycle: 600K. 
 
 https://www.pfu-us.ricoh.com/scanners/fi/fi-7800
 
@@ -82,11 +81,11 @@ https://www.pfu-us.ricoh.com/scanners/fi/fi-7800
 
 
 
-The rated scanning speed of the fi7090 is 140 ppm (sheets per minute) and 280 ipm (duplex) can be achieved only if letter-size pages are fed in landscape orientation (long-edge first), and thus it islimited to letter (11" / A4) sheets. Ballots, however, tend to be 8.5" wide by 14, 17, 19, or 21" in length. When fed in portrait orientation (short edge first), the rated speed is 105 sheets per minute and 210 ipm (images per minute, i.e sides). Longer sheets will be a bit slower.
+The rated scanning speed of the fi7090 is 140 ppm (sheets per minute) and 280 ipm (duplex) can be achieved only if letter-size pages are fed in landscape orientation (long-edge first), and thus it is limited to letter (11" / A4) sheets. When fed in portrait orientation (short edge first), the rated speed is 105 sheets per minute and 210 ipm (images per minute, i.e sides). Longer sheets will be a bit slower.
 
 ### Xerox W110 Scanner
 
-Scan speeds up to 120 ppm / 240 ipm; 100,000 pages daily duty cycle; 500-page adjustable input tray*. List price in 2023: $5,995. This scanner is a competitive price, and can be purchased for $4K on Dell.com. A maintenance kit is $249 and hard to find. Stated duty cycle on rollers is 550K. However, reviews say that the rollers need to be changed frequently, probably once every 100,000 pages. So although it looks attractive at first, this scanner is not recommended.
+Scan speeds up to 120 ppm / 240 ipm; 100,000 pages daily duty cycle; 500-page adjustable input tray*. List price in 2023: $5,995. This scanner is a competitive price, and can be purchased for $4K on Dell.com. A maintenance kit, however, is $249 and hard to find. Stated duty cycle on rollers is 550K. However, reviewers say that the rollers need to be changed frequently, probably once every 100K pages. So although it looks attractive at first, this scanner may be more expensive when the cost for replacement rollers and possible delays in purchasing them are factored in.
 
 Also, Xerox W130, scan speeds up to 135ppm / 270 ipm, with USB or Gigabit Ethernet to PC with Imprinter ($8,995)
 
@@ -94,3 +93,6 @@ https://www.xeroxscanners.com/en/us/products/item.asp?PN=W110
 
 ![image-20231106171247122](https://www.xeroxscanners.com/images/products/W110/W110_img1.jpg)
 
+## Conclusion
+
+The ScanEngine App is specifically suited to scanning ballots using a COTS high-speed duplexing scanner to produce images that can be incorporated in various auditing workflows. ScanEngine provides the chain of custody tracking of each ballot scanned, as well as each batch scanned, and can use separator sheets with barcodes to help to organize the images and physical ballots.
