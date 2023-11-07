@@ -1,4 +1,4 @@
-# ScanEngine 
+# ScanEngine App
 
 State regulations frequently call for scanning some or all ballots using a scanner(s) independent from the primary voting system, and then evaluating these images using a Ballot Image Auditing (BIA) platform or a secondary voting system. AuditEngine has a companion application called ***ScanEngine*** to manage this process so it can be handled in an error free manner.
 
@@ -15,6 +15,8 @@ Separator sheets can be kept with the physical ballots to document that batch. W
 *ScanEngine* maintains a log which describes the time that each ballot is scanned, whether it was successful, and whether the batch is accepted, if any rescanning of batches occurs, and details about any error (jams, etc) that occur.
 
 *ScanEngine* may check the fidelity of the ballot scanned but it does not perform any ballot interpretation.
+
+The images can be written directly to USB media, hand-carried out of the air-gapped environment, and uploaded to the AuditEngine.org website for further processing. A Hardware Security Module (HSM) can be used to sign the resulting files using a private key. For example, the Yubico HSM https://www.yubico.com/product/yubihsm-2-series/yubihsm-2-fips/.
 
 ## Use Cases
 
@@ -35,11 +37,12 @@ Separator sheets can be kept with the physical ballots to document that batch. W
 6. The images in the batch are copied to a staging area directory, as they are scanned.
 7. A log is produced showing the progress of each ballot in the batch.
 8. If another separator page is encountered, that will signal the end of the batch. Alternatively, a timeout or operator input can be used to complete a batch if it does not have another batch after it.
-9. If the batch is completed without error, then the images in the batch are copied to the final area. Normally, images are copied to a sub-folder of the main destination folder.
+9. If the batch is completed without error, then the images in the batch are copied to the final area. Normally, images are copied to a sub-folder of the main destination folder. These images can be written directly to USB drive so there is no connection to the voting system environment.
 10. If there is no error, the scanner would continue onto the next batch without stopping.
 11. The operator removes the scanned batch from the output tray of the scanner and the separator page is kept on the top of the batch for identification purposes. We recommend that the operator would seal the batch into a zip-lock bag, and place it in the box holding the ballots. In this way, the batch can be identified later.
 12. ERROR FLOW. In the case of an error, the images captured in that batch would be deleted in the staging area, and the user alerted to the failure. Sometimes, it is possible to remove the offending ballot, if it is not scannable due to being damaged, and then run the batch without that ballot. This fact would need to be entered by the user.
 13. Any ballots that are damaged and cannot be scanned can be combined into another batch, where each of the ballots are "remade" by copying the votes from one to the other.
+14. The USB drive is removed and then hand-carried out of the secure air-gapped environment, and then uploaded to the AuditEngine datacenter for processing.
 
 ## Batch Scan Dialog
 
@@ -53,13 +56,17 @@ It is recommended that the ScanEngine app be paired with a high-speed scanner th
 
 ### Canon DR-G2140
 
-Canon has several similar products in this category, differing by scanning speed. The top speed is obtained by feeding letter sheets in landscape orientation and is not achievable for ballot scanning, as these ballots tend to be larger than letter size, at least 8.5 x 14. Also, the scanning speed can be increased by selecting B&W and 200 dpi to avoid limiting factors caused by the USB interface.
+Canon has several similar products in this category, differing by scanning speed. The top speed is obtained by feeding letter sheets in landscape orientation and is not achievable for ballot scanning, as these ballots tend to be larger than letter size, at least 8.5 x 14. Also, the scanning speed can be increased by selecting B&W and 200 dpi to avoid limiting factors caused by the USB interface. List price in 2023: $7970.00
+
+https://www.usa.canon.com/shop/p/imageformula-dr-g2140-production-document-scanner
 
 ![img](https://lh7-us.googleusercontent.com/ZMhsA22gbDgyQoSa0o9-m7W2UOlsy_0flcqff8qR_tmdd_959Pykox3tD9Tf3ZYcm5qspamfO6A82w4TADyDXa1kmVj6dM0SrwGDQuPohvouZFPjN8ROhnLGlMj6T9mmVSi88o2V3fDVOnXJLv8Klaw)
 
-### Ricoh fi7090
+### Ricoh fi7090 or fi7800
 
-Ricoh Corporation recently purchased Fujitsu, including their line of high-volume and high-speed production grade scanners, which they have rebranded as Ricoh products but they are keeping the same model names. The fi7090 is a good example of a scanner suitable for scanning verification ballots.
+Ricoh Corporation recently purchased Fujitsu, including their line of high-volume and high-speed production grade scanners, which they have rebranded as Ricoh products but they are keeping the same model names. The fi7090 is a good example of a scanner suitable for scanning verification ballots. However, it appears their current product is the fi7800 series, which is a little slower, at only 110 ppm. List price in 2023, fi7800: $10,425; fi-7900: $15,159
+
+https://www.pfu-us.ricoh.com/scanners/fi/fi-7800
 
 
 
@@ -67,4 +74,18 @@ Ricoh Corporation recently purchased Fujitsu, including their line of high-volum
 
 
 
-The rated scanning speed of 140 ppm (sheets per minute) and 280 ipm (duplex) can be achieved only if letter-size pages are fed in landscape orientation (long-edge first), and thus it islimited to letter (11" / A4) sheets. Ballots, however, tend to be 8.5" wide by 14, 17, 19, or 21" in length. When fed in portrait orientation (short edge first), the rated speed is 105 sheets per minute and 210 ipm (images per minute, i.e sides). Longer sheets will be a bit slower.
+The rated scanning speed of the fi7090 is 140 ppm (sheets per minute) and 280 ipm (duplex) can be achieved only if letter-size pages are fed in landscape orientation (long-edge first), and thus it islimited to letter (11" / A4) sheets. Ballots, however, tend to be 8.5" wide by 14, 17, 19, or 21" in length. When fed in portrait orientation (short edge first), the rated speed is 105 sheets per minute and 210 ipm (images per minute, i.e sides). Longer sheets will be a bit slower.
+
+### Xerox W110 Scanner
+
+Scan speeds up to 120 ppm / 240 ipm; 100,000 pages daily duty cycle; 500-page adjustable input tray*. List price in 2023: $5995.
+
+![image-20231106171247122](C:\Users\raylu\AppData\Roaming\Typora\typora-user-images\image-20231106171247122.png)
+
+### Datawin HEMERA
+
+Datawin has several scanners in this product line. The HEMERA S scans up to 360 ppm (A4) at 200 DPI, which is a customary resolution for ballot imaging applications.  The HEMERA C scans at 200 ppm. This is a familiar site as this scanner is used by ES&S ES-850 series ballot scanners.
+
+https://www.datawin.de/high-volume-document-scanner/?lang=en
+
+![image-20231106165935856](C:\Users\raylu\AppData\Roaming\Typora\typora-user-images\image-20231106165935856.png)
