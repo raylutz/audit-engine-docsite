@@ -14,9 +14,9 @@ Separator sheets can be kept with the physical ballots to document that batch. W
 
 *ScanEngine* maintains a log which describes the time that each ballot is scanned, whether it was successful, and whether the batch is accepted, if any rescanning of batches occurs, and details about any error (jams, etc) that occur.
 
-*ScanEngine* may check the fidelity of the ballot scanned but it does not perform any ballot interpretation.
+*ScanEngine* may check the fidelity of the ballot scanned but it does not perform ballot interpretation. It creates high-fidelity scans only.
 
-The images can be written directly to USB media, hand-carried out of the air-gapped environment, and uploaded to the AuditEngine.org website for further processing. A Hardware Security Module (HSM) can be used to sign the resulting files using a private key. For example, the Yubico HSM https://www.yubico.com/product/yubihsm-2-series/yubihsm-2-fips/.
+The images are written directly to USB media, hand-carried out of the air-gapped environment, and uploaded to the AuditEngine.org website for further processing. A Hardware Security Module (HSM) can be used to sign the resulting files using a private key. For example, the Yubico HSM https://www.yubico.com/product/yubihsm-2-series/yubihsm-2-fips/.
 
 ## Use Cases
 
@@ -78,14 +78,11 @@ The rated scanning speed of the fi7090 is 140 ppm (sheets per minute) and 280 ip
 
 ### Xerox W110 Scanner
 
-Scan speeds up to 120 ppm / 240 ipm; 100,000 pages daily duty cycle; 500-page adjustable input tray*. List price in 2023: $5995.
+Scan speeds up to 120 ppm / 240 ipm; 100,000 pages daily duty cycle; 500-page adjustable input tray*. List price in 2023: $5,995.
 
-![image-20231106171247122](C:\Users\raylu\AppData\Roaming\Typora\typora-user-images\image-20231106171247122.png)
+Also, Xerox W130, scan speeds up to 135ppm / 270 ipm, with USB or Gigabit Ethernet to PC with Imprinter ($8,995)
 
-### Datawin HEMERA
+https://www.xeroxscanners.com/en/us/products/item.asp?PN=W110
 
-Datawin has several scanners in this product line. The HEMERA S scans up to 360 ppm (A4) at 200 DPI, which is a customary resolution for ballot imaging applications.  The HEMERA C scans at 200 ppm. This is a familiar site as this scanner is used by ES&S ES-850 series ballot scanners.
+![image-20231106171247122](https://www.xeroxscanners.com/images/products/W110/W110_img1.jpg)
 
-https://www.datawin.de/high-volume-document-scanner/?lang=en
-
-![image-20231106165935856](C:\Users\raylu\AppData\Roaming\Typora\typora-user-images\image-20231106165935856.png)
