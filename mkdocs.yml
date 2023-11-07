@@ -16,11 +16,11 @@ nav:
         - Hart Exporting Guide:           user-guide/hart_exporting_guide.md
         - Sending Data:                   user-guide/sending_data.md
         - Configuration Files:            user-guide/configuration_files.md
+        - ScanEngine App:                 user-guide/scanengine.md
 #        - Running Audits:                 user-guide/running_audits_app.md
 #        - TargetMapper App:               user-guide/targetmapper_app.md
-#        - Adjudicator App:                user-guide/adjudicator_app.md
+#        - AdjudiTally App:                user-guide/adjudicator_app.md
 #        - Voter Intent Guide:             user-guide/voter_intent_guide.md
-#        - Tally App:                      user-guide/tally_app.md
 #        - Pricing Guidelines:             user-guide/prices.md
         - FAQs:                           user-guide/auditengine_faqs.md            # https://copswiki.org/Common/AuditEngineFAQs
         - Glossary:                       user-guide/glossary.md
