@@ -64,7 +64,7 @@ It is recommended that the ScanEngine app be paired with a high-speed scanner th
 
 ### Canon DR-G2140
 
-Canon has several similar products in this category, differing by scanning speed. The top speed is obtained by feeding letter sheets in landscape orientation and is not achievable for ballot scanning, as these ballots tend to be larger than letter size, at least 8.5 x 14. Also, the scanning speed can be increased by selecting B&W and 200 dpi to avoid limiting factors caused by the USB interface. List price in 2023: $7,970.00. Replacement rollers are easy to obtain from $29.95 for compatible to $90 for Canon official rollers. Duty Cycle for the rollers is 450K pages. This scanner and other similar products in the same family is our top recommendation
+Canon has several similar products in this category, differing by scanning speed. The top speed is obtained by feeding letter sheets in landscape orientation and is not achievable for ballot scanning, as these ballots tend to be larger than letter size, at least 8.5 x 14. Also, the scanning speed can be increased by selecting B&W and 200 dpi to avoid limiting factors caused by the USB interface. List price in 2023: $7,970.00. Replacement rollers are easy to obtain from $29.95 for compatible to $90 for Canon official rollers. Duty Cycle for the rollers is 450K pages. This scanner and other similar products in the same family is our top recommendation due to the easy availability of the rollers and high recommendations.
 
 https://www.usa.canon.com/shop/p/imageformula-dr-g2140-production-document-scanner
 
