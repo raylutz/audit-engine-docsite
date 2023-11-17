@@ -29,7 +29,7 @@ This can be determined by looking that the voting systems used by the districts.
 
 |                                          | Ballot Image Producing                                       | Not Ballot Image Producing                                   |
 | ---------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| **Election Systems & Software (ES&S)**   | [DS200](https://verifiedvoting.org/election-system/ess-ds200/), [DS450, DS850, DS950](https://verifiedvoting.org/election-system/ess-ds850-ds450/)<br />[ExpressVote as BMD](https://verifiedvoting.org/election-system/ess-expressvote/) when used with the scanners above, [ExpressVote XL](https://verifiedvoting.org/election-system/ess-expressvote-xl/).<br />Note: ES&S scanners allow ballot images to be deleted if not set to "Save All" | [ExpressTouch](https://verifiedvoting.org/election-system/ess-expresstouch/), [iVotronic](https://verifiedvoting.org/election-system/ess-ivotronic/), [Model 100](https://verifiedvoting.org/election-system/ess-model-100/), Model 150, 550 |
+| **Election Systems & Software (ES&S)**   | [DS200](https://verifiedvoting.org/election-system/ess-ds200/), [DS450, DS850, DS950](https://verifiedvoting.org/election-system/ess-ds850-ds450/)<br />[ExpressVote as BMD](https://verifiedvoting.org/election-system/ess-expressvote/) when used with the scanners above, and the [ExpressVote XL](https://verifiedvoting.org/election-system/ess-expressvote-xl/).<br />Note: ES&S scanners allow ballot images to be deleted if not set to "Save All" | [ExpressTouch](https://verifiedvoting.org/election-system/ess-expresstouch/), [iVotronic](https://verifiedvoting.org/election-system/ess-ivotronic/), [Model 100](https://verifiedvoting.org/election-system/ess-model-100/), Model 150, 550 |
 | **Dominion Voting Systems**              | [ImageCast Central](https://verifiedvoting.org/election-system/dominion-imagecast-central/), [ImageCast Precinct](https://verifiedvoting.org/election-system/dominion-imagecast-precinct/)<br />[ImageCase X BMD](https://verifiedvoting.org/election-system/dominion-imagecast-x/) when used with the above scanners | [ImageCast X DRE](https://verifiedvoting.org/election-system/dominion-imagecast-x/) |
 | **Sequoia Voting Systems**               |                                                              | AVC Advantage, AVC Edge                                      |
 | **Premier Election Solutions (Diebold)** |                                                              | AccuVote OS Central, Accuvote OS, and Accuvote OSX           |
@@ -45,7 +45,7 @@ Here is a partial list of availability. Please see a full and dynamically update
 
 | States will full availability | States with mixed availability                     | States with no availability (yet) |
 | ----------------------------- | -------------------------------------------------- | --------------------------------- |
-| GA, WI                        | CA (only SF), FL (some counties delete images), NJ | AZ, WA, NC                        |
+| GA, WI, MD                    | CA (only SF), FL (some counties delete images), NJ | AZ, WA, NC                        |
 
 ## Getting the Data
 
@@ -53,7 +53,7 @@ Some counties may post their data for everyone. This is the case, for example, i
 
 | To: email@county.gov <br />Subject: Public Records Request for Election Data |
 | ------------------------------------------------------------ |
-| Dear County Representative:<br /><br />Please provide the following data per this PUBLIC RECORDS REQUEST for the MM/DD/YYYY election in your county:<br /> -- All Ballot Images<br /> -- Cast Vote Records CVRs<br /> -- Ballot Style Masters<br /><br />Please see the following guides for your system.<br />   Dominion: https://AuditEngine.org/user-guide/dom_exporting_guide/<br />   ES&S: https://AuditEngine.org/user-guide/ess_exporting_guide/<br />   Hart: https://AuditEngine.org/user-guide/hart_exporting_guide/<br />Please provide the data in electronic format. See the following guide for options for sending the data to us:<br />https://AuditEngine.org/user-guide/sending_data/<br /><br />If you have any questions, please contact me at (your telephone number)<br />Sincerely, XXXXXX<br /> |
+| Dear County Representative:<br /><br />Please provide the following data per this PUBLIC RECORDS REQUEST for the MM/DD/YYYY election in your county:<br /> -- All Ballot Images<br /> -- Cast Vote Records (CVRs)<br /> -- Ballot Style Masters<br /><br />In brief, you should export "Audit Images" from the Election Management System and create ZIP archives. Also export the Cast Vote Records and the Ballot Style Masters (blank ballots). Best to keep any ZIP archive to about 10GB or less if possible for convenience. You can upload these ZIP archives directly to AuditEngine.org (we can provide an upload link) or you can write them to a USB thumbdrive. (Make sure you reformat the thumbdrive to use exFAT or you will be limited to 4GB per file). <br />Please see detailed instructions for exporting and sending data to the following guides for your system.<br />   Dominion: https://AuditEngine.org/user-guide/dom_exporting_guide/<br />   ES&S: https://AuditEngine.org/user-guide/ess_exporting_guide/<br />   Hart: https://AuditEngine.org/user-guide/hart_exporting_guide/<br />Please provide the data in electronic format. See the following guide for options for sending the data to us:<br />https://AuditEngine.org/user-guide/sending_data/<br /><br />Here is an uploading link specifically for your district: (paste the link here which we can supply for direct uploading to AuditE gine, if it is available.)<br /><br />If you have any questions, please contact me at (your telephone number)<br />Sincerely, XXXXXX<br /> |
 
 ### Exporting Guides
 
@@ -74,6 +74,7 @@ We have the following guides to help them export and provide the data to AuditEn
   - Providing the data:
     - Posting the data - Election officials are now opting to post the data once for all requesters.
     - Uploading - We can provide a county-specific upload link so they files can be easily uploaded.
+      - Note: To generate this link, the District must be created in AuditEngine. Then edit the District Properties and click [Request Link] to generate a general link for this district, suitable for any election
     - Using USB Thumbdrives
     - Using a "Jump Drive"
 
