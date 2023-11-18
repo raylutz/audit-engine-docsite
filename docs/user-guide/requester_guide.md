@@ -49,7 +49,13 @@ Here is a partial list of availability. Please see a full and dynamically update
 
 ## Getting the Data
 
-Some counties may post their data for everyone. This is the case, for example, in San Francisco. We hope that more counties will adopt this methodology to reduce their cost and ours. However, if they do not, you can submit a <u>Public Record Request</u> to the county. Here is a example of a public record request: (Note: Although generally understood, not all states use this term. See [the name of the law in each state](https://www.rcfp.org/open-government-sections/foreword/))
+Some counties may post their data for everyone. This is the case, for example, in San Francisco. We hope that more counties will adopt this methodology to reduce their cost and ours. However, if they do not, you can submit a <u>Public Record Request</u> to the county. Here is a example of a public record request: (Note: Although generally understood, not all states use this term. See [the name of the law in each state](https://www.rcfp.org/open-government-sections/foreword/)
+
+For example: 
+
+- CA: CPRA (California Public Records Act)
+- CO: CORA (Colorado Open Records Act)
+- NJ: OPRA (Open Records Act)
 
 It is recommended that you both email this in, and if you are local to the office, to also create two hard-copy requests, and hand-deliver them to the office, and get them time-stamped. Alternatively, you can send a certified letter to the office using https://onlinecertifiedmail.com or similar service, which can be very cost effective compared with using postal services directly. 
 
