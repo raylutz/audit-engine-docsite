@@ -22,29 +22,50 @@ The images are written directly to USB media, hand-carried out of the air-gapped
 
 For each of these use cases, we recommend very strongly that a full ballot image audit is performed to cover all ballots and all contests in addition to any further processing of scanned paper ballots. When the original images are utilized, they are indexed to the Cast Vote Records, and therefore we can get much higher diagnostic power in the comparison process rather than rescanned ballots because they tend to be not correlated to the CVR. One additional benefit of using AuditEngine is that there is no dependency on the voting system determination of the margin of victory, which is used to determine the samples required.
 
-- **Scan-centric workflow:** When state law requires that an automated audit rescans physical ballots, either on a sampling basis (such as 20% of the precincts) or exhaustively (all ballots), *ScanEngine* can support the scanning required. The scanned images must be grouped identically as the groups used in the voting system to be able to compare if not all the ballots are included in the scanning operation. 
+### **Scan-centric workflow:** 
 
-- **Verification scans:** For election districts that use a voting system that produce ballot images which are already being fully audited by *AuditEngine*, *ScanEngine* can be used to scan batches as a check that the images were not altered. The scanned images must be grouped identically as the groups used in the voting system to be able to compare, and run by *AuditEngine* as "Verification Images".
+When state law requires that an automated audit rescans physical ballots, either on a sampling basis (such as 20% of the precincts) or exhaustively (all ballots), *ScanEngine* can support the scanning required. The scanned images must be grouped identically as the groups used in the voting system to be able to compare if not all the ballots are included in the scanning operation. 
 
-- **Creating Auditable Images from Legacy Voting Systems:** For any election districts that do not use voting machines that produce ballot images, *ScanEngine* can provide images to perform a ballot image audit of the results. Cover sheets can be produced based on the precinct or batch as they are stored, and thereby provide that additional metadata about the ballots scanned in the images. The ballot images can be scanned with complete chain of custody tracking.
+### **Verification scans:** 
 
-- **Ballot-Image Driven RLAs:** When performing Risk-Limiting Audits (RLAs) that utilize examination of paper ballots, these can be done by utilizing *ScanEngine* to reduce the cost of performing the audit and improve transparency. <BR><BR>It is unfortunately the case that these audits are difficult to observe and provide public oversight, since it is necessary to sit right there and watch as the votes are being entered into a DRE-like interface. Instead, once the samples are pulled, we use *ScanEngine* to scan those paper ballots, and then use *AuditEngine* to extract the votes and compare with the official results. The tool *AdjudiTally* can be used by auditors or the public to review the ballot images involved in the audit and verify the automated evaluation.
+For election districts that use a voting system that produce ballot images which are already being fully audited by *AuditEngine*, *ScanEngine* can be used to scan batches as a check that the images were not altered. The scanned images must be grouped identically as the groups used in the voting system to be able to compare, and run by *AuditEngine* as "Verification Images".
 
-   | Types of Risk Limiting Audits:                               |
-| ------------------------------------------------------------ |
-   | **Ballot Polling Audit:** In a ballot polling audit, random ballots are pulled from all ballots and they do not need to be indexed or grouped in any way. The ballots are typically required to be pulled from a specific location such as pallet, box, batch, and offset within the batch. We recommend that a cover sheet is printed for every ballot to be fetched. Then, when the ballot is scanned using *ScanEngine*, the cover sheet is also scanned to identify from where it was drawn, and also to allow returning that ballot to that location. Once the ballots are scanned, then are evaluated by AuditEngine without comparing each ballot to the original CVR (which may not exist), and an independent margin is evaluated for the sampled set. If the margin is within the calculated boundaries, then the risk limit is satisfied. |
-   | **Batch Polling Audit:** This method is not discussed much by RLA supporters, but it is a viable method for performing RLAs, particularly when *ScanEngine* is utilized. The number of ballots is not reduced from the number required in the ballot polling audit, but the sampling process is much easier, as entire batches are selected randomly. They are scanned using *ScanEngine*, the vote is extracted using *AuditEngine*, and the resulting margin for contests is compared with the official margin, and if within the calculated boundaries, then the risk limit is satisfied. As with the Ballot Polling Audit, this does not require any comparison on a ballot-by-ballot or batch-by-batch basis. It also does not break up batches and it does not require returning individual ballots to their original location within batches. This also has fewer hazards for malicious acts during the audit because batches remain sealed until rescanned. |
-   | **Batch Comparison Audit:** This method is the same as the batch polling audit, but it requires that the batches are identified in the CVR (or by *AuditEngine*), so they can be compared with physical batch. Unfortunately, not all voting systems identify batches. Dominion does, for example, but ES&amp;S does not (in many cases). When not identified, then RLA *comparison* audits are not feasible.<br/>In this method, batches are randomly selected, cover sheets printed, and are fetched from physical storage, and then scanned using the cover sheet identifying the batch. Once scanned, the batches can be processed by AuditEngine to evaluate the vote and compare with the batches in the CVR to determine the number of overstatements and understatements in each batch, and then evaluating the risk. |
-| **Ballot Comparison Audit:** If there is a way to identify individual ballots in storage and index them to the CVR, we can conduct a ballot comparison audit using *ScanEngine* and *AuditEngine.* For each ballot randomly selected, a cover sheet is prepared which is used as the fetch request, as well as to inform *ScanEngine* how to label the images when scanned. Preferably, each will use the official ballot_id for that ballot. For example, let's say there are 200 ballots required in the Ballot Comparison RLA. 200 cover sheets are prepared, and the ballots are accessed from physical storage. The stack of documents to be scanned include the cover sheet for each ballot, and then one ballot, alternating, resulting in 400 total sheets to scan. Once scanned, the vote on each ballot can be evaluated by *AuditEngine*, the ballots directly compared with CVR records that already exist, and then calculate the risk. |
-   
-All of these audits should include a phase where the sample is further sampled, for 1:1 comparison of the images to the physical ballots.
+### **Creating Auditable Images from Legacy Voting Systems:** 
+
+For any election districts that do not use voting machines that produce ballot images, *ScanEngine* can provide images to perform a ballot image audit of the results. Cover sheets can be produced based on the precinct or batch as they are stored, and thereby provide that additional metadata about the ballots scanned in the images. The ballot images can be scanned with complete chain of custody tracking.
+
+### **Ballot-Image Driven RLAs:** 
+
+When performing Risk-Limiting Audits (RLAs) that utilize examination of paper ballots, these can be done by utilizing *ScanEngine* to reduce the cost of performing the audit and improve transparency. <BR><BR>It is unfortunately the case that these audits are difficult to observe and provide public oversight, since it is necessary to sit right there and watch as the votes are being entered into a DRE-like interface. Instead, once the samples are pulled, we use *ScanEngine* to scan those paper ballots, and then use *AuditEngine* to extract the votes and compare with the official results. The tool *AdjudiTally* can be used by auditors or the public to review the ballot images involved in the audit and verify the automated evaluation.
+
+#### Types of Risk Limiting Audits:
+
+##### **Ballot Polling Audit:** 
+
+In a ballot polling audit, random ballots are pulled from all ballots and they do not need to be indexed or grouped in any way. The ballots are typically required to be pulled from a specific location such as pallet, box, batch, and offset within the batch. We recommend that a cover sheet is printed for every ballot to be fetched. Then, when the ballot is scanned using *ScanEngine*, the cover sheet is also scanned to identify from where it was drawn, and also to allow returning that ballot to that location. Once the ballots are scanned, then are evaluated by AuditEngine without comparing each ballot to the original CVR (which may not exist), and an independent margin is evaluated for the sampled set. If the margin is within the calculated boundaries, then the risk limit is satisfied.
+
+##### **Batch Polling Audit:** 
+
+This method is not discussed much by RLA supporters, but it is a viable method for performing RLAs, particularly when *ScanEngine* is utilized. The number of ballots is not reduced from the number required in the ballot polling audit, but the sampling process is much easier, as entire batches are selected randomly. They are scanned using *ScanEngine*, the vote is extracted using *AuditEngine*, and the resulting margin for contests is compared with the official margin, and if within the calculated boundaries, then the risk limit is satisfied. As with the Ballot Polling Audit, this does not require any comparison on a ballot-by-ballot or batch-by-batch basis. It also does not break up batches and it does not require returning individual ballots to their original location within batches. This also has fewer hazards for malicious acts during the audit because batches remain sealed until rescanned.
+
+##### **Batch Comparison Audit:** 
+
+This method is the same as the batch polling audit, but it requires that the batches are identified in the CVR (or by *AuditEngine*), so they can be compared with physical batch. Unfortunately, not all voting systems identify batches. Dominion does, for example, but ES&amp;S does not (in many cases). When not identified, then RLA *comparison* audits are not feasible.<br/>In this method, batches are randomly selected, cover sheets printed, and are fetched from physical storage, and then scanned using the cover sheet identifying the batch. Once scanned, the batches can be processed by AuditEngine to evaluate the vote and compare with the batches in the CVR to determine the number of overstatements and understatements in each batch, and then evaluating the risk.
+
+##### **Ballot Comparison Audit:** 
+
+If there is a way to identify individual ballots in storage and index them to the CVR, we can conduct a ballot comparison audit using *ScanEngine* and *AuditEngine.* For each ballot randomly selected, a cover sheet is prepared which is used as the fetch request, as well as to inform *ScanEngine* how to label the images when scanned. Preferably, each will use the official ballot_id for that ballot. For example, let's say there are 200 ballots required in the Ballot Comparison RLA. 200 cover sheets are prepared, and the ballots are accessed from physical storage. The stack of documents to be scanned include the cover sheet for each ballot, and then one ballot, alternating, resulting in 400 total sheets to scan. Once scanned, the vote on each ballot can be evaluated by *AuditEngine*, the ballots directly compared with CVR records that already exist, and then calculate the risk.
+
+
 
 ## Example Workflow
 
 1. **Create Batches:** The user separates ballots into batches of a convenient size, of about 200 ballots, for example. This can be commonly done using a counting scale. Each batch should have fewer than half the ballots in the automatic document feeder (ADF), and those typically can handle 500 sheets. If batches are already determined when originally scanned, these can be used as-is. Random selection of batches may be appropriate for verification scan creation.
 2. **Name Batches:** Using *ScanEngine*, the user enters the GROUP and BATCH, like EV_1000. EV is the Group, Early Voting EV. This can be any string. This will be the prefix of the filename.
 3. The workflow can be run with separator sheets or manually.
-   - **Separator Sheets:** 
+
+   1. **Separator Sheets:** 
+
       1. The prefix is expressed on a separator page with a code-39 barcode. This separator page is printed using a co-located laser printer.
       2. The separator page is placed on top of the batch 
       3. The batch is loaded into the ADF feeder (Automatic Document Feeder) of a high-speed scanner, such as the Ricoh fi7090 or Canon DR-G2140, for example.
@@ -52,10 +73,15 @@ All of these audits should include a phase where the sample is further sampled, 
          In normal (non-error) flow, the code from the separator sheet is used to determine the file names in the batch. 
       5. The user can concurrently prepare the next batch and load it into the ADF when convenient. If another separator page is encountered, that will signal the end of the batch. The ability to load the ADF while scanning is not feasible with all scanners.
       6. If there is no error, the scanner would continue onto the next batch without stopping, and start the new batch based on the separator page.
-   -  **Manually:**
+
+   2. **Manually:**
+
       1. The user enters the prefix for the batch manually into the ScanEngine App.
+
       2. The user places the batch without a separator page into the ADF.
+
       3. The user waits for the timeout to occur before loading the next batch.
+
 4. **Image Staging Area:** The images in the batch are copied to a staging directory, as they are scanned. 
 5. **Fully Logged:** A log is produced showing the progress of each ballot in the batch.
 6. **Image Final Area:** If the batch is completed without error, then the images in the batch are copied to the final area. Signed hashes are provided for each image scanned. These images can be written directly to USB drive so there is no connection to the voting system environment, and there is no connection to the Internet.
@@ -142,7 +168,7 @@ It is important to use file names that can be re-sorted to the right order if th
   "**scans from john's laptop - precincts 1 - 14 - 001_002**"
   ... 
   "**scans from john's laptop - precincts 1-14 - 2000_002**"
-  and
+  and then later
   "**scans from johns laptop pcts 1-14 - 001_4653**"
 
   Notice special characters, spaces, different lengths, varying spaces, reused ranges.
