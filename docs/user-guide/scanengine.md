@@ -109,7 +109,7 @@ https://www.xeroxscanners.com/en/us/products/item.asp?PN=W110
 
 ## File Naming is Critical
 
-It is important to use file names that can be re-sorted to the right order if they should become shuffled. This is particularly important if a separate image file is used for each side of a ballot, which is common because PNG format only has one side per file. Sorting then names must return the original order, with the front and back together again because the style of the back relies on the front. The underlying problem is that the files are commonly added to the ZIP archives according to how they are listed rather than the order they were created. When looking at the zip file, we can't get them back in order without a lot of work if we don't plan ahead.
+It is important to use file names that can be re-sorted to the right order if they should become shuffled. This is particularly important if a separate image file is used for each side of a ballot, which is common because PNG format only has one side per file. To get back to the original order is important because the style of the back relies on the front. The underlying problem is that the files are commonly added to the ZIP archives according to how they are listed rather than the order they were created. When looking at the zip file, we can't get them back in order without a lot of work if we don't plan ahead. If file names are created correctly, then we can simply sort the names to get them to the original order, and in fact, they probably will be added to the zip file correctly too.
 
 **Please adhere to the following rules:**
 
@@ -118,11 +118,10 @@ It is important to use file names that can be re-sorted to the right order if th
 - If there is more than one number field, the first number field must not be reused even if the second number field has different range numbers.
 - Non-number fields should be simple and just a few characters. Do not use any special characters. Do not include any spaces. Non-numbers can be used to indicate the GROUP of the ballots, such as EV, ED, MIB, PROV, etc. This can be first. Then there can be a batch number and sequence number.
 - Use underscore "_" to separate groups of characters or numbers.
-- The file name should be usable without the file extension as the ballot_id, which must be unique across all ball
+- The file name should be usable without the file extension as the ballot_id, which must be unique across all ballots.
 - If two images are created for each page, they should be numbered so the order can be restored when resorted using a lexical (default) sort. Try to keep the images in front-back order. This should be normal for any duplexing scanner. 
-- Make sure that all ballots are imaged with the same number of pages. If both sides are included, they must be included for all  ballots in the set. If only the front is included, a random back should not also be included.
+- Make sure that all ballots are imaged with the same number of pages. If both sides are included, they must be included for all  ballots in the set. If only the front is included, a random back should not also be included. This makes it very hard to keep the fronts and backs together.
 - It is okay to have prefixes indicating the archive, like D001, D002, the precinct, group, etc. Always use fixed-length fields if numbering is used. Make sure it will be easy to parse the name to extract any meaningful data.
-- Try to keep the top of the images all inserted the same way.
 
 **Examples:**
 
