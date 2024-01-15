@@ -116,8 +116,9 @@ It is important to use file names that can be re-sorted to the right order if th
 - Keep file names relatively short and meaningful. 
 - Any number fields should be fixed-length and long enough to avoid overflow and create a number with more characters. For example, you should not ever see a number roll from 999 to 1000. But 0999 to 1000 is okay.
 - If there is more than one number field, the first number field must not be reused even if the second number field has different range numbers.
-- Non-number fields should be simple and just a few characters. Do not use any special characters. Do not include any spaces. The file name should be usable without the file extension as the ballot_id. Non-numbers can be used to indicate the GROUP of the ballots, such as EV, ED, MIB, PROV, etc. This can be first. Then there can be a batch number and sequence number.
+- Non-number fields should be simple and just a few characters. Do not use any special characters. Do not include any spaces. Non-numbers can be used to indicate the GROUP of the ballots, such as EV, ED, MIB, PROV, etc. This can be first. Then there can be a batch number and sequence number.
 - Use underscore "_" to separate groups of characters or numbers.
+- The file name should be usable without the file extension as the ballot_id, which must be unique across all ball
 - If two images are created for each page, they should be numbered so the order can be restored when resorted using a lexical (default) sort. Try to keep the images in front-back order. This should be normal for any duplexing scanner. 
 - Make sure that all ballots are imaged with the same number of pages. If both sides are included, they must be included for all  ballots in the set. If only the front is included, a random back should not also be included.
 - It is okay to have prefixes indicating the archive, like D001, D002, the precinct, group, etc. Always use fixed-length fields if numbering is used. Make sure it will be easy to parse the name to extract any meaningful data.
@@ -147,7 +148,7 @@ It is important to use file names that can be re-sorted to the right order if th
 **How to recover from bad naming procedures:**
 
 1. Analyze ranges of names that exist in the set of images and plan a simple file naming scheme. Check with staff at AuditEngine  if needed to make sure that your plan will work to allow resorting of the names from each archive to return them to the originally scanned order.
-2. Use existing numbers when possible and make sure you record how you renamed the original names to the new names.
+2. Use existing numbers (but padded to fixed length) when possible and make sure you record how you renamed the original names to the new names.
 3. Unzip the zip files into separate folders so they can be renamed. Make sure names are unique among all folders.
 4. Use existing tools like Bulk Rename Utility (BRU) "https://www.bulkrenameutility.co.uk/" to quickly rename them.
 5. re-ZIP the files using a tool like 7zip.org, but please use conventional ZIP format not 7z format. 
