@@ -156,29 +156,30 @@ It is important to use file names that can be re-sorted to the right order if th
 
 - GOOD: 
 
-  **EV1_00004_000001.png**, 
-  **EV1_00004_000002.png**,
-  ...
-  **EV1_00004_009678.png**, 
-  **EV1_00005_000001.png**,
+  **EV1_00004_000001.png**, <br>
+  **EV1_00004_000002.png**,<br>
+
+  ...<br>
+  **EV1_00004_009678.png**, <br>
+  **EV1_00005_000001.png**, <br>
   etc.
 
-- BAD: 
+- BAD: <br>
 
-  "**scans from john's laptop - precincts 1 - 14 - 001_002**"
-  ... 
-  "**scans from john's laptop - precincts 1-14 - 2000_002**"
-  and then later
-  "**scans from johns laptop pcts 1-14 - 001_4653**"
+  "**scans from john's laptop - precincts 1 - 14 - 001_002**" <br>
+  ... <br>
+  "**scans from john's laptop - precincts 1-14 - 2000_002**"<br>
+  and then later<br>
+  "**scans from johns laptop pcts 1-14 - 001_4653**"<br>
 
-  Notice special characters, spaces, different lengths, varying spaces, reused ranges.
+  Notice unnecessary information, special characters, spaces, different lengths, varying spaces, reused ranges.
 
 **How to recover from bad naming procedures:**
 
-1. Analyze ranges of names that exist in the set of images and plan a simple file naming scheme. Check with staff at AuditEngine  if needed to make sure that your plan will work to allow resorting of the names from each archive to return them to the originally scanned order.
+1. Analyze ranges of names that exist in the set of images and plan a simple file naming scheme. Check with staff at AuditEngine  if needed to make sure that your plan will work to allow resorting of the names from each archive to return them to the originally scanned order. Make sure names are unique among all folders.
 2. Use existing numbers (but padded to fixed length) when possible and make sure you record how you renamed the original names to the new names.
-3. Unzip the zip files into separate folders so they can be renamed. Make sure names are unique among all folders.
-4. Use existing tools like Bulk Rename Utility (BRU) "https://www.bulkrenameutility.co.uk/" to quickly rename them.
+3. Unzip the zip files into separate folders so they can be renamed. Make sure you make a backup of the data.
+4. Use existing tools like Bulk Rename Utility (BRU) (https://www.bulkrenameutility.co.uk/) to quickly rename them. 
 5. re-ZIP the files using a tool like 7zip.org, but please use conventional ZIP format not 7z format. 
 6. Each zip file should include no more than about 30K files, and limit to 10GB for convenience of handling and uploading.
 7. Upload to the same project and then reassign the archives in the job file.
