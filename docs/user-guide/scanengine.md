@@ -95,7 +95,9 @@ https://www.pfu-us.ricoh.com/scanners/fi/fi-7800
 
 
 
-The rated scanning speed of the fi7090 is 140 ppm (sheets per minute) and 280 ipm (duplex) can be achieved only if letter-size pages are fed in landscape orientation (long-edge first), and thus it is limited to letter (11" / A4) sheets. When fed in portrait orientation (short edge first), the rated speed is 105 sheets per minute and 210 ipm (images per minute, i.e sides). Longer sheets will be a bit slower.
+The rated scanning speed of the fi7090 is 140 ppm (sheets per minute) and 280 ipm (duplex) can be achieved only if letter-size pages are fed in landscape orientation (long-edge first), and thus it is limited to letter (11" / A4) sheets. 
+
+When fed in portrait orientation (short edge first), the rated speed is 105 sheets per minute and 210 ipm (images per minute, i.e sides). Longer sheets will be a bit slower.
 
 ### Xerox W110 Scanner
 
@@ -109,7 +111,7 @@ https://www.xeroxscanners.com/en/us/products/item.asp?PN=W110
 
 ## File Naming is Critical
 
-It is important to use file names that can be re-sorted to the right order if they should become shuffled. This is particularly important if a separate image file is used for each side of a ballot, which is common because PNG format only has one side per file. To get back to the original order is important because the style of the back relies on the front. The underlying problem is that the files are commonly added to the ZIP archives according to how they are listed rather than the order they were created. When looking at the zip file, we can't get them back in order without a lot of work if we don't plan ahead. If file names are created correctly, then we can simply sort the names to get them to the original order, and in fact, they probably will be added to the zip file correctly too.
+It is important to use file names that can be re-sorted to the right order if they should become shuffled. This is particularly important if a separate image file is used for each side of a ballot, which is common because PNG format only has one side per file. Restoring the original order is important because the style of the back relies on the front. The underlying problem is that the files are commonly added to the ZIP archives according to how they are listed rather than the order they were created. When looking at the zip file, we can't get them back in order without a lot of work if we don't plan ahead. If file names are created correctly, then we can simply sort the names to get them to the original order, and in fact, they probably will be added to the zip file correctly too.
 
 **Please adhere to the following rules:**
 
@@ -151,6 +153,8 @@ It is important to use file names that can be re-sorted to the right order if th
 3. Unzip the zip files into separate folders so they can be renamed. Make sure names are unique among all folders.
 4. Use existing tools like Bulk Rename Utility (BRU) "https://www.bulkrenameutility.co.uk/" to quickly rename them.
 5. re-ZIP the files using a tool like 7zip.org, but please use conventional ZIP format not 7z format. 
+6. Each zip file should include no more than about 30K files, and limit to 10GB for convenience of handling and uploading.
+7. Upload to the same project and then reassign the archives in the job file.
 
 ## Conclusion
 
