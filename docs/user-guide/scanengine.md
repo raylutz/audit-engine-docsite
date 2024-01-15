@@ -107,6 +107,51 @@ https://www.xeroxscanners.com/en/us/products/item.asp?PN=W110
 
 ![image-20231106171247122](https://www.xeroxscanners.com/images/products/W110/W110_img1.jpg)
 
+## File Naming is Critical
+
+It is important to use file names that can be re-sorted to the right order if they should become shuffled. This is particularly important if a separate image file is used for each side of a ballot, which is common because PNG format only has one side per file. The underlying problem is that the names can be added to the ZIP archives according to how they are listed rather than the order they were created. When looking at the zip file, we can't get them back in order without a lot of work. We need to be able to sort them to return them in the original order. It is particularly important that we can get the front and back back together.
+
+**Please adhere to the following rules:**
+
+- Keep file names relatively short and meaningful. 
+- Any number fields should be fixed-length and long enough to avoid overflow and create a number with more characters. For example, you should not ever see a number roll from 999 to 1000. But 0999 to 1000 is okay.
+- If there is more than one number field, the first number field must not be reused even if the second number field has different range numbers.
+- Non-number fields should be simple and just a few characters. Do not use any special characters. Do not include any spaces. The file name should be usable without the file extension as the ballot_id. Non-numbers can be used to indicate the GROUP of the ballots, such as EV, ED, MIB, PROV, etc. This can be first. Then there can be a batch number and sequence number.
+- Use underscore "_" to separate groups of characters or numbers.
+- If two images are created for each page, they should be numbered so the order can be restored when resorted using a lexical (default) sort. Try to keep the images in front-back order. This should be normal for any duplexing scanner. 
+- Make sure that all ballots are imaged with the same number of pages. If both sides are included, they must be included for all  ballots in the set. If only the front is included, a random back should not also be included.
+- It is okay to have prefixes indicating the archive, like D001, D002, the precinct, group, etc. Always use fixed-length fields if numbering is used. Make sure it will be easy to parse the name to extract any meaningful data.
+- Try to keep the top of the images all inserted the same way.
+
+**Examples:**
+
+- GOOD: 
+
+  - EV1_00004_000001.png, 
+  - EV1_00004_000002.png,
+  - ...
+  - EV1_00004_009678.png, 
+  - EV1_00005_000001.png,
+  - etc.
+
+- BAD: 
+
+  - "scans from john's laptop - precincts 1 - 14 - 001_002"
+  - ... 
+  - "scans from john's laptop - precincts 1-14 - 2000_002"
+  - and
+  - "scans from johns laptop pcts 1-14 - 001_4653"
+
+  Notice special characters, spaces, different lengths, varying spaces, reused ranges.
+
+**How to recover from bad naming procedures:**
+
+1. Analyze ranges of names that exist in the set of images and plan a simple file naming scheme.
+2. Use existing numbers when possible and make sure you record how you renamed the original names to the new names.
+3. Unzip the zip files into separate folders so they can be renamed. Make sure names are unique among all folders.
+4. Use existing tools like Bulk Rename Utility (BRU) "https://www.bulkrenameutility.co.uk/" to quickly rename them.
+5. re-ZIP the files using a tool like 7zip.org, but please use conventional ZIP format not 7z format. 
+
 ## Conclusion
 
 The ScanEngine App is specifically suited to scanning ballots using a COTS high-speed duplexing scanner to produce images that can be incorporated in various auditing workflows. ScanEngine provides the chain of custody tracking of each ballot scanned, as well as each batch scanned, and can use separator sheets with barcodes to help to organize the images and physical ballots.
