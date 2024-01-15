@@ -180,7 +180,7 @@ It is important to use file names that can be re-sorted to the right order if th
 2. Use existing numbers (but padded to fixed length) when possible and make sure you record how you renamed the original names to the new names.
 3. Unzip the zip files into separate folders so they can be renamed. Make sure you make a backup of the data.
 4. Use existing tools like Bulk Rename Utility (BRU) (https://www.bulkrenameutility.co.uk/) to quickly rename them. 
-5. re-ZIP the files using a tool like 7zip.org, but please use conventional ZIP format not 7z format. 
+5. re-ZIP the files using a tool like 7zip.org, but please use conventional ZIP format not 7z format.  With 7zip, you can look at the listing of files in each ZIP archive and click on "offset" to see the exact ordering within the archive. The ordering in the archive should be the correct order of scanning if names were chosen correctly, or at least within the major blocks of ballots with no intermixing.
 6. Each zip file should include no more than about 30K files, and limit to 10GB for convenience of handling and uploading.
 7. Upload to the same project and then reassign the archives in the job file.
 
