@@ -109,7 +109,7 @@ https://www.xeroxscanners.com/en/us/products/item.asp?PN=W110
 
 ## File Naming is Critical
 
-It is important to use file names that can be re-sorted to the right order if they should become shuffled. This is particularly important if a separate image file is used for each side of a ballot, which is common because PNG format only has one side per file. The underlying problem is that the names can be added to the ZIP archives according to how they are listed rather than the order they were created. When looking at the zip file, we can't get them back in order without a lot of work. We need to be able to sort them to return them in the original order. It is particularly important that we can get the front and back together again because the style of the back relies on the front.
+It is important to use file names that can be re-sorted to the right order if they should become shuffled. This is particularly important if a separate image file is used for each side of a ballot, which is common because PNG format only has one side per file. Sorting then names must return the original order, with the front and back together again because the style of the back relies on the front. The underlying problem is that the files are commonly added to the ZIP archives according to how they are listed rather than the order they were created. When looking at the zip file, we can't get them back in order without a lot of work if we don't plan ahead.
 
 **Please adhere to the following rules:**
 
