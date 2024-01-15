@@ -109,7 +109,7 @@ https://www.xeroxscanners.com/en/us/products/item.asp?PN=W110
 
 ## File Naming is Critical
 
-It is important to use file names that can be re-sorted to the right order if they should become shuffled. This is particularly important if a separate image file is used for each side of a ballot, which is common because PNG format only has one side per file. The underlying problem is that the names can be added to the ZIP archives according to how they are listed rather than the order they were created. When looking at the zip file, we can't get them back in order without a lot of work. We need to be able to sort them to return them in the original order. It is particularly important that we can get the front and back back together.
+It is important to use file names that can be re-sorted to the right order if they should become shuffled. This is particularly important if a separate image file is used for each side of a ballot, which is common because PNG format only has one side per file. The underlying problem is that the names can be added to the ZIP archives according to how they are listed rather than the order they were created. When looking at the zip file, we can't get them back in order without a lot of work. We need to be able to sort them to return them in the original order. It is particularly important that we can get the front and back together again because the style of the back relies on the front.
 
 **Please adhere to the following rules:**
 
@@ -146,7 +146,7 @@ It is important to use file names that can be re-sorted to the right order if th
 
 **How to recover from bad naming procedures:**
 
-1. Analyze ranges of names that exist in the set of images and plan a simple file naming scheme.
+1. Analyze ranges of names that exist in the set of images and plan a simple file naming scheme. Check with staff at AuditEngine  if needed to make sure that your plan will work to allow resorting of the names from each archive to return them to the originally scanned order.
 2. Use existing numbers when possible and make sure you record how you renamed the original names to the new names.
 3. Unzip the zip files into separate folders so they can be renamed. Make sure names are unique among all folders.
 4. Use existing tools like Bulk Rename Utility (BRU) "https://www.bulkrenameutility.co.uk/" to quickly rename them.
@@ -155,3 +155,6 @@ It is important to use file names that can be re-sorted to the right order if th
 ## Conclusion
 
 The ScanEngine App is specifically suited to scanning ballots using a COTS high-speed duplexing scanner to produce images that can be incorporated in various auditing workflows. ScanEngine provides the chain of custody tracking of each ballot scanned, as well as each batch scanned, and can use separator sheets with barcodes to help to organize the images and physical ballots.
+
+If other methods are used to scan ballots make sure you adhere to file naming rules to produce names that can be sorted to return the files to their original order, and can be used as the basis for the ballot_id without any other changes.
+
