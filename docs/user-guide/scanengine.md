@@ -30,15 +30,14 @@ For each of these use cases, we recommend very strongly that a full ballot image
 
 - **Ballot-Image Driven RLAs:** When performing Risk-Limiting Audits (RLAs) that utilize examination of paper ballots, these can be done by utilizing *ScanEngine* to reduce the cost of performing the audit and improve transparency. <BR><BR>It is unfortunately the case that these audits are difficult to observe and provide public oversight, since it is necessary to sit right there and watch as the votes are being entered into a DRE-like interface. Instead, once the samples are pulled, we use *ScanEngine* to scan those paper ballots, and then use *AuditEngine* to extract the votes and compare with the official results. The tool *AdjudiTally* can be used by auditors or the public to review the ballot images involved in the audit and verify the automated evaluation.
 
-   1. **Ballot Polling Audit:** In a ballot polling audit, random ballots are pulled from all ballots and they do not need to be indexed or grouped in any way. The ballots are typically required to be pulled from a specific location such as pallet, box, batch, and offset within the batch. We recommend that a cover sheet is printed for every ballot to be fetched. Then, when the ballot is scanned using *ScanEngine*, the cover sheet is also scanned to identify from where it was drawn, and also to allow returning that ballot to that location. Once the ballots are scanned, then are evaluated by AuditEngine without comparing each ballot to the original CVR (which may not exist), and an independent margin is evaluated for the sampled set. If the margin is within the calculated boundaries, then the risk limit is satisfied.
-
-   2. **Batch Polling Audit:** This method is not discussed much by RLA supporters, but it is a viable method for performing RLAs, particularly when *ScanEngine* is utilized. The number of ballots is not reduced from the number required in the ballot polling audit, but the sampling process is much easier, as entire batches are selected randomly. They are scanned using *ScanEngine*, the vote is extracted using *AuditEngine*, and the resulting margin for contests is compared with the official margin, and if within the calculated boundaries, then the risk limit is satisfied. As with the Ballot Polling Audit, this does not require any comparison on a ballot-by-ballot or batch-by-batch basis. It also does not break up batches and it does not require returning individual ballots to their original location within batches. This also has fewer hazards for malicious acts during the audit because batches remain sealed until rescanned.
-   3. **Batch Comparison Audit:** This method is the same as the batch polling audit, but it requires that the batches are identified in the CVR (or by *AuditEngine*), so they can be compared with physical batch. Unfortunately, not all voting systems identify batches. Dominion does, for example, but ES&amp;S does not. When not identified, then RLA comparison audits are not feasible.<BR><BR>
-    In this method, batches are randomly selected, cover sheets printed, and are fetched from physical storage, and then scanned using the cover sheet identifying the batch. Once scanned, the batches can be processed by AuditEngine to evaluate the vote and compare with the batches in the CVR to determine the number of overstatements and understatements in each batch, and then evaluating the risk.
-
-   4. **Ballot Comparison Audit:** If there is a way to identify individual ballots in storage and index them to the CVR, we can conduct a ballot comparison audit using *ScanEngine* and *AuditEngine.* For each ballot randomly selected, a cover sheet is prepared which is used as the fetch request, as well as to inform *ScanEngine* how to label the images when scanned. Preferably, each will use the official ballot_id for that ballot. For example, let's say there are 200 ballots required in the Ballot Comparison RLA. 200 cover sheets are prepared, and the ballots are accessed from physical storage. The stack of documents to be scanned include the cover sheet for each ballot, and then one ballot, alternating, resulting in 400 total sheets to scan. Once scanned, the vote on each ballot can be evaluated by *AuditEngine*, the ballots directly compared with CVR records that already exist, and then calculate the risk.
-
-  All of these audits should include a phase where the sample is further sampled, for 1:1 comparison of the images to the physical ballots.
+   | Types of Risk Limiting Audits:                               |
+| ------------------------------------------------------------ |
+   | **Ballot Polling Audit:** In a ballot polling audit, random ballots are pulled from all ballots and they do not need to be indexed or grouped in any way. The ballots are typically required to be pulled from a specific location such as pallet, box, batch, and offset within the batch. We recommend that a cover sheet is printed for every ballot to be fetched. Then, when the ballot is scanned using *ScanEngine*, the cover sheet is also scanned to identify from where it was drawn, and also to allow returning that ballot to that location. Once the ballots are scanned, then are evaluated by AuditEngine without comparing each ballot to the original CVR (which may not exist), and an independent margin is evaluated for the sampled set. If the margin is within the calculated boundaries, then the risk limit is satisfied. |
+   | **Batch Polling Audit:** This method is not discussed much by RLA supporters, but it is a viable method for performing RLAs, particularly when *ScanEngine* is utilized. The number of ballots is not reduced from the number required in the ballot polling audit, but the sampling process is much easier, as entire batches are selected randomly. They are scanned using *ScanEngine*, the vote is extracted using *AuditEngine*, and the resulting margin for contests is compared with the official margin, and if within the calculated boundaries, then the risk limit is satisfied. As with the Ballot Polling Audit, this does not require any comparison on a ballot-by-ballot or batch-by-batch basis. It also does not break up batches and it does not require returning individual ballots to their original location within batches. This also has fewer hazards for malicious acts during the audit because batches remain sealed until rescanned. |
+   | **Batch Comparison Audit:** This method is the same as the batch polling audit, but it requires that the batches are identified in the CVR (or by *AuditEngine*), so they can be compared with physical batch. Unfortunately, not all voting systems identify batches. Dominion does, for example, but ES&amp;S does not (in many cases). When not identified, then RLA *comparison* audits are not feasible.<br/>In this method, batches are randomly selected, cover sheets printed, and are fetched from physical storage, and then scanned using the cover sheet identifying the batch. Once scanned, the batches can be processed by AuditEngine to evaluate the vote and compare with the batches in the CVR to determine the number of overstatements and understatements in each batch, and then evaluating the risk. |
+| **Ballot Comparison Audit:** If there is a way to identify individual ballots in storage and index them to the CVR, we can conduct a ballot comparison audit using *ScanEngine* and *AuditEngine.* For each ballot randomly selected, a cover sheet is prepared which is used as the fetch request, as well as to inform *ScanEngine* how to label the images when scanned. Preferably, each will use the official ballot_id for that ballot. For example, let's say there are 200 ballots required in the Ballot Comparison RLA. 200 cover sheets are prepared, and the ballots are accessed from physical storage. The stack of documents to be scanned include the cover sheet for each ballot, and then one ballot, alternating, resulting in 400 total sheets to scan. Once scanned, the vote on each ballot can be evaluated by *AuditEngine*, the ballots directly compared with CVR records that already exist, and then calculate the risk. |
+   
+All of these audits should include a phase where the sample is further sampled, for 1:1 comparison of the images to the physical ballots.
 
 ## Example Workflow
 
@@ -131,20 +130,20 @@ It is important to use file names that can be re-sorted to the right order if th
 
 - GOOD: 
 
-  - EV1_00004_000001.png, 
-  - EV1_00004_000002.png,
-  - ...
-  - EV1_00004_009678.png, 
-  - EV1_00005_000001.png,
-  - etc.
+  **EV1_00004_000001.png**, 
+  **EV1_00004_000002.png**,
+  ...
+  **EV1_00004_009678.png**, 
+  **EV1_00005_000001.png**,
+  etc.
 
 - BAD: 
 
-  - "scans from john's laptop - precincts 1 - 14 - 001_002"
-  - ... 
-  - "scans from john's laptop - precincts 1-14 - 2000_002"
-  - and
-  - "scans from johns laptop pcts 1-14 - 001_4653"
+  "**scans from john's laptop - precincts 1 - 14 - 001_002**"
+  ... 
+  "**scans from john's laptop - precincts 1-14 - 2000_002**"
+  and
+  "**scans from johns laptop pcts 1-14 - 001_4653**"
 
   Notice special characters, spaces, different lengths, varying spaces, reused ranges.
 
