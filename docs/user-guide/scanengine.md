@@ -148,7 +148,7 @@ It is important to use file names that can be re-sorted to the right order if th
 - Non-number fields should be simple and just a few characters. Do not use any special characters. Do not include any spaces. Non-numbers can be used to indicate the GROUP of the ballots, such as EV, ED, MIB, PROV, etc. This can be first. Then there can be a batch number and sequence number.
 - Use underscore "_" to separate groups of characters or numbers.
 - The file name should be usable without the file extension as the ballot_id, which must be unique across all ballots.
-- If two images are created for each page, they should be numbered so the order can be restored when resorted using a lexical (default) sort. Try to keep the images in front-back order. This should be normal for any duplexing scanner. 
+- If two images are created for each sheet, they should be numbered so the order can be restored when resorted using a lexical (default) sort. Try to keep the images in front-back order. This should be normal for any duplexing scanner. 
 - Make sure that all ballots are imaged with the same number of pages. If both sides are included, they must be included for all  ballots in the set. If only the front is included, a random back should not also be included. This makes it very hard to keep the fronts and backs together.
 - It is okay to have prefixes indicating the archive, like D001, D002, the precinct, group, etc. Always use fixed-length fields if numbering is used. Make sure it will be easy to parse the name to extract any meaningful data.
 
