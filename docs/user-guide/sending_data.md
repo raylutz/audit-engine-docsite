@@ -41,7 +41,7 @@ Level 1 is available to any election district, and is not reliant on the capabil
 Level 2 is available to any election district, and is not reliant on the capabilities of voting machines or scanners.
 
 1. Create each *hash manifest* file as in Level 1.
-2. Submit the hash manifest file to a third-party transparency service, such as [DataTrails.ai](https://DataTrails.ai), so it can be logged into a immutable log, and date established. By doing this, we know the hash manifest was submitted on that date. All files listed in the hash manifest cannot be changed after that date without the possibility of detection.
+2. Submit the hash manifest file to a third-party transparency service, such as [DataTrails.ai](https://DataTrails.ai), so it can be logged into an immutable log, and date established. By doing this, we know the hash manifest was submitted on that date. All files listed in the hash manifest cannot be changed after that date without the possibility of detection.
 3. Publish the link to the transparency service on the posting service (such as a website) so the hash manifest file can be checked with the immutable log.
 4. Henceforth, anyone can drag and drop the hash manifest file on the transparency service and it will be checked with the original version.
 
@@ -49,7 +49,7 @@ Level 2 is available to any election district, and is not reliant on the capabil
 
 Level 3 requires security capabilities of voting machines and scanners.
 
-1. **Create Public Key Manifest:** Create a *public key manifest* file containing all the the public keys of scanners used to create ballot images.
+1. **Create Public Key Manifest:** Create a *public key manifest* file containing all the public keys of scanners used to create ballot images.
 2. Secure the *public key manifest* file by submitting it to a third-party transparency service, such as [DataTrails.ai](https://DataTrails.ai) prior to the election, and make it available to the public.
 3. **Signed Hashes of Ballot Images:** Each voting machine and scanner used in the election must create a hash of each ballot image as it is produced and sign it with its internally-generated private key, which is related to the public key provided in the *public key manifest* file. These signed hashes should be included in the ballot image archives with the same base name as the image file, and in a standard format.
 4. Create and post the hash manifest file as in Level 2.
@@ -121,7 +121,6 @@ Since AuditEngine is on AWS, we use AWS S3 storage in the same datacenter where 
 
 We have experience with the following services, but this information is likely out of date, as the services are driven by competition and may offer improved services.
 
-
 <table>
   <tr>
    <td><strong>Service</strong>
@@ -156,14 +155,14 @@ We have experience with the following services, but this information is likely o
   <tr>
    <td><a href="https://www.dropbox.com/">Dropbox</a>
    </td>
-   <td>10 GB
+   <td>10 GB (seems to have been increased.)
    </td>
    <td>Basic: 2GB.  \
 up to 5TB for business accounts.
    </td>
    <td>Usable if the zip archives are split into archives less than 10GB. Multiple file downloads are not supported except for zipping them, and so each archive must be individually downloaded.
 <p>
-Not recommended because storage limits are too low for most jurisdictions.
+Has increased their file-size limits. Now used by San Francisco County with ballot image archive between about 20GB and 30GB.
    </td>
   </tr>
   <tr>
@@ -193,10 +192,11 @@ Not recommended because storage limits are too low for most jurisdictions.
    </td>
    <td>2TB or unlimited.
    </td>
-   <td>Used by San Francisco County. Good user interface which allows bulk downloads. Offers a desktop client for Windows.
+   <td>Used by San Francisco County prior to 2023. Good user interface which allows bulk downloads. Offers a desktop client for Windows.
    </td>
   </tr>
 </table>
+
 
 ### Option 2: Uploading the Data to Directly to AuditEngine
 
