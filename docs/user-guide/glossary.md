@@ -240,7 +240,7 @@ Some states require that the order of the Contest Options will rotate to avoid b
 
 A given graphical expression of a contest on a [Hand-Marked Paper Ballot](#hand-marked-paper-ballot) is called a _Contest Rendition_. Normally, contests are designed as a block with the [Contest Name](#contest-name) at the top, a possible description, followed by the _[Contest Options](#contest-options)_. Normally, such a contest rendition will be the same no matter where it is shown on the ballot, unless a different language or option rotation is used. The TargetMapper App will allow the user to link a given Contest Rendition to a Contest Name and Contest Options as defined by the CVR, and when linked, it will be found no matter where it is located on the ballot.
 
-<h3 id="contest-variant">Contest Variant</h3>
+### Contest Variant
 
 A contest variant is a _[ballot-contest](#contest-or-ballot-contest)_ which has [write-ins](#write-in), [overvotes](#overvote), is [flagged](#flagged), or is _[disagreed](#disagreed-contest)_, i.e. if there is any disagreement between the evaluation of the vote by AuditEngine and the official result. ([Undervotes](#undervote) are not included in the set unless they are disagreed.) Contest Variants can normally be summed by contest. Each contest variant has a separate comparison record for each ballot-contest instance.
 
