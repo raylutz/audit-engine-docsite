@@ -1,5 +1,5 @@
 <link rel="icon" type="image/x-icon" href="https://auditengine.org/docs/assets/images/A.png">
-<img src="assets/images/AuditEngineLogo.png" alt="AuditEngineLogo.png" width='300' />
+<img src="images/AuditEngineLogo.png" alt="AuditEngineLogo.png" width='300' />
 
 
 
