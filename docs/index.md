@@ -1,5 +1,5 @@
-<link rel="icon" type="image/x-icon" href="https://mapper.auditengine.org/docs/assets/images/A.png">
-<img src="https://copswiki.org/w/pub/Common/AuditEngine/AuditEngineLogo.png" alt="AuditEngineLogo.png" width='300' />
+<link rel="icon" type="image/x-icon" href="https://auditengine.org/docs/assets/images/A.png">
+<img src="assets/images/AuditEngineLogo.png" alt="AuditEngineLogo.png" width='300' />
 
 
 
