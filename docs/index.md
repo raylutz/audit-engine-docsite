@@ -7,7 +7,7 @@ AuditEngine is an election auditing platform which performs "Ballot Image Auditi
 
 ## Primary Links
 
-- [AuditEngine Landing Site](https://auditengine.org/index.html)
+- <a href="https://auditengine.org">AuditEngine Landing Site</a>
 - [AuditEngine Background -- start here](user-guide/auditengine-background-doc.md)
 - [AuditEngine FAQs: Frequently Asked Questions](user-guide/auditengine_faqs.md)
 - [Active AuditEngine site: (click to Enter)](https://engine.auditengine.org) -- Use this to upload election files and start audits (you must have approval)
