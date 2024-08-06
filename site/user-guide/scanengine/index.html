@@ -1,0 +1,1360 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://auditengine.org/user-guide/scanengine/">
+      
+      
+        <link rel="prev" href="../configuration_files/">
+      
+      
+        <link rel="next" href="../auditengine_faqs/">
+      
+      
+      <link rel="icon" href="https://mapper.auditengine.org/assets/images/A.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.31">
+    
+    
+      
+        <title>ScanEngine App - AuditEngine Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3cba04c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#scanengine-app" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AuditEngine Docs" class="md-header__button md-logo" aria-label="AuditEngine Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AuditEngine Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ScanEngine App
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AuditEngine Docs" class="md-nav__button md-logo" aria-label="AuditEngine Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    AuditEngine Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Audit Results
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Audit Results
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit-results/case-study/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Case Study, 3 FL Disticts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit-results/3-audits-GA-WI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Three Audits GA/WI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    User Guide
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            User Guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../auditengine-background-doc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Background Document
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../requester_guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Requester Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exporting_guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exporting Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dom_exporting_guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dominion Exporting Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ess_exporting_guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ES&S Exporting Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hart_exporting_guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hart Exporting Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sending_data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sending Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration_files/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuration Files
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    ScanEngine App
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    ScanEngine App
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use Cases
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Use Cases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scan-centric-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scan-centric workflow:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verification-scans" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verification scans:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-auditable-images-from-legacy-voting-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating Auditable Images from Legacy Voting Systems:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ballot-image-driven-rlas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ballot-Image Driven RLAs:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ballot-Image Driven RLAs:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#types-of-risk-limiting-audits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types of Risk Limiting Audits:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Types of Risk Limiting Audits:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ballot-polling-audit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ballot Polling Audit:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#batch-polling-audit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Batch Polling Audit:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#batch-comparison-audit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Batch Comparison Audit:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ballot-comparison-audit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ballot Comparison Audit:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Workflow
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batch-scan-dialog" class="md-nav__link">
+    <span class="md-ellipsis">
+      Batch Scan Dialog
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-cots-scanners" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommended COTS Scanners
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Recommended COTS Scanners">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#canon-dr-g2140" class="md-nav__link">
+    <span class="md-ellipsis">
+      Canon DR-G2140
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ricoh-fi7090-or-fi7800" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ricoh fi7090 or fi7800
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xerox-w110-scanner" class="md-nav__link">
+    <span class="md-ellipsis">
+      Xerox W110 Scanner
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-naming-is-critical" class="md-nav__link">
+    <span class="md-ellipsis">
+      File Naming is Critical
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../auditengine_faqs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Community
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Community
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/in_the_news/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    In the News
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/you_can_help/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How you can help
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Audit Projects
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Audit Projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit-projects/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit-projects/AZ_2020/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arizona 2020
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit-projects/FL_2020/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Florida 2020
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit-projects/GA_2020/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Georgia 2020
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit-projects/WI_2020/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wisconsin 2020
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            About
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About Us
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="scanengine-app">ScanEngine App</h1>
+<p>State regulations frequently call for scanning some or all ballots using a scanner(s) independent from the primary voting system, and then evaluating these images using a Ballot Image Auditing (BIA) platform or a secondary voting system. AuditEngine has a companion application called <strong><em>ScanEngine</em></strong> to manage this process so it can be handled in an error free manner.</p>
+<p>Batches of ballots scanned by a scanner that is independent from the voting system can create "Verification Images" which can be processed to mitigate the hazard that hacks were implemented in the voting system to alter the images. </p>
+<p>A separate <em>ScanEngine</em> application runs on a computer associated with each COTS (Commercial off the shelf) high-speed scanner within the secure air-gapped environment of the election office. This application maintains a rigorous chain of custody to track batches scanned and any issues (jams, etc) during scanning a batch without repeating or missing images in the process.</p>
+<p>Separator sheets can be used with barcodes provide file name prefixes and group ballot images into batches, to provide additional information about ballots that are imaged which are not included in the ballot style designations, and provide information to create file names and batches.</p>
+<p><em>ScanEngine</em> places all images for the current batch into a temporary holding area until all ballots are correctly scanned. If the batch must be re-scanned, then the ballots in the holding area are erased and replaced with new scans. For each batch successfully scanned, the images in the holding area can be transferred to the main area and placed in a sub-folder with the same batch designation.</p>
+<p>Separator sheets can be kept with the physical ballots to document that batch. When each batch is completed, it recommended that the separator sheet be placed on top of the batch of ballots and all ballots enclosed in a zip-lock plastic bag, and then returned to the ballot carrier box.</p>
+<p><em>ScanEngine</em> maintains a log which describes the time that each ballot is scanned, whether it was successful, and whether the batch is accepted, if any rescanning of batches occurs, and details about any error (jams, etc) that occur.</p>
+<p><em>ScanEngine</em> may check the fidelity of the ballot scanned but it does not perform ballot interpretation. It creates high-fidelity scans only.</p>
+<p>The images are written directly to USB media, hand-carried out of the air-gapped environment, and uploaded to the AuditEngine.org website for further processing. A Hardware Security Module (HSM) can be used to sign the resulting files using a private key. For example, the Yubico HSM https://www.yubico.com/product/yubihsm-2-series/yubihsm-2-fips/.</p>
+<h2 id="use-cases">Use Cases</h2>
+<p>For each of these use cases, we recommend very strongly that a full ballot image audit is performed to cover all ballots and all contests in addition to any further processing of scanned paper ballots. When the original images are utilized, they are indexed to the Cast Vote Records, and therefore we can get much higher diagnostic power in the comparison process rather than rescanned ballots because they tend to be not correlated to the CVR. One additional benefit of using AuditEngine is that there is no dependency on the voting system determination of the margin of victory, which is used to determine the samples required.</p>
+<h3 id="scan-centric-workflow"><strong>Scan-centric workflow:</strong></h3>
+<p>When state law requires that an automated audit rescans physical ballots, either on a sampling basis (such as 20% of the precincts) or exhaustively (all ballots), <em>ScanEngine</em> can support the scanning required. The scanned images must be grouped identically as the groups used in the voting system to be able to compare if not all the ballots are included in the scanning operation. </p>
+<h3 id="verification-scans"><strong>Verification scans:</strong></h3>
+<p>For election districts that use a voting system that produce ballot images which are already being fully audited by <em>AuditEngine</em>, <em>ScanEngine</em> can be used to scan batches as a check that the images were not altered. The scanned images must be grouped identically as the groups used in the voting system to be able to compare, and run by <em>AuditEngine</em> as "Verification Images".</p>
+<h3 id="creating-auditable-images-from-legacy-voting-systems"><strong>Creating Auditable Images from Legacy Voting Systems:</strong></h3>
+<p>For any election districts that do not use voting machines that produce ballot images, <em>ScanEngine</em> can provide images to perform a ballot image audit of the results. Cover sheets can be produced based on the precinct or batch as they are stored, and thereby provide that additional metadata about the ballots scanned in the images. The ballot images can be scanned with complete chain of custody tracking.</p>
+<h3 id="ballot-image-driven-rlas"><strong>Ballot-Image Driven RLAs:</strong></h3>
+<p>When performing Risk-Limiting Audits (RLAs) that utilize examination of paper ballots, these can be done by utilizing <em>ScanEngine</em> to reduce the cost of performing the audit and improve transparency. <BR><BR>It is unfortunately the case that these audits are difficult to observe and provide public oversight, since it is necessary to sit right there and watch as the votes are being entered into a DRE-like interface. Instead, once the samples are pulled, we use <em>ScanEngine</em> to scan those paper ballots, and then use <em>AuditEngine</em> to extract the votes and compare with the official results. The tool <em>AdjudiTally</em> can be used by auditors or the public to review the ballot images involved in the audit and verify the automated evaluation.</p>
+<h4 id="types-of-risk-limiting-audits">Types of Risk Limiting Audits:</h4>
+<h5 id="ballot-polling-audit"><strong>Ballot Polling Audit:</strong></h5>
+<p>In a ballot polling audit, random ballots are pulled from all ballots and they do not need to be indexed or grouped in any way. The ballots are typically required to be pulled from a specific location such as pallet, box, batch, and offset within the batch. We recommend that a cover sheet is printed for every ballot to be fetched. Then, when the ballot is scanned using <em>ScanEngine</em>, the cover sheet is also scanned to identify from where it was drawn, and also to allow returning that ballot to that location. Once the ballots are scanned, then are evaluated by AuditEngine without comparing each ballot to the original CVR (which may not exist), and an independent margin is evaluated for the sampled set. If the margin is within the calculated boundaries, then the risk limit is satisfied.</p>
+<h5 id="batch-polling-audit"><strong>Batch Polling Audit:</strong></h5>
+<p>This method is not discussed much by RLA supporters, but it is a viable method for performing RLAs, particularly when <em>ScanEngine</em> is utilized. The number of ballots is not reduced from the number required in the ballot polling audit, but the sampling process is much easier, as entire batches are selected randomly. They are scanned using <em>ScanEngine</em>, the vote is extracted using <em>AuditEngine</em>, and the resulting margin for contests is compared with the official margin, and if within the calculated boundaries, then the risk limit is satisfied. As with the Ballot Polling Audit, this does not require any comparison on a ballot-by-ballot or batch-by-batch basis. It also does not break up batches and it does not require returning individual ballots to their original location within batches. This also has fewer hazards for malicious acts during the audit because batches remain sealed until rescanned.</p>
+<h5 id="batch-comparison-audit"><strong>Batch Comparison Audit:</strong></h5>
+<p>This method is the same as the batch polling audit, but it requires that the batches are identified in the CVR (or by <em>AuditEngine</em>), so they can be compared with physical batch. Unfortunately, not all voting systems identify batches. Dominion does, for example, but ES&amp;S does not (in many cases). When not identified, then RLA <em>comparison</em> audits are not feasible.<br/>In this method, batches are randomly selected, cover sheets printed, and are fetched from physical storage, and then scanned using the cover sheet identifying the batch. Once scanned, the batches can be processed by AuditEngine to evaluate the vote and compare with the batches in the CVR to determine the number of overstatements and understatements in each batch, and then evaluating the risk.</p>
+<h5 id="ballot-comparison-audit"><strong>Ballot Comparison Audit:</strong></h5>
+<p>If there is a way to identify individual ballots in storage and index them to the CVR, we can conduct a ballot comparison audit using <em>ScanEngine</em> and <em>AuditEngine.</em> For each ballot randomly selected, a cover sheet is prepared which is used as the fetch request, as well as to inform <em>ScanEngine</em> how to label the images when scanned. Preferably, each will use the official ballot_id for that ballot. For example, let's say there are 200 ballots required in the Ballot Comparison RLA. 200 cover sheets are prepared, and the ballots are accessed from physical storage. The stack of documents to be scanned include the cover sheet for each ballot, and then one ballot, alternating, resulting in 400 total sheets to scan. Once scanned, the vote on each ballot can be evaluated by <em>AuditEngine</em>, the ballots directly compared with CVR records that already exist, and then calculate the risk.</p>
+<h2 id="example-workflow">Example Workflow</h2>
+<ol>
+<li><strong>Create Batches:</strong> The user separates ballots into batches of a convenient size, of about 200 ballots, for example. This can be commonly done using a counting scale. Each batch should have fewer than half the ballots in the automatic document feeder (ADF), and those typically can handle 500 sheets. If batches are already determined when originally scanned, these can be used as-is. Random selection of batches may be appropriate for verification scan creation.</li>
+<li><strong>Name Batches:</strong> Using <em>ScanEngine</em>, the user enters the GROUP and BATCH, like EV_1000. EV is the Group, Early Voting EV. This can be any string. This will be the prefix of the filename.</li>
+<li>
+<p>The workflow can be run with separator sheets or manually.</p>
+</li>
+<li>
+<p><strong>Separator Sheets:</strong> </p>
+<ol>
+<li>The prefix is expressed on a separator page with a code-39 barcode. This separator page is printed using a co-located laser printer.</li>
+<li>The separator page is placed on top of the batch </li>
+<li>The batch is loaded into the ADF feeder (Automatic Document Feeder) of a high-speed scanner, such as the Ricoh fi7090 or Canon DR-G2140, for example.</li>
+<li>As the scanning of the batch proceeds, the <em>ScanEngine</em> software detects the separator sheet and begins a new batch.
+     In normal (non-error) flow, the code from the separator sheet is used to determine the file names in the batch. </li>
+<li>The user can concurrently prepare the next batch and load it into the ADF when convenient. If another separator page is encountered, that will signal the end of the batch. The ability to load the ADF while scanning is not feasible with all scanners.</li>
+<li>If there is no error, the scanner would continue onto the next batch without stopping, and start the new batch based on the separator page.</li>
+</ol>
+</li>
+<li>
+<p><strong>Manually:</strong></p>
+<ol>
+<li>
+<p>The user enters the prefix for the batch manually into the ScanEngine App.</p>
+</li>
+<li>
+<p>The user places the batch without a separator page into the ADF.</p>
+</li>
+<li>
+<p>The user waits for the timeout to occur before loading the next batch.</p>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>Image Staging Area:</strong> The images in the batch are copied to a staging directory, as they are scanned. </p>
+</li>
+<li><strong>Fully Logged:</strong> A log is produced showing the progress of each ballot in the batch.</li>
+<li><strong>Image Final Area:</strong> If the batch is completed without error, then the images in the batch are copied to the final area. Signed hashes are provided for each image scanned. These images can be written directly to USB drive so there is no connection to the voting system environment, and there is no connection to the Internet.</li>
+<li><strong>Return Batch:</strong> The operator removes the scanned batch from the output tray of the scanner and the separator page is kept on the top of the batch for identification purposes. We recommend that the operator would seal the batch into packaging, such as a tamper-evident zip-lock bag, which can show the cover sheet while also maintaining integrity of the batch, and place it in the box holding the ballots. In this way, the batch can be identified later. If any ballots had to be remade, then the batch may need to be put aside so the ballot can be returned to the batch before storage.</li>
+<li><strong>Error Flow:</strong> In the case of an error, the images captured in that batch would be deleted in the staging area, and the user alerted to the failure. Sometimes, it is possible to remove the offending ballot, if it is not scannable due to being damaged, and then run the batch without that ballot. Instructions are provided to the user for error recovery.</li>
+<li><strong>Remaking ballots:</strong> Any ballots that are damaged and cannot be scanned can be combined into another batch, or they can be scanned on a co-located flatbed scanner and kept with the batch.</li>
+<li><strong>USB Drive:</strong> After all scanning is completed, the USB drive is removed and then hand-carried out of the secure air-gapped environment, and then uploaded to the AuditEngine datacenter for processing.</li>
+<li><strong>Random spot checks:</strong> As the scanning progresses, the user is able to review the fidelity of the images and compare with the paper on a random inspection basis, either as they are being scanned or later, because the batches are identified in storage and in the archives.</li>
+<li><strong>Public Oversight:</strong> A livestream camera should be positioned to record the activity in the scanning process, and simultaneously show the log as it being generated. If used, random number generation should use ten-sided dice in a public meeting to create the seed of a random number generator or to directly select the batches to be included.</li>
+</ol>
+<h2 id="batch-scan-dialog">Batch Scan Dialog</h2>
+<p><em>ScanEngine</em> uses a "Batch Scan" dialog similar to the dialog box shown here to manage the scans. Users can enter the filename prefix manually, or use the prefix from the code-39 barcode on separator sheets to derive the filename.</p>
+<p><img alt="img" src="https://lh7-us.googleusercontent.com/YXvokW-U5L7NarnCaZQtFUIiYpW001es5jCXKvTcDRTp89vJ72eJmAi2ODGEDLq5o7vbX0Fl-M-qJt-k3tsA2fEXi3JoDmwRJB6VuoBVeyRrpM23LDENSYtrsab0CJppzyioF90puEWnemjzFL_THV0" /></p>
+<h2 id="recommended-cots-scanners">Recommended COTS Scanners</h2>
+<p>It is recommended that the ScanEngine app be paired with a commercial off-the-shelf high-speed scanner that will image both sides of each ballot (duplexing) using an automatic document feeder (ADF). The following scanners are available for this purpose.</p>
+<h3 id="canon-dr-g2140">Canon DR-G2140</h3>
+<p>Canon has several similar products in this category, differing by scanning speed. The top speed is obtained by feeding letter sheets in landscape orientation and is not achievable for ballot scanning, as these ballots tend to be larger than letter size,  8.5" wide by 14", 17", 19", or 21" in length. so they must be scanned with short-edge first. The scanning speed may also be limited by the USB port, and such limits can be avoided by selecting B&amp;W and 200 dpi, which is a common resolution and color for ballots. List price in 2023: $7,970.00. Replacement rollers are easy to obtain from $29.95 for "compatible" vendor to $90 for Canon official rollers. The claimed duty cycle for the rollers is 450K pages. This scanner and other similar products in the same family is our top recommendation due to the easy availability of the rollers and high recommendations by users.</p>
+<p>https://www.usa.canon.com/shop/p/imageformula-dr-g2140-production-document-scanner</p>
+<p><img alt="img" src="https://lh7-us.googleusercontent.com/ZMhsA22gbDgyQoSa0o9-m7W2UOlsy_0flcqff8qR_tmdd_959Pykox3tD9Tf3ZYcm5qspamfO6A82w4TADyDXa1kmVj6dM0SrwGDQuPohvouZFPjN8ROhnLGlMj6T9mmVSi88o2V3fDVOnXJLv8Klaw" /></p>
+<h3 id="ricoh-fi7090-or-fi7800">Ricoh fi7090 or fi7800</h3>
+<p>Ricoh Corporation recently purchased Fujitsu, including their line of high-volume and high-speed production grade scanners, which they have rebranded as Ricoh products but they are keeping the same model names. The fi7090 is a good example of a scanner suitable for scanning verification ballots. However, it appears their current product is the fi7800 series, which is a little slower, at only 110 ppm. List price in 2023, fi7800: $10,425; fi-7900: $15,159. Pickup roller set $45, Brake Rollers $65 from Ricoh website only. ($110 total) Roller duty cycle: 600K. </p>
+<p>https://www.pfu-us.ricoh.com/scanners/fi/fi-7800</p>
+<p><img alt="img" src="https://lh7-us.googleusercontent.com/ohuL1xyRAl5KxnGQrWO66_A3QOjQOKc68_hm-W1EXPaGRKobj-y4RY90PvDJanib45lGeKUPuOqGuhQsTgW5bMnMTOk7TtQziYZvERNNmO_jmVvf59AHoxvutF20rs6Dr2Ohe1QXa-5kd3J6NqjaIQM" /></p>
+<p>The rated scanning speed of the fi7090 is 140 ppm (sheets per minute) and 280 ipm (duplex) can be achieved only if letter-size pages are fed in landscape orientation (long-edge first), and thus it is limited to letter (11" / A4) sheets. </p>
+<p>When fed in portrait orientation (short edge first), the rated speed is 105 sheets per minute and 210 ipm (images per minute, i.e sides). Longer sheets will be a bit slower.</p>
+<h3 id="xerox-w110-scanner">Xerox W110 Scanner</h3>
+<p>Scan speeds up to 120 ppm / 240 ipm; 100,000 pages daily duty cycle; 500-page adjustable input tray*. List price in 2023: $5,995. This scanner is a competitive price, and can be purchased for $4K on Dell.com. A maintenance kit, however, is $249 and hard to find. Stated duty cycle on rollers is 550K. However, reviewers say that the rollers need to be changed frequently, probably once every 100K pages. So although it looks attractive at first, this scanner may be more expensive when the cost for replacement rollers and possible delays in purchasing them are factored in.</p>
+<p>Also, Xerox W130, scan speeds up to 135ppm / 270 ipm, with USB or Gigabit Ethernet to PC with Imprinter ($8,995)</p>
+<p>https://www.xeroxscanners.com/en/us/products/item.asp?PN=W110</p>
+<p><img alt="image-20231106171247122" src="https://www.xeroxscanners.com/images/products/W110/W110_img1.jpg" /></p>
+<h2 id="file-naming-is-critical">File Naming is Critical</h2>
+<p>It is important to use file names that can be re-sorted to the right order if they should become shuffled. This is particularly important if a separate image file is used for each side of a ballot, which is common because PNG format only has one side per file. Restoring the original order is important because the style of the back relies on the front. The underlying problem is that the files are commonly added to the ZIP archives according to how they are listed rather than the order they were created. When looking at the zip file, we can't get them back in order without a lot of work if we don't plan ahead. If file names are created correctly, then we can simply sort the names to get them to the original order, and in fact, they probably will be added to the zip file correctly too.</p>
+<p><strong>Please adhere to the following rules:</strong></p>
+<ul>
+<li>Keep file names relatively short and meaningful. </li>
+<li>Any number fields should be fixed-length and long enough to avoid overflow and create a number with more characters. For example, you should not ever see a number roll from 999 to 1000. But 0999 to 1000 is okay.</li>
+<li>If there is more than one number field, the first number field must not be reused even if the second number field has different range numbers.</li>
+<li>Non-number fields should be simple and just a few characters. Do not use any special characters. Do not include any spaces. Non-numbers can be used to indicate the GROUP of the ballots, such as EV, ED, MIB, PROV, etc. This can be first. Then there can be a batch number and sequence number.</li>
+<li>Use underscore "_" to separate groups of characters or numbers.</li>
+<li>The file name should be usable without the file extension as the ballot_id, which must be unique across all ballots.</li>
+<li>If two images are created for each sheet, they should be numbered so the order can be restored when resorted using a lexical (default) sort. Try to keep the images in front-back order. This should be normal for any duplexing scanner. </li>
+<li>Make sure that all ballots are imaged with the same number of pages. If both sides are included, they must be included for all  ballots in the set. If only the front is included, a random back should not also be included. This makes it very hard to keep the fronts and backs together.</li>
+<li>It is okay to have prefixes indicating the archive, like D001, D002, the precinct, group, etc. Always use fixed-length fields if numbering is used. Make sure it will be easy to parse the name to extract any meaningful data.</li>
+</ul>
+<p><strong>Examples:</strong></p>
+<ul>
+<li>GOOD: </li>
+</ul>
+<p><strong>EV1_00004_000001.png</strong>, <br>
+  <strong>EV1_00004_000002.png</strong>,<br></p>
+<p>...<br>
+  <strong>EV1_00004_009678.png</strong>, <br>
+  <strong>EV1_00005_000001.png</strong>, <br>
+  etc.</p>
+<ul>
+<li>BAD: <br></li>
+</ul>
+<p>"<strong>scans from john's laptop - precincts 1 - 14 - 001_002</strong>" <br>
+  ... <br>
+  "<strong>scans from john's laptop - precincts 1-14 - 2000_002</strong>"<br>
+  and then later<br>
+  "<strong>scans from johns laptop pcts 1-14 - 001_4653</strong>"<br></p>
+<p>Notice unnecessary information, special characters, spaces, different lengths, varying spaces, reused ranges.</p>
+<p><strong>How to recover from bad naming procedures:</strong></p>
+<ol>
+<li>Analyze ranges of names that exist in the set of images and plan a simple file naming scheme. Check with staff at AuditEngine  if needed to make sure that your plan will work to allow resorting of the names from each archive to return them to the originally scanned order. Make sure names are unique among all folders.</li>
+<li>Use existing numbers (but padded to fixed length) when possible and make sure you record how you renamed the original names to the new names.</li>
+<li>Unzip the zip files into separate folders so they can be renamed. Make sure you make a backup of the data.</li>
+<li>Use existing tools like Bulk Rename Utility (BRU) (https://www.bulkrenameutility.co.uk/) to quickly rename them. </li>
+<li>re-ZIP the files using a tool like 7zip.org, but please use conventional ZIP format not 7z format.  With 7zip, you can look at the listing of files in each ZIP archive and click on "offset" to see the exact ordering within the archive. The ordering in the archive should be the correct order of scanning if names were chosen correctly, or at least within the major blocks of ballots with no intermixing.</li>
+<li>Each zip file should include no more than about 30K files, and limit to 10GB for convenience of handling and uploading.</li>
+<li>Upload to the same project and then reassign the archives in the job file.</li>
+</ol>
+<h2 id="conclusion">Conclusion</h2>
+<p>The ScanEngine App is specifically suited to scanning ballots using a COTS high-speed duplexing scanner to produce images that can be incorporated in various auditing workflows. ScanEngine provides the chain of custody tracking of each ballot scanned, as well as each batch scanned, and can use separator sheets with barcodes to help to organize the images and physical ballots.</p>
+<p>If other methods are used to scan ballots make sure you adhere to file naming rules to produce names that can be sorted to return the files to their original order, and can be used as the basis for the ballot_id without any other changes.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["toc.integrate", "navigation.instant", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+    
+  </body>
+</html>

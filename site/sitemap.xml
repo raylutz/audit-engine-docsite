@@ -2,32 +2,132 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://auditengine.org/</loc>
-         <lastmod>2021-07-01</lastmod>
+         <lastmod>2024-08-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://auditengine.org/wml_test/</loc>
+         <lastmod>2024-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://auditengine.org/about/about/</loc>
-         <lastmod>2021-07-01</lastmod>
+         <lastmod>2024-08-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://auditengine.org/audit-projects/AZ_2020/</loc>
+         <lastmod>2024-08-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://auditengine.org/audit-projects/FL_2020/</loc>
+         <lastmod>2024-08-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://auditengine.org/audit-projects/GA_2020/</loc>
+         <lastmod>2024-08-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://auditengine.org/audit-projects/WI_2020/</loc>
+         <lastmod>2024-08-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://auditengine.org/audit-projects/overview/</loc>
+         <lastmod>2024-08-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://auditengine.org/audit-projects/policies/</loc>
+         <lastmod>2024-08-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://auditengine.org/audit-projects/privacy/</loc>
+         <lastmod>2024-08-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://auditengine.org/audit-results/3-audits-GA-WI/</loc>
+         <lastmod>2024-08-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://auditengine.org/audit-results/case-study/</loc>
+         <lastmod>2024-08-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://auditengine.org/community/in_the_news/</loc>
+         <lastmod>2024-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://auditengine.org/community/you_can_help/</loc>
-         <lastmod>2021-07-01</lastmod>
+         <lastmod>2024-08-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://auditengine.org/user-guide/auditengine-background-doc/</loc>
+         <lastmod>2024-08-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://auditengine.org/user-guide/auditengine_faqs/</loc>
+         <lastmod>2024-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://auditengine.org/user-guide/configuration_files/</loc>
-         <lastmod>2021-07-01</lastmod>
+         <lastmod>2024-08-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://auditengine.org/user-guide/dom_exporting_guide/</loc>
+         <lastmod>2024-08-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://auditengine.org/user-guide/ess_exporting_guide/</loc>
+         <lastmod>2024-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://auditengine.org/user-guide/exporting_guide/</loc>
-         <lastmod>2021-07-01</lastmod>
+         <lastmod>2024-08-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://auditengine.org/user-guide/glossary/</loc>
+         <lastmod>2024-08-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://auditengine.org/user-guide/hart_exporting_guide/</loc>
+         <lastmod>2024-08-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://auditengine.org/user-guide/requester_guide/</loc>
+         <lastmod>2024-08-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://auditengine.org/user-guide/scanengine/</loc>
+         <lastmod>2024-08-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://auditengine.org/user-guide/sending_data/</loc>
+         <lastmod>2024-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://auditengine.org/user-guide/uploading_guide/</loc>
-         <lastmod>2021-07-01</lastmod>
+         <lastmod>2024-08-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

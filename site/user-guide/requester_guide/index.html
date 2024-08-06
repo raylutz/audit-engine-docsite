@@ -1,0 +1,1262 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://auditengine.org/user-guide/requester_guide/">
+      
+      
+        <link rel="prev" href="../auditengine-background-doc/">
+      
+      
+        <link rel="next" href="../exporting_guide/">
+      
+      
+      <link rel="icon" href="https://mapper.auditengine.org/assets/images/A.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.31">
+    
+    
+      
+        <title>Requester Guide - AuditEngine Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3cba04c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#requester-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AuditEngine Docs" class="md-header__button md-logo" aria-label="AuditEngine Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AuditEngine Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Requester Guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AuditEngine Docs" class="md-nav__button md-logo" aria-label="AuditEngine Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    AuditEngine Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Audit Results
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Audit Results
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit-results/case-study/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Case Study, 3 FL Disticts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit-results/3-audits-GA-WI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Three Audits GA/WI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    User Guide
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            User Guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../auditengine-background-doc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Background Document
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Requester Guide
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Requester Guide
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#strategize-minimize-setup-costs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Strategize: Minimize Setup Costs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#availability-of-ballot-images" class="md-nav__link">
+    <span class="md-ellipsis">
+      Availability of Ballot Images
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Availability of Ballot Images">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#only-available-if-the-voting-system-uses-them" class="md-nav__link">
+    <span class="md-ellipsis">
+      Only available if the voting system uses them
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ballot-image-availability-by-state-law-or-procedure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ballot Image Availability by State Law or Procedure
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-the-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting the Data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting the Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exporting-guides" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exporting Guides
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sending-the-data-to-auditengine" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sending the data to AuditEngine
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-an-election-on-auditengine" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create an Election on AuditEngine
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-the-audit-and-process-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create the Audit and process it!
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exporting_guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exporting Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dom_exporting_guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dominion Exporting Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ess_exporting_guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ES&S Exporting Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hart_exporting_guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hart Exporting Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sending_data/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sending Data
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration_files/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuration Files
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scanengine/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ScanEngine App
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../auditengine_faqs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Community
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Community
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/in_the_news/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    In the News
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/you_can_help/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How you can help
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Audit Projects
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Audit Projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit-projects/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit-projects/AZ_2020/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arizona 2020
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit-projects/FL_2020/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Florida 2020
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit-projects/GA_2020/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Georgia 2020
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit-projects/WI_2020/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wisconsin 2020
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            About
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About Us
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p><link rel="icon" type="image/x-icon" href="https://mapper.auditengine.org/assets/images/A.png">
+<img src="https://copswiki.org/w/pub/Common/AuditEngine/AuditEngineLogo.png" alt="AuditEngineLogo.png" width='300' /></p>
+<h1 id="requester-guide">Requester Guide</h1>
+<p>This Requester Guide provides guidance for candidates, campaigns or other interested parties that are working to acquire data so AuditEngine can audit an election in one or more districts.</p>
+<h2 id="strategize-minimize-setup-costs">Strategize: Minimize Setup Costs</h2>
+<p>Given that any interested party may be interested in a specific contest or set of contests, it may not be necessary to audit all the districts (such as counties) involved in those contests. Of course, if it is constrained to one county, no strategy is necessary. If it is a congressional district, those counties that are wholly or partially included in the congressional district should be included. For the presidential contest, each entire state is of concern, but even then, a subset of the counties will comprise a vast majority of the votes. It is not quite as lopsided as the Pareto Principle (80/20) rule, but almost.</p>
+<p>For example, in California, there are 58 counties. The top 5 counties (8.6% of counties) include more than 50% of the electorate; the top 14 counties (24% of the counties) comprise 80%, and the top 24 counties (41% of counties) comprise 92% of the vote. </p>
+<p>Setup costs are roughly fixed on a per-county basis, so leaving out the remaining 34 counties in CA is a prudent approach to audit almost all, (92%) of the vote, but avoid 60% of the setup costs if you were to just do "all counties" without adopting a strategy. </p>
+<p>This is particularly important in states like Georgia, which has 159 counties but has about the same electorate as New Jersey, which has only 15 counties. </p>
+<p>Of course, if the margin is extremely close in a state-wide contest, errors or hacking in small counties could still overturn the results.</p>
+<h2 id="availability-of-ballot-images">Availability of Ballot Images</h2>
+<h3 id="only-available-if-the-voting-system-uses-them">Only available if the voting system uses them</h3>
+<p>Most districts today produce ballot images (about 93% of the top 500 counties), but some are still using the older DRE-type systems or optical scanners that have no ballot images. Those cannot be processed by AuditEngine, but in the case of DRE systems, absentee or vote-by-mail ballots will be hand-marked and may still be available.</p>
+<p>This can be determined by looking that the voting systems used by the districts. You can use the <a href="https://verifiedvoting.org/verifier/">Verified Voting Verifier</a> tool to look at the equipment used in your district. The equipment listed as "Optical Scan Voting Systems" may provide ballot images, but not all.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Ballot Image Producing</th>
+<th>Not Ballot Image Producing</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Election Systems &amp; Software (ES&amp;S)</strong></td>
+<td><a href="https://verifiedvoting.org/election-system/ess-ds200/">DS200</a>, <a href="https://verifiedvoting.org/election-system/ess-ds850-ds450/">DS450, DS850, DS950</a><br /><a href="https://verifiedvoting.org/election-system/ess-expressvote/">ExpressVote as BMD</a> when used with the scanners above, and the <a href="https://verifiedvoting.org/election-system/ess-expressvote-xl/">ExpressVote XL</a>.<br />Note: ES&amp;S scanners allow ballot images to be deleted if not set to "Save All"</td>
+<td><a href="https://verifiedvoting.org/election-system/ess-expresstouch/">ExpressTouch</a>, <a href="https://verifiedvoting.org/election-system/ess-ivotronic/">iVotronic</a>, <a href="https://verifiedvoting.org/election-system/ess-model-100/">Model 100</a>, Model 150, 550</td>
+</tr>
+<tr>
+<td><strong>Dominion Voting Systems</strong></td>
+<td><a href="https://verifiedvoting.org/election-system/dominion-imagecast-central/">ImageCast Central</a>, <a href="https://verifiedvoting.org/election-system/dominion-imagecast-precinct/">ImageCast Precinct</a><br /><a href="https://verifiedvoting.org/election-system/dominion-imagecast-x/">ImageCase X BMD</a> when used with the above scanners</td>
+<td><a href="https://verifiedvoting.org/election-system/dominion-imagecast-x/">ImageCast X DRE</a></td>
+</tr>
+<tr>
+<td><strong>Sequoia Voting Systems</strong></td>
+<td></td>
+<td>AVC Advantage, AVC Edge</td>
+</tr>
+<tr>
+<td><strong>Premier Election Solutions (Diebold)</strong></td>
+<td></td>
+<td>AccuVote OS Central, Accuvote OS, and Accuvote OSX</td>
+</tr>
+<tr>
+<td><strong>SmartMatic</strong></td>
+<td><a href="https://verifiedvoting.org/election-system/smartmatic-lac-vsap/">Smartmatic Voting Solutions for All People (VSAP)</a> Used in Los Angeles only.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Hart Intercivic</strong></td>
+<td><a href="https://verifiedvoting.org/election-system/hart-intercivic-escan/">eScan</a>, <a href="https://verifiedvoting.org/election-system/hart-intercivic-verity-scan/">Verity Scan</a>, <a href="https://verifiedvoting.org/election-system/hart-intercivic-ballot-now/">Ballot Now</a>, <a href="https://verifiedvoting.org/election-system/hart-verity-central/">Verity Central</a> <a href="https://verifiedvoting.org/election-system/hart-intercivic-verity-touch-writer/">Verity Touch Writer</a> <a href="https://verifiedvoting.org/election-system/hart-intercivic-verity-touch-writer-duo/">Verity Duo</a></td>
+<td>eSlate, <a href="https://verifiedvoting.org/election-system/hart-intercivic-verity-touch/">Verity Touch</a></td>
+</tr>
+<tr>
+<td><strong>MicroVote</strong></td>
+<td></td>
+<td>Infinity, MV-464</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ballot-image-availability-by-state-law-or-procedure">Ballot Image Availability by State Law or Procedure</h3>
+<p>The other factor is whether the ballot images are available by state law or restricted by procedure. This is a very dynamic area as there are some court cases in process to provide ballot images. Jurisdictions sometimes play it safe and claim that ballot images are the same as paper ballots. Counties may charge for the data, and may use this as a mechanism to block access.</p>
+<p>Here is a partial list of availability. Please see a full and dynamically updated list: <a href="https://en.wikipedia.org/wiki/File:Ballot-foia.png">here</a> and <a href="https://en.wikipedia.org/wiki/File:Keepimages.png">here</a>. Some states are working on making ballot images and cast-vote records public records, such as AZ.</p>
+<table>
+<thead>
+<tr>
+<th>States will full availability</th>
+<th>States with mixed availability</th>
+<th>States with no availability (yet)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GA, WI, MD</td>
+<td>CA (only SF), FL (some counties delete images), NJ</td>
+<td>AZ, WA, NC</td>
+</tr>
+</tbody>
+</table>
+<h2 id="getting-the-data">Getting the Data</h2>
+<p>Some counties may post their data for everyone. This is the case, for example, in San Francisco. We hope that more counties will adopt this methodology to reduce their cost and ours. However, if they do not, you can submit a <u>Public Record Request</u> to the county. Here is a example of a public record request: (Note: Although generally understood, not all states use this term. See <a href="https://www.rcfp.org/open-government-sections/foreword/">the name of the law in each state</a></p>
+<p>For example: </p>
+<ul>
+<li>CA: CPRA (California Public Records Act)</li>
+<li>CO: CORA (Colorado Open Records Act)</li>
+<li>NJ: OPRA (Open Records Act)</li>
+</ul>
+<p>It is recommended that you both email this in, and if you are local to the office, to also create two hard-copy requests, and hand-deliver them to the office, and get them time-stamped. Alternatively, you can send a certified letter to the office using https://onlinecertifiedmail.com or similar service, which can be very cost effective compared with using postal services directly. </p>
+<table>
+<thead>
+<tr>
+<th>To: email@county.gov <br />Subject: Public Records Request for Election Data</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><br />Dear County Representative:<br /><br />Please provide the following data per this PUBLIC RECORDS REQUEST for the MM/DD/YYYY election in your county:<br /> -- All Ballot Images<br /> -- Cast Vote Records (CVRs)<br /> -- Ballot Style Masters<br /><br />In brief, you should export "Audit Images" from the Election Management System and create ZIP archives. Also export the Cast Vote Records and the Ballot Style Masters (blank ballots for each style in searchable PDF format). Best to keep any ZIP archive to about 10GB or less if possible for convenience. You can upload these ZIP archives directly to AuditEngine.org (we can provide an upload link) or you can write them to a USB thumbdrive. (Make sure you reformat the thumbdrive to use exFAT or you will be limited to 4GB per file). <br /><br />Please see detailed instructions for exporting and sending data to the following guides for your system.<br />   Dominion: https://AuditEngine.org/user-guide/dom_exporting_guide/<br />   ES&amp;S: https://AuditEngine.org/user-guide/ess_exporting_guide/<br />   Hart: https://AuditEngine.org/user-guide/hart_exporting_guide/<br /><br />Please provide the data in electronic format. See the following guide for options for sending the data to us:<br />https://AuditEngine.org/user-guide/sending_data/<br /><br />Here is an uploading link specifically for your district: (paste the link here which we can supply for direct uploading to AuditE gine, if it is available.)<br /><br />If you have any questions, please contact me at (your telephone number)<br />Sincerely, XXXXXX<br /></td>
+</tr>
+</tbody>
+</table>
+<h3 id="exporting-guides">Exporting Guides</h3>
+<p>We have the following guides to help them export and provide the data to AuditEngine.</p>
+<ul>
+<li>
+<p><a href="user-guide/dom_exporting_guide.md">Dominion Exporting Guide</a></p>
+</li>
+<li>
+<p><a href="user-guide/ess_exporting_guide.md">ES&amp;S Exporting Guide</a></p>
+</li>
+<li>
+<p><a href="user-guide/hart_exporting_guide.md">Hart Exporting Guide</a></p>
+</li>
+</ul>
+<h3 id="sending-the-data-to-auditengine">Sending the data to AuditEngine</h3>
+<ul>
+<li>
+<p><a href="../sending_data/">Sending Election Data to AuditEngine</a> -- Includes:</p>
+</li>
+<li>
+<p>Archiving the Data</p>
+</li>
+<li>Creating a Hash Manifest File</li>
+<li>Providing the data:<ul>
+<li>Posting the data - Election officials are now opting to post the data once for all requesters.</li>
+<li>Uploading - We can provide a county-specific upload link so they files can be easily uploaded.</li>
+<li>Note: To generate this link, the District must be created in AuditEngine. Then edit the District Properties and click [Request Link] to generate a general link for this district, suitable for any election</li>
+<li>Using USB Thumbdrives</li>
+<li>Using a "Jump Drive"</li>
+</ul>
+</li>
+</ul>
+<h2 id="create-an-election-on-auditengine">Create an Election on AuditEngine</h2>
+<p>It is necessary to create an "Election" on AuditEngine so that these files can be associated with that election, and so that audits can be performed. Once the files are uploaded, then they are "adopted" to the appropriate election, and the type of each file is tagged to the file. This way, the uploading can proceed without any concern for the election or what type of files are uploaded, and then it is resolved later.</p>
+<h2 id="create-the-audit-and-process-it">Create the Audit and process it!</h2>
+<p>The next steps are covered in other guides. But briefly, once the data is uploaded and associated with an election by adopting the data, then an Audit is created. After creating the audit settings for the election, the various stages of the audit pipeline can be run.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["toc.integrate", "navigation.instant", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+    
+  </body>
+</html>

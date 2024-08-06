@@ -1,0 +1,1392 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://auditengine.org/user-guide/sending_data/">
+      
+      
+        <link rel="prev" href="../hart_exporting_guide/">
+      
+      
+        <link rel="next" href="../configuration_files/">
+      
+      
+      <link rel="icon" href="https://mapper.auditengine.org/assets/images/A.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.31">
+    
+    
+      
+        <title>Sending Data - AuditEngine Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3cba04c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#sending-election-data-to-auditengine" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AuditEngine Docs" class="md-header__button md-logo" aria-label="AuditEngine Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AuditEngine Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Sending Data
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AuditEngine Docs" class="md-nav__button md-logo" aria-label="AuditEngine Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    AuditEngine Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Audit Results
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Audit Results
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit-results/case-study/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Case Study, 3 FL Disticts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit-results/3-audits-GA-WI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Three Audits GA/WI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    User Guide
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            User Guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../auditengine-background-doc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Background Document
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../requester_guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Requester Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exporting_guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exporting Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dom_exporting_guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dominion Exporting Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ess_exporting_guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ES&S Exporting Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hart_exporting_guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hart Exporting Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Sending Data
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Sending Data
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pre-election-submission" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pre-election Submission
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-archiving-the-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Archiving the data
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-securing-data-using-hashes-and-security-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Securing Data using Hashes and Security Keys
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 2: Securing Data using Hashes and Security Keys">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-security-level-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Security Level 1:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-security-level-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Security Level 2:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-security-level-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Security Level 3:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-the-hash-manifest-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating the Hash Manifest File:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-1-use-quickhash-gui" class="md-nav__link">
+    <span class="md-ellipsis">
+      Option 1: Use QuickHash-GUI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-2-use-command-line-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      Option 2: Use command line tool
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-options-for-providing-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Options for providing data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 3: Options for providing data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#option-1-post-data-to-a-posting-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Option 1: Post Data to a Posting Service
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-2-uploading-the-data-to-directly-to-auditengine" class="md-nav__link">
+    <span class="md-ellipsis">
+      Option 2: Uploading the Data to Directly to AuditEngine
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-3-using-usb-flash-drives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Option 3: Using USB Flash drives
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#option-4-using-a-multi-tb-jump-drive" class="md-nav__link">
+    <span class="md-ellipsis">
+      Option 4: Using a multi-TB Jump Drive
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notes
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration_files/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configuration Files
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scanengine/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ScanEngine App
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../auditengine_faqs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Community
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Community
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/in_the_news/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    In the News
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../community/you_can_help/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How you can help
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Audit Projects
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Audit Projects
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit-projects/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit-projects/AZ_2020/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arizona 2020
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit-projects/FL_2020/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Florida 2020
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit-projects/GA_2020/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Georgia 2020
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../audit-projects/WI_2020/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wisconsin 2020
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            About
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About Us
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p><link rel="icon" type="image/x-icon" href="https://mapper.auditengine.org/assets/images/A.png">
+<img src="https://copswiki.org/w/pub/Common/AuditEngine/AuditEngineLogo.png" alt="AuditEngineLogo.png" width='300' /></p>
+<h1 id="sending-election-data-to-auditengine">Sending Election Data to AuditEngine</h1>
+<p>Sending data to be used by AuditEngine is the same regardless of the vendor, and thus we have just one guide for this. Generally, the options are to </p>
+<ol>
+<li>Upload directly to AuditEngine, </li>
+<li>Post the files on your site or on a posting service, </li>
+<li>Write the data to removable media (AKA Thumbdrives or Flash drives) and deliver that to our office using a delivery service (like UPS, FedEx, or USPS) or, </li>
+<li>For extremely large data transfers, we can have a 5TB jump drive delivered to your office and it will be sent directly to cloud storage service provider and avoid lengthy uploading processes.</li>
+</ol>
+<h2 id="pre-election-submission">Pre-election Submission</h2>
+<p>When operating under "Cooperative Workflow", some data should be submitted prior to the election, as well as the results of the election which are submitted after the election an as soon as the data is available. The submission process is similar except that ballot image data needs special attention because of the amount of data involved. Pre-election data is optional for public-oversight workflow.</p>
+<p>Pre-election data includes:</p>
+<ol>
+<li><strong>Public-key manifest:</strong> including public keys of all scanners that will be digitally signing images.</li>
+<li><strong>Ballot Style Masters:</strong> "searchable" PDFs of each hand-marked ballot style used in the election.</li>
+<li><strong>Election Information Data:</strong> To include exact text representations of all contests and options as found on  both hand-marked and BMD ballots.</li>
+<li><strong>Logic and Accuracy Test data:</strong> preferably the expected results and ballot images of scanned test ballots.</li>
+</ol>
+<p>As with the post-election submission described below, the pre-election submission should be documented by creating a hash manifest of all files, digitally signing it, and writing all files to a thumb drive so it can be transferred outside the air-gapped EMS network and submitting this to a transparency service. The final submission should include information about the transparency service used so we can confirm the consistency of the package.</p>
+<h2 id="step-1-archiving-the-data">Step 1: Archiving the data</h2>
+<p>For ease of handling, please archive the ballot image data into ZIP archives. Each zip archive should be less than about 10GB or so for easy handling, or generally up to about 50,000 ballot sheets. But we don't mind if they are larger. Of course, if you use flash drives, they should be smaller than the capacity of those flash drives. If you are uploading, files about 5 to 10 GB are the easiest to handle, particularly if you have slower internet speeds. </p>
+<p>We recommend the free utility 7-zip.org, because the Windows integrated zipper and extractor can be very slow. (Most particularly, avoid right-clicking on any zip folder in Windows or it can take almost forever!) However, if you use this utility, please use the industry standard <code>.zip</code> format rather than the proprietary <code>.7z</code> format. This is very important for our application to use this data, and is a requirement. Also, do not double-zip the data.</p>
+<p>Dominion Cast Vote Records in JSON format should also be combined into one ZIP archive as there may be many hundreds or thousands of files. ES&amp;S Cast Vote Records in .xlsx format can be provided without zipping. There are up to 99,999 ballot images per file, so there may be a few files, and zipping is optional. Ballot Style Masters (PDFs) should be included in one zip archive.</p>
+<h2 id="step-2-securing-data-using-hashes-and-security-keys">Step 2: Securing Data using Hashes and Security Keys</h2>
+<p>Hash Manifests provide a way to check that the files match the source files and provide a means to prove that the files are actually the official results. A hash value is a fixed-length "fingerprint" of each file which will change substantially if even one bit is changed, and which is infeasible to predict and it is infeasible to alter a given file to produce another valid file and also produce the same hash.</p>
+<p>The same hash values are then generated by the receiver and compared to verify that the files are unchanged. In addition, the hash manifest can be committed to a secure transparency service that will establish a certain date when the hash manifest was submitted.</p>
+<p>There are three levels of security, levels 1, 2 and 3, where level 3 is the highest grade of security. We can summarize the grades here:</p>
+<h3 id="data-security-level-1"><strong>Data Security Level 1:</strong></h3>
+<p>Level 1 is available to any election district, and is not reliant on the capabilities of voting machines or scanners.</p>
+<ol>
+<li>Create one or more <em>hash manifest</em> files, as described below, and provide it along with the other data on a public posting service (such as the district website). All files that are available should be included in the <em>hash manifest</em>, including ballot image archives (zip files) cast-vote records and official results. If there are phased releases of information, each release can have a separate hash manifest file.</li>
+</ol>
+<h3 id="data-security-level-2">Data Security <strong>Level 2</strong>:</h3>
+<p>Level 2 is available to any election district, and is not reliant on the capabilities of voting machines or scanners.</p>
+<ol>
+<li>Create each <em>hash manifest</em> file as in Level 1.</li>
+<li>Submit the hash manifest file to a third-party transparency service, such as <a href="https://DataTrails.ai">DataTrails.ai</a>, so it can be logged into an immutable log, and date established. By doing this, we know the hash manifest was submitted on that date. All files listed in the hash manifest cannot be changed after that date without the possibility of detection.</li>
+<li>Publish the link to the transparency service on the posting service (such as a website) so the hash manifest file can be checked with the immutable log.</li>
+<li>Henceforth, anyone can drag and drop the hash manifest file on the transparency service and it will be checked with the original version.</li>
+</ol>
+<h3 id="data-security-level-3">Data Security <strong>Level 3</strong>:</h3>
+<p>Level 3 requires security capabilities of voting machines and scanners.</p>
+<ol>
+<li><strong>Create Public Key Manifest:</strong> Create a <em>public key manifest</em> file containing all the public keys of scanners used to create ballot images.</li>
+<li>Secure the <em>public key manifest</em> file by submitting it to a third-party transparency service, such as <a href="https://DataTrails.ai">DataTrails.ai</a> prior to the election, and make it available to the public.</li>
+<li><strong>Signed Hashes of Ballot Images:</strong> Each voting machine and scanner used in the election must create a hash of each ballot image as it is produced and sign it with its internally-generated private key, which is related to the public key provided in the <em>public key manifest</em> file. These signed hashes should be included in the ballot image archives with the same base name as the image file, and in a standard format.</li>
+<li>Create and post the hash manifest file as in Level 2.</li>
+</ol>
+<h3 id="creating-the-hash-manifest-file">Creating the Hash Manifest File:</h3>
+<p>A single "hash manifest" file can be prepared that includes a hash value for each file provided in the export of the official results. </p>
+<p>There are several options for creating a hash manifest file for the official results of the election, as described below.</p>
+<h3 id="option-1-use-quickhash-gui">Option 1: Use QuickHash-GUI</h3>
+<p>We suggest it might be easier to use the free tool Quickhash-GUI, which can be downloaded from <a href="https://www.quickhash-gui.org/">https://www.quickhash-gui.org/</a>. This is a cross-platform utility that will run on Windows, Linux, or Mac. You can select an entire folder and it will create a CSV file with the following fields: </p>
+<ul>
+<li>Index</li>
+<li>File Name </li>
+<li>Path  </li>
+<li>Hash Value    </li>
+<li>File Size (on Disk)   </li>
+<li>Duplicate?</li>
+</ul>
+<p>Please use the SHA512 algorithm and create a separate file which should be uploaded with the other data.</p>
+<h3 id="option-2-use-command-line-tool">Option 2: Use command line tool</h3>
+<p>Election officials can create a "(election name)-manifest-sha256.txt" file with content hash values that will comprise all the files in the data set. </p>
+<p>Please use the SHA256 or SHA512 algorithm for creating hash values.</p>
+<p>Utilities to create hash values are provided in all Linux and Unix operating systems as standard command-line functions. Equivalent utilities can be obtained for Windows by installing the CygWin set of Linux functions. (Cygwin was originally developed by Cygnus Solutions, and was later sold to RedHat and to IBM) It is a free download from <a href="https://www.cygwin.com/">https://www.cygwin.com/</a>. You can also use similar utilities[^1] if you don't want to download and install the complete cygwin set but make sure you produce linux-compatible output.</p>
+<p>In the description here, we will use the md5sum utility provided in the Cygwin distribution. You can use this command to generate a **<code>manifest-sha512.txt</code></strong> file:</p>
+<pre><code>sha512sum *.*  &gt;manifest-sha512.txt
+</code></pre>
+<p>The resulting manifest file for GA_Bartow_20201103, a relatively small county with just over 50K ballots, looks like this in standard unix format. (The hash values here are actually MD5 type). </p>
+<pre><code>f664b587aacae05c8aa5c591b8659ec4 *CVR_Export_20201103.zip
+9c25af50cb821a897180c9fc1ade9afb *GA_Bartow_20201103 Official Ballots.zip
+7880d59840e3b709321d9312482bb7cf *Nov. 2020 Ballot Images.zip
+0c89d5502de29bd4998b15c354634630 *detailtxt.zip
+ff4d72b4e0f77b086195c77ca6f6ed00 *detailxls.zip
+4344e416b3c186da66f57d115a43532c *detailxml.zip
+9c8fc2b0ebab08c12cc14d3b9a2e95ef *summary.zip
+</code></pre>
+<p>In the example above, the first 32 characters are the hexadecimal expression of the 128 bit MD5 hash value, where each character represents 4 bits. This listing took under two minutes to create, but it can be time consuming if the entire folder has many big files.</p>
+<p>In summary, we need only that the election office create the <strong>manifest-sha512.txt</strong> file using the standard unix format as described above for the folder, and that folder should include only regular files or ZIP files, and not subfolders. Any subfolders should be zipped. If you use the MD5 hash algorithm, then the file should be named <strong>manifest-md5.txt</strong>.</p>
+<h2 id="step-3-options-for-providing-data"><strong>Step 3: Options for providing data</strong></h2>
+<p>AuditEngine processes the elections using cloud resources where we can delegate processing to many thousands of computers in parallel. We use the Amazon Web Services (AWS) "<strong>us-east-1</strong>" datacenter which is in Northern Virginia for elections in the United States. We also archive data in our San Diego, CA facility.</p>
+<h3 id="option-1-post-data-to-a-posting-service">Option 1: Post Data to a Posting Service</h3>
+<p>We recommend that you post the ballot image archives, hash manifest file, public key manifest file, and other data to a public posting service so it can be easily downloaded by anyone and thus avoid any incremental work by your staff for each additional request if members of the public wish to access it. Please do not post individual ballot images but always archive them as described above.</p>
+<p>The ballot image archives may each be pretty large, and thus they may not be compatible with your official website service provider. The following posting services are just a few of the ones we have encountered, and each has limitations and costs that you should investigate. </p>
+<p>Since AuditEngine is on AWS, we use AWS S3 storage in the same datacenter where our compute service runs. If you use AWS S3, it is very easy for us to transfer the files to the correct region and datacenter for AuditEngine. But the user interface is not as good as with other services. Many of these other services actually use S3 behind the scenes.</p>
+<p>We have experience with the following services, but this information is likely out of date, as the services are driven by competition and may offer improved services.</p>
+<table>
+  <tr>
+   <td><strong>Service</strong>
+   </td>
+   <td><strong>File Limits</strong>
+   </td>
+   <td><strong>Storage Limits</strong>
+   </td>
+   <td><strong>Comments</strong>
+   </td>
+  </tr>
+  <tr>
+   <td><a href="https://aws.amazon.com/pm/serv-s3/?trk=fecf68c9-3874-4ae2-a7ed-72b6d19c8034&sc_channel=ps&sc_campaign=acquisition&sc_medium=ACQ-P|PS-GO|Brand|Desktop|SU|Storage|S3|US|EN|Text&s_kwcid=AL!4422!3!488982706719!e!!g!!aws%20s3&ef_id=CjwKCAjw46CVBhB1EiwAgy6M4sZJ1svjP15b3ZPhJGM2BkHDCj1fXCb09KqP6klyGwrpsEzPLLpO9xoCsG8QAvD_BwE:G:s&s_kwcid=AL!4422!3!488982706719!e!!g!!aws%20s3">AWS S3</a>
+   </td>
+   <td>5TB
+   </td>
+   <td>5GB free, unlimited available. Several access grades based on response time.
+   </td>
+   <td>Offers WORM equivalent. Impossible to modify timestamps. User interface is not as easy as other options. About $2 per 100GB/Mo.
+   </td>
+  </tr>
+  <tr>
+   <td><a href="https://www.box.com/">Box.com</a>
+   </td>
+   <td>5 GB
+   </td>
+   <td>100GB to unlimited.
+   </td>
+   <td>Limits are too low for ballot images, not recommended.
+   </td>
+  </tr>
+  <tr>
+   <td><a href="https://www.dropbox.com/">Dropbox</a>
+   </td>
+   <td>10 GB (seems to have been increased.)
+   </td>
+   <td>Basic: 2GB.  \
+up to 5TB for business accounts.
+   </td>
+   <td>Usable if the zip archives are split into archives less than 10GB. Multiple file downloads are not supported except for zipping them, and so each archive must be individually downloaded.
+<p>
+Has increased their file-size limits. Now used by San Francisco County with ballot image archive between about 20GB and 30GB.
+   </td>
+  </tr>
+  <tr>
+   <td><a href="https://www.google.com/drive/">Google Drive</a>
+   </td>
+   <td>5TB
+   </td>
+   <td>Unlimited, depending on plan
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td><a href="https://www.sharefile.com/">Sharefile</a>
+   </td>
+   <td>10 GB
+   </td>
+   <td>Unlimited
+   </td>
+   <td>Usable if the zip archives are split into archives less than 10GB. Least expensive for unlimited storage.
+   </td>
+  </tr>
+  <tr>
+   <td><a href="https://www.sync.com/">Sync.com</a>
+   </td>
+   <td>No limit
+   </td>
+   <td>2TB or unlimited.
+   </td>
+   <td>Used by San Francisco County prior to 2023. Good user interface which allows bulk downloads. Offers a desktop client for Windows.
+   </td>
+  </tr>
+</table>
+
+<h3 id="option-2-uploading-the-data-to-directly-to-auditengine">Option 2: Uploading the Data to Directly to AuditEngine</h3>
+<p>AuditEngine has a convenient uploading mechanism to upload all the files to AuditEngine in one convenient step. We now can allocate a single permanent upload link for each county. When files are uploaded using this link, they first go to an upload area so they can be reviewed before being added to the specific election.</p>
+<p>If you have not been provided with an upload link, send an email to: <a href="mailto:support@citizensoversight.org">support@citizensoversight.org</a> and request an upload link and provide the following information:</p>
+<ol>
+<li>Election jurisdiction (state, county)</li>
+<li>Election date</li>
+<li>Election description.</li>
+</ol>
+<p>And then an upload link will be sent to you by return email. Then you will upload using the portal at the link sent to you, and this link will remain valid for future use and for other elections in the same district.</p>
+<p>Please use a computer with a good broadband connection. Although download speeds on most subscriber ISP services may be extremely fast, the uploading speeds are usually a fraction of the downloading speeds. The AuditEngine uploader is very fast and will upload a number of files in parallel. You can "setup and forget" the uploading job without the need for staff to be present during the uploading. Just check it the next day and make sure everything went well.</p>
+<p>The upload dialog looks like the following.</p>
+<p><img alt="upload image dialog" src="../../images/upload_dialog.png" title="upload dialog" /></p>
+<p>Click SELECT FILES and then select all the files on your computer you want to upload.</p>
+<p>Then click UPLOAD ALL. The dialog will track all the files being uploaded, and you will receive an email when each file is successfully uploaded.</p>
+<p>You will need to provide your name and email so you can be notified.</p>
+<p>After you have selected some files, the uploading job will be tracked in a table format. The name of the district which is being uploaded to will be shown in the circled area. </p>
+<p><img alt="upload_status_dialog" src="../../images/upload_status_dialog.png" title="upload_status_dialog" /></p>
+<p>Please leave the browser window open for the duration. It can be on a tab you are not using in your browser, or better, use a computer that you are not actively using during the upload. There is no limit to the number of files you can schedule for uploading.Please check that all the files were uploaded properly and if any were not successful, please try again. Normally, we find any issues are with the "last mile" between your office and your Internet Service Provider.</p>
+<p>The "Cooperative Workflow" requires that districts upload their files directly to AuditEngine.</p>
+<h3 id="option-3-using-usb-flash-drives">Option 3: Using USB Flash drives</h3>
+<p>Many districts prefer to use USB Flash drives (also called "USB thumb drives") to send the data to us, because these do not require any Internet connectivity, and USB flash drives are quite inexpensive. These can be sent to us using conventional mail or other shipping services.</p>
+<p>You will need to format your flash device to be able to handle files larger than 4GB. The exFAT file system allows a single file larger than 4GB to be stored on the device. This file system is also compatible with Mac.</p>
+<p>Windows 7 and Mac OS 10.6.6 and higher are compatible with exFAT out of the box. Older operating systems may need a patch installed for exFAT compatibility.</p>
+<p>NOTE: exFAT file system is NOT compatible with some host devices such as TV, game systems, older operating systems, car stereos etc.</p>
+<p>Formatting a drive in exFAT</p>
+<ol>
+<li>Double-click on My Computer.</li>
+<li>Right-click on the flash drive or memory card, then select Format.</li>
+<li>In the File System list, click exFAT.</li>
+<li>Click Start.</li>
+<li>Click OK to start formatting.</li>
+</ol>
+<p>If you use this method, please ship to:</p>
+<pre>
+    AuditEngine Data Clerk
+    Citizens Oversight
+    771 Jamacha Rd, #148
+    El Cajon, CA 92019
+</pre>
+
+<p>Please print out the manifest-sha256.txt file and include it in the package with the drive.</p>
+<p>If you want to clip a convenient listing from your screen showing what is included, that is fine. Any reasonable format is accepted. We find this is essential to help get everything included and avoid any need for second requests. </p>
+<h3 id="option-4-using-a-multi-tb-jump-drive">Option 4: Using a multi-TB Jump Drive</h3>
+<p>For extremely large data uploads, we can ship to the election office a 5+ TB USB 3.0 "jump drive" so files can be rapidly copied to that drive, and then a courier will pick it up and transport it directly to the cloud storage service provider by truck and plane, where they will copy it directly from the drive to cloud storage. For very large data transfers, this option can easily beat any internet connection. (There is a small additional charge for this method).</p>
+<p>Thank you!</p>
+<h2 id="notes">Notes</h2>
+<p>[^1]:For example, a similar function can be downloaded from this site: https://www.pc-tools.net/win32/md5sums/   Use the -u switch to create linux-compatible output.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["toc.integrate", "navigation.instant", "navigation.indexes"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+    
+  </body>
+</html>

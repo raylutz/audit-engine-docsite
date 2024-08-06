@@ -1,5 +1,5 @@
 site_name: AuditEngine Docs
-site_url: https://auditengine.org/
+site_url: https://auditengine.org/docs/
 nav:
     - Home: index.md
     - Audit Results:
