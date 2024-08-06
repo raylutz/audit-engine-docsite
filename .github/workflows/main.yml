@@ -44,9 +44,10 @@ jobs:
         env:
           AWS_S3_BUCKET: auditengine.org
           SOURCE_DIR: "site"
+          DEST_DIR: "docs"
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
       - name: Invalidate CloudFront Cache
         run: |
-          aws cloudfront create-invalidation --distribution-id E22Q65O2V7FLS4 --paths "/*"
+          aws cloudfront create-invalidation --distribution-id E22Q65O2V7FLS4 --paths "/docs/*"
