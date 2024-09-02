@@ -51,15 +51,55 @@ There are three major panes in the layout of the application
 
 There are a number of nuances and details for special case, but primarily, the workflow is as follows:
 
-1. **Select The Next Style** **in the Style List** -- Click on the style and page to be mapped. That will bring up the style template image.
-2. **Select the Next Contest in the Contest/Options List** -- Click on the next contest to be mapped. All contests for both sides of the template will be listed.
-3. **Find the oval for that contest and option** -- Use the mouse to click the oval to place the target indicator on the image.
+1. **Select the Job** -- Select the job to be worked on in the Job List.
+   1. Note: Each worker must have permissions to work on a mapping project.
+   2. Each worker can be assigned a range of styles to work on and to one page or the other or both.
+2. **Select The Next Style** **in the Style List** -- Click on the style and page to be mapped. That will bring up the style template image.
+3. **Select the Next Contest in the Contest/Options List** -- Click on the next contest to be mapped. All contests for both sides of the template will be listed.
+4. **Find the oval for that contest and option** -- Use the mouse to click the oval to place the target indicator on the image.
    1. Double click to delete the target indicator
    2. Drag the target indicator to adjust. Normally the snap-grid will be provided and it will snap to the closest allowed location.
-4. **Move to the Next Option** -- There are two ways to select the next option for mapping. When selected for mapping, the option will change to "Yellow".
+   3. Use Settings-Allow Target Area Resizing to adjust the size and offset of the target by dragging the controls on the oval. Disable adjusting when it is an appropriate size for the specific vendor type.
+5. **Move to the Next Option** -- There are two ways to select the next option for mapping. When selected for mapping, the option will change to "Yellow".
    1. Click the next option in the Contest/Options list.
    2. Press "n" for "next"
-5. **Continue from 3.**
+6. **Continue from 3.**
 
-If the options are in the right order, the mapping process can proceed very quickly. If they are not in the correct option, then click the "Edit (pencil on paper)" icon and edit the order of the options.
+If the options are in the right order, the mapping process can proceed very quickly. If they are not in the correct option, then click the "Edit (pencil on paper)" icon near the contest name in the Contest/Options list and edit the order of the options.
 
+When the style is completed, double check your work by comparing the red notations with the contest and options on the ballot, and then click the "verified" checkbox to the right of the style.
+
+At the end of editing, use "Save All" to save the mapping.
+
+## Optimizations
+
+Although the primary flow will normally work, there are a number of optimizations that can help to accelerate the process.
+
+1. **Copy and Paste** -- Very frequently, one ballot style will be identical to or very much like the next. In such a case, you can use "Copy" and the "Paste" to paste the copied style on this template. It will only paste the current page. Note that if a contest does not exist on a template, it will not be pasted, but if the contest is in a different location, it may be mapped to the wrong location.
+2. **Clear** -- this control will simply clear the mapping from this page. Commonly, this is used before a paste.
+3. **Paste Rest** -- Sometimes, all the templates of one page will be exactly the same, such as Page 2. If you use "Paste Rest" then it will paste the copied mapping to the rest of this page.
+4. **Clear Rest** -- Clear all the rest of the current page.
+5. **Paste Similar** -- This is a very handy operation, because it will look back to a prior template that was mapped with the same or many of the same contests, and then it will map the contests that are the same up to the point when the two styles diverge in the contests on it. 
+   1. **Auto Paste Similar** -- Use the Checkbox "Auto Paste Similar" to automatically click the Paste Similar button each time a new unmapped style is selected.
+6. **Map Rest** -- Automatically apply "Paste Similar" to all the rest of the styles in the list.
+
+## Completion
+
+1. Save All -- to save the current mapping.
+2. Click "Freeze Job" so that the job cannot be accidentally changed using this app.
+3. Import the mapping using the stage "import_targetmap"
+4. Check the map for any errors. These can normally be resolved by editing the map for the style of concern.
+5. Generate Redline Proofs
+6. Run 'gen_style_report' to create the report of all styles for proofing.
+
+## Special Operations
+
+There are a number of special operations that deviate from the primary flow and the defined operations.
+
+1. **No styles-to-contests available.** For normal operations, the list of contests is defined for each style. This will limit the contests in the contest-options pane to only those that are defined. However, if the contests are not available for each style, then it is most convenient to obtain this information from the mapping process.
+   1. The difference in operation is that the next contest must be more carefully checked each time and not just use "Next" to go to the next contest.
+   2. The clock that shows the completion of each style (both pages) will not know when the full set of contests has been mapped.
+2. **Change of styles.** It is fairly common for an initial set of styles to be defined, and the mapping completed for those styles, and then later, additional styles are added.
+   1. Consider the case when ballot_id numbers are used twice in the project for different ballots. Assume that these were initially thought to be repeats of the same ballots, but later, it was determined that the ballots that use the same numbers are of different ballots. Then, the ballot_id values can be modified based on the set so these no longer have the same identifiers. Further, we assume that additional styles are found among the newly renamed ballots.
+   2. The stages of AuditEngine should be re-run and ballots style templates generated. The new styles should have distinctive style identifiers. Run the stage "build_targetmapper_package" and generate a new package for TargetMapper.
+   3. Click "File-Update Database". This should then show the new styles in the Style List.
