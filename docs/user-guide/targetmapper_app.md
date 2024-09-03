@@ -31,7 +31,7 @@ Prior to using TargetMapper, the initial stages of AuditEngine must be run to pr
 
 ## TargetMapper Layout
 
-<img href="https://s3.amazonaws.com/auditengine.org/docs/images/targetmapper_layout.png">
+<img src="https://s3.amazonaws.com/auditengine.org/docs/images/targetmapper_layout.png" alt="Target Mapper Layout">
 
 There are three major panes in the layout of the application
 
