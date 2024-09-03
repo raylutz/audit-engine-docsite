@@ -1,3 +1,4 @@
+
 # TargetMapper App
 
 ## Purpose
@@ -30,22 +31,22 @@ Prior to using TargetMapper, the initial stages of AuditEngine must be run to pr
 
 ## TargetMapper Layout
 
-<img href="images/targetmapper_layout.png">
+<img href="https://s3.amazonaws.com/auditengine.org/docs/images/targetmapper_layout.png">
 
 There are three major panes in the layout of the application
 
 1. **Ballot Image pane** -- This pane will show one side of one ballot style template.
-   1. The image can be zoomed in, panned, and rotated using the mouse, scroll wheel and dragging gestures.
-   2. The magnified lock icon can be used to lock the zoom, pan and rotation for that side.
-   3. There is a second set of rotation buttons to rotate the red text that is added to the image.
+   - The image can be zoomed in, panned, and rotated using the mouse, scroll wheel and dragging gestures.
+   - The magnified lock icon can be used to lock the zoom, pan and rotation for that side.
+   - There is a second set of rotation buttons to rotate the red text that is added to the image.
 2. **Style List** -- This pane lists the styles to be mapped, with one line item per side.
-   1. to work on just one side or the other, use the Page 1, Page 2 check boxes.
-   2. The check boxes are use to indicate that you have verified that the side is completed.
-   3. A clock face is used to indicate whether all contests have been mapped among both sides.
+   - to work on just one side or the other, use the Page 1, Page 2 check boxes.
+   - The check boxes are use to indicate that you have verified that the side is completed.
+   - A clock face is used to indicate whether all contests have been mapped among both sides.
 3. **Contest/Options List** -- This pane provides the contests and options that can be mapped to the style selected.
-   1. "Show All" -- means that all contests will be shown regardless of the contests defined for this ballot style.
-   2. "Expand All" -- means the options will be shown for each contest. The plus symbol "+" can be used to selectively expand one contests and show the options, and "-" can be used to minimize the contest.
-   3. The edit button can be used to edit the order of the options.
+   - "Show All" -- means that all contests will be shown regardless of the contests defined for this ballot style.
+   - "Expand All" -- means the options will be shown for each contest. The plus symbol "+" can be used to selectively expand one contests and show the options, and "-" can be used to minimize the contest.
+   - The edit button can be used to edit the order of the options.
 
 ## Primary Flow
 
