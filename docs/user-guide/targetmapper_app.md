@@ -30,7 +30,7 @@ Prior to using TargetMapper, the initial stages of AuditEngine must be run to pr
 
 ## TargetMapper Layout
 
-![images/targetmapper_layout.png](images/targetmapper_layout.png)
+<img href="images/targetmapper_layout.png">
 
 There are three major panes in the layout of the application
 
