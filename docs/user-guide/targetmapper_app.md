@@ -36,39 +36,35 @@ Prior to using TargetMapper, the initial stages of AuditEngine must be run to pr
 There are three major panes in the layout of the application
 
 1. **Ballot Image pane** -- This pane will show one side of one ballot style template.
-<ol><li>The image can be zoomed in, panned, and rotated using the mouse, scroll wheel and dragging gestures.
-<li>The magnified lock icon can be used to lock the zoom, pan and rotation for that side.
-<li>There is a second set of rotation buttons to rotate the red text that is added to the image.</ol>
+    1. The image can be zoomed in, panned, and rotated using the mouse, scroll wheel and dragging gestures.
+    2. The magnified lock icon can be used to lock the zoom, pan and rotation for that side.
+    3. There is a second set of rotation buttons to rotate the red text that is added to the image.
 2. **Style List** -- This pane lists the styles to be mapped, with one line item per side.
-<ol><li> To work on just one side or the other, use the Page 1, Page 2 check boxes.
-<li> The check boxes are use to indicate that you have verified that the side is completed.
-<li> A clock face is used to indicate whether all contests have been mapped among both sides.
-</ol>
+    1. To work on just one side or the other, use the Page 1, Page 2 check boxes.
+    2. The check boxes are use to indicate that you have verified that the side is completed.
+    3. A clock face is used to indicate whether all contests have been mapped among both sides.
 3. **Contest/Options List** -- This pane provides the contests and options that can be mapped to the style selected.
-<ol><li> "Show All" -- means that all contests will be shown regardless of the contests defined for this ballot style.
-<li> "Expand All" -- means the options will be shown for each contest. The plus symbol "+" can be used to selectively expand one contests and show the options, and "-" can be used to minimize the contest.
-<li> The edit button can be used to edit the order of the options.
-</ol>
+    1. "Show All" -- means that all contests will be shown regardless of the contests defined for this ballot style.
+    2. "Expand All" -- means the options will be shown for each contest. The plus symbol "+" can be used to selectively expand one contests and show the options, and "-" can be used to minimize the contest.
+    3. The edit button can be used to edit the order of the options.
+
 
 ## Primary Flow
 
 There are a number of nuances and details for special case, but primarily, the workflow is as follows:
 
 1. **Select the Job** -- Select the job to be worked on in the Job List.
-<ol><li>Note: Each worker must have permissions to work on a mapping project.
-<li>Each worker can be assigned a range of styles to work on and to one page or the other or both.
-</ol>
+    1. Note: Each worker must have permissions to work on a mapping project.
+    2. Each worker can be assigned a range of styles to work on and to one page or the other or both.
 2. **Select The Next Style in the Style List** -- Click on the style and page to be mapped. That will bring up the style template image.
 3. **Select the Next Contest in the Contest/Options List** -- Click on the next contest to be mapped. All contests for both sides of the template will be listed.
 4. **Find the oval for that contest and option** -- Use the mouse to click the oval to place the target indicator on the image.
-<ol><li>Double click to delete the target indicator
-<li>Drag the target indicator to adjust. Normally the snap-grid will be provided and it will snap to the closest allowed location.
-<li>Use Settings-Allow Target Area Resizing to adjust the size and offset of the target by dragging the controls on the oval. Disable adjusting when it is an appropriate size for the specific vendor type.
-</ol>
+    1. Double click to delete the target indicator
+    2. Drag the target indicator to adjust. Normally the snap-grid will be provided and it will snap to the closest allowed location.
+    3. Use Settings-Allow Target Area Resizing to adjust the size and offset of the target by dragging the controls on the oval. Disable adjusting when it is an appropriate size for the specific vendor type.
 5. **Move to the Next Option** -- There are two ways to select the next option for mapping. When selected for mapping, the option will change to "Yellow".
-<ol><li>Click the next option in the Contest/Options list.
-<li>Press "n" for "next"
-</ol>
+    1. Click the next option in the Contest/Options list.
+    2. Press "n" for "next"
 6. **Continue from 3.**
 
 If the options are in the right order, the mapping process can proceed very quickly. If they are not in the correct option, then click the "Edit (pencil on paper)" icon near the contest name in the Contest/Options list and edit the order of the options.
@@ -86,9 +82,7 @@ Although the primary flow will normally work, there are a number of optimization
 3. **Paste Rest** -- Sometimes, all the templates of one page will be exactly the same, such as Page 2. If you use "Paste Rest" then it will paste the copied mapping to the rest of this page.
 4. **Clear Rest** -- Clear all the rest of the current page.
 5. **Paste Similar** -- This is a very handy operation, because it will look back to a prior template that was mapped with the same or many of the same contests, and then it will map the contests that are the same up to the point when the two styles diverge in the contests on it. 
-</ol><li>**Auto Paste Similar** -- Use the Checkbox "Auto Paste Similar" to automatically click 
-the Paste Similar button each time a new unmapped style is selected.
-<ol>
+    1. **Auto Paste Similar** -- Use the Checkbox "Auto Paste Similar" to automatically click the Paste Similar button each time a new unmapped style is selected.
 6. **Map Rest** -- Automatically apply "Paste Similar" to all the rest of the styles in the list.
 
 ## Completion
@@ -105,11 +99,9 @@ the Paste Similar button each time a new unmapped style is selected.
 There are a number of special operations that deviate from the primary flow and the defined operations.
 
 1. **No styles-to-contests available.** For normal operations, the list of contests is defined for each style. This will limit the contests in the contest-options pane to only those that are defined. However, if the contests are not available for each style, then it is most convenient to obtain this information from the mapping process.
-<ol><li>The difference in operation is that the next contest must be more carefully checked each time and not just use "Next" to go to the next contest.
-<li>The clock that shows the completion of each style (both pages) will not know when the full set of contests has been mapped.
-</ol>
+    1. The difference in operation is that the next contest must be more carefully checked each time and not just use "Next" to go to the next contest.
+    2. The clock that shows the completion of each style (both pages) will not know when the full set of contests has been mapped.
 2. **Change of styles.** It is fairly common for an initial set of styles to be defined, and the mapping completed for those styles, and then later, additional styles are added.
-<ol><li>Consider the case when ballot_id numbers are used twice in the project for different ballots. Assume that these were initially thought to be repeats of the same ballots, but later, it was determined that the ballots that use the same numbers are of different ballots. Then, the ballot_id values can be modified based on the set so these no longer have the same identifiers. Further, we assume that additional styles are found among the newly renamed ballots.
-<li>The stages of AuditEngine should be re-run and ballots style templates generated. The new styles should have distinctive style identifiers. Run the stage "build_targetmapper_package" and generate a new package for TargetMapper.
-<li>Click "File-Update Database". This should then show the new styles in the Style List.
-</ol>
+    1. Consider the case when ballot_id numbers are used twice in the project for different ballots. Assume that these were initially thought to be repeats of the same ballots, but later, it was determined that the ballots that use the same numbers are of different ballots. Then, the ballot_id values can be modified based on the set so these no longer have the same identifiers. Further, we assume that additional styles are found among the newly renamed ballots.
+    2. The stages of AuditEngine should be re-run and ballots style templates generated. The new styles should have distinctive style identifiers. Run the stage "build_targetmapper_package" and generate a new package for TargetMapper.
+    3. Click "File-Update Database". This should then show the new styles in the Style List.
