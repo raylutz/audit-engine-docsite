@@ -776,12 +776,14 @@ How the work will be done in an audit, particularly when working in concert with
 * **Cooperative Workflow**
   When audits are run in cooperation with election districts, turnaround time of results prior to [Certification](#certification-election) can be reduced by configuring AuditEngine prior to the start of the election using:
 
-    * the [Logic and Accuracy Test (LAT) ](#logic-and-accuracy-test-lat)ballot images, 
-    * the "known good" [CVR](#cast-vote-record-cvr) of those LAT ballots, and
-    * the [Ballot Style Masters (BSMs)](#ballot-style-masters-bsms) PDF files
+    * **Ballot Contest Names and Ballot Option names:** We need a source of information for the exact text used on hand-marked paper ballots for contest names and option names. This could from the [Logic and Accuracy Test (LAT) ](#logic-and-accuracy-test-lat)ballot images or an export of contest and option names from the voting system.
+    * **CVR Contest Names and CVR Option Names:** We need a source of information of the contest names and option names as used in the CVR. This could be the "known good" [CVR](#cast-vote-record-cvr) of LAT ballots or an export of CVR metadata.
+    * **[Ballot Style Masters (BSMs)](#ballot-style-masters-bsms)** PDF files which must be in searchable format (not image scans).
 
-  This will allow AuditEngine to be fully configured prior to the election and ready to run when live election data is available without any further time consuming configuration. An optional Verification Phase is an optional addition to this workflow, and requires handling of the paper ballots, and may require additional jurisdiction involvement (see details in the "Jurisdiction-Run Workflow", below)
+  This will allow AuditEngine to be fully configured prior to the election and ready to run when live election data is available without any further time consuming configuration. 
 
+  An optional Verification Phase is an optional addition to this workflow, and requires handling of the paper ballots, and may require additional jurisdiction involvement (see details in the "Jurisdiction-Run Workflow", below)
+  
 * **Jurisdiction-Run Workflow**
   To further optimize the workflow and reduce the reliance on personnel outside the control of election districts, the configuration of AuditEngine for audits in each election district can be easily delegated to staff in those districts. This is quite similar to [Cooperative Workflow](#cooperative-workflow) except that the work is being done by staff in each election district rather than by an outside team associated with AuditEngine. In this workflow there must be at least one project manager who is independent from the election districts assigned to each state to provide independent oversight. 
 
@@ -789,8 +791,8 @@ How the work will be done in an audit, particularly when working in concert with
 
     * Cooperate with workers of all the other districts in the state in the design of ballots.  In this way, a common configuration can be used by AuditEngine to recognize the County and Election on each ballot.
 
-    * Within the AuditEngine frontend app, Create the Election and create two audits for that district. 
-        * One audit uses [LAT](#logic-and-accuracy-test-lat) data (the "LAT Audit"), which will allow the full configuration and testing of AuditEngine, for this election, and
+    * Within the AuditEngine browser app, Create the Election and create two audits for that district. 
+        * One audit uses [LAT](#logic-and-accuracy-test-lat) data (the "LAT Audit"), which will allow the full configuration and testing of AuditEngine, for this election (this assumes full ballot images and ballot-level CVR is available), and
         * the other is for the "live" election data.
 
     * For the "LAT Audit":
