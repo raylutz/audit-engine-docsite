@@ -54,6 +54,72 @@ There are three major panes in the layout of the application
     2. "Expand All" -- means the options will be shown for each contest. The plus symbol "+" can be used to selectively expand one contests and show the options, and "-" can be used to minimize the contest.
     3. The edit button can be used to edit the order of the options.
 
+### Ballot Pane Detail
+
+<img src="https://s3.amazonaws.com/auditengine.org/docs/images/TargetMapper_Ballot_Pane_Detail.png" alt="TargetMapper Ballot Pane Detail">
+
+1. **Map target by clicking** when option is highlighted in option list to map a target. Drag oval to adjust. These will always snap to the grid. Double-click to delete. If the oval is the wrong size, use Settings - Allow Target Area Resizing to adjust with the mouse, then disable when it is correct. The new size will be used in all future mapping.
+2. **Name of the option** will be shown near the oval to allow for verification.
+3. **Pan and Zoom:** Use mouse to drag the ballot in the display to pan or use sliders. Use Control Scroll to zoom in and out.
+4. **Save All:** to save the current map. It is good to do this frequently.
+5. **Copy:** If the mapping can be mostly used for another style, click "copy" to copy the mapping to the clipboard.
+6. **Paste:** Click paste to paste the mapping onto the current style. Normally, you can use Copy, then move to another style that is similar, then Clear and Paste. Check that the mapping is correct, and either reposition or delete and re-map those that are incorrect.
+7. **Clear** deletes the mapping for the current style and page.
+8. **Paste Rest** will paste the currently copied map to the pages that are selected (via Page 1, Page 2) in the style list, to all styles that are listed after this one. If style_to_contests is known, it will not paste a contest that does not exist.
+9. **Clear Rest** acts similarly, but clears all the rest.
+10. **Paste Similar** is available if style_to_contests data is available. It will paste all contests to the first and second page of this style, using a prior style that is the most similar to this style, and it will stop when there is any difference between the two styles. This will usually do a very good job of completing most of the mapping of a style, but you must check it carefully.
+11. **Map Rest** will attempt to map all the rest based on similar existing styles. (Not generally used and it is slow.)
+12. **Auto Paste Similar** -- Save one mouse click by automatically implementing **Paste Similar** when any new style is selected, and if it has not been mapped yet.
+13. **Freeze Job** -- Use this to lock a job so it will not be modified, and to allow the map to be used in the audit pipeline.
+14. **Rotate Page** -- Use this to rotate the page in 30 degree increments. Generally used to flip or rotate to landscape orientation.
+15. **Zoom Lock** -- Use Zoom Lock to set where you want the page to start when mapping, such as to skip the instructions and to zoom at a convenient level to start each page. There is a separate zoom lock for each side (Page 1 and Page 2).
+16. **Rotate Text** -- this will rotate the text when it is hard to read, esp. when mapping grid styles where the text will otherwise overprint.
+
+### Style List Detail
+
+<img src="https://s3.amazonaws.com/auditengine.org/docs/images/TargetMapper_StyleList_Detail.png" alt="TargetMapper Style List Detail">
+
+1. **Green Checkmark** -- this is shown when TargetMapper knows what contests are on this style, and all contests and options have been mapped.
+
+2. **Incomplete Pie Symbol** -- the incomplete pie chart symbol means that TargetMapper detects that some contests and options have been mapped, but not all have been. 
+
+3. **No Leading Symbol** -- No contests and options have been mapped.
+
+4. **Highlighted Style** -- The style highlighted in Yellow indicates that it is currently being shown in the Ballot Image Pane.
+
+5. **Verified Checked** -- The blue checkmark on the right is checked by the user after the ballot is fully mapped and checked by the user.
+
+6. **Verified Unchecked** -- If the verified checkbox is unchecked, the the user has not verified it. If another user is to verify the work again, the verified checkmarks can be all cleared by using **Actions -  Clear All Verified**.
+
+7. **Page 1 Checkbox** -- indicates that page 1 styles will be shown. Uncheck Page 2 and check Page 1 to show only Page 1 of all styles (all styles will have a page 1).
+
+8. **Page 2 Checkbox** -- indicates that only styles that include Page 2 will be shown, and only page 2 will be shown. Uncheck Page 1 and check Page 2 to show only Page 2.
+
+9. **Total Sides** -- shows the total number of sides to be mapped.
+
+10. **Started** -- shows the total number of sides that have been mapped or partially mapped.
+
+11. **Completed** -- Shows the number calculated based on the number of contest and options on each style, and whether all those have been mapped. If the style_to_contests data is not provided, then this will never change from 0.
+
+12. **Verified** -- The number of sides that also have a verified checkbox checked.
+
+### Contest/Option List Detail
+
+<img src="https://s3.amazonaws.com/auditengine.org/docs/images/TargetMapper_Contest-Option_List_Detail.png" alt="TargetMapper Contest/Option List Detail">
+
+1. **Expand Options:** Click on Plus-sign to the left of the contest name to expand the option list for the contest.
+2. **Minimize Options:** Click on minus-sign to the left of the contest name to suppress the option list for a contest.
+3. **Blue "Mapped" check** is shown when all options in the contest have been mapped.
+4. **Black "Mapped" check** is shown next to an option when the target for this option has been mapped.
+5. **Mapped Coordinates** where target has been mapped.
+6. **Unmapped Contest** No Blue checkmark means not all targets have been mapped for this contest.
+7. **Unmapped Option:** No black checkmark means option has not been mapped.
+8. **Selected Option:** Body of option box will be yellow when the option is selected for placing a target.
+9. **Show All** will show all contests even if they are not defined for a style, to allow for mapping to contests when style_to_contests data is not available (such as if there is no CVR).
+10. **Expand All** will expand all options for all contests. If unchecked, then it minimizes all.
+11. **Edit** icon (pencil) allows user to edit primarily the order of the options if they are not in the correct order. This can speed up the mapping process. Sometimes, states will vary the order of the options and then this can be reordered to match. When clicked, this will open up a dialog box.
+12. **Link** icon is used for linking to parsed ballot styles and is no long needed.
+13. **Reorder** icon is used to change the order of contests if needed (rare).
 
 ## Primary Flow
 
