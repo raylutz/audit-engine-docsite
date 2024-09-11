@@ -172,6 +172,61 @@ Although the primary flow will normally work, there are a number of optimization
 5. Generate Redline Proofs
 6. Run 'gen_style_report' to create the report of all styles for proofing.
 
+## Menu Functions
+
+The menu bar has a number of functions:
+
+### File:
+
+- **Reload Project Files** -- Normally, project files are loaded when the Job is opened. (Need to update functionality)
+- **Reload and Delete All Work** -- This will restart the current job and delete all work. Careful!
+- **Open Backup File** -- Each time "Save All" is clicked, a backup is created of the Target Map being built. This function will provide a list of backup files that can be reopened.
+- **style_map_dolod** -- This is an alternative realization of the result of mapping.  (Need to update functionality --what does it do?) [Propose delete this.]
+- **Import Map** -- If there is an existing targetmap.json for this project, it can be manually imported.
+- **Export Map** -- Export the map to a given file name (Need to test, will hang if no job is opened.)
+- **Export Target Position Spec** -- The target position can vary based on the vendor, and may not be centered at the snapgrid. This is set in "Settings - Edit Target Spec"
+- **Export Code Extraction Spec** -- The code extraction spec allows the user to set a location on the ballot face which can be defined to be extracted. Can be edited in "Settings - Edit Code Spec".
+- **New Project** -- (Need to update functionality. Does it make sense to have this? Probably should call this "Close Job?")
+- **Update Database** -- If a job was reopened after have some changes to the list of templates and styles, then the database will need to be updated. -- (Need to update functionality.)
+
+### Project Information
+
+Simply provides the File Name - targetmap.json, and the job folder. There is no functionality to the pull down items.
+
+[This should be moved to Settings.]
+
+### Job List
+
+Use this list to select the job to be mapped. The items will be shown in the list if the job has built the stage 'build_targetmapper_package' has been completed. The job will show "locked" if the job has been hard locked in the audit actions, and will show "frozen" (snowflake) if the job is frozen. [Note: this should be move under "File" and rename it "Open Job"]
+
+### Settings
+
+- **Edit Code Spec** - This provides the definition of a location on the face of the ballot which will be extracted using OCR and provided in a variable. Currently, the following can be defined:
+
+  - pstyle - printed style
+  - precinct
+
+  This functionality should allow using the mouse to define the region.
+
+- **Edit Target Position Spec** -- This function provides a means to adjust the exact position of the target with respect to the snapgrid. Select the default spec and adjust if needed.
+
+- **Edit Style Contest Map** -- Allows for the manual adjustment of the contest included in any style.
+
+- **Allow Target Area Resizing** -- Check this box and then use the handles on the oval to change its size and location vs. snapgrid.
+
+### User Lock
+
+To avoid users stepping on each-other's work, the application will be locked for a specific user. There are two functions:
+
+- **Request Lock** - If the job is locked by another user, you can request that they release their lock.
+- **Release Lock** - If you have a lock on the job, you can release your lock so another user can work on it.
+
+### Actions
+
+- **Clear All Verified** -- will clear all the verified checkmarks to allow the job to be re-verified.
+- **Add Contest** -- Use this to add a contest to the election, so it can be placed in the style contests map. [This could be moved to Settings]
+- **Show/Hide Value Entry** -- (Update the functionality for this menu item.)
+
 ## Special Operations
 
 There are a number of special operations that deviate from the primary flow and the defined operations.
