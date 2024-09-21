@@ -606,7 +606,7 @@ Essentially "data about other data", and used to refer to attributes of [ballot 
 
 See '_[Adjudicated](#adjudicated-modified-record)_'.
 
-### Nonvariant Ballots
+<h3 id="nonvariant-ballots">Nonvariant Ballots</h3>
 
 A nonvariant ballot is neither a [Ballot Variant](#ballot-variant), and it has no [Contest Variants](#contest-variant). In essence, a nonvarant ballot is 100% in agreement with the evaluation by AuditEngine, and also has no write-ins, overvotes, or gray-flags. However, it might have agreed undervotes.
 
