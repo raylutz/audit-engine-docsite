@@ -19,7 +19,7 @@ nav:
         - ScanEngine App:                 user-guide/scanengine.md
 #        - Running Audits:                 user-guide/running_audits_app.md
         - TargetMapper App:               user-guide/targetmapper_app.md
-#        - AdjudiTally App:                user-guide/adjudicator_app.md
+        - AdjudiTally App:                user-guide/adjudicator_app.md
 #        - Voter Intent Guide:             user-guide/voter_intent_guide.md
 #        - Pricing Guidelines:             user-guide/prices.md
         - FAQs:                           user-guide/auditengine_faqs.md            # https://copswiki.org/Common/AuditEngineFAQs

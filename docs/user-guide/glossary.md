@@ -28,8 +28,6 @@ This is the process of human review of ballots or ballot images and providing an
 
 This component of AuditEngine is a browser-based application that provides a user interface to check any ballot, particularly flagged contests or comparison results that are disagreed. The AdjudiTally App has a number of modes that operate from the same interface. It can be used to: 
 
-
-
 * select between the evaluation by AuditEngine or the evaluation by the voting system (per the CVR) by selecting the evaluation which is correct or entering it from scratch.
 * fine-tune the results by AuditEngine without any voting system results by reviewing any records that have been [flagged](#flagged) for further review.
 * review ballot images without any results by AuditEngine or the voting system.
@@ -114,7 +112,7 @@ Because there are these edge cases where the linkage between the voter and their
 <h3 id="ballot-image">Ballot Image</h3>
 
 
-Election systems today create digital pictures of both sides of each ballot sheet. These images can be exported by the [Election Management System (EMS)](#election-management-system-ems) in standard formats, such as PDF (Adobe Portable Document Format, used by [ES&S](#election-systems-&-software-es&s) generally with both the front and back in the same file), multipage TIFF (Tagged Image File Format; [Dominion](#dominion-voting-systems-dominion) uses these, with three pages in one file, the front, back and AuditMark(tm) graphical image of the voting system evaluation), or PNG (Portable Network Graphics; [Dominion](#dominion-voting-systems-dominion) uses this format, typically with all three pages combined into a single tall image.)
+Election systems today create digital pictures of both sides of each ballot sheet. These images can be exported by the [Election Management System (EMS)](#election-management-system-ems) in standard formats, such as PDF (Adobe Portable Document Format, used by [ES&S](#election-systems-&-software-es&s) generally with both the front and back in the same file), multipage TIFF (Tagged Image File Format; [Dominion](#dominion-voting-systems-dominion) uses these, with three pages in one file, the front, back and AuditMark(tm) graphical image of the voting system evaluation), or PNG (Portable Network Graphics; [Dominion](#dominion-voting-systems-dominion) uses this format, typically with all three pages combined into a single tall image.) Clear Ballot uses JPEG format files, and Hart uses TIFF format.
 
 Please note that the term "Ballot Image" has a deprecated meaning. Previously, it was used to mean digital inputs by the user at a _[Direct-Recording Electronic (DRE)](#direct-recording-electronic-dre-voting-machines)_ machine or another touch-screen machine. The term "image" is used in computer science to sometimes mean an exact copy of digital data. This prior use is now deprecated and the term is now widely understood to mean the actual digital pictures of the document rather than just a copy of digital data that does not represent a picture.
 
@@ -135,7 +133,7 @@ For [ES&S](#election-systems-&-software-es&s) and [Dominion](#dominion-voting-sy
 <h3 id="ballot-style">Ballot Style</h3>
 
 
-A designation that represents the set of contests on the ballot, the language and in the case of a hand-marked paper ballot, the order voting targets. The contests on the ballot are determined by the voter's address and party affiliation, in the case of partisan elections where ballots differ by party. There may be 100s or 1000s of styles in any given election in a single jurisdiction. The method for designating style is one of the most complex aspects of a ballot image audit, because there are many variations that are up to election districts, while, which we call the is 
+A designation that represents the set of contests on the ballot, the language and in the case of a hand-marked paper ballot, the order voting targets. The contests on the ballot are determined by the voter's address and party affiliation, in the case of partisan elections where ballots differ by party. There may be 100s or 1000s of styles in any given election in a single jurisdiction. The method for designating style is one of the most complex aspects of a ballot image audit, because there are many variations that are up to election districts. 
 
 To deal with these many variations, AuditEngine has a number of additional terms:
 
@@ -145,8 +143,7 @@ To deal with these many variations, AuditEngine has a number of additional terms
 
 **_[hexstyle](#hexstyle)_** - a useful representation that avoids arbitrary numerical assignments of the _style_num_, and represents only the set of contests used on the ballot.
 
-
-**_pstyle_num _** - a printed style designation, usually a more human-friendly representation than _style_num_ but with (usually) a 1:1 correspondence with the _style_num_. The _pstyle_num_ can be extracted from the ballot using Optical Character Recognition (OCR) or from a [barcode](#barcode) printed on the ballot. OCR is not perfect and errors may cause critical errors if misread. 
+**_pstyle_num_** - a printed style designation, usually a more human-friendly representation than _style_num_ but with (usually) a 1:1 correspondence with the _style_num_. The _pstyle_num_ can be extracted from the ballot using Optical Character Recognition (OCR) or from a [barcode](#barcode) printed on the ballot. OCR is not perfect and errors may cause critical errors if misread. 
 
 <h3 id="ballot-style-masters-bsms">Ballot Style Masters (BSMs)</h3>
 
@@ -204,6 +201,12 @@ A data file or set of files that provides the outcome of an election, typically 
 
 ES&S also uses this term for PDF files that may be provided where each is a written summary of the voting system evaluation of the vote on that ballot, and so we call these "CVR PDF files" while the spreadsheets are "CVR Spreadsheets". Dominion uses a similar record called the "AuditMark(tm)" which is combined with the ballot images as the third page of the TIFF image file.
 
+There are several variants of CVR that are commonly seen:
+
+- **Summary, as Independent text or PDF, or image file:** Sometimes, there is an independent text, PDF, or image file (.png or .tif) that provides a summary of the votes on that ballot. Typically, this summary includes only the options voted for, and whether votes were not cast for a contest, but it does not include options not voted for.
+- **"Flat" files:** ES&S provides an Excel spreadsheet file (.xlsx format) which provides a separate line for each sheet. Dominion also has a similar format (.csv format) with one line for each sheet. The ES&S format provides a separate column for each voting opportunity. For example, if the contest is "vote for 3" contest, then there will be three columns. In each column, there will be either a candidate name, "undervote", "overvote", "write-in" or an image of the write-in area. The Dominion format provides a separate column for each option, with 0 or 1 in each cell. The ES&S spreadsheet files are limited to 99,999 records each, and so there may be multiple files in the set.
+- **"Nested" files:** typically JSON or XML format. Used by Dominion, Hart and Clear Ballot, but each has its own variations on the theme. Generally there will be one block which represents the sheet, which then contains blocks representing each contest, and then blocks for each option voted for. It may have other information as well. This type of CVR may be a set of files that describe the contests, candidates, and other attributes. In some cases, each ballot image will have an associated nested file, and in others, they combine into fewer files, but perhaps still many thousands of chunks.
+
 <h3 id="certification-election">Certification (Election)</h3>
 
 
@@ -219,6 +222,8 @@ The name used by AuditEngine for the _[stage](#stage)_ of a _[ballot image audit
 This is a term used in the comparison process. On each ballot cast, there are a number of contests. A single contest on a single cast ballot is a "ballot-contest" and sometimes just "contest" in the context of the comparison report. This is not the entire contest with all votes from all ballots summed, but simply the evaluation of that single contest on that sheet (for that single voter). Frequently, these can be called "votes".
 
 <h3 id="contest-name">Contest Name</h3>
+
+A contest will have a name, which is used in the cast-vote record (CVR), and is preferrably unique. The contest name in the CVR may differ somewhat from what is actually printed on the ballot. But generally, the contest name on the ballot will be exactly the same on all styles, and it will have the same options (although they might be rotated and in a different order). There may also be write-in lines associated with the contest.
 
 AuditEngine uses the names of contests as defined by the [Cast Vote Record (CVR)](#cast-vote-record-cvr) file when one is available. The [Election Information File (EIF)](#election-information-file-eif) provides these names as used by the CVR and we stick with those when the CVR is available. 
 
@@ -333,8 +338,11 @@ After the Help America Vote Act (HAVA) was passed in response to the year 2000 e
 
 <h3 id="disagreed-contest">Disagreed Contest</h3>
 
-
 As used in the comparison process, a [contest](#contest-or-ballot-contest) is considered "disagreed" unless the voting system (from the [CVR](#cast-vote-record-cvr)) and AuditEngine fully agree on the outcome, including whether it was overvoted, undervoted, or had write-ins. Since write-ins and overvotes are frequently reviewed and adjudicated by election staff, disagreed write-ins and overvotes are treated separately by the AuditEngine analysis. "_Normal Disagreed_" are the rest of the disagreed contests, which do not include write-ins or overvotes, but instead provide the actual difference in the evaluation of the vote cast by AuditEngine vs. the voting system.
+
+### District Record
+
+For each election processed by AuditEngine, there will be a District Record defined, which will provided the details about the given district. Districts are usually counties, but not always. Once the district is set up, then an [Election Record](#election record) can be defined for each election processed in this district. Finally, one or more [Audit Jobs](#audit-job) can be defined and run. These audit jobs can be combined in a single Project.
 
 <h3 id="dominion-voting-systems-dominion">Dominion Voting Systems (Dominion)</h3>
 
@@ -365,6 +373,10 @@ This is a required file that defines many aspects of a specific election in a sp
 * **qualified_writeins** - list of qualified write-ins for this contest
 
 This file should be reviewed by the auditing team, particularly to adjust the 'bmd_contest_name's and 'writein_num' to verify that these accurately match the layouts. Note: Other fields exist but are not normally used because most of the definition is not required since we use the [TargetMapper App](#targetmapper-app) to generate the map instead of doing image analysis.
+
+### Election Record
+
+Within the AuditEngine app, within a given district, there may be multiple elections defined. The "Election Record" is the information related to that election, and will eventually include files uploaded appropriate for that election and used by one or more Audits.
 
 <h3 id="election-management-system-ems">Election Management System (EMS)</h3>
 
@@ -515,10 +527,9 @@ This is the name of the AuditEngine job to differentiate it from other jobs, and
 
 Thus, **GA_Bartow_20201103** is the job for the 2020 General Election in Bartow County, GA. It is okay to add additional tags to the end, like **\_LAT** if it is the job to process the [Logic and Accuracy Test](#logic-and-accuracy-test-lat) ballot images in that same election, or for other purposes. NOTE: The job_name can't be changed very easily once it is set. It cannot have spaces or special characters other than underscore. See also _[Audit Job](#audit-job)_.
 
-<h3 id="job-settings-file">Job Settings File</h3>
+<h3 id="job-settings">Job Settings</h3>
 
-
-For each [Audit Job](#audit-job), there is a related _Job Settings File_. It has the name which is the _[job_name](#job_name) prefixed with the string "JOB\_". It is a csv (comma separated values, i.e. spreadsheet) file and can be edited with any spreadsheet program, but is normally edited through the *[AuditEngine App](#auditengine-app)*. There are a vast number of possible settings that can control AuditEngine when it processes an election. Most of these are to allow AuditEngine to handle ballots from various vendors, and variations we find due to differences in how the [Voting Systems](#voting-system) are programmed. We can summarize these settings into a number of categories:
+For each [Audit Job](#audit-job), there are a set of related _Job Settings_. The file of job settings for a given job will be in a file with name "JOB_" followed by the [job_name](#job_name). It is a csv (comma separated values, i.e. spreadsheet) file and can be edited with any spreadsheet program, but is normally edited through the *[AuditEngine App](#auditengine-app)*. There are a vast number of possible settings that can control AuditEngine when it processes an election. Most of these are to allow AuditEngine to handle ballots from various vendors, and variations we find due to differences in how the [Voting Systems](#voting-system) are programmed. We can summarize these settings into a number of categories:
 
 * **Source Files** -- The locations and names of Ballot Image [Archives](#archive-zip-archive), Verification Archives, [CVR](#cast-vote-record-cvr) files, [BSM](#ballot-style-masters-bsms) Files, and other exports from the [EMS](#election-management-system-ems). These parameters are provided by the _AuditEngine App_ derived from the files that are uploaded. 
 * **Election Info** -- Information about the election district used for reporting, such as the official ballots cast, population, registered voters, registration partisan bias, etc. 
@@ -593,8 +604,11 @@ Essentially "data about other data", and used to refer to attributes of [ballot 
 
 <h3 id="modified-record">Modified Record</h3>
 
-
 See '_[Adjudicated](#adjudicated-modified-record)_'.
+
+### Nonvariant Ballots
+
+A nonvariant ballot is neither a [Ballot Variant](#ballot-variant), and it has no [Contest Variants](#contest-variant). In essence, a nonvarant ballot is 100% in agreement with the evaluation by AuditEngine, and also has no write-ins, overvotes, or gray-flags. However, it might have agreed undervotes.
 
 <h3 id="optical-character-recognition-ocr">Optical Character Recognition (OCR)</h3>
 
@@ -704,10 +718,10 @@ To complicate matters further, BMD ballots may combine multiple sheets onto one 
 
 One set of operations that are logically separated in AuditEngine, with specified input files (dependencies) and output files that result. Each stage commonly also produces reports of the results of those operations. The stages are organized into a pipeline and are executed sequentially until the pipeline is completed or a stage does not have all the inputs available. Sets of stages are also combined logically into [phases](#phase), for the purposes of explaining their functionality.
 
-<h3 id="targets">Targets</h3>
+<h3 id="target">Target</h3>
 
 
-The ovals or graphic elements that are completed by the voter using a pen or other writing utensil to indicate a vote.
+Targets are ovals or graphic elements that are marked by the voter using a pen or other writing utensil to indicate a vote.
 
 <h3 id="target-map">Target Map</h3>
 
@@ -726,8 +740,23 @@ An Undervote occurs when a voter does not vote for as many options as is possibl
 
 <h3 id="unprocessed-sheets">Unprocessed Sheets</h3>
 
-
 Sheets that were NOT successfully processed by AuditEngine, generally due to images that are damaged due to scanner jitter when the sheet is not evenly fed through the scanner, barcodes that were corrupted and unreliable, or BMD ballots that were not perfectly read by AuditEngine using [OCR (optical character recognition)](#optical-character-recognition-ocr). Cleaning the scanner rollers can help to avoid corrupted images. AuditEngine does not track the number of contests on unprocessed sheets. If a large number of ballots are unprocessed from a specific voting machine scanner, then additional maintenance or retiring that scanner may be called for. Ballots that were Unprocessed were not necessarily improperly evaluated by the voting system.
+
+### User Permissions
+
+AuditEngine has a set of user permissions to regulate the activities of users on the site. These can be summarized as follows, from lowest permission to highest:
+
+| **Role**        | **Permissions Granted**                                      |
+| --------------- | ------------------------------------------------------------ |
+| Guest           | This is the default role and has no permissions. You will need to request additional permissions for activities on the site. |
+| Uploader        | An uploader has no permissions except to upload files to a given district. The files that are uploaded are placed in an initial bucket until they are reviewed by a "User" or above and adopted to the election. |
+| Observer        | This role can watch specific audits, and review the results. |
+| User            | This is the general purpose level that can do most activities, but can't run expensive stages. |
+| Auditor         | Same as User but can run expensive stages as well.           |
+| Project Manager | Can also Manage and edit projects. A project is a set of audit jobs say in an entire state. |
+| Admin           | The administrator has authority also to change the role of users. |
+
+There are also audit-specific permissions for running TargetMapper and AdjudiTally 
 
 <h3 id="verification-images-verification-phase">Verification Images, Verification Phase</h3>
 
@@ -743,6 +772,14 @@ The number of batches processed in this way can be minimized, because the primar
 Typically, this phase can be added if there is any concern by the public of specific contests that are close. It is mainly important that the public knows this option is available because any temptation to attempt to hack the election in this manner will be reduced.
 
 The physical ballots utilized by this phase should not be touched by election staff after the precincts (or batches) of ballots are chosen, and the seals should be intact when they are ultimately rescanned. Thus, the precincts (or batches) should be kept isolated and easily accessible in storage. The exact strategy to be used in this phase will depend on the voting system and how ballots are already being stored, and must be discussed with our election experts.
+
+### Voter Intent
+
+"Voter intent" refers to the will or preference of a voter as expressed through their vote. It aims to capture the true choice of the voter, even if the ballot is marked ambiguously, contains errors, or does not fully comply with voting instructions. The concept is often used in elections to ensure that a vote reflects the voter's intended selection, particularly in cases where ballots are being recounted or where disputes arise about the validity of a vote.
+
+For example, if a voter marks a ballot incorrectly but their intended candidate is clear (such as circling a candidate's name instead of filling in a bubble), "voter intent" could be used as the guiding principle in determining whether to count the vote. It is frequently discussed in relation to recounts, contested elections, and electoral procedures.
+
+State law may vary and in some cases, machine evaluation is used instead of voter intent, i.e. how the machine would interpret it, regardless of
 
 <h3 id="voter-verifiable-paper-audit-trail-vvpat">Voter-Verifiable Paper Audit Trail (VVPAT)</h3>
 
