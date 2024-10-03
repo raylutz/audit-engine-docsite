@@ -118,24 +118,26 @@ There are three major panes in the layout of the application
 
 There are a number of nuances and details for special case, but primarily, the workflow is as follows:
 
-1. **Select the Job** -- Select the job to be worked on in the Job List.
-    1. Note: Each worker must have permissions to work on a mapping project.
+1. **Process Audit Pipeline to build_target_mapper_package** -- this will generate the files in the /map folder. Also must run the stage 'update_system_status_stage' so TargetMapper can see that the package has been built.
+2. **Run TargetMapper** -- TargetMapper can be run at the link https://mapper.auditengine.org
+3. **Select the Job** -- Select the job to be worked on in the Job List.
+    1. Note: Each user must have permissions to work on a mapping project. This is done by an administrator or project manager.
     2. Each worker can be assigned a range of styles to work on and to one page or the other or both.
     3. Select the desired job from the 'Job List' pull down menu. If you don't see the job there, then click the refresh button.
     4. If the job still is not in the list: 
        1. Check that the election and audit job have been defined in the engine.auditengine.org browser application.
        2. Check that the user has sufficient permissions for this specific job.
        3. Check that the stages of the audit have been run through "build_targetmapper_package" and "update_system_status_stage".
-2. **Select The Next Style in the Style List** -- Click on the style and page to be mapped. That will bring up the style template image.
-3. **Select the Next Contest in the Contest/Options List** -- Click on the next contest to be mapped. All contests for both sides of the template will be listed.
-4. **Find the oval for that contest and option** -- Use the mouse to click the oval to place the target indicator on the image.
+4. **Select The Next Style in the Style List** -- Click on the style and page to be mapped. That will bring up the style template image.
+5. **Select the Next Contest in the Contest/Options List** -- Click on the next contest to be mapped. All contests for both sides of the template will be listed.
+6. **Find the oval for that contest and option** -- Use the mouse to click the oval to place the target indicator on the image.
     1. Double click to delete the target indicator
     2. Drag the target indicator to adjust. Normally the snap-grid will be provided and it will snap to the closest allowed location.
     3. Use Settings-Allow Target Area Resizing to adjust the size and offset of the target by dragging the controls on the oval. Disable adjusting when it is an appropriate size for the specific vendor type.
-5. **Move to the Next Option** -- There are two ways to select the next option for mapping. When selected for mapping, the option will change to "Yellow".
+7. **Move to the Next Option** -- There are two ways to select the next option for mapping. When selected for mapping, the option will change to "Yellow".
     1. Click the next option in the Contest/Options list.
     2. Press "n" for "next"
-6. **Continue from 3.**
+8. **Continue from 3.**
 
 If the options are in the right order, the mapping process can proceed very quickly. If they are not in the correct option, then click the "Edit (pencil on paper)" icon near the contest name in the Contest/Options list and edit the order of the options.
 
@@ -158,12 +160,14 @@ Although the primary flow will normally work, there are a number of optimization
 
 ## Completion
 
-1. Save All -- to save the current mapping.
-2. Click "Freeze Job" so that the job cannot be accidentally changed using this app.
-3. Import the mapping using the stage "import_targetmap"
-4. Check the map for any errors. These can normally be resolved by editing the map for the style of concern.
-5. Generate Redline Proofs
-6. Run 'gen_style_report' to create the report of all styles for proofing.
+1. **Save All** -- to save the current mapping.
+2. Click "**Freeze Job**" so that the job cannot be accidentally changed using this app.
+3. In AuditEngine app, under Audit Operations, Import the mapping using the stage "**import_targetmap**"
+4. Check the map report for any errors. These can normally be resolved by editing the map for the style of concern.
+5. Generate Redline Proofs by running the stage: **gen_all_redlined_proofs**
+6. General Option Proofs by running the stage: **gen_option_proofs_report**
+7. Run the stage '**gen_style_report**' to create the styles report and proof the redline proofs for each style.
+8. If there are any mapping mistakes, reopen the job and complete the mapping.
 
 ## Menu Functions
 
@@ -224,13 +228,29 @@ To avoid users stepping on each-other's work, the application will be locked for
 
 There are a number of special operations that deviate from the primary flow and the defined operations.
 
-1. **No styles-to-contests available.** For normal operations, the list of contests is defined for each style. This will limit the contests in the contest-options pane to only those that are defined. However, if the contests are not defined for each style, then it is most convenient to obtain this information from the mapping process. This can commonly occur when no CVR exists. Please note: Running in this mode will require more diligence because one extremely helpful piece of information is missing.
-    1. The difference in operation is that the next contest must be more carefully checked each time and not just use "Next" to go to the next contest.
-    2. The pie chart symbol in the style list normally shows the completion of each style (both pages) will it not know when the full set of contests has been mapped, so this symbol may not ever show completion (green checkmark)
-    3. Make sure job settings includes 'define_style_to_contests_from_map' = TRUE
-    4. When the stage 'import_targetmap' is run, it will also create the style_to_contests data.
-    5. The redline proofs and option proof report will require careful scrutiny to check that all contests are included for each style.
-2. **Change of styles.** It is fairly common for an initial set of styles to be defined, and the mapping completed for those styles, and then later, additional styles are added.
-    1. Consider the case when ballot_id numbers are used twice in the project for different ballots. Assume that these were initially thought to be repeats of the same ballots, but later, it was determined that the ballots that use the same numbers are of different ballots. Then, the ballot_id values can be modified based on the set so these no longer have the same identifiers. Further, we assume that additional styles are found among the newly renamed ballots.
-    2. The stages of AuditEngine should be re-run and ballots style templates generated. The new styles should have distinctive style identifiers. Run the stage "build_targetmapper_package" and generate a new package for TargetMapper.
-    3. Click "File - Update Database". This should then show the new styles in the Style List.
+### No styles-to-contests available
+
+For normal operations, the list of contests is defined for each style. This will limit the contests in the contest-options pane to only those that are defined. However, if the contests are not defined for each style, then it is most convenient to obtain this information from the mapping process. This can commonly occur when no CVR exists. Please note: Running in this mode will require more diligence because one extremely helpful piece of information is missing.
+
+1. The difference in operation is that the next contest must be more carefully checked each time and not just use "Next" to go to the next contest.
+2. The pie chart symbol in the style list normally shows the completion of each style (both pages) will it not know when the full set of contests has been mapped, so this symbol may not ever show completion (green checkmark)
+3. Make sure job settings includes 'define_style_to_contests_from_map' = TRUE
+4. When the stage 'import_targetmap' is run, it will also create the style_to_contests data.
+5. The redline proofs and option proof report will require careful scrutiny to check that all contests are included for each style.
+
+### Change the styles in the job
+
+It is fairly common for an initial set of styles to be defined, and the mapping completed for those styles, and then later, additional styles are added.
+
+1. Consider the case when ballot_id numbers are used twice in the project for different ballots. Assume that these were initially thought to be repeats of the same ballots, but later, it was determined that the ballots that use the same numbers are of different ballots. Then, the ballot_id values can be modified based on the set so these no longer have the same identifiers. Further, we assume that additional styles are found among the newly renamed ballots.
+2. The stages of AuditEngine should be re-run and ballots style templates generated. The new styles should have distinctive style identifiers. Run the stage "build_targetmapper_package" and generate a new package for TargetMapper.
+3. Click "File - Update Database". This should then show the new styles in the Style List.
+
+### Adopt an existing Targetmap from another job
+
+Sometime a targetmap needs to be adopted from a prior job and then enhanced in the current job. This can occur when the prior job is locked, and we do not want to modify it, and then us it in the current job with enhancements. For this special operation, use the following procedure:
+
+1. In AuditEngine settings, set the '**adopt_from_jobname**' to the core job name of the prior job that the targetmap should be adopted from.
+2. In AuditEngine settings, set '**enable_adopt_targetmap**' to True. This will pull in the target map from the other location and create the file '**adopted_targetmap.json**' in the current job.
+3. In TargetMapper, select the function **File - Adopt Targetmap** -- This will the file **'adopted_targetmap.json'** as the starting point, along with all other files in the map/ folder, in the operation of TargetMapper.
+4. After editing the map, TargetMapper will write the file '**targetmap.json**' and will never alter the file '**adopted_targetmap.json**'
