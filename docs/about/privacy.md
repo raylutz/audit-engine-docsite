@@ -4,11 +4,11 @@ Last Updated:  11/23/2021
 
 ## Introduction
 
-This Privacy Policy describes the privacy practices for the websites and mobile applications operated by CitizensOveright, Inc. and its affiliates **(“CitizensOversight” “we”, “our” “us”)**, and applies solely to the Personal Information (as defined below in Section 1) that we collect and use relating to consumers and users residing outside of the State of California. **This Privacy Policy does not apply to California residents. If you are a California resident, please [click here](https://cm.azcentral.com/privacy-policy/) for Your California Privacy Rights/Privacy Policy.**
+This Privacy Policy describes the privacy practices for the websites and mobile applications operated by CitizensOveright, Inc. and its affiliates **(“CitizensOversight” “we”, “our” “us”)**, and applies solely to the Personal Information (as defined below in Section 1) that we collect and use relating to consumers and users residing outside of the State of California.
 
-This Privacy Policy is applicable to the publications, businesses, websites and mobile applications operated by Gannett/USA TODAY Network, including the Media Property or application from which you accessed this Privacy Policy (our websites and mobile applications are collectively referred to as "**Media Properties"**. It also applies to the related online services that we provide through our Media Properties the **"Services"**.
+This Privacy Policy is applicable to the publications, businesses, websites and mobile applications collectively referred to as "**Media Properties"**. It also applies to the related online services that we provide through our Media Properties the **"Services"**.
 
-**To the extent permitted by applicable law, by using the Media Properties and/or the Services and providing us with Personal Information (defined below), you agree to the practices described in this Privacy Policy and the [Cookie Policy](#cookie-policy) referenced below and to the updates to these policies posted here from time to time. If you are based in the European Economic Area (“EEA”) or the United Kingdom (“UK”), this Privacy Policy serves as notice of how we process your Personal Data (defined below) for which we are a controller. If we require your consent, we will request it formally, in adherence to applicable data protection laws.**
+**To the extent permitted by applicable law, by using the Media Properties and/or the Services and providing us with Personal Information (defined below), you agree to the practices described in this Privacy Policy and the [Cookie Policy](cookie-policy.md) referenced below and to the updates to these policies posted here from time to time. If you are based in the European Economic Area (“EEA”) or the United Kingdom (“UK”), this Privacy Policy serves as notice of how we process your Personal Data (defined below) for which we are a controller. If we require your consent, we will request it formally, in adherence to applicable data protection laws.**
 
 **To make sure you stay informed of all changes, you should check these policies periodically. Updates will be referenced by the "Last Updated" date shown above.**
 
@@ -59,7 +59,7 @@ Our Media Properties and Services may automatically collect certain Personal Inf
 
 **C. Personal Information We May Receive from Third Parties**
 
-We may collect additional Personal Information about you from third-party websites, social media platforms, such as, but not limited, to Facebook, Twitter, Instagram, SnapChat **(“Social Media Platforms”)**, third party data providers, and sources providing publicly-available Personal information (e.g., from the U.S. postal service) for the purposes described in Section 3 below.
+We may collect additional Personal Information about you from third-party websites, social media platforms, such as, but not limited, to Facebook, X (Twitter), Instagram, SnapChat **(“Social Media Platforms”)**, third party data providers, and sources providing publicly-available Personal information (e.g., from the U.S. postal service) for the purposes described in Section 3 below.
 
 Personal Information we may access from Social Media Platforms may include, but is not limited to:
 
@@ -85,7 +85,7 @@ We use and process your Personal Information for the following types of purposes
 - To fulfill contracts we have with you
 - To manage, improve and foster relationships with third-party service providers, including vendors, suppliers, and parents, affiliates, subsidiaries, and business partners
 - To maintain, improve, customize, or administer the Media Properties and Services, perform business analyses, or other internal purposes to improve the quality of our business, the Media Properties and the Services, resolve technical problems, or improve security or develop other products and services
-- To comply with our [Terms of Service](terms.md)
+- To comply with our [Terms of Use](policies.md)
 - To perform analytics for business purposes and business intelligence, such as monitoring traffic to our Media Properties, counting ad impressions, and auditing legal and regulatory compliance
 - To maintain the safety, security, and integrity of our Media Properties, products and Services, databases and other technology assets and our business, including preventing fraud, detecting security breaches and prosecuting violators
 - To identify and repair errors in our Media Properties' functionality
@@ -107,13 +107,13 @@ We may disclose your Personal Information to other parties, including:
 - To an entity involved in the sale of our business
 - Third parties to whom you or your agents authorize us to disclose your Personal Information in connection with products or Services we provide to you
 
-In order to provide advertisements and content that are more relevant to you, we and our advertising and content providers may collect certain types of Personal Information when you use our Media Properties (such as, by way of example, your email, the IP address of your device, the identifier on your mobile device, or cookies stored on your device). We or our advertising and content providers may combine this information with other information we have, or that we collect through other sources, and may share the information we collect with third parties to provide interest based or targeted advertising. If you would like to opt out from this use, or for more information, please see our [Cookie Policy](https://cm.azcentral.com/cookie-policy#) for more information.
+In order to provide advertisements and content that are more relevant to you, we and our advertising and content providers may collect certain types of Personal Information when you use our Media Properties (such as, by way of example, your email, the IP address of your device, the identifier on your mobile device, or cookies stored on your device). We or our advertising and content providers may combine this information with other information we have, or that we collect through other sources, and may share the information we collect with third parties to provide interest based or targeted advertising. If you would like to opt out from this use, or for more information, please see our [Cookie Policy](#cookie-policy) for more information.
 
 If we decide to disclose Personal Information to additional categories of parties, we will update this Privacy Policy.
 
-## Do We Use "Cookies"?
+## Cookie Policy
 
-Yes. Cookies, SDKs, tracking pixels and similar technologies are small files that a website or mobile application stores on your device that recognizes the user’s browser or device and captures and remembers certain information.
+Cookies, SDKs, tracking pixels and similar technologies are small files that a website or mobile application stores on your device that recognizes the user’s browser or device and captures and remembers certain information.
 
 In general, we and our third-party providers and advertisers, use these technologies to optimize the functionality of the Media Properties, to help us understand how the Media Properties are used and to provide users with interest-based content or advertising based upon their browsing activities and interests.
 
@@ -143,10 +143,6 @@ Your Personal Information may be stored, transferred to, and processed in any co
 
 We may aggregate and/or de-identify any information collected through the Media Properties and Services so that such information can no longer be linked to you or your device **(“Aggregate/De-Identified Information”)**. We may use Aggregate/De-Identified Information for any purpose, including without limitation for research and marketing purposes, and may also share such data with any third parties, including advertisers, promotional partners, and sponsors, in our discretion.
 
-## Privacy Policy For California Residents
-
-**This Privacy Policy does not apply to California residents.** If you are a California resident, please go to [Your California Privacy Rights/Privacy Policy](CA_privacy-policy.md) to learn about your California privacy rights.
-
 ## Individuals In The European Economic Area (EEA), Or UK
 
 **This Section is included in this Privacy Policy to comply with the requirements of the General Data Protection Regulation ("GDPR"). It applies only to individuals coming to our Media Properties from within the EEA, Switzerland or the UK and applies only (1) if we collect through the Media Property any Personal Data of those individuals or (2) if we track individuals in the EEA, Switzerland or the UK who access our Media Properties.**
@@ -163,15 +159,15 @@ Subject to applicable law, you may be able to exercise any of the following righ
 - **Right to stop us from using your information:** This is known as the **"right to object"** and gives you the right to ask us to stop using your Personal Data when applicable.
 - **Rights relating to how we use your information to categorize you or make decisions about you:** This is known as the **"right in relation to automated decision-making and profiling":** You have the right to be free from decisions we may make that are based solely on automated processing of your Personal Data, including profiling, if they produce a significant legal effect on you, unless such decision-making or profiling is necessary for entering into or performing a contract between you and us, or is made with your explicit consent.
 - **Right to withdraw consent:** If we rely on your consent to use your Personal Data, you have the right to withdraw that consent at any time. This will not affect our use of your data before we received notice that you wished to withdraw your consent.
-- **Right to file a complaint with the supervisory authority:** If you have a concern about our privacy practices, including the way we handled your Personal Data, you can report it to the supervisory authority that is authorized to hear those concerns in your jurisdiction, although we invite you to [Contact Us](https://cm.azcentral.com/privacy#otnotice-section-4b7267ae-594a-4dff-b734-da7fe351004f) with any concern as we would be happy to try and resolve it directly.
+- **Right to file a complaint with the supervisory authority:** If you have a concern about our privacy practices, including the way we handled your Personal Data, you can report it to the supervisory authority that is authorized to hear those concerns in your jurisdiction, although we invite you to [Contact Us](contactus.md) with any concern as we would be happy to try and resolve it directly.
 
-You may exercise your rights by contacting us as indicated under the  [Contact Us](contactus.md) ” section below. To change your consent settings for our use of cookies and other technologies, please see our [Cookie Policy](cookies.md). 
+You may exercise your rights by contacting us as indicated under the  [Contact Us](contactus.md) ” section below. To change your consent settings for our use of cookies and other technologies, please see our [Cookie Policy](cookie-policy.md). 
 
 The requests above will be considered and responded to in the time period stated by applicable law. Certain information may be exempt from such requests. We may require additional information from you to confirm your identity in responding to such requests. 
 
 ## Legitimate Interests
 
-"Legitimate interests" means the interests of our company in conducting and managing our organization. For example, and without limitation, we have a legitimate interest in processing your Personal Data to analyze how the Media Property and our products and Services are being used, to administer our contractual relationships, fulfil legal obligations, process employee data, prevent fraud or criminal activity or misuse of our products or services, ensure the security of our IT systems, architecture and networks, and meet our corporate and social responsibility objectives, and/or effectively and efficiently operate our business and provide you with the services offered through our Services, as described in this Privacy Policy. When we process your Personal Data for our legitimate interests, we make sure to consider and balance any potential impact on you, and your rights under data protection laws. Our legitimate interests do not automatically override your interests. We will not use your Personal Data for activities where our interests are overridden by the impact on you, unless we have your consent or those activities are otherwise required or permitted to by law. You have the right to object to processing that is based on our legitimate interests. For more information on your rights, please see "[Your Rights](privacy.md#your-rights)" section above.
+"Legitimate interests" means the interests of our company in conducting and managing our organization. For example, and without limitation, we have a legitimate interest in processing your Personal Data to analyze how the Media Property and our products and Services are being used, to administer our contractual relationships, fulfil legal obligations, process employee data, prevent fraud or criminal activity or misuse of our products or services, ensure the security of our IT systems, architecture and networks, and meet our corporate and social responsibility objectives, and/or effectively and efficiently operate our business and provide you with the services offered through our Services, as described in this Privacy Policy. When we process your Personal Data for our legitimate interests, we make sure to consider and balance any potential impact on you, and your rights under data protection laws. Our legitimate interests do not automatically override your interests. We will not use your Personal Data for activities where our interests are overridden by the impact on you, unless we have your consent or those activities are otherwise required or permitted to by law. You have the right to object to processing that is based on our legitimate interests. 
 
 ## Data Transfers
 
@@ -214,7 +210,7 @@ This Privacy Policy for California Residents is provided by Citizens Oversight, 
 
 This Privacy Policy applies solely to the Personal Information (as defined below in Section 1) collected from consumers or users who reside in the State of California ("users," "consumers" or "you"). The California Consumer Privacy Act of 2018 ("CCPA") requires certain notice(s) and may provide specific rights to California residents, which are detailed below.
 
-By using the Media Property and/or the Services, and providing us with Personal Information you agree to the practices described in this Privacy Policy and the [Cookie Policy](https://cm.azcentral.com/cookie-policy) referenced below and to the updates to these policies posted here from time to time. To make sure you stay informed of all changes, you should check these policies periodically. Updates will be referenced by the "Last Updated" date shown above.
+By using the Media Property and/or the Services, and providing us with Personal Information you agree to the practices described in this Privacy Policy and the [Cookie Policy](cookie-policy.md) referenced below and to the updates to these policies posted here from time to time. To make sure you stay informed of all changes, you should check these policies periodically. Updates will be referenced by the "Last Updated" date shown above.
 
 ## Definition of Personal Data
 
@@ -231,7 +227,7 @@ Personal Information for purposes of this Privacy Policy does not include:
 
 ## California "Shine the Light" Law/Your California Privacy Rights
 
-California Civil Code Section 1798.83, also known as the "Shine The Light" law, permits consumers who are California residents, to request and obtain from us once a year, free of charge, information about the categories of personal information (as defined in the Shine the Light law), if any, that we disclosed in the preceding calendar year to third parties for those third parties' direct marketing purposes. **Our disclosure requirements apply only if we share our consumers’ personal information with third parties for them to directly market their own products to those consumers, instead of assisting us with our own business.** If you are a California resident and would like to make such a request, contact us as provided in the "[Contact Us](#contactus)" section below.
+California Civil Code Section 1798.83, also known as the "Shine The Light" law, permits consumers who are California residents, to request and obtain from us once a year, free of charge, information about the categories of personal information (as defined in the Shine the Light law), if any, that we disclosed in the preceding calendar year to third parties for those third parties' direct marketing purposes. **Our disclosure requirements apply only if we share our consumers’ personal information with third parties for them to directly market their own products to those consumers, instead of assisting us with our own business.** If you are a California resident and would like to make such a request, contact us as provided in the "[Contact Us](contactus.md)" page.
 
 ## CCPA Disclosures and Rights; Do Not Sell
 
@@ -322,7 +318,7 @@ We may disclose your Personal Information to the following categories of other p
 - To an entity involved in the sale of our business
 - Third parties to whom you or your agents authorize us to disclose your Personal Information in connection with products or Services we provide to you
 
-In order to provide advertisements and content that are more relevant to you, we and our advertising and content providers may collect certain types of Personal Information when you use our Websites (such as, by way of example, your email, the IP address of your device, the identifier on your mobile device, or cookies stored on your device). We or our advertising and content providers may combine this information with other information we have, or that we collect through other sources, and may share the information we collect with third parties to provide interest based or targeted advertising. If you would like to opt out from this use, or for more information, please see our [Cookie Policy](https://cm.usatoday.com/cookie-policy) which includes links to specific third party opt-outs.
+In order to provide advertisements and content that are more relevant to you, we and our advertising and content providers may collect certain types of Personal Information when you use our Websites (such as, by way of example, your email, the IP address of your device, the identifier on your mobile device, or cookies stored on your device). We or our advertising and content providers may combine this information with other information we have, or that we collect through other sources, and may share the information we collect with third parties to provide interest based or targeted advertising. If you would like to opt out from this use, or for more information, please see our [Cookie Policy](cookie-policy.md) which includes links to specific third party opt-outs.
 
 **Your CCPA Privacy Rights and Choices**
 
@@ -332,32 +328,32 @@ California residents may have certain rights under the CCPA, many of which are s
 
 You have the right to request that we disclose certain information to you about our collection and use of your Personal Information over the past 12 months. After we receive and confirm your verifiable consumer request, we will disclose to you within the time required by the CCPA, the relevant information, which may include:
 
-- - - The categories of Personal Information we collected about you.
-    - The categories of sources for the Personal Information we collected about you.
-    - Our business or commercial purpose for collecting or selling that Personal Information.
-    - The categories of third parties with whom we share that Personal Information.
-    - The specific pieces of Personal Information we collected about you (also called a data portability request).
-    - If we sold your Personal Information, or disclosed your Personal Information for a business purpose, two separate lists disclosing:
+- The categories of Personal Information we collected about you.
+- The categories of sources for the Personal Information we collected about you.
+- Our business or commercial purpose for collecting or selling that Personal Information.
+- The categories of third parties with whom we share that Personal Information.
+- The specific pieces of Personal Information we collected about you (also called a data portability request).
+- If we sold your Personal Information, or disclosed your Personal Information for a business purpose, two separate lists disclosing:
 
-1. 1. 1. sales, identifying the Personal Information categories that each category of recipient purchased; and
-      2. disclosures for a business purpose, identifying the Personal Information categories that each category of recipient obtained.
+1. sales, identifying the Personal Information categories that each category of recipient purchased; and
+2. disclosures for a business purpose, identifying the Personal Information categories that each category of recipient obtained.
 
 (b) Right to Request Deletion of Personal Information
 
 You have the right to request that we delete any of your Personal Information that we collected from you and retained, subject to certain exceptions, including if we need the Personal Information for a reason related to our business, such as:
 
-1. 1. 1. providing goods or Services to you;
-      2. detecting and resolving issues related to security or functionality;
-      3. complying with legal obligations;
-      4. conducting research in the public interest;
-      5. exercising free speech or ensuring another’s exercise of free speech; or
-      6. using the information for internal purposes that a consumer might reasonably expect.
+1. providing goods or Services to you;
+2. detecting and resolving issues related to security or functionality;
+3. complying with legal obligations;
+4. conducting research in the public interest;
+5. exercising free speech or ensuring another’s exercise of free speech; or
+6. using the information for internal purposes that a consumer might reasonably expect.
 
 After we receive and confirm your verifiable consumer request, we will delete your Personal Information from our records in the time and manner required by the CCPA, subject to any limitations or exceptions under law.
 
 **Exercising Your Rights**
 
-To exercise the rights described above, please submit a verifiable consumer request to us through the web form link provided below in [Contact Us.](https://cm.azcentral.com/privacy-policy#otnotice-section-bc511b5a-aa58-4b19-a51c-5083c6006eda)
+To exercise the rights described above, please submit a verifiable consumer request to us through the web form link provided below in [Contact Us.](contactus.md)
 
 You may only make a verifiable consumer request for access or data portability twice within a 12-month period.
 
@@ -390,35 +386,13 @@ We will not discriminate against you for exercising any of your CCPA rights. In 
 
 We may offer you certain financial incentives for the collection of your Personal Information and as permitted by the CCPA. These incentives may result in different prices, rates, or quality levels. Any CCPA-permitted financial incentive we offer will reasonably relate to your Personal Information’s value and contain written terms that describe the program’s material aspects. Participation in a financial incentive program requires your prior opt in consent, which you may revoke at any time. Details of the incentive, if applicable, including how to opt in or out and the basis for the value of the incentive, will be provided prior to or at the time of your participation.
 
-**Do Not Sell My Personal Information.**
-
-The CCPA requires businesses to provide a web page where consumers can opt out of the ''sale" of their Personal Information. California residents may exercise there "Do Not Sell" Right by clicking on the **Do Not Sell** button below.
-
-
-
-In addition, you may opt out of certain interest-based advertising by using the following resources:
-
-(a) You may opt-out of tracking and receiving tailored advertisements on your mobile device by some mobile advertising companies and other similar entities by downloading the App Choices app at [www.aboutads.info/appchoices](https://www.aboutads.info/appchoices).
-
-(b) You may opt-out of receiving permissible targeted advertisements by using the [NAI Opt-out tool](http://www.networkadvertising.org/choices/) available at [optout.networkadvertising.org](https://optout.networkadvertising.org/?c=1) or visiting [About Ads](https://optout.aboutads.info/).
-
-(c) You may opt-out of having your activity on our Websites and Services made available to Google Analytics by installing the Google Analytics opt-out add-on for your web browser by visiting: [tools.google.com/dlpage/gaoptout](https://tools.google.com/dlpage/gaoptout) for your web browser.
-
-(d) One of our providers, LiveRamp, Inc. collects certain Personal Information from you on our Websites, such as your email (in hashed form), IP address or information about your browser or operating system. LiveRamp then returns to us an online identification code that is associated with your Personal Information, and that we may store in our first-party cookie for our own use in online and cross-channel advertising across our Websites. It may also be shared with advertising companies to enable interest-based and targeted advertising. To opt out of this use by LiveRamp, please click here: https://optout.liveramp.com/opt_out.
-
 ## California Do Not Track Disclosures
 
-We do not currently respond to browser Do Not Track signals or other browser or device based mechanisms that provide a method to opt out of the collection of information across the networks of websites and online services in which we participate. Unless and until the law requires us to respond to browser Do Not Track signals, we will not respond to those signals as an opt out, but if we do so in the future, we will describe how we do so here. However, we do provide consumers with the ability to manage their cookie choices as described in our [Cookie Policy](https://cm.azcentral.com/cookie-policy). For more information on Do Not Track, please visit [allaboutdnt.com](https://allaboutdnt.com/).
-
-## Do we use "Cookies"?
-
-Yes. Cookies and similar technologies are small files that a website or its service provider transfers to a computer’s hard drive through a Web browser (if the user allows) that enables the website’s or service provider’s systems to recognize the user’s browser and capture and remember certain information.
-
-In general, we and our third party providers and advertisers, use cookies and other technologies to optimize the functionality of the Websites, to help us understand how the Websites are used and to provide users with interest-based content or advertising based upon their browsing activities and interests. For more information about the cookies and other technologies that we, our affiliates and third party providers and advertisers use on our Websites, please read our [Cookie Policy](https://cm.azcentral.com/cookie-policy).
+We do not currently respond to browser Do Not Track signals or other browser or device based mechanisms that provide a method to opt out of the collection of information across the networks of websites and online services in which we participate. Unless and until the law requires us to respond to browser Do Not Track signals, we will not respond to those signals as an opt out, but if we do so in the future, we will describe how we do so here. However, we do provide consumers with the ability to manage their cookie choices as described in our [Cookie Policy](cookie-policy.md). For more information on Do Not Track, please visit [allaboutdnt.com](https://allaboutdnt.com/).
 
 ## Security
 
-We use commercially reasonable procedures and various technical, administrative and physical safeguards to help protect the confidentiality of Personal Information. However, no data transmitted over the Internet or stored or maintained by us or our third-party service providers can be 100% secure given the reality of communication via technology systems. Therefore, although we believe the measures implemented by us are commercially reasonable and reduce the likelihood of security problems to a level appropriate to the type of data involved, we do not promise or guarantee, and you should not expect, that your Personal Information or private communications sent to us over those systems will always remain private or secure. We are not responsible for the circumvention of any privacy settings or security features. If you believe that your Personal Information has been accessed or acquired by an unauthorized person, please promptly [Contact Us](https://cm.azcentral.com/privacy-policy#otnotice-section-bc511b5a-aa58-4b19-a51c-5083c6006eda) so that necessary measures can quickly be taken.
+We use commercially reasonable procedures and various technical, administrative and physical safeguards to help protect the confidentiality of Personal Information. However, no data transmitted over the Internet or stored or maintained by us or our third-party service providers can be 100% secure given the reality of communication via technology systems. Therefore, although we believe the measures implemented by us are commercially reasonable and reduce the likelihood of security problems to a level appropriate to the type of data involved, we do not promise or guarantee, and you should not expect, that your Personal Information or private communications sent to us over those systems will always remain private or secure. We are not responsible for the circumvention of any privacy settings or security features. If you believe that your Personal Information has been accessed or acquired by an unauthorized person, please promptly [Contact Us](contactus.md) so that necessary measures can quickly be taken.
 
 ## Third Party Links
 
@@ -432,36 +406,15 @@ Your Personal Information may be stored, transferred to, and processed in any co
 
 We may aggregate and/or de-identify any information collected through the Websites and Services so that such information can no longer be linked to you or your device ("Aggregate/De-Identified Information"). We may use Aggregate/De-Identified Information for any purpose, including without limitation for research and marketing purposes, and may also share such data with any third parties, including advertisers, promotional partners, and sponsors, in our discretion.
 
-## Do Not Sell My Personal Information.
+## Do Not Sell My Personal Information
 
 In general, the Websites and Services are not intended for use by children under the age of 13, or 16 where applicable. In cases where certain Websites or Services are intended for use by children under the age of 13 (or 16 where applicable), we will post appropriate notices and take steps as required by applicable law to safeguard children's data. In addition, we do not knowingly collect Personal Information from children under the age of 13 (or 16 where applicable) through form submissions on our Websites or Services, although certain third party sites that we link to may do so. These third-party sites have their own terms of use and privacy policies and we encourage parents and legal guardians to monitor their children’s Internet usage and to help enforce our Privacy Policy by instructing their children to never provide information on our Websites without their permission.
 
 Involvement of parents: In accordance with the provisions of the Children’s Online Privacy Act, in the event that we do begin collecting any Personal Information or data from children under the age of 13 (or 16 where applicable), we will notify parents first, and will seek parental or guardian consent to collect, use and/or disclose certain Personal Information from children under the age of 13, or 16 where applicable. A parent may review and have deleted their child’s Personal Information, and may refuse to permit further collection or use of their child’s information by contacting us as noted at the end of this Privacy Policy. Parents may consent to our collection and use of their child’s Personal Information without consenting to the disclosure of that information to others.
 
-If you have reason to believe that a child under the age of 13 (or 16) has provided Personal Information "[Contact Us](https://cm.azcentral.com/privacy-policy#otnotice-section-bc511b5a-aa58-4b19-a51c-5083c6006eda)" below with sufficient detail to enable us to delete that information from our databases.
-
-## Accessibility
-
-Please see our Accessibility Support page at https://static.usatoday.com/accessibility/ if you experience any difficulty in accessing any part of this Website or this Policy. You may also contact us at [accessibility@usatoday.com](mailto:accessibility@usatoday.com).
+If you have reason to believe that a child under the age of 13 (or 16) has provided Personal Information "[Contact Us](contactus.md)" below with sufficient detail to enable us to delete that information from our databases.
 
 ## Changes to Our Privacy Policy
 
 We may amend this Privacy Policy at our discretion and at any time. When we make changes to this Privacy Policy, we will post the updated notice on our Websites and update the notice’s "Last Updated" date. Your continued use of our Website and/or Services following the posting of changes constitutes your acceptance of such changes.
 
-## Contact Us
-
-If you have any questions or comments about this Privacy Policy, the ways in which we collect and use your information described here, your choices and rights regarding such use, or you wish to exercise your rights under California law, please contact us as provided below:
-
-
-
-**PLEASE NOTE: YOU SHOULD ONLY CONTACT US AT THIS NUMBER AND EMAIL FORM FOR PRIVACY RELATED CONCERNS, AND NOT FOR EDITORIAL, SUBSCRIPTION OR CONTENT-BASED ISSUES INCLUDING TAKE-DOWN REQUESTS RELATING TO YOUR NAME OR IMAGE APPEARING IN NEWS STORIES. PLEASE SEE OUR CORPORATE [CONTACT US](https://www.gannett.com/contact/) PAGE INSTEAD FOR THOSE MATTERS.**
-
-
-
-To fill out a Data Information or Deletion Request, [click here](https://privacyportal-cdn.onetrust.com/dsarwebform/5b4b73e5-9c9c-4c5c-82c1-9389c9e42f1c/a1f2900f-24b5-4039-a406-fd6c1b1a07eb.html?anonymous-id=aad70776-9c76-11eb-8231-86c24a4fec4f&client-id=26091daf-876a-4604-99df-0aadc80c952e)
-
-Do Not Sell My Personal Information: [click here](https://privacyportal-cdn.onetrust.com/dsarwebform/5b4b73e5-9c9c-4c5c-82c1-9389c9e42f1c/d67dd2ff-2806-409f-95ea-5adfb78643bb.html?anonymous-id=aad70776-9c76-11eb-8231-86c24a4fec4f&client-id=26091daf-876a-4604-99df-0aadc80c952e)
-
-Call us at 1 (844) 510-3710 (California residents only)
-
-For additional information and other non-privacy requests, at [contact us](https://www.gannett.com/contact/).

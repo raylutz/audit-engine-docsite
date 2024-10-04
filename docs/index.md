@@ -44,8 +44,8 @@ First, the data must be assembled for use by AuditEngine. Most of this is alread
     - It is essential that this equipment be set so the ballot images are not deleted after they are used to extract the vote. 
     - These images are then transferred to the Election Management System (EMS) from voter-facing scanners using flash media or from central scan operations using similar methods.
     - The EMS can export the ballot images for use by AuditEngine. These should be placed into ZIP archives with about 30,000 to 50,000 ballots per archive. 
-    - Please see [exporting_guide.md](exporting guide) for step-by-step guides for exporting Ballot Images from popular voting systems.
-    - The ballot images are then uploaded to our datacenter so we can process them using thousands of computers in parallel. See [uploading_guilde.md](uploading guide) for instructions.
+    - Please see [exporting guide](user-guide/exporting_guide.md) for step-by-step guides for exporting Ballot Images from popular voting systems.
+    - The ballot images are then uploaded to our datacenter so we can process them using thousands of computers in parallel. See [uploading guide](user-guide/uploading_guide.md) for instructions.
 - **Cast Vote Records (CVRs):**
     - Officials can produce cast-vote-record files (CVRs) which lists the results of their interpretation of the ballots. 
     - AuditEngine currently supports the ES&S format and the Dominion format.
@@ -56,7 +56,7 @@ First, the data must be assembled for use by AuditEngine. Most of this is alread
 - **Ballot Style Masters:**
 
    - It is necessary for us to generate a map of the targets (ovals) on hand-marked paper ballots and what they mean. To do this with the least opportunity for human error, we can parse the ballot style master PDF files. These are the files actually sent to the printing contractor, and must have all barcode information included, and be in "searchable" PDF format. 
-   - Please see [exporting_guide](user-guide/exporting guide.md) for step-by-step guides for exporting Ballot Style Masters from popular voting systems.
+   - Please see [exporting guide](user-guide/exporting_guide.md) for step-by-step guides for exporting Ballot Style Masters from popular voting systems.
 
 - **Election Information File (EIF):** 
      - Our system requires additional information regarding the information actually printed on the ballots. This we can generally generate automatically by parsing the CVRs files. 

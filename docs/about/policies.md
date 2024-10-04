@@ -1,6 +1,6 @@
 <img src="https://copswiki.org/w/pub/Common/AuditEngine/AuditEngineLogo.png" alt="AuditEngineLogo.png" width=300 />
 
-## Terms of Service
+## Terms of Use
 
 By using our website, mobile site or app (the "Site"), you agree to be bound by these Terms of Service and to use the Site in accordance with these Terms of Service, our [Privacy Notice](privacy.md), and any additional terms and conditions that are referenced herein or that otherwise may apply to specific sections of the Site, or to products and services that we make available to you through the Site (all of which are deemed part of these Terms of Service). Accessing the Site, in any manner, whether automated or otherwise, constitutes use of the Site and your agreement to be bound by these Terms of Service. Your accessing the Site for the limited and exclusive purpose of reviewing these Terms of Service does not constitute your "use" of the Site or agreement to be bound by these Terms of Service unless you further access or use the Site.
 
@@ -20,21 +20,15 @@ We also reserve the right to deny access to the Site or any features of the Site
 
 **Our Right to Use Materials You Submit or Post.** When you submit or post any material via the Site, you grant us, and anyone authorized by us, a royalty-free, perpetual, irrevocable, non-exclusive, unrestricted, worldwide license to use, copy, modify, transmit, sell, exploit, create derivative works from, distribute, and/or publicly perform or display such material, in whole or in part, in any manner or medium (whether now known or hereafter developed), for any purpose that we choose. The foregoing grant includes the right to exploit any proprietary rights in such posting or submission, including, but not limited to, rights under copyright, trademark or patent laws that exist in any relevant jurisdiction. Also, in connection with the exercise of these rights, you grant us, and anyone authorized by us, the right to identify you as the author of any of your postings or submissions by name, email address or screen name, as we deem appropriate. You understand that the technical processing and transmission of the Site, including content submitted by you, may involve transmissions over various networks, and may involve changes to the content to conform and adapt it to technical requirements of connecting networks or devices. You will not receive any compensation of any kind for the use of any materials submitted by you.
 
-
-
 **Limitations on Linking and Framing.** You are free to establish a hypertext link to our Site so long as the link does not state or imply any sponsorship of your website or service by us or by our Site. However, you may not, without our prior written permission, frame or inline link any of the content of our Site, or incorporate into another website or other service any of our material, content or intellectual property.
-
-
-
-**Limitations on Use of Associated Press Materials.** Some of the material available on this Site is provided by the Associated Press. By using this Site you agree and acknowledge that (1) you will not publish, display, broadcast, or rewrite for broadcast or publication, or redistribute, directly or indirectly in any medium, any Associated Press text, photo, graphic, audio, and/or video material; and (2) no Associated Press materials nor any portion thereof may be stored in a computer except for personal and non-commercial use. The Associated Press will not be held liable for any delays, inaccuracies, errors or omissions in its materials or in the transmission or delivery of all or any part of its materials, or for any damages arising from any of the foregoing. In addition to those set forth in this paragraph, the Associated Press may impose other terms and conditions on the use of its materials. Please[ click here](http://www.ap.org/termsandconditions/) for more information.
 
 ## Access to Certain Features of Our Site
 
-To access certain features of our Site, we may ask you to provide certain demographic information including your gender, year of birth, zip code and country. In addition, if you elect to sign-up for a particular feature of the Site, such as discussion forums, blogs, photo- and video-sharing pages or social networking features, you may also be asked to register with us on the form provided and such registration may require you to provide information such as your name and email address. You agree to provide true, accurate, current and complete information about yourself as prompted by the Site's registration form. If we have reasonable grounds to suspect that such information is untrue, inaccurate, or incomplete, we have the right to suspend or terminate your account and refuse any and all current or future use of the Site (or any portion thereof). Our use of any information you provide to us as part of the registration process is governed by the terms of our [Privacy Notice](https://cm.azcentral.com/privacy).
+To access certain features of our Site, we may ask you to provide certain demographic information including your gender, year of birth, zip code and country. In addition, if you elect to sign-up for a particular feature of the Site, such as discussion forums, blogs, photo- and video-sharing pages or social networking features, you may also be asked to register with us on the form provided and such registration may require you to provide information such as your name and email address. You agree to provide true, accurate, current and complete information about yourself as prompted by the Site's registration form. If we have reasonable grounds to suspect that such information is untrue, inaccurate, or incomplete, we have the right to suspend or terminate your account and refuse any and all current or future use of the Site (or any portion thereof). Our use of any information you provide to us as part of the registration process is governed by the terms of our [Privacy Notice](privacy.md).
 
 ## Privacy
 
-We respect the privacy of the users of our Site. Please review our [Privacy Notice](https://cm.azcentral.com/privacy). These Terms include and fully incorporate our Privacy notice.
+We respect the privacy of the users of our Site. Please review our [Privacy Notice](privacy.md). These Terms include and fully incorporate our Privacy notice.
 
 ## Responsibility for Your Username and Password
 
@@ -44,49 +38,17 @@ To use certain features of our Site, you will need a username and password to cr
 
 Certain sections of this Site may allow you to purchase different types of products and services online that are provided by third parties. We are not responsible for the quality, accuracy, timeliness, reliability or any other aspect of these products and services. If you make a purchase from a merchant on our Site, or on a third-party website that you have accessed via a link on our Site, the information obtained during your visit to that merchant's online store or site, and the information that you give as part of the transaction, such as your credit card number and contact information, may be collected by both the merchant and us. A merchant may have privacy and data collection practices that are different from ours. We have no responsibility or liability for these independent policies. In addition, when you purchase products or services on or through the Site, you may be subject to additional terms and conditions that specifically apply to your purchase or use of such products or services. For more information regarding a merchant, its online store, its privacy policies, and/or any additional terms and conditions that may apply, visit that merchant's website and click on its information links or contact the merchant directly. You release us and our affiliates from any damages that you incur, and agree not to assert any claims against us or any of our affiliates, arising from your purchase or use of any products or services made available by third parties through the Site.
 
-
-
 You agree to be financially responsible for all purchases made by you or someone acting on your behalf through the Site. You agree to use the Site, and to purchase services or products through the Site, for legitimate, non-commercial purposes only. You also agree not to make any purchases for speculative, false or fraudulent purposes or for the purpose of anticipating demand for a particular product or service. You agree to only purchase goods or services for yourself or for another person for whom you are legally permitted to do so. When making a purchase for a third party that requires you to submit the third party's personal information to us or a merchant, you represent that you have obtained the express consent of such third party to provide such third party's personal information.
 
 ## Responsibility for User-Provided Content
 
-This Site may include a variety of features, such as discussion forums, blogs, photo- and video-sharing pages, email services and social networking features that allow feedback to us and allow users to interact with each other on the Site and post content and materials for display on the Site. This Site also may include other features, such as personalized home pages and email services, that allow users to communicate with third parties. By accessing and using any such features, you represent and agree: (i) that you have read and agree to abide by our [Community Rules](https://cm.azcentral.com/community) ; (ii) that you are the owner of any material you post or submit, or are making your posting or submission with the express consent of the owner of the material; (iii) that you are making your posting or submission with the express consent of anyone pictured in any material you post or submit, (iv) that you are 13 years of age or older; (v) that the materials will not violate the rights of, or cause injury to, any person or entity; and (vi) that you will indemnify and hold harmless us, our affiliates, and each of our and their respective directors, officers, managers, employees, shareholders, agents, representatives and licensors, from and against any liability of any nature arising out of related to any content or materials displayed on or submitted via the Site by you or by others using your username and password. You also grant us a license to use the materials you post or submit via such features, as described above under the header ["Rights and Restrictions Relating to Site Content."](https://cm.azcentral.com/terms/#rights)
-
-
+This Site may include a variety of features, such as discussion forums, blogs, photo- and video-sharing pages, email services and social networking features that allow feedback to us and allow users to interact with each other on the Site and post content and materials for display on the Site. This Site also may include other features, such as personalized home pages and email services, that allow users to communicate with third parties. By accessing and using any such features, you represent and agree: (i) that you have read and agree to abide by our privacy policy; (ii) that you are the owner of any material you post or submit, or are making your posting or submission with the express consent of the owner of the material; (iii) that you are making your posting or submission with the express consent of anyone pictured in any material you post or submit, (iv) that you are 13 years of age or older; (v) that the materials will not violate the rights of, or cause injury to, any person or entity; and (vi) that you will indemnify and hold harmless us, our affiliates, and each of our and their respective directors, officers, managers, employees, shareholders, agents, representatives and licensors, from and against any liability of any nature arising out of related to any content or materials displayed on or submitted via the Site by you or by others using your username and password.
 
 Responsibility for what is posted on discussion forums, blogs, photo- and video-sharing pages, and other areas on the Site through which users can supply information or material, or sent via any email services that are made available via the Site, lies with each user – you alone are responsible for the material you post or send. We are not responsible for the speech, content, messages, information or files that you or others may transmit, post or otherwise provide on or through the Site.
 
-
-
 You understand that we have no obligation to monitor any discussion forums, blogs, photo- or video-sharing pages, or other areas of the Site through which users can supply information or material. However, we reserve the right at all times, in our sole discretion, to screen content submitted by users and to edit, move, delete, and/or refuse to accept any content that in our judgment violates these Terms of Service or is otherwise unacceptable or inappropriate, whether for legal or any other reasons.
 
-
-
 You acknowledge and agree that we may preserve content and materials submitted by you, and may also disclose such content and materials if required to do so by law or if, in our business judgment, such preservation or disclosure is reasonably necessary to: (a) comply with legal process; (b) enforce these Terms of Service; (c) respond to claims that any content or materials submitted by you violate the rights of third parties; or (d) protect the rights, property, or personal safety of our Site, us, our affiliates, our officers, directors, employees, representatives, our licensors, other users, and/or the public.
-
-## Classified Advertising
-
-All classified ads are subject to the applicable rate card, copies of which are available from our Advertising Dept. All ads are subject to approval before publication. The Site reserves the right to edit, refuse, reject, classify or cancel any ad at any time. Errors must be reported in the first day of publication.
-
-
-
-The Site shall not be liable for any loss or expense that results from an error in or omission of an advertisement. No refunds for early cancellation of order.
-
-
-
-When you submit a classified ad for publication on the Site, you agree that the advertisement as it appears on the Site becomes our property and you assign all ownership interest in the advertisement as it appears on the Site under copyright law or otherwise to us. Submission of an advertisement does not constitute a commitment to publish the advertisement, and publication of an advertisement does not constitute an agreement for continued publication. We will accept only standard abbreviations and require proper punctuation. We reserve the right to edit, reclassify, revise, reject or cancel any advertisement at any time, in our sole discretion. Rates and specifications for any advertisement are subject to change.
-
-## Real Estate Advertisements; Equal Housing Opportunity
-
-The Federal Fair Housing Act makes it illegal to advertise "any preference, limitation, or discrimination because of race, color, religion, sex, handicap, familial status, or national origin, or intention to make any such preference, limitation, or discrimination." State law may also forbid discrimination based on these factors and others. We will not knowingly accept any advertising for real estate which is in violation of the law. All persons are hereby informed that all dwellings advertised are available on an equal opportunity basis. To complain of discrimination call the U.S. Department of Housing and Urban Development at 800-669-9777.
-
-## Job Listings
-
-Our Site may permit users to post, and search for, job openings. We do not knowingly accept listings regarding employment that are not for bona fide job opportunities. We also do not knowingly accept listings that discriminate or intend to discriminate on any illegal basis, or that are otherwise illegal. If you think that a listing posted on our Site discriminates on any illegal basis, or is otherwise illegal, please contact us. We encourage you to investigate fully and understand all aspects of any job you are considering.
-
-## Limitation on Use of Company Directories
-
-The information contained in any company directories that may be provided on the Site is provided for business lookup purposes and is not to be used for marketing or telemarketing applications. This information may not be copied or redistributed and is provided "AS IS" without warranty of any kind. In no event will we or our suppliers be liable in any way with regard to such information.
 
 ## Modifications to, or Discontinuation of, the Site
 
@@ -96,27 +58,15 @@ We reserve the right at any time and from time to time to modify or discontinue,
 
 Throughout our Site, we have provided links and pointers to Internet sites maintained by third parties. Our linking to such third-party sites does not imply an endorsement or sponsorship of such sites, or the information, products or services offered on or through the sites. In addition, neither we nor our parent or subsidiary companies nor any of our respective affiliates operate or control in any respect any information, products or services that third parties may provide on or through the Site or on websites linked to by us on the Site.
 
-
-
 THE INFORMATION, PRODUCTS AND SERVICES OFFERED ON OR THROUGH THE SITE AND ANY THIRD-PARTY SITES ARE PROVIDED "AS IS" AND WITHOUT WARRANTIES OF ANY KIND EITHER EXPRESS OR IMPLIED. TO THE FULLEST EXTENT PERMISSIBLE PURSUANT TO APPLICABLE LAW, WE DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. WE DO NOT WARRANT THAT THE SITE OR ANY OF ITS FUNCTIONS WILL BE UNINTERRUPTED OR ERROR-FREE, THAT DEFECTS WILL BE CORRECTED, OR THAT ANY PART OF THIS SITE, INCLUDING BULLETIN BOARDS, OR THE SERVERS THAT MAKE IT AVAILABLE, ARE FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS.
-
-
 
 WE DO NOT WARRANT OR MAKE ANY REPRESENTATIONS REGARDING THE USE OR THE RESULTS OF THE USE OF THE SITE OR MATERIALS ON THIS SITE OR ON THIRD-PARTY SITES IN TERMS OF THEIR CORRECTNESS, ACCURACY, TIMELINESS, RELIABILITY OR OTHERWISE.
 
-
-
 YOU ACKNOWLEDGE THAT THE PROVISIONS OF THIS SECTION ARE A MATERIAL INDUCEMENT AND CONSIDERATION TO US TO GRANT THE LICENSE CONTAINED IN THIS TERMS OF SERVICE AND TO PROVIDE YOU WITH ACCESS TO THE SITE AND SERVICES.
-
-
 
 You must provide and are solely responsible for all hardware and/or software necessary to access the Site. You assume the entire cost of and responsibility for any damage to, and all necessary maintenance, repair or correction of, that hardware and/or software.
 
-
-
 You acknowledge that by using the Site, you may incur charges from your wireless carrier, internet service provider or other method of internet or data access, and that payment of any such charges will be your sole responsibility. You agree that your use of the Site will be in accordance with all requirements of your wireless carrier, internet service provider and other method of internet or data access. We do not control network access. Your use of these networks may not be secure and may expose your personal information sent over such networks.
-
-
 
 The Site is provided for informational purposes only, and is not intended for trading or investing purposes, or for commercial use. Stock and mutual fund quotes, and related financial news stories may be delayed at least 20 minutes, as may be required by the stock exchanges and/or the financial information services. The Site should not be used in any high risk activities where damage or injury to persons, property, environment, finances or business may result if an error occurs. You expressly assume all risk for such use.
 
@@ -138,7 +88,7 @@ You agree that, in our sole discretion, we may suspend or terminate your passwor
 
 ## Notice of Copyright Infringement
 
-If you are a copyright owner who believes your copyrighted material has been reproduced, posted or distributed via the Site in a manner that constitutes copyright infringement, please inform our designated copyright agent by sending written notice by U.S. Mail to Gannett Co., Inc., 7950 Jones Branch Drive, McLean, VA 22107, Attn: M. Faris, or by email to mfaris@gannett.com. Please include the following information in your written notice: (1) a detailed description of the copyrighted work that is allegedly infringed upon; (2) a description of the location of the allegedly infringing material on the Site; (3) your contact information, including your address, telephone number, and, if available, email address; (4) a statement by you indicating that you have a good-faith belief that the allegedly infringing use is not authorized by the copyright owner, its agent, or the law; (5) a statement by you, made under penalty of perjury, affirming that the information in your notice is accurate and that you are authorized to act on the copyright owner's behalf; and (6) an electronic or physical signature of the copyright owner or someone authorized on the owner's behalf to assert infringement of copyright and to submit the statement. Please note that the contact information provided in this paragraph is for suspected copyright infringement only. Contact information for other matters is provided elsewhere in these Terms of Service or on the Site.
+If you are a copyright owner who believes your copyrighted material has been reproduced, posted or distributed via the Site in a manner that constitutes copyright infringement, please inform our designated copyright agent by sending written notice by U.S. Mail to Citizens Oversight, 771 Jamacha Rd, Suite 148, El Cajon, CA 92019. Please include the following information in your written notice: (1) a detailed description of the copyrighted work that is allegedly infringed upon; (2) a description of the location of the allegedly infringing material on the Site; (3) your contact information, including your address, telephone number, and, if available, email address; (4) a statement by you indicating that you have a good-faith belief that the allegedly infringing use is not authorized by the copyright owner, its agent, or the law; (5) a statement by you, made under penalty of perjury, affirming that the information in your notice is accurate and that you are authorized to act on the copyright owner's behalf; and (6) an electronic or physical signature of the copyright owner or someone authorized on the owner's behalf to assert infringement of copyright and to submit the statement. Please note that the contact information provided in this paragraph is for suspected copyright infringement only. Contact information for other matters is provided elsewhere in these Terms of Service or on the Site.
 
 ## Restrictions
 
@@ -146,8 +96,6 @@ The Site is intended for use only by residents of the United States over the age
 
 ## Other
 
-This agreement constitutes the entire agreement between us and you with respect to the subject matter contained in this agreement and supersedes all previous and contemporaneous agreements, proposals and communications, written oral. You also may be subject to additional terms and conditions that may apply when you use the products or services of a third party that are provided through the Site. In the event of any conflict between any such third-party terms and conditions and these Terms of Service, these Terms of Service will govern. This agreement will be governed by and construed in accordance with the laws of the State of New York, without giving effect to any principles of conflicts of law.
-
-
+This agreement constitutes the entire agreement between us and you with respect to the subject matter contained in this agreement and supersedes all previous and contemporaneous agreements, proposals and communications, written oral. You also may be subject to additional terms and conditions that may apply when you use the products or services of a third party that are provided through the Site. In the event of any conflict between any such third-party terms and conditions and these Terms of Service, these Terms of Service will govern. This agreement will be governed by and construed in accordance with the laws of the State of California, without giving effect to any principles of conflicts of law.
 
 This agreement is personal to you and you may not assign it to anyone. If any provision of this agreement is found to be unlawful, void, or for any reason unenforceable, then that provision will be deemed severable from this agreement and will not affect the validity and enforceability of any remaining provisions. These Terms of Service are not intended to benefit any third party, and do not create any third party beneficiaries. Accordingly, these Terms of Service may only be invoked or enforced by you or us. You agree that regardless of any statute or law to the contrary, any claim or cause of action that you may have arising out of or related to use of the Site or these Terms of Service must be filed by you within one year after such claim or cause of action arose or be forever barred.

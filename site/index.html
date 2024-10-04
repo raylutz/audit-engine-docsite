@@ -8,14 +8,14 @@
       
       
       
-        <link rel="canonical" href="https://auditengine.org/">
+        <link rel="canonical" href="https://auditengine.org/docs/">
       
       
       
         <link rel="next" href="audit-results/case-study/">
       
       
-      <link rel="icon" href="https://mapper.auditengine.org/assets/images/A.png">
+      <link rel="icon" href="assets/images/A.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.31">
     
     
@@ -499,6 +499,8 @@
       
         
       
+        
+      
     
     
     
@@ -639,27 +641,6 @@
   
   
     <li class="md-nav__item">
-      <a href="user-guide/hart_exporting_guide/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Hart Exporting Guide
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="user-guide/sending_data/" class="md-nav__link">
         
   
@@ -707,6 +688,48 @@
   
   <span class="md-ellipsis">
     ScanEngine App
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="user-guide/targetmapper_app/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TargetMapper App
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="user-guide/adjudicator_app/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AdjudiTally App
   </span>
   
 
@@ -1098,8 +1121,8 @@
 
   <h1>Home</h1>
 
-<p><link rel="icon" type="image/x-icon" href="https://mapper.auditengine.org/assets/images/A.png">
-<img src="https://copswiki.org/w/pub/Common/AuditEngine/AuditEngineLogo.png" alt="AuditEngineLogo.png" width='300' /></p>
+<p><link rel="icon" type="image/x-icon" href="https://auditengine.org/docs/assets/images/A.png">
+<img src="images/AuditEngineLogo.png" alt="AuditEngineLogo.png" width='300' /></p>
 <p>AuditEngine is an election auditing platform which performs "Ballot Image Auditing". Relatively high-resolution ballot images are now captured by voting machine scanners used in polling places or central count operations. AuditEngine processes these ballot images to create an independent tabulation, and then it compares with the official cast-vote record files and can provide detailed reports which detail any discrepancy between the official records and our independent tabulation.</p>
 <h2 id="primary-links">Primary Links</h2>
 <ul>
@@ -1136,8 +1159,8 @@
 <li>It is essential that this equipment be set so the ballot images are not deleted after they are used to extract the vote. </li>
 <li>These images are then transferred to the Election Management System (EMS) from voter-facing scanners using flash media or from central scan operations using similar methods.</li>
 <li>The EMS can export the ballot images for use by AuditEngine. These should be placed into ZIP archives with about 30,000 to 50,000 ballots per archive. </li>
-<li>Please see <a href="exporting guide">exporting_guide.md</a> for step-by-step guides for exporting Ballot Images from popular voting systems.</li>
-<li>The ballot images are then uploaded to our datacenter so we can process them using thousands of computers in parallel. See <a href="uploading guide">uploading_guilde.md</a> for instructions.</li>
+<li>Please see <a href="user-guide/exporting_guide">exporting guide</a> for step-by-step guides for exporting Ballot Images from popular voting systems.</li>
+<li>The ballot images are then uploaded to our datacenter so we can process them using thousands of computers in parallel. See <a href="uploading_guide">uploading guide</a> for instructions.</li>
 </ul>
 </li>
 <li>
@@ -1157,7 +1180,7 @@
 <p>It is necessary for us to generate a map of the targets (ovals) on hand-marked paper ballots and what they mean. To do this with the least opportunity for human error, we can parse the ballot style master PDF files. These are the files actually sent to the printing contractor, and must have all barcode information included, and be in "searchable" PDF format. </p>
 </li>
 <li>
-<p>Please see <a href="user-guide/exporting guide.md">exporting_guide</a> for step-by-step guides for exporting Ballot Style Masters from popular voting systems.</p>
+<p>Please see <a href="exporting_guide">exporting guide</a> for step-by-step guides for exporting Ballot Style Masters from popular voting systems.</p>
 </li>
 <li>
 <p><strong>Election Information File (EIF):</strong> </p>
@@ -1187,7 +1210,7 @@
 </ul>
 <h3 id="guides">Guides:</h3>
 <ul>
-<li><a href="user-guide/exporting_guide/">Exporting Guide</a> -- Guide for election staff to export ballot images, Cast-vote records, and Ballot Style Masters from ES&amp;S, Dominion, or Hart systems.</li>
+<li><a href="exporting_guide">Exporting Guide</a> -- Guide for election staff to export ballot images, Cast-vote records, and Ballot Style Masters from ES&amp;S, Dominion, or Hart systems.</li>
 <li><a href="user-guide/dom_exporting_guide/">Dominion Exporting Guide</a> -- step-by-step instructions for exporting ballot images, cast vote records, and ballot style masters from the Dominion voting system.</li>
 <li><a href="user-guide/ess_exporting_guide/">ES&amp;S Exporting Guide</a> -- step-by-step instructions for exporting ballot images, cast vote records, and ballot style masters from the Election Software &amp; Systems (ES&amp;S) voting system.</li>
 <li><a href="user-guide/hart_exporting_guide/">Hart Exporting Guide</a> -- step-by-step instructions for exporting ballot images, cast vote records, and ballot style masters from the Hart InterCivic voting system.</li>

@@ -11,5 +11,11 @@ AuditEngine is a project by CitizensOversight, a 501(c)3 nonpartisan nonprofit o
    Citizens Oversight
    771 Jamacha Rd, #148
    El Cajon, CA 92019
-
 - Email: support@auditengine.org
+
+## Policies
+
+- [General Policies](policies.md)
+- [Privacy Policies](privacy.md)
+- [Cookie Policy](cookie-policy.md)
+

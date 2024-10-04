@@ -18,7 +18,7 @@ The volunteers and staff of Citizens' Oversight Projects (COPs) conducted three 
 In this case, we of course found that there were many missing ballot images in Fulton County, (380,000) and we found 5 ballots from the preceding primary (which is pretty strange, because the ballots were a little longer physically in that election), and we found 5 ballots from DeKalb county, which is next door.
 
 ## Background Document:
-   * [Background Document](/user-guide/auditengine-background-doc/) -- Review this background document to become acquainted with general concepts and operational principles of AuditEngine 
+   * [Background Document](../user-guide/auditengine-background-doc.md) -- Review this background document to become acquainted with general concepts and operational principles of AuditEngine 
 
 ## Bartow, GA:
 

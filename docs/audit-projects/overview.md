@@ -19,14 +19,4 @@ In each state, we try to focus on the most populous counties, because of their o
 
 AuditEngine is primarily a ballot image auditing system, and that means the ballot images must be available. Of the most populous counties in the U.S., 97% use equipment that makes ballot images as a part of their normal processing steps. But not all states provide that ballot images are accessible as public records, and some counties routinely delete the ballot images. For those cases when we offer our services directly to county governments, we can keep the ballot images secured for the vast majority of the ballots unless they require adjudication.
 
-## Current Projects
-
-- [Georgia](GA_2020.md) -- top 27 counties out of 159 (17%) includes 70% of the electorate
-    - Recent changes in state law provides that all ballot images are available, and we have obtained more than half of them as of this writing.
-- [Wisconsin](WI_2020.md) -- top 18 counties out of 72 (25%) includes 70% of the electorate.  [Donate to WI audits Now!](https://engine.auditengine.org/projects/WI_20201103)
-    - Ballot images are public records and counties are cooperative.
-- [Florida](FL_2020.md) -- top 20 counties out of 67 (29%) includes 80% of the electorate
-    - Ballot images are public records, but many counties do not save them.
-    - We have conducted a [three-county case study](audit-results/case_study.md), including Volusia, Collier and St. Lucie counties.
-- [Arizona](AZ_2020.md), Maricopa County -- This single county out of 15 includes 60% of the electorate.
-    - Ballot images are not easily available but we are still working to get them.
+Please see a summary of completed Audit Projects at this link: https://auditengine.org/projects

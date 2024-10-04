@@ -67,16 +67,15 @@ It is recommended that you both email this in, and if you are local to the offic
 
 We have the following guides to help them export and provide the data to AuditEngine.
 
-- [Dominion Exporting Guide](user-guide/dom_exporting_guide.md)
+- [Dominion Exporting Guide](dom_exporting_guide.md)
 
-- [ES&S Exporting Guide](user-guide/ess_exporting_guide.md)
+- [ES&S Exporting Guide](ess_exporting_guide.md)
 
-- [Hart Exporting Guide](user-guide/hart_exporting_guide.md)
+- [Hart Exporting Guide](hart_exporting_guide.md)
 
 ### Sending the data to AuditEngine
 
 - [Sending Election Data to AuditEngine](sending_data.md) -- Includes:
-
   - Archiving the Data
   - Creating a Hash Manifest File
   - Providing the data:

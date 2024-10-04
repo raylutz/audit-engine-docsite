@@ -11,7 +11,7 @@ A general set of election terminology can be found at this URL: [https://www.eac
 <h3 id="adaptive-thresholding">Adaptive Thresholding</h3>
 
 
-AuditEngine uses a methodology called "adaptive thresholding" which can adjust the mark recognition thresholds based on the habits of the voter and the darkness of the scanned image. This methodology is used when marks are recognized from the ballot, and determines whether there is a mark at the target location. But it does not work if there are very few targets on the ballot, or if there are very few marks by the voter, and in those cases it is not used. See also _[Evaluation Heuristics](#evaluation-heuristics)_ which are used to evaluate whether the marks resolve into votes whether the contest is _[Overvoted](#overvote)_ or _[Undervoted](#undervote)_. AuditEngine uses sets of larger and smaller evaluation areas to catch most circles and checks that are outside the _[Target](#targets)_ symbol but are obvious voter intent.
+AuditEngine uses a methodology called "adaptive thresholding" which can adjust the mark recognition thresholds based on the habits of the voter and the darkness of the scanned image. This methodology is used when marks are recognized from the ballot, and determines whether there is a mark at the target location. But it does not work if there are very few targets on the ballot, or if there are very few marks by the voter, and in those cases it is not used. See also _[Evaluation Heuristics](#evaluation-heuristics)_ which are used to evaluate whether the marks resolve into votes whether the contest is _[Overvoted](#overvote)_ or _[Undervoted](#undervote)_. AuditEngine uses sets of larger and smaller evaluation areas to catch most circles and checks that are outside the _[Target](#target)_ symbol but are obvious voter intent.
 
 <h3 id="adjudicated-modified-record">Adjudicated / Modified Record</h3>
 
@@ -56,7 +56,7 @@ AuditEngine provides a user-friendly application that runs in the user's browser
 
 * **Elections** -- Within a district, elections can be defined. An election has a name and a date, and a related District. An election also has a number of files that must be uploaded from or by the District, including Ballot Image Archives, CVRs, Ballot Style Masters (BMS), etc. The uploading from a given district first goes to an upload folder before it is "adopted" and combined with a given election. AuditEngine has a convenient uploading function which allows the user to request the uploading of any number of files and then come back later, as long as the browser window remains active. 
 
-* [Audit Jobs](#audit-job) -- For a given District and Election, there can be one or more Audit Jobs, and these will use the data uploaded to the Election. A given Audit Job will have a [job_name](#job_name) and consists of a number of [Phases](#phase) and [Stages](#stage) in a [Pipeline](#pipeline). The Audit Job will also have a [Job Settings File](#job-settings-file) to configure the job. 
+* [Audit Jobs](#audit-job) -- For a given District and Election, there can be one or more Audit Jobs, and these will use the data uploaded to the Election. A given Audit Job will have a [job_name](#job_name) and consists of a number of [Phases](#phase) and [Stages](#stage) in a [Pipeline](#pipeline). The Audit Job will also have a [Job Settings](#job-settings) file to configure the job. 
 
 * Users -- There is also the concept of Users, who can be related to a given district or Election, and each has permissions that can be adjusted to allow users to observe or assist in the audit.
 
@@ -236,7 +236,7 @@ Also please avoid generic names that depend on the ballot style to have meaning.
 <h3 id="contest-options">Contest Options</h3>
 
 
-The list of voting opportunities in a contest are called _Contest Options_. The options can either be candidate names or Yes/No options for ballot measure type contests or approval contests (such as for judges). The options may include [Write-Ins](#write-in). The _Contest Options_ are defined by the _[Election Information File (EIF)](#election-information-file-eif)_ and are preferably the same as the strings used in the _[CVR](#cast-vote-record-cvr)_. Each option on a _[Hand-Marked Paper Ballot](#hand-marked-paper-ballot)_ will have a _[Target](#targets)_, such as an oval, which can be darkened using a pen by the voter. 
+The list of voting opportunities in a contest are called _Contest Options_. The options can either be candidate names or Yes/No options for ballot measure type contests or approval contests (such as for judges). The options may include [Write-Ins](#write-in). The _Contest Options_ are defined by the _[Election Information File (EIF)](#election-information-file-eif)_ and are preferably the same as the strings used in the _[CVR](#cast-vote-record-cvr)_. Each option on a _[Hand-Marked Paper Ballot](#hand-marked-paper-ballot)_ will have a _[Target](#target)_, such as an oval, which can be darkened using a pen by the voter. 
 
 Some states require that the order of the Contest Options will rotate to avoid bias. The Yes/No options are always in the same order.
 
@@ -342,7 +342,7 @@ As used in the comparison process, a [contest](#contest-or-ballot-contest) is co
 
 ### District Record
 
-For each election processed by AuditEngine, there will be a District Record defined, which will provided the details about the given district. Districts are usually counties, but not always. Once the district is set up, then an [Election Record](#election record) can be defined for each election processed in this district. Finally, one or more [Audit Jobs](#audit-job) can be defined and run. These audit jobs can be combined in a single Project.
+For each election processed by AuditEngine, there will be a District Record defined, which will provided the details about the given district. Districts are usually counties, but not always. Once the district is set up, then an [Election Record](#election-record) can be defined for each election processed in this district. Finally, one or more [Audit Jobs](#audit-job) can be defined and run. These audit jobs can be combined in a single Project.
 
 <h3 id="dominion-voting-systems-dominion">Dominion Voting Systems (Dominion)</h3>
 
@@ -437,7 +437,7 @@ This is an important stage in the AuditEngine processing [pipeline](#pipeline) w
 <h3 id="hand-marked-paper-ballot">Hand-Marked Paper Ballot</h3>
 
 
-A ballot format that provides all the contests and options available for voting by a specific voter on a set of ballot [sheet](#sheet)s, with [targets](#targets) that can be marked by the voter using a conventional pen. This type of voting is not directly usable by voters who are blind or cannot operate a pen. Federal law currently mandates that each polling place have machines that are compatible with the needs of voters with disabilities. Some [BMD](#ballot-marking-device-bmd) devices produce a ballot format identical hand-marked paper ballot even though they are machine marked. These then can be completed by some voters with disabilities using the BMD interface or _assistive devices_. Also known as _nonBMD ballots_.
+A ballot format that provides all the contests and options available for voting by a specific voter on a set of ballot [sheet](#sheet)s, with [targets](#target) that can be marked by the voter using a conventional pen. This type of voting is not directly usable by voters who are blind or cannot operate a pen. Federal law currently mandates that each polling place have machines that are compatible with the needs of voters with disabilities. Some [BMD](#ballot-marking-device-bmd) devices produce a ballot format identical hand-marked paper ballot even though they are machine marked. These then can be completed by some voters with disabilities using the BMD interface or _assistive devices_. Also known as _nonBMD ballots_.
 
 <h3 id="hart-intercivic-hart">Hart Intercivic (Hart)</h3>
 
@@ -574,7 +574,7 @@ This list as published should not include any [personal identifying information]
 <h3 id="logic-and-accuracy-test-lat">Logic and Accuracy Test (LAT)</h3>
 
 
-Voting systems typically are required to complete a "Logic and Accuracy Test" (LAT) by state law, where the voting system is configured and it processes test ballots to check that the mapping of _[Targets](#targets)_ on[ Hand-Marked Paper Ballots](#hand-marked-paper-ballot) and [BMD](#ballot-marking-device-bmd) [ballot summary cards](#ballot-summary-card) are correctly linked to the contest and options as reported in [cast vote records (CVR)](#cast-vote-record-cvr). Essentially, the LAT answers the question: 
+Voting systems typically are required to complete a "Logic and Accuracy Test" (LAT) by state law, where the voting system is configured and it processes test ballots to check that the mapping of _[Targets](#target)_ on[ Hand-Marked Paper Ballots](#hand-marked-paper-ballot) and [BMD](#ballot-marking-device-bmd) [ballot summary cards](#ballot-summary-card) are correctly linked to the contest and options as reported in [cast vote records (CVR)](#cast-vote-record-cvr). Essentially, the LAT answers the question: 
 
 Does the voting system (hardware and software) read and tabulate the marks on a ballot or touches on the screen with 100% accuracy?
 
@@ -588,7 +588,7 @@ Note: For a general treatment of the subject of the LAT test ballots, see[ Guide
 
 <h3 id="mapping">Mapping</h3>
 
-One key _[Phase](#phase)_ in the process of performing a [ballot image audit](#ballot-image-audit-bia) is the mapping of the contests and options to specific [target](#targets) locations on a paper ballot of a specified style, resulting in the _[Target Map](#target-map)_. This _Phase_ includes a number of stages for setting up, processing, and then importing the results from the [TargetMapper App](#targetmapper-app).
+One key _[Phase](#phase)_ in the process of performing a [ballot image audit](#ballot-image-audit-bia) is the mapping of the contests and options to specific [target](#target) locations on a paper ballot of a specified style, resulting in the _[Target Map](#target-map)_. This _Phase_ includes a number of stages for setting up, processing, and then importing the results from the [TargetMapper App](#targetmapper-app).
 
 <h3 id="md5">MD5</h3>
 
@@ -606,7 +606,7 @@ Essentially "data about other data", and used to refer to attributes of [ballot 
 
 See '_[Adjudicated](#adjudicated-modified-record)_'.
 
-<h3 id="nonvariant-ballots">Nonvariant Ballots</h3>
+<h3 id="nonvariant-ballot">Nonvariant Ballot</h3>
 
 A nonvariant ballot is neither a [Ballot Variant](#ballot-variant), and it has no [Contest Variants](#contest-variant). In essence, a nonvarant ballot is 100% in agreement with the evaluation by AuditEngine, and also has no write-ins, overvotes, or gray-flags. However, it might have agreed undervotes.
 
@@ -678,7 +678,7 @@ AuditEngine does not use QR Codes to determine the votes on a BMD ballot summary
 <h3 id="redline-proofs">Redline Proofs</h3>
 
 
-A critical step in the operation of AuditEngine is the creation of the [Target Map](#target-map) using our [TargetMapper App](#targetmapper-app). To check the consistency of this map, we have a consistency check when the Target Map is imported, and AuditEngine creates a full set of "Redline Proofs" which are ballot styles with red outlines and printing on them that shows the location of each [Target](#targets) and the associated CVR [Contest Name](#contest-name). These proofs can be reviewed by human-eye to find inconsistencies. Also shown are Write-in Areas.
+A critical step in the operation of AuditEngine is the creation of the [Target Map](#target-map) using our [TargetMapper App](#targetmapper-app). To check the consistency of this map, we have a consistency check when the Target Map is imported, and AuditEngine creates a full set of "Redline Proofs" which are ballot styles with red outlines and printing on them that shows the location of each [Target](#target) and the associated CVR [Contest Name](#contest-name). These proofs can be reviewed by human-eye to find inconsistencies. Also shown are Write-in Areas.
 
 <h3 id="repeated-ballot-images">Repeated Ballot Images</h3>
 
@@ -850,7 +850,7 @@ How the work will be done in an audit, particularly when working in concert with
 <h3 id="write-in">Write-in</h3>
 
 
-If the write-in [target](#targets) is marked or if the [Write-in Area](#write-in-area) is filled in, then it is considered that the voter intended to write-in the name for a write-in candidate. How this is handled is specific to different states, but most often, the written-in name must also be from a list of qualified write-in candidates.
+If the write-in [target](#target) is marked or if the [Write-in Area](#write-in-area) is filled in, then it is considered that the voter intended to write-in the name for a write-in candidate. How this is handled is specific to different states, but most often, the written-in name must also be from a list of qualified write-in candidates.
 
 Write-ins on [BMD ballots](#ballot-marking-device-bmd) do not need human-eye adjudication because the names are keyed in.
 
@@ -863,4 +863,4 @@ Write-ins normally account for about 80% of [Contest Variants](#contest-variant)
 
 The write-in area is the area set aside for manual entry on[ Hand-Marked Paper Ballots](#hand-marked-paper-ballot). We suggest that there is a square box provided for user entry that does not have any other marks and will be blank if the user does not write anything in the box.
 
-AuditEngine checks to see if there is anything written into the write-in area and if there is, attempts to convert it using [Optical Character Recognition (OCR)](#optical-character-recognition-ocr). The Write-in Area can be adjusted to match the area on the ballot relative to the [Target](#targets).
+AuditEngine checks to see if there is anything written into the write-in area and if there is, attempts to convert it using [Optical Character Recognition (OCR)](#optical-character-recognition-ocr). The Write-in Area can be adjusted to match the area on the ballot relative to the [Target](#target).

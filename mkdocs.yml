@@ -13,7 +13,7 @@ nav:
         - Exporting Guide:                user-guide/exporting_guide.md
         - Dominion Exporting Guide:       user-guide/dom_exporting_guide.md
         - ES&S Exporting Guide:           user-guide/ess_exporting_guide.md
-        - Hart Exporting Guide:           user-guide/hart_exporting_guide.md
+#        - Hart Exporting Guide:           user-guide/hart_exporting_guide.md
         - Sending Data:                   user-guide/sending_data.md
         - Configuration Files:            user-guide/configuration_files.md
         - ScanEngine App:                 user-guide/scanengine.md
