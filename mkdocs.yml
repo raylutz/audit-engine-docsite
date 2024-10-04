@@ -60,6 +60,8 @@ theme:
   include_search_page: false
   search_index_only: true
 
+  use_directory_urls: false
+
   # Default values, taken from mkdocs_theme.yml
   language: en
   font:
