@@ -13,10 +13,10 @@ jobs:
 
     steps:
       - name: Checkout Master
-        uses: actions/checkout@v3
+        uses: actions/checkout@v3.5.1  # Latest version as of now
 
       - name: Set up Python 3.x
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v4.4.0  # Latest version as of now
         with:
           python-version: '3.x'
 
