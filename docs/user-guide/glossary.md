@@ -731,8 +731,9 @@ This stands for[ Amazon](#amazon-web-service-aws) "Simple Storage Service" but i
 
 <h3 id="sha1-sha256-sha512">SHA1 / SHA256 / SHA512</h3>
 
-
 Stronger hash algorithms that result in longer hash values, and are approved for cryptographic purposes. If available, we recommend the use of SHA512 in _[Hash Manifest](#hash-value-hash-manifest-file)_ files. See also _[MD5](#md5)_ and _[ETag](#etag)._
+
+There is much confusion about "SHA" files that may be included with other files provided by the voting system. These files are useful only to detect error in the associated file, but they will not guard against alteration of that file, because it is easy to generate the associated SHA file. However, once the SHA files are published, then the associated files cannot be changed. It would be useful for voting systems to create and post these files early-on, even before the images are available.
 
 <h3 id="sheet">Sheet</h3>
 
@@ -756,12 +757,12 @@ Targets are ovals or graphic elements that are marked by the voter using a pen o
 <h3 id="target-map">Target Map</h3>
 
 
-A configuration file which is the result of the _[TargetMapper App](#targetmapper-app)_ which associates the location of targets on hand-marked paper ballots with the contest and option as defined by the voting system and exists in the _[CVR](#cast-vote-record-cvr)_.
+A configuration file which is the result of the _[TargetMapper App](#targetmapper-app)_ which associates the location of targets on hand-marked paper ballots with the contest and option as defined by the voting system and exists in the _[CVR](#cast-vote-record-cvr)_. A given Target Map is unique to a given [Election](#election-record) in a specific [District](#district-record), but it can be shared by different [Audit Jobs](#audit-job) by adopting the Target Map of an Audit Job in the same Election.
 
 <h3 id="targetmapper-app">TargetMapper App</h3>
 
 
-A browser-based application that assists with the mapping of the contests and options as defined by the [CVR](#cast-vote-record-cvr) and the targets on hand-marked paper ballots. The result of the TargetMapper App is the _[Target Map](#target-map)_.
+A browser-based application that assists with the mapping of the contests and options as defined by the [CVR](#cast-vote-record-cvr) and the targets on hand-marked paper ballots. The result of the TargetMapper App is the _[Target Map](#target-map)_. See details here: [TargetMapper App](targetmapper_app.md)
 
 <h3 id="undervote">Undervote</h3>
 
