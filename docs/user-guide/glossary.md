@@ -753,7 +753,7 @@ This stands for[ Amazon](#amazon-web-service-aws) "Simple Storage Service" but i
 
 Stronger hash algorithms that result in longer hash values, and are approved for cryptographic purposes. If available, we recommend the use of SHA512 in _[Hash Manifest](#hash-value-hash-manifest-file)_ files. See also _[MD5](#md5)_ and _[ETag](#etag)._
 
-There is much confusion about "SHA" files that may be included with other files provided by the voting system. These files are useful only to detect error in the associated file, but they will not guard against alteration of that file, because it is easy to generate the associated SHA file. However, once the SHA files are published, then the associated files cannot be changed. It would be useful for voting systems to create and post these files early-on, even before the images are available.
+There is much confusion about "SHA" files that may be included with other files provided by the voting system. These files are useful only to detect error in the associated file, and they will not guard against alteration of that file, because it is easy to generate the associated SHA file. However, once the SHA files are published, then the associated files cannot be changed without the possibility of detection. It would be useful for voting systems to create and post these files early-on, even before the images are available, so the files cannot later be modified.
 
 <h3 id="sheet">Sheet</h3>
 
