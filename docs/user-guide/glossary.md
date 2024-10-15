@@ -142,7 +142,7 @@ To deal with these many variations, AuditEngine has a number of additional terms
 
 **_style_num_** - an integer that represents a given style, and may be either exactly the _card_code _or a deterministic conversion of that code. 
 
-**_[hexstyle](#hexstyle)_** - a useful representation that avoids arbitrary numerical assignments of the _style_num_, and represents only the set of contests used on the ballot.
+**_[hexstyle](#hexstyle)_** - a useful representation that avoids arbitrary numerical assignments of the _style_num_, and represents only the set of contests used on the ballot. See [Hexstyle](hexstyle)
 
 **_pstyle_num_** - a printed style designation, usually a more human-friendly representation than _style_num_ but with (usually) a 1:1 correspondence with the _style_num_. The _pstyle_num_ can be extracted from the ballot using Optical Character Recognition (OCR) or from a [barcode](#barcode) printed on the ballot. OCR is not perfect and errors may cause critical errors if misread. 
 
@@ -347,11 +347,11 @@ For each election processed by AuditEngine, there will be a District Record defi
 
 The District Record should use the same naming conventions, but it will not have the date of the election, for example.
 
-​	CC_SS_District
+​	`CC_SS_District`
 
-- CC is the Country Code,
-- SS is the two-character state code
-- District -- is the District name, typically a County, State, City, or other jurisdiction.
+- `CC` is the Country Code, (can be omitted if 'US') [Full List](https://www.iban.com/country-codes)
+- `SS` is the two-character state code. [Full List](https://www.faa.gov/air_traffic/publications/atpubs/cnt_html/appendix_a.html)
+- `District` -- is the District name, typically a County, State, City, or other jurisdiction.
 
 ​	GA_Bartow, CA_SanDiego, GA_DeKalb, FL_MiamiDade
 
@@ -490,14 +490,16 @@ A single "_Hash Manifest File_" can be prepared that includes the file name and 
 
 We recommend the free Windows Application _QuickHash_ to prepare a Hash Manifest File for all the files produced as the result of an election.
 
-<h3 id="hexstyle">hexstyle</h3>
+<h3 id="hexstyle">Hexstyle</h3>
 
+Each vendor and each county can use an arbitrary method for identifying styles, typically by number. The number is just a label, and does not provide information about what contests exist on the ballot. Therefore, we have defined a method of describing the style, essentially by listing the contests that exist on that ballot. We call this the **hexstyle**, even though the form of the indicator may not use hex digits.
 
-This is a style indicator, originally defined by AuditEngine, to represent the contests included on a ballot. It is represented as a hexadecimal number written with the characters 0-9 and a-f, where each character represents a 4-bit sequence, in the same order as defined in the EIF. Each bit in the sequence is 1 if the contest exists on the ballot of that style, and 0 if it does not. The sequence is left justified, and padded with 0's on the right. So the hexsyle value **0xc003** indicates that the first two contests and the last two contests are on the ballot, and the middle 12 contests are not. The entire binary sequence in this example is **1100 0000 0000 0011**.The characters "**0x**" indicate that it is a hexadecimal number, and "**c**" indicates the bit sequence **1100**, while **3** indicates 0011. 
+**TYPE 1: hexidecimal encoded bitmap:**
+This is a style indicator, originally defined by AuditEngine, to represent the contests included on a ballot. It is represented as a hexadecimal number written with the characters 0-9 and a-f, where each character represents a 4-bit sequence, in the same order as defined in the EIF. In the bitfield, each bit in the sequence is **1** if the contest exists on the ballot of that style, and **0** if it does not. The sequence is left justified, and padded with 0's on the right. So the hexsyle value **`0xc003`** indicates that the first two contests and the last two contests are on the ballot, and the middle 12 contests are not. The entire binary sequence in this example is **`1100 0000 0000 0011`**.The characters "**0x**" indicate that it is a hexadecimal number, and "**c**" indicates the bit sequence **1100**, while **3** indicates 0011. 
 
 The hexstyle is a shorthand way to represent the contests on the ballot, which is a primary determinant of style. It does not handle differences in style due to language, or option rotation. There should be only one hexstyle per style_num, but more than one style_num may have the same hexstyle.
 
-The following table provides the hexadecimal characters for each bit sequence.
+The following table provides the hexadecimal characters for each bit sequence. This is the standard definition.
 
 
 <table>
@@ -542,7 +544,25 @@ The following table provides the hexadecimal characters for each bit sequence.
    </td>
   </tr>
 </table>
+**TYPE 2: Contest Numbers with run-length**
 
+The form of the hexstyle has changed due to the extremely long hex sequences that may result when there are a large number of contests. If there are more than 160 contests (which would be more than 40 hexidecimal digits), or optionally always, a run-length encoded hexstyle is used, of the following form:
+
+​		**`<(contest_idx)[xrun_length]|(contest_idx)[xrun_length]|...>`**
+
+like:   `<14x4|20|23|25x3|745|810x2>`
+
+specifies the following contests:
+
+​		`14, 15, 16, 17, 20, 23, 25, 26, 27, 745, 810, 811`
+
+Example: consider the hexstyle in bit-mapped form: **0xc003** has contests in locations 0, 1, 14, 15
+
+​        runlength form:
+
+​        **`<0x2|14x2>`**    or  **`<0|1|14|15>`**
+
+Thus, for very few contests, the Type 1 hex mapping is the most economical, but becomes unwieldy if there are many contests defined when only a few are included on any ballot sheet, and then Type 2 is essential. Using Type 2 is a little bit less economical for very few contests but is still quite reasonable to use at all times. Therefore, Type 1 may be deprecated in the future.
 
 <h3 id="images-missing">Images Missing</h3>
 
