@@ -62,8 +62,9 @@ AuditEngine provides a user-friendly application that runs in the user's browser
 
 <h3 id="audit-job">Audit Job</h3>
 
+For a given [Election](#election-record) in a given [District](#district-record), there can be one or more **Audit Jobs**. An audit job tracks the specific _[stages](#stage)_ completed in the processing _[pipeline](#pipeline)._ Each Audit Job for a given election will have a unique _[job_name](#job_name)_.
 
-For a given election in a given district, there can be one or more Audit Jobs. An audit job tracks the specific _[stages](#stage)_ completed in the processing _[pipeline](#pipeline)._ Each Audit Job for a given election will have a unique _[job_name](#job_name)_.
+See also [District](#district-record), [Election](#election-record), [Job Name](#job-name) 
 
 <h3 id="audit-phase">Audit Phase</h3>
 
@@ -344,6 +345,18 @@ As used in the comparison process, a [contest](#contest-or-ballot-contest) is co
 
 For each election processed by AuditEngine, there will be a District Record defined, which will provided the details about the given district. Districts are usually counties, but not always. Once the district is set up, then an [Election Record](#election-record) can be defined for each election processed in this district. Finally, one or more [Audit Jobs](#audit-job) can be defined and run. These audit jobs can be combined in a single Project.
 
+The District Record should use the same naming conventions, but it will not have the date of the election, for example.
+
+​	CC_SS_District
+
+- CC is the Country Code,
+- SS is the two-character state code
+- District -- is the District name, typically a County, State, City, or other jurisdiction.
+
+​	GA_Bartow, CA_SanDiego, GA_DeKalb, FL_MiamiDade
+
+See also [Election](#election-record), [Audit Job](#audit-job), [Job Name](#job-name)
+
 <h3 id="dominion-voting-systems-dominion">Dominion Voting Systems (Dominion)</h3>
 
 
@@ -376,7 +389,7 @@ This file should be reviewed by the auditing team, particularly to adjust the 'b
 
 ### Election Record
 
-Within the AuditEngine app, within a given [District](#district-record), there may be multiple elections defined. The "Election Record" is the information related to that election, and will eventually include files uploaded appropriate for that election and used by one or more [Audit Jobs][#audit-jobs]. 
+Within the AuditEngine app, within a given [District](#district-record), there may be multiple elections defined. The "Election Record" is the information related to that election, and will eventually include files uploaded appropriate for that election and used by one or more [Audit Jobs][#audit-job]. 
 
 In AuditEngine, we have established a standard naming convention for elections, as follows:
 
@@ -388,6 +401,10 @@ Where:
 - SS -- is the standard two-character State code, such as **AZ** (Arizona), **CA** (California), and **FL** (Florida) [Full List](https://www.faa.gov/air_traffic/publications/atpubs/cnt_html/appendix_a.html)
 - District -- is the District name, typically a County, but sometimes a State (Alaska).
 - YYYYMMDD -- is the date of the election, such as 20241105.
+
+For example, **US_GA_Bartow_20241105**
+
+See also [District](#district-record) [Audit Job](#audit-job), [Job Name](#job-name)
 
 <h3 id="election-management-system-ems">Election Management System (EMS)</h3>
 
@@ -532,11 +549,13 @@ The following table provides the hexadecimal characters for each bit sequence.
 
 This is a discrepancy attribute. Sometimes not all the images are provided and so these are accounted for as the number of Images Missing. AuditEngine does not attempt to sum the number of contests nor the votes on ballot images that are missing. If there are a vast number of images missing, this can make an accurate audit difficult.
 
-<h3 id="job_name">job_name</h3>
+<h3 id="job-name">Job Name</h3>
 
-This is the name of the AuditEngine job to differentiate it from other jobs, and determines where the files are stored. The format of the _job_name_ has been standardized internal to AuditEngine for the [Election](#election-record), such as **ST_County_YYYYMMDD**, where **ST** is the two-character state abbreviation, **County** is the County Name without spaces or special characters, and YYYYMMDD is the the data of the election when the polls closed. It may also have the two-digit country code as a preface, such as "US\_" 
+This is the name of the AuditEngine job to differentiate it from other jobs, and determines where generated files are stored. The format of the Job Name has been standardized internal to AuditEngine for the [Election](#election-record), such as **ST_County_YYYYMMDD**, where **ST** is the two-character state abbreviation, **County** is the County Name without spaces or special characters, and YYYYMMDD is the the data of the election when the polls closed. It may also have the two-digit country code as a preface, such as "US\_" 
 
 Thus, **GA_Bartow_20201103** is the job for the 2020 General Election in Bartow County, GA. It is okay to add additional tags to the end, like **\_LAT** if it is the job to process the [Logic and Accuracy Test](#logic-and-accuracy-test-lat) ballot images in that same election, or for other purposes. NOTE: The job_name can't be changed very easily once it is set. It cannot have spaces or special characters other than underscore. See also _[Audit Job](#audit-job)_, *[Election](#election-record)*, and *[District](district-record)*.  Sometimes, jobs may be created from other jobs using the 'clone_job' function. The name of the cloned job must have a similar name, with the same name given to the Election, and then a suffix modifier, like _clone, _functest, etc. For example, **GA_Bartow_20201103_clone**.
+
+See also:  [District](#district-record), [Election](#election-record), [Audit Job](#audit-job)
 
 <h3 id="job-settings">Job Settings</h3>
 
