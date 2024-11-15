@@ -255,7 +255,7 @@ If **styles-to-contests** IS available, then the contests in each style will be 
 
 In the case shown here, the ballot style is for **TOWNSHIP OF EVESHAM D-12.** The contests originally linked to this style were for **Hainesport Township**. You can see that the contests appropriate for Evesham Township are used instead, and mapped as usual. Note that the progress indicator will not change to a green checkmark, and you should still check the verified checkbox (blue).
 
-<img src="https://s3.amazonaws.com/auditengine.org/docs/images/Change_Contests_detail.png" alt="TargetMapper Change Contests Detail">
+<img src="https://s3.amazonaws.com/auditengine.org/docs/images/Change_Contests_detail.png" alt="TargetMapper Change Contests Detail" width=800>
 
 ### Change the styles in the job
 
