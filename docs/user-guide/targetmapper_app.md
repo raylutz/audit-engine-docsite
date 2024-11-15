@@ -238,6 +238,25 @@ For normal operations, the list of contests is defined for each style. This will
 4. When the stage 'import_targetmap' is run, it will also create the style_to_contests data.
 5. The redline proofs and option proof report will require careful scrutiny to check that all contests are included for each style.
 
+### Change Contests on a style template
+
+If **styles-to-contests** IS available, then the contests in each style will be predetermined. Normally, you can just go through each contest provided for that style and fill it in. However, sometimes, there will be a mistake in the **style-to-contests** definition. In that case, we can override the contest that are defined for that style.
+
+1. In the **Contest/Option** list, checkmark **[ ] Show All**.  This will provide all the contests in the election.
+2. Find the correct contest that is on the ballot in the **Contest/Option** list. Click **+** (plus sign) to open it.
+3. Verify that the options match those options actually on the style, to verify that you are choosing the correct contest.
+4. Map the targets for this contest as usual.
+5. Repeat from 2.
+6. When done mapping the style, checkmark VERIFIED in the **Style List**, which is the checkbox on the right end of the style item.
+7. The progress Icon to the left of the style in the **Style List** will show partially complete. This is correct because it does not match the contests expected on this style.
+8. At this time, this will need to be communicated to the audit process by enabling "**define_style_to_contests_from_map**" in the job settings file.
+
+#### Example:
+
+In the case shown here, the ballot style is for **TOWNSHIP OF EVESHAM D-12.** The contests originally linked to this style were for **Hainesport Township**. You can see that the contests appropriate for Evesham Township are used instead, and mapped as usual. Note that the progress indicator will not change to a green checkmark, and you should still check the verified checkbox (blue).
+
+<img src="https://s3.amazonaws.com/auditengine.org/docs/images/Change_Contests_detail.png" alt="TargetMapper Change Contests Detail">
+
 ### Change the styles in the job
 
 It is fairly common for an initial set of styles to be defined, and the mapping completed for those styles, and then later, additional styles are added.
