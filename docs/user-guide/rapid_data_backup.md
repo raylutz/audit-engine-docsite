@@ -12,7 +12,7 @@ Backups should be created as soon as data becomes available and should include a
 
 ## Caveat
 
-Although we are generally familiar with voting system software and how ballot images and CVRs can be exported (see the "Exporting Guide" in the User Guide for detailed instructions), the procedures described here serve a different purpose. The goal is to produce rapid, interim backups during the election process so that an unexpected interruption does not result in a substantial loss of data.
+Although we are generally familiar with voting system software and how ballot images and CVRs can be exported (see [Exporting Guide](exporting_guide.md), the procedures described here serve a different purpose. The goal is to produce rapid, interim backups during the election process so that an unexpected interruption does not result in a substantial loss of data.
 
 Election management systems are not typically designed to support comprehensive exports during active election operations. As a result, the availability of data may be limited or incomplete at any given point in time. For example, full Cast Vote Record (CVR) datasets are often not finalized or exportable until processing is complete. Similarly, logs, adjudication records, or consolidated reports may only become available at later stages. However, other files may be available that are not in final reported form that may still help in a loss situation.
 
@@ -95,7 +95,7 @@ If backups are not performed promptly, original data may be altered during adjud
 
 ## Relationship to Data Submission
 
-For guidance on submitting data for independent audit, see the "Sending Election Data to AuditEngine" document included in this repository.
+For guidance on submitting data for independent audit, see [Sending Election Data to AuditEngine](sending_data.md).
 
 ## Summary
 
