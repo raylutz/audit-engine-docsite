@@ -15,6 +15,7 @@ nav:
         - ES&S Exporting Guide:           user-guide/ess_exporting_guide.md
 #        - Hart Exporting Guide:           user-guide/hart_exporting_guide.md
         - Sending Data:                   user-guide/sending_data.md
+        - Rapid Data Backup:              user-guide/rapid_data_backup.md
         - Configuration Files:            user-guide/configuration_files.md
         - ScanEngine App:                 user-guide/scanengine.md
 #        - Running Audits:                 user-guide/running_audits_app.md
