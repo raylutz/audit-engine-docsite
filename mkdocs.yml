@@ -43,6 +43,8 @@ nav:
 #        - Terms of Use:                   about/terms-of-use.md
 #        - EULA:                           about/eula.md
 
+use_directory_urls: true
+
 theme:
   name: material
   #custom_dir: mkdocs-material/material
@@ -60,8 +62,6 @@ theme:
   # Necessary for search to work properly
   include_search_page: false
   search_index_only: true
-
-  use_directory_urls: false
 
   # Default values, taken from mkdocs_theme.yml
   language: en
