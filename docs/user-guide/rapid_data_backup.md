@@ -65,19 +65,36 @@ Cryptographic hashes provide a reliable method for confirming that files have no
 
 SHA-256 is the recommended standard.
 
-To generate hashes on Linux or macOS systems, run:
+To generate hashes on Linux or macOS systems, assuming all files are in a single folder. `cd` to that folder, then:
 
-    find . -type f -exec sha256sum "{}" \; > sha256_manifest.txt
+    sha256sum * > sha256_manifest.txt
 
 On Windows PowerShell, use:
 
-    Get-ChildItem -Recurse | Where-Object { -not $_.PSIsContainer } | Get-FileHash -Algorithm SHA256 | Format-Table -AutoSize > sha256_manifest.txt
+    GGet-FileHash -Algorithm SHA256 * | ForEach-Object { "$($_.Hash)  $($_.Path)" } | Out-File sha256_manifest.txt
+
+That will work. But for windows, consider using the sha256sum utility, same as on Linux. It is easily available by:
+
+1. Download the Cygwin installer -- https://www.cygwin.com/install.html
+2. You need to install setup-x86_64.exe typically for windows machines.
+3. Run installer `setup-x86_64.exe -q -P coreutils`
+4. Add the c:\cygwin64\bin folder to the PATH so this command is available in a cmd terminal (there are also other methods):
+
+    setx PATH "%PATH%;C:\cygwin64\bin"
+
+5. Open a cmd terminal and check it with `sha256sum --version`
+6. Go to the folder that contains the files for the hash manifest, and use:
+
+    sha256sum * > sha256_manifest.txt
 
 To verify hashes on a separate system:
 
     sha256sum -c sha256_manifest.txt
 
-All files should report as OK.
+All files should report as OK. You can also manually check the hash for any specific file by creating the hash:
+
+    sha256sum filename
+
 
 ## Publishing Hash Values
 
