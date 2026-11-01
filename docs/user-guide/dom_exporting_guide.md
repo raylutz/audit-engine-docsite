@@ -3,7 +3,8 @@
 Ray Lutz, Citizens' Oversight. Version 6, 2022-04-27.
 Contact: <support@citizensoversight.org>
 
-[Download this guide as a PDF](https://auditengine.org/docs/pdf/dom_exporting_guide.pdf)
+!!! tip "PDF"
+    [Download this guide as a PDF](https://auditengine.org/docs/pdf/dom_exporting_guide.pdf), to read offline or to attach to an email.
 
 AuditEngine performs ballot image audits.
 To audit an election independently, we need the district to export three kinds of files:

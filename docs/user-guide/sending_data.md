@@ -1,6 +1,7 @@
 # Sending Election Data to AuditEngine
 
-[Download this guide as a PDF](https://auditengine.org/docs/pdf/sending_data.pdf)
+!!! tip "PDF"
+    [Download this guide as a PDF](https://auditengine.org/docs/pdf/sending_data.pdf), to read offline or to attach to an email.
 
 Sending data to be used by AuditEngine is the same regardless of the vendor, and thus we have just one guide for this. Generally, the options are to 
 
