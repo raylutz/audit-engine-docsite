@@ -1,1 +1,3 @@
-mkdocs-material
+# MkDocs 2.0 will break Material sites, so both stay pinned.
+mkdocs==1.6.1
+mkdocs-material==9.7.7

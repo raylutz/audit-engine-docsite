@@ -45,6 +45,9 @@ nav:
 
 use_directory_urls: true
 
+markdown_extensions:
+  - footnotes
+
 theme:
   name: material
   #custom_dir: mkdocs-material/material
