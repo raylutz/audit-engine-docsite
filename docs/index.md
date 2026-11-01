@@ -45,7 +45,7 @@ First, the data must be assembled for use by AuditEngine. Most of this is alread
     - These images are then transferred to the Election Management System (EMS) from voter-facing scanners using flash media or from central scan operations using similar methods.
     - The EMS can export the ballot images for use by AuditEngine. These should be placed into ZIP archives with about 30,000 to 50,000 ballots per archive. 
     - Please see [exporting guide](user-guide/exporting_guide.md) for step-by-step guides for exporting Ballot Images from popular voting systems.
-    - The ballot images are then uploaded to our datacenter so we can process them using thousands of computers in parallel. See [uploading guide](user-guide/uploading_guide.md) for instructions.
+    - The ballot images are then uploaded to our datacenter so we can process them using thousands of computers in parallel. See [Sending Election Data to AuditEngine](user-guide/sending_data.md) for instructions.
 - **Cast Vote Records (CVRs):**
     - Officials can produce cast-vote-record files (CVRs) which lists the results of their interpretation of the ballots. 
     - AuditEngine currently supports the ES&S format and the Dominion format.

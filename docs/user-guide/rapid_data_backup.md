@@ -1,5 +1,8 @@
 # Rapid Election Data Backup and Verification
 
+!!! tip "PDF"
+    [Download this guide as a PDF](https://auditengine.org/docs/pdf/rapid_data_backup.pdf), to read offline or to attach to an email.
+
 ## Purpose
 
 This guide provides practical procedures for creating rapid, secure backups of election data as it becomes available during normal election workflows.
