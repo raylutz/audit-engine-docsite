@@ -73,11 +73,14 @@ On Windows PowerShell, use:
 
     GGet-FileHash -Algorithm SHA256 * | ForEach-Object { "$($_.Hash)  $($_.Path)" } | Out-File sha256_manifest.txt
 
-That will work. But for windows, consider using the sha256sum utility, same as on Linux. It is easily available by:
+The commands above should work on the system that you use to create the data for the thumbdrives without adding any other data.
 
-1. Download the Cygwin installer -- https://www.cygwin.com/install.html
-2. You need to install setup-x86_64.exe typically for windows machines.
-3. Run installer `setup-x86_64.exe -q -P coreutils`
+For windows, consider using the sha256sum utility, same as on Linux. In many windows systems, this is already installed. If not, you may consider installing.
+
+1. Install Cygwin
+2. visit: https://www.cygwin.com/install.html
+2. You need to select and download `setup-x86_64.exe` typically for windows machines.
+3. Run installer with this command at a command prompt `setup-x86_64.exe -q -P coreutils`
 4. Add the c:\cygwin64\bin folder to the PATH so this command is available in a cmd terminal (there are also other methods):
 
     setx PATH "%PATH%;C:\cygwin64\bin"
