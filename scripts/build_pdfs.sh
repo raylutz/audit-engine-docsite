@@ -12,6 +12,7 @@ set -euo pipefail
 pages=(
     user-guide/sending_data
     user-guide/rapid_data_backup
+    user-guide/auditengine-background-doc
     user-guide/dom_exporting_guide
     user-guide/ess_exporting_guide
     user-guide/hart_exporting_guide

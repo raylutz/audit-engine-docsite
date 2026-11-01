@@ -8,7 +8,7 @@ nav:
         - Three Audits GA/WI:             audit-results/3-audits-GA-WI.md          # https://copswiki.org/Common/M1986
     - User Guide:
 #        - Overview:                       user-guide/overview.md
-        - Background Document:            user-guide/auditengine-background-doc.md
+        - How AuditEngine Works:          user-guide/auditengine-background-doc.md
         - Requester Guide:                user-guide/requester_guide.md
         - Exporting Guide:                user-guide/exporting_guide.md
         - Dominion Exporting Guide:       user-guide/dom_exporting_guide.md
