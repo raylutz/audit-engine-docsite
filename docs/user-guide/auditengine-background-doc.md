@@ -18,7 +18,11 @@ Citizens' Oversight Projects develops AuditEngine.
 It is a nonpartisan 501(c)(3) nonprofit organization.
 
 AuditEngine runs in the cloud.
-It processes the ballot images on many computers at once, so a full election takes minutes.
+An audit runs in about 40 stages.
+In the largest stages, many computers process the ballot images at once.
+A stage that would take weeks on one computer then takes minutes.
+Other stages include manual steps, such as mapping the targets on each ballot style.
+So a full audit takes longer than its computer time.
 
 This page describes the general method.
 Reports on specific audits refer to it for background and terms.
