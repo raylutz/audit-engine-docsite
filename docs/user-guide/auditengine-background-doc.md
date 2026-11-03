@@ -222,15 +222,7 @@ Since some of this information is derived later in the process, the fields that 
 The target map gives the location of each target on each ballot style.
 Vendors do not provide target maps in any standard form, but even if they did, it would be a violation of independence to use them.
 
-AuditEngine builds the map using automated inspection of ballot styles or with an app called TargetMapper.
-A third option is to use ballot style masters, which show the exact layout of each style in searchable PDF format.
-The election office sends the ballot style masters to the printer, so they provide an accurate representation of all ballot styles.
-
-AuditEngine can derive the mapping from the ballots themselves using deterministic machine learning and OCR matching, if the ballot layout is consistent.
-If not, then the TargetMapper application can assist human operators to create the mapping.
-If the ballot style masters are provided, then they can provide the mapping.
-
-Regardless of the method, the mapping is checked by human reviewers by checking two types of redline proofs.
+The section [Map the styles](#map-the-styles) explains how AuditEngine builds the map.
 
 The job settings file holds the settings for one audit.
 It names the image archives and the CVR files.
@@ -258,6 +250,10 @@ The next stages collect metadata for each ballot.
 The metadata comes from the image archives, the CVR files and the images themselves.
 AuditEngine reads the style code from the proprietary coding printed on each ballot.
 Dominion BMD ballots are the exception, because their style is provided in the QR code, which AuditEngine does not read per policy.
+For these ballots, AuditEngine derives a basic style from the contests the CVR files show on each ballot.
+So AuditEngine needs the CVR files to audit Dominion BMD ballots.
+ES&S BMD cards have a separate barcode that holds the style but no votes.
+AuditEngine reads it, and it works when the code matches a style already defined for hand-marked ballots.
 The metadata from these various sources is compared and a common set resolved.
 
 The images are inspected for any exact repeated files, which will not occur unless the images were uploaded incorrectly.
