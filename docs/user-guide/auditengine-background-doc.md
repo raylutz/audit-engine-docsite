@@ -249,11 +249,9 @@ The jurisdiction can compare each hash with its own, to show the files are ident
 The next stages collect metadata for each ballot.
 The metadata comes from the image archives, the CVR files and the images themselves.
 AuditEngine reads the style code from the proprietary coding printed on each ballot.
-Dominion BMD ballots are the exception, because their style is provided in the QR code, which AuditEngine does not read per policy.
+BMD ballots are the exception, because their style is provided in the QR code or barcode, which AuditEngine does not read per policy.
 For these ballots, AuditEngine derives a basic style from the contests the CVR files show on each ballot.
-So AuditEngine needs the CVR files to audit Dominion BMD ballots.
-ES&S BMD cards have a separate barcode that holds the style but no votes.
-AuditEngine reads it, and it works when the code matches a style already defined for hand-marked ballots.
+Jurisdictions should print the BMD style on the card so it can be read to avoid needing the CVR.
 The metadata from these various sources is compared and a common set resolved.
 
 The images are inspected for any exact repeated files, which will not occur unless the images were uploaded incorrectly.
