@@ -1,0 +1,6 @@
+/* A block marked no-print shows on the web page but not in the printed PDF. */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+}

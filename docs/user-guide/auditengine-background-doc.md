@@ -6,6 +6,9 @@ Adapted from "Auditing Elections Using Ballot Images and AuditEngine: General Ba
 !!! tip "PDF"
     [Download this page as a PDF](https://auditengine.org/docs/pdf/auditengine-background-doc.pdf), to read offline or to attach to an email.
 
+!!! note no-print "Original version"
+    The 2022 original is on copswiki, as a [PDF](https://copswiki.org/w/pub/Common/M1986/Auditing%20Elections%20Using%20Ballot%20Images%20and%20AuditEngine%20--%20General%20Background.pdf).
+
 ## What AuditEngine does
 
 AuditEngine audits the tabulation of an election using ballot images.
