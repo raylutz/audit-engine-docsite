@@ -19,7 +19,7 @@ It then compares its result with the official result separately for each ballot.
 Citizens' Oversight Projects, a nonpartisan 501(c)(3) nonprofit organization, develops AuditEngine.
 
 AuditEngine runs in the cloud.
-It has about 40 separate steps called "stages."
+It has about 45 separate steps called "stages."
 In the largest stages, many computers process the ballot images at once.
 A stage that would take weeks on one computer then takes minutes.
 Other stages include manual steps, such as mapping the targets on each ballot style, and analyzing the results.
@@ -120,6 +120,8 @@ Malicious software on a BMD could change the votes in the QR code and leave the 
 AuditEngine reads the printed text on BMD cards using optical character recognition (OCR).
 It does not rely on barcodes.
 So it would catch a change to the barcode, as long as the text shows what the voter chose.
+If OCR cannot read an ES&S card at all, AuditEngine reads its barcode.
+It marks that card as not independently checked, and lists it in a report.
 If the text itself were altered, only the voter could detect it.
 Districts that use BMDs should guide each voter to check the printed card, which would reduce that risk.[^directed]
 
@@ -144,7 +146,7 @@ The EMS exports the images.
 For our purposes, they should go into ZIP archives of about 10,000 to 50,000 ballots each.
 AuditEngine accepts the image formats the vendors produce, including PDF, TIFF, PNG, PBM and JPG.
 Current Dominion systems use TIFF, and current ES&S systems use PDF.
-One ballot sheet, front and back, typically takes about 200 KB to 600 KB.
+One ballot sheet, front and back, typically takes about 20 KB to 500 KB.
 Ballots printed without a gray background are easier to read and make smaller files.
 
 The [exporting guides](exporting_guide.md) explain how to export the data from each vendor's system.
@@ -168,8 +170,9 @@ AuditEngine checks each audit for rare styles.
 Rare styles can be avoided by designing the election district by avoiding small groups.
 
 AuditEngine does not need people to look at most ballots.
-People review a ballot only where AuditEngine and the voting system disagree.
-That is usually fewer than 1% of the ballots.
+People review only the ballots with a variant.
+A variant is a disagreement with the voting system, an overvote, a write-in or an ambiguous gray mark.
+That is usually a few percent of the ballots.
 
 Every ballot can be researched in full in AuditEngine, so others can check its results.
 As in science, trust comes from others repeating the analysis.
@@ -242,17 +245,16 @@ An "election" is created in AuditEngine for a given "district".
 Each district can be provided a single consistent upload link.
 The ballot images, CVR files and ballot style masters are uploaded through it.
 
-If available, AuditEngine will check that these input files match the hash values provided in an adjacent file.
 These data files are placed in a staging area and then adopted to the secure area for further processing.
 
 An audit job is then created for the election, with its job settings.
-The first stage lists every input file with its hash value.
-The jurisdiction can compare each hash with its own, to show the files are identical.
+If the jurisdiction publishes a list of its files with a hash of each, AuditEngine hashes each file.
+It reports whether each file matches the list, to show the files are identical.
 
 The next stages collect metadata for each ballot.
 The metadata comes from the image archives, the CVR files and the images themselves.
 AuditEngine reads the style code from the proprietary coding printed on each ballot.
-BMD ballots are the exception, because their style is provided in the QR code or barcode, which AuditEngine does not read per policy.
+BMD ballots are the exception, because their style is provided in the QR code or barcode, which AuditEngine does not use for this, per policy.
 For these ballots, AuditEngine derives a basic style from the contests the CVR files show on each ballot.
 Jurisdictions should print the BMD style on the card so it can be read to avoid needing the CVR.
 The metadata from these various sources is compared and a common set resolved.
@@ -297,17 +299,18 @@ Reports then show the marks found and the totals for each contest.
 When CVR files are available, AuditEngine compares its evaluation with the official evaluation of every ballot.
 The result is the Reconciliation Report.
 It lists each disagreement and links to the ballot images involved.
-Without CVR files, the report lists the ballots with ambiguous marks, which can guide further review.
+Without CVR files, the report lists the ballots with overvotes, write-ins and ambiguous gray marks, which can guide further review.
 
 The Reconciliation Report can run to thousands of pages, so it is meant to be read on screen.
 It gives details on selected contests.
-By default these are the first ten contests, the five closest contests and the five with the most disagreements.
+By default these are the first ten contests and every contest with a margin under 10%.
+They also include the contests where variants or disagreements are largest compared with the margin.
 
 Reviewers can then look at the ballots that need it in the AdjudiTally app.
 They can review overvotes, write-ins, undervotes and ambiguous marks.
 
-A final report lists all the reports.
-Each audit also has a narrative report that describes its findings.
+An index links all the reports.
+A narrative report describes the findings of a finished audit.
 
 ## About the author
 
