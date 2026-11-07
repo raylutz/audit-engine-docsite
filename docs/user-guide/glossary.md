@@ -94,6 +94,8 @@ If _[Cooperative Workflow](#cooperative-workflow)_ is used, then there are 2 to 
 <h3 id="ballot">Ballot</h3>
 
 
+In AuditEngine, a ballot is one voter's complete set of [sheets](#sheet). The number of ballots cast counts ballots, not sheets.
+
 Generally a presentation of contests and options for each contest that can be selected by a voter, and the recording of those selections. The word "ballot" originally meant "little ball" and these were placed into a box to represent the votes of each person. In practice, a complete ballot may be a number of [sheets](#sheet), each with a front and back side, also called _[pages](#page)_. However, in many instances, the term "ballot" may also be used to refer to a single sheet. Thus, "Ballot Images" should technically be "Ballot Sheet Images" because when there are multiple sheets, each image is only one sheet of the combined ballot. Sometimes, a ballot image is only of one side of one sheet (one page).
 
 See _[Ballot Image](#ballot-image)._
@@ -117,6 +119,8 @@ Election systems today create digital pictures of both sides of each ballot shee
 
 Please note that the term "Ballot Image" has a deprecated meaning. Previously, it was used to mean digital inputs by the user at a _[Direct-Recording Electronic (DRE)](#direct-recording-electronic-dre-voting-machines)_ machine or another touch-screen machine. The term "image" is used in computer science to sometimes mean an exact copy of digital data. This prior use is now deprecated and the term is now widely understood to mean the actual digital pictures of the document rather than just a copy of digital data that does not represent a picture.
 
+In AuditEngine, an image is the scanned picture of one [page](#page). One image file often holds several images, such as both pages of a sheet.
+
 <h3 id="ballot-image-audit-bia">Ballot Image Audit (BIA)</h3>
 
 
@@ -136,11 +140,13 @@ For [ES&S](#election-systems-&-software-es&s) and [Dominion](#dominion-voting-sy
 
 A designation that represents the set of contests on the ballot, the language and in the case of a hand-marked paper ballot, the order voting targets. The contests on the ballot are determined by the voter's address and party affiliation, in the case of partisan elections where ballots differ by party. There may be 100s or 1000s of styles in any given election in a single jurisdiction. The method for designating style is one of the most complex aspects of a ballot image audit, because there are many variations that are up to election districts. 
 
+In AuditEngine, a ballot style is the set of [sheet styles](#sheet-style) that make up one ballot, one for each [sheet position](#sheet-position).
+
 To deal with these many variations, AuditEngine has a number of additional terms:
 
 **_[card_code](#card_code)_**  - the actual encoding on the ballot determined by the [Election Management System (EMS)](#election-management-system-ems) and usually unknown to election workers.
 
-**_style_num_** - an integer that represents a given style, and may be either exactly the _card_code _or a deterministic conversion of that code. 
+**_style_num_** - an integer that represents a given [sheet style](#sheet-style), and may be either exactly the _card_code _or a deterministic conversion of that code. 
 
 **_[hexstyle](#hexstyle)_** - a useful representation that avoids arbitrary numerical assignments of the _style_num_, and represents only the set of contests used on the ballot. See [Hexstyle](hexstyle)
 
@@ -189,6 +195,16 @@ A machine-readable graphical artifact, typically linear in form, commonly printe
 AuditEngine does not rely on the barcodes to determine the votes on a [BMD](#ballot-marking-device-bmd) [ballot summary card](#ballot-summary-card), but rather reads the printed strings using _[Optical Character Recognition (OCR)](#optical-character-recognition-ocr)_. Sometimes, the term *barcode* is used as a generic term to mean any type of linear or 2-d (2-dimensional) code, such as a *[QR Code](#qr-code)*, or a _Datamatrix_ code which is similar to a QR Code. 2-d codes have superior error detection and correction.
 
 Both [ES&S](#election-systems-&-software-es&s) and [Dominion](#dominion-voting-systems-dominion) use proprietary barcodes to encode the style on [hand-marked paper ballots](#hand-marked-paper-ballot). See _[card_code](#card_code)._
+
+<h3 id="bmd-sheet">BMD Sheet</h3>
+
+
+One physical sheet printed by a [BMD](#ballot-marking-device-bmd). A BMD prints a voter's whole ballot on one sheet. The [CVR](#cast-vote-record-cvr) may still record it as several [cards](#card), as if it were a hand-marked ballot of several sheets. In the San Francisco 2024 election, 12,612 CVR records have 4 cards each, all at sheet position 1.
+
+<h3 id="card">Card</h3>
+
+
+A logical sheet, as the [CVR](#cast-vote-record-cvr) records it. A hand-marked sheet is one card. A [BMD sheet](#bmd-sheet) can hold several cards. Because a card is a logical sheet, the word is not used for a [sheet position](#sheet-position).
 
 <h3 id="card_code">card_code</h3>
 
@@ -677,7 +693,7 @@ Very frequently, overvotes are misinterpreted by the voting system and should be
 <h3 id="page">Page</h3>
 
 
-One side of a [sheet](#sheet), if sheets are printed on both sides. If a ballot provided to a single voter has 2 sheets, then the pages are numbered 1, 2, 3, 4, for the front of sheet 1, back of sheet 1, front of sheet 2, back of sheet 2. Sometimes pages and sheets are numbered starting at 0, so we have to be careful. If we know the page or sheet will start at 0, we will call it page0 or sheet0.
+One side of a [sheet](#sheet), if sheets are printed on both sides. If a ballot provided to a single voter has 2 sheets, then the pages are numbered 1, 2, 3, 4, for the front of sheet 1, back of sheet 1, front of sheet 2, back of sheet 2. Each sheet has two pages. An [image](#ballot-image) is the scanned picture of one page. Sometimes pages and sheets are numbered starting at 0, so we have to be careful. If we know the page or sheet will start at 0, we will call it page0 or sheet0.
 
 <h3 id="partially-agreed-sheets">Partially Agreed Sheets</h3>
 
@@ -705,6 +721,31 @@ The operation of AuditEngine is divided into a series of [stages](#stage), where
 
 
 Voting machines that are used in polling places typically have a _poll-tape report_ which is printed out by poll workers during an election, and frequently is posted at the polling site with a signed copy turned into the election office. _Digital Poll Tapes_ can be produced by [ES&S](#election-systems-&-software-es&s) voting systems. These are an exact copy of the report produced by the voting system scanner but they are provided as a PDF, LST or TXT files. These files can be processed by AuditEngine to provide another check of the results of the election by comparing the aggregated results for each precinct with the final aggregated report. This audit is not available for [Dominion](#dominion-voting-systems-dominion) systems.
+
+<h3 id="profile">Profile</h3>
+
+
+Some audits process only part of an election. A large election can have over a million sheets, and processing every one takes time and cost. A profile limits the audit to the sheets it needs, such as the sheets that carry the contests being audited.
+
+A profile is a set of constraints. Each constraint is a filter on the [metadata](#metadata) of each sheet. Applying the profile to every sheet in the election gives the profiled set. That is the set of sheets the audit processes, with the image files of each sheet. The profile is the constraints. The profiled set is what they select.
+
+Most constraints select [sheet styles](#sheet-style). They can take several forms:
+
+- A list of sheet styles. This is the most exact form.
+- A [sheet position](#sheet-position), such as the first sheet of every ballot. This form is broad. Sheet position 2 of one ballot style can carry different contests from sheet position 2 of another.
+- A party, in a primary election. It selects the sheet styles of that party's ballots.
+
+Some constraints are not part of any style:
+
+- A voting group, such as mail, early voting, in-person election day or provisional. Sheets of the same style are cast in every group.
+- An [archive](#archive-zip-archive).
+- [BMD sheets](#bmd-sheet) or [hand-marked](#hand-marked-paper-ballot) sheets.
+
+A constraint on sheet position applies to the physical sheet. A BMD sheet can stand for several [cards](#card). So a profile of sheet position 1 takes in every BMD sheet, with the contests of all its cards.
+
+The metadata comes from the [CVR](#cast-vote-record-cvr) and from the image files. The votes are never used. CVRs differ in how much metadata they carry. Some give each sheet's style, sheet position, group and BMD status. Others give no style or card code at all. Then the [card_code](#card_code) is read from the image of each sheet. A card code says nothing about contests or sheet position until its style is [mapped](#mapping). So a profile that avoids mapping the whole election needs a CVR that carries the styles.
+
+AuditEngine supports these constraints today: archives, sheet positions, BMD or hand-marked sheets, and lists of sheet styles to keep or drop. It cannot yet filter on party or voting group.
 
 <h3 id="protected-voters">Protected Voters</h3>
 
@@ -758,11 +799,21 @@ There is much confusion about "SHA" files that may be included with other files 
 <h3 id="sheet">Sheet</h3>
 
 
-Each ballot image is of a single paper sheet, including both sides. This is the case even if multiple sheets are included in the logical ballot.
+One piece of paper. A [ballot](#ballot) may have several sheets. In the San Francisco 2024 election, 412,231 ballots had 1,604,380 sheets. Each sheet has two [pages](#page), and each [image](#ballot-image) is the scanned picture of one page. One image file often holds both pages of a sheet.
 
 In the comparison process, the number of sheets shown in tables is not necessarily a direct sum because a single sheet may include multiple contest variants. Also, depending on the number of sheets included in a single logical ballot, the number of ballots cast may be less than the total number of sheets. This discrepancy may be hard to predict because subsequent sheets are commonly not included in the logical ballot cast. Counting the first sheet will usually produce a pretty accurate number, but even then, some voters do not include the first sheet.
 
-To complicate matters further, BMD ballots may combine multiple sheets onto one ballot summary card, and thus may result in only one ballot image file even when there are multiple sheets involved in [Hand-Marked Paper Ballots](#hand-marked-paper-ballot).
+To complicate matters further, a BMD prints a voter's whole ballot on one sheet, even when a [hand-marked ballot](#hand-marked-paper-ballot) of the same style has several sheets. See [BMD Sheet](#bmd-sheet).
+
+<h3 id="sheet-position">Sheet Position</h3>
+
+
+Which sheet of its [ballot](#ballot) a sheet is. In San Francisco it runs from 1 to 4. It is always written with the word sheet, as in "sheet position 1".
+
+<h3 id="sheet-style">Sheet Style</h3>
+
+
+The style of one [sheet](#sheet). It is what _style_num_ holds. A [ballot style](#ballot-style) is the set of sheet styles that make up one ballot.
 
 <h3 id="stage">Stage</h3>
 
