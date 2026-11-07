@@ -727,6 +727,12 @@ Voting machines that are used in polling places typically have a _poll-tape repo
 
 Some audits process only part of an election. A large election can have over a million sheets, and processing every one takes time and cost. A profile limits the audit to the sheets it needs, such as the sheets that carry the contests being audited.
 
+A profile helps whenever the interest is one contest in a large election. An example is a close local measure decided within a large county.
+
+In the March 3, 2020 primary, Long Beach voted on Measure A, which extended a 1% sales tax indefinitely. It passed by 16 votes, 49,676 to 49,660. A citizens' group, the Long Beach Reform Coalition, asked for a recount. Los Angeles County had moved to vote centers, where a voter can cast a ballot anywhere in the county. So the Long Beach ballots were mixed with over 2 million others. The county's published table put a hand recount at $15,000 to $24,000. Its estimate to find the Long Beach ballots alone was over $187,000, and the total came to nearly $240,000. The recount stopped, and a court later upheld the charges. ([Long Beach Post](https://lbpost.com/news/costs-of-recounts-fate-of-measure-a-could-hinge-on-challenge-to-countys-new-recount-rules))
+
+With the county's ballot images and CVR, AuditEngine could audit that one contest without finding or sorting any paper. A profile narrows the county to Long Beach, and then to the sheet styles that carry Measure A. Every Long Beach ballot carried the measure, so here the two give the same sheets. AuditEngine then audits only those sheets.
+
 A profile is a set of constraints. Each constraint is a filter on the [metadata](#metadata) of each sheet. Applying the profile to every sheet in the election gives the profiled set. That is the set of sheets the audit processes, with the image files of each sheet. The profile is the constraints. The profiled set is what they select.
 
 Most constraints select [sheet styles](#sheet-style). They can take several forms:
