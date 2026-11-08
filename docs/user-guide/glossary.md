@@ -16,7 +16,11 @@ AuditEngine uses a methodology called "adaptive thresholding" which can adjust t
 <h3 id="adjudicated-modified-record">Adjudicated / Modified Record</h3>
 
 
-For some [voting systems](#voting-system), such as _[Dominion](#dominion-voting-systems-dominion)_ when the JSON style CVR is used, the _[CVR](#cast-vote-record-cvr)_ may provide not only the original evaluation of the [ballot](#ballot) [sheet](#sheet), but also a 'modified' record which includes all the contests on that sheet, and may be modified. The 'modified' record may modify zero or many contests on that ballot sheet after human-eye review by election staff. If the modified record does not show a change in a given contest, it is not possible to know from that record if the contest was inspected and confirmed or not.
+Some [voting systems](#voting-system), such as [Dominion](#dominion-voting-systems-dominion), give a modified record of a [sheet](#sheet) as well as the original record in the [CVR](#cast-vote-record-cvr).
+
+Election staff make the modified record when they review the sheet. It holds every contest on the sheet, and may change none or several of them. An unchanged contest does not show whether staff examined it.
+
+AuditEngine's own results can be adjudicated in the [AdjudiTally app](#adjuditally-app). Those results, and any official hand counts, are included in the comparison.
 
 <h3 id="adjudication">Adjudication</h3>
 
@@ -94,9 +98,9 @@ If _[Cooperative Workflow](#cooperative-workflow)_ is used, then there are 2 to 
 <h3 id="ballot">Ballot</h3>
 
 
-In AuditEngine, a ballot is one voter's complete set of [sheets](#sheet). The number of ballots cast counts ballots, not sheets.
+The sheets one voter casts. One ballot is one voter. A ballot can have several [sheets](#sheet).
 
-Generally a presentation of contests and options for each contest that can be selected by a voter, and the recording of those selections. The word "ballot" originally meant "little ball" and these were placed into a box to represent the votes of each person. In practice, a complete ballot may be a number of [sheets](#sheet), each with a front and back side, also called _[pages](#page)_. However, in many instances, the term "ballot" may also be used to refer to a single sheet. Thus, "Ballot Images" should technically be "Ballot Sheet Images" because when there are multiple sheets, each image is only one sheet of the combined ballot. Sometimes, a ballot image is only of one side of one sheet (one page).
+The number of ballots cast counts ballots, not sheets. In many instances, the term "ballot" is also used to mean a single sheet. Thus "ballot images" should strictly be "ballot sheet images", because each image is of one sheet of the ballot.
 
 See _[Ballot Image](#ballot-image)._
 
@@ -162,7 +166,8 @@ BMDs use a touch-screen interface and usually produce a Ballot Summary Card whic
 
 <h3 id="ballot-variant">Ballot Variant</h3>
 
-A term used in the comparison process. If a complete sheet is blank or if the image was detected as corrupted, then this is classified as a ballot-variant. See also _[Contest Variant](#contest-variant)_ and _[cmpcvr](#cmpcvr)_.
+
+A [sheet](#sheet) that differs as a whole, such as a blank sheet or a distorted image. See also [Contest Variant](#contest-variant).
 
 <h3 id="ballots-cast-number-of">Ballots Cast (Number of)</h3>
 
@@ -236,7 +241,8 @@ The name used by AuditEngine for the _[stage](#stage)_ of a _[ballot image audit
 
 <h3 id="contest-or-ballot-contest">Contest or Ballot-Contest</h3>
 
-This is a term used in the comparison process. On each ballot cast, there are a number of contests. A single contest on a single cast ballot is a "ballot-contest" and sometimes just "contest" in the context of the comparison report. This is not the entire contest with all votes from all ballots summed, but simply the evaluation of that single contest on that sheet (for that single voter). Frequently, these can be called "votes".
+
+One contest on one [sheet](#sheet). It is the reading of that contest on that sheet, not the contest's total. It is often called a vote, but a contest can allow several votes.
 
 <h3 id="contest-name">Contest Name</h3>
 
@@ -264,7 +270,10 @@ A given graphical expression of a contest on a [Hand-Marked Paper Ballot](#hand-
 
 ### Contest Variant
 
-A contest variant is a _[ballot-contest](#contest-or-ballot-contest)_ which has [write-ins](#write-in), [overvotes](#overvote), is [flagged](#flagged), or is _[disagreed](#disagreed-contest)_, i.e. if there is any disagreement between the evaluation of the vote by AuditEngine and the official result. ([Undervotes](#undervote) are not included in the set unless they are disagreed.) Contest Variants can normally be summed by contest. Each contest variant has a separate comparison record for each ballot-contest instance.
+
+A [ballot contest](#contest-or-ballot-contest) set aside for review. It has a [write-in](#write-in), an [overvote](#overvote) or a [gray flag](#flagged), or it [disagrees](#disagreed-contest) with the CVR.
+
+An [undervote](#undervote) is a contest variant only if it disagrees or is gray-flagged. A contest variant is not necessarily an error. Each contest variant has a record of its own.
 
 ### COTS -- Commercial Off the Shelf
 
@@ -355,7 +364,10 @@ After the Help America Vote Act (HAVA) was passed in response to the year 2000 e
 
 <h3 id="disagreed-contest">Disagreed Contest</h3>
 
-As used in the comparison process, a [contest](#contest-or-ballot-contest) is considered "disagreed" unless the voting system (from the [CVR](#cast-vote-record-cvr)) and AuditEngine fully agree on the outcome, including whether it was overvoted, undervoted, or had write-ins. Since write-ins and overvotes are frequently reviewed and adjudicated by election staff, disagreed write-ins and overvotes are treated separately by the AuditEngine analysis. "_Normal Disagreed_" are the rest of the disagreed contests, which do not include write-ins or overvotes, but instead provide the actual difference in the evaluation of the vote cast by AuditEngine vs. the voting system.
+
+A [contest](#contest-or-ballot-contest) where AuditEngine and the voting system do not fully agree on the result. That includes whether the contest is overvoted, undervoted or has a write-in.
+
+Election staff often review write-ins and overvotes, so disagreed write-ins and overvotes are analyzed together. Plain disagreed contests are the other disagreed contests. They show the actual difference between AuditEngine's reading and the voting system's.
 
 ### District Record
 
@@ -451,10 +463,12 @@ When compared with voting systems without adjudication, AuditEngine resolves 75%
 
 This is the primary stage in the audit process where all ballot sheets are individually processed to recognize either the marks made by the voter, if it is a hand-marked paper ballot format, or to perform _[Optical Character Recognition (OCR)](#optical-character-recognition-ocr)_ on the text summary on the [ballot summary cards](#ballot-summary-card) produced by [BMD](#ballot-marking-device-bmd)s. The extractvote processing is delegated to a [fleet](#fleet) of individual compute instances in our datacenter and we are authorized to run up to 10,000 compute instances. See also _[Fleet](#fleet)_, _[Lambda](#lambda)_.
 
-<h3 id="flagged">Flagged</h3>
+<h3 id="flagged">Flagged / Gray Flag</h3>
 
 
-A contest is _flagged_ by AuditEngine if they include [write-ins](#write-in), are "[Flagged](#flagged)" as ambiguous, that is, if AuditEngine used heuristics to guess on the correct resolution of hesitation marks and cross-outs, in the case of overvotes, or if the ballot images were *[unprocessable](#unprocessed-sheets)* due to damage to the image. AuditEngine can be used to produce its own canvass of the election, and the Flagged contests can be reviewed using the AuditEngine [AdjudiTallyApp](#adjuditally-app) when the margin of victory is close to resolve the flagged contests using human eye evaluation of the images.
+Also called a gray flag. AuditEngine found an ambiguous mark, or used heuristics to judge the voter's intent. A gray-flagged contest is set aside for review.
+
+Flagged contests can be reviewed by eye in the [AdjudiTally app](#adjuditally-app), which matters most when the margin is close.
 
 <h3 id="fleet">Fleet</h3>
 
@@ -583,7 +597,7 @@ Thus, for very few contests, the Type 1 hex mapping is the most economical, but 
 <h3 id="images-missing">Images Missing</h3>
 
 
-This is a discrepancy attribute. Sometimes not all the images are provided and so these are accounted for as the number of Images Missing. AuditEngine does not attempt to sum the number of contests nor the votes on ballot images that are missing. If there are a vast number of images missing, this can make an accurate audit difficult.
+[CVR](#cast-vote-record-cvr) records with no ballot image. AuditEngine counts no contests for them. A large number of missing images can make an accurate audit difficult.
 
 <h3 id="job-name">Job Name</h3>
 
@@ -672,9 +686,10 @@ Essentially "data about other data", and used to refer to attributes of [ballot 
 
 See '_[Adjudicated](#adjudicated-modified-record)_'.
 
-<h3 id="nonvariant-ballot">Nonvariant Ballot</h3>
+<h3 id="nonvariant-ballot">Non-variant Sheet</h3>
 
-A nonvariant ballot is neither a [Ballot Variant](#ballot-variant), and it has no [Contest Variants](#contest-variant). In essence, a nonvarant ballot is 100% in agreement with the evaluation by AuditEngine, and also has no write-ins, overvotes, or gray-flags. However, it might have agreed undervotes.
+
+A [sheet](#sheet) with no [contest variants](#contest-variant). Every contest on it agrees. It may have agreed undervotes.
 
 <h3 id="optical-character-recognition-ocr">Optical Character Recognition (OCR)</h3>
 
@@ -684,21 +699,25 @@ This is the process used by computer software to convert printed text that is sc
 <h3 id="overvote">Overvote</h3>
 
 
-If a voter marks more than the number of options allowed in the contest, it is considered "overvoted" and no vote is awarded to any option. For example, if the "vote-for" number is 1 and the voter votes for three options, it is considered one overvote.
+A contest with more selections than the vote-for number. No vote is awarded to any option. For example, if the vote-for number is 1 and the voter marks three options, it is one overvote. A [BMD](#ballot-marking-device-bmd) sheet cannot be overvoted.
 
-Overvotes do not occur on BMD ballots.
+A contest with an overvote is classed as an overvote, even if the write-in target is marked.
 
-Very frequently, overvotes are misinterpreted by the voting system and should be fully reviewed in close contests. If a contest has an overvote, it will be first classified as an overvote, even when the write-in target is selected. Some election departments will mark overvotes as an undervote when [adjudicated](#adjudicated-modified-record) if they are confirmed as an overvote. AuditEngine understands this form of adjudication and does not regard it as a disagreement.
+Voting systems and AuditEngine can read overvotes differently, so the overvotes of a close contest should be reviewed. Some election offices record a confirmed overvote as an undervote when it is [adjudicated](#adjudicated-modified-record). AuditEngine accepts that adjudication, and does not count it as a disagreement.
+
+AuditEngine counts some marks that a voting system may read as undervotes, such as a circled oval or a check mark that does not reach the oval.
 
 <h3 id="page">Page</h3>
 
 
 One side of a [sheet](#sheet), if sheets are printed on both sides. If a ballot provided to a single voter has 2 sheets, then the pages are numbered 1, 2, 3, 4, for the front of sheet 1, back of sheet 1, front of sheet 2, back of sheet 2. Each sheet has two pages. An [image](#ballot-image) is the scanned picture of one page. Sometimes pages and sheets are numbered starting at 0, so we have to be careful. If we know the page or sheet will start at 0, we will call it page0 or sheet0.
 
-<h3 id="partially-agreed-sheets">Partially Agreed Sheets</h3>
+<h3 id="partially-agreed-sheets">Variants Removed Sheet / Partially Agreed Sheet</h3>
 
 
-In the _[cmpcvr](#cmpcvr)_ comparison process, if a ballot sheet has at least one _[contest-variant](#contest-variant)_, then that contest-variant is logically pulled from the _[partially agreed sheet](#partially-agreed-sheets)_ comparison record, and what remains in the _partially agreed sheet_ record are the rest of the non-variant contests. Note that if all contests are considered contest-variants, then the partially agreed sheet will persist as an empty shell with no contests left in it, and all contest variants will be moved to the contest-variants set.
+The Reconciliation Report calls these variants removed sheets. A variants removed sheet has at least one [contest variant](#contest-variant). Its contest variants are moved to records of their own.
+
+What remains are the sheet's other contests, which agree. If every contest is a variant, no contests remain.
 
 <h3 id="personal-identifying-information-pii">Personal Identifying Information (PII)</h3>
 
@@ -725,36 +744,9 @@ Voting machines that are used in polling places typically have a _poll-tape repo
 <h3 id="profile">Profile</h3>
 
 
-Some audits process only part of an election. A large election can have over a million sheets, and processing every one takes time and cost. A profile limits the audit to the sheets it needs, such as the sheets that carry the contests being audited.
+Some audits process only part of an election. A profile limits the audit to the sheets it needs. The usual profile takes every [sheet style](#sheet-style) that carries the contest being audited, and only those sheets.
 
-A profile helps whenever the interest is one contest in a large election. An example is a close local measure decided within a large county.
-
-In the March 3, 2020 primary, Long Beach voted on Measure A, which extended a 1% sales tax indefinitely. It passed by 16 votes, 49,676 to 49,660. A citizens' group, the Long Beach Reform Coalition, asked for a recount. Los Angeles County had moved to vote centers, where a voter can cast a ballot anywhere in the county. So the Long Beach ballots were mixed with over 2 million others. The county's published table put a hand recount at $15,000 to $24,000. Its estimate to find the Long Beach ballots alone was over $187,000, and the total came to nearly $240,000. The recount stopped, and a court later upheld the charges. ([Long Beach Post](https://lbpost.com/news/costs-of-recounts-fate-of-measure-a-could-hinge-on-challenge-to-countys-new-recount-rules))
-
-With the county's ballot images and CVR, AuditEngine could audit that one contest without finding or sorting any paper. A profile selects the sheet styles that carry Measure A, and only those sheets. AuditEngine then audits every sheet of the contest, and no others.
-
-A profile is a set of constraints. Each constraint is a filter on the [metadata](#metadata) of each sheet. Applying the profile to every sheet in the election gives the profiled set. That is the set of sheets the audit processes, with the image files of each sheet. The profile is the constraints. The profiled set is what they select.
-
-Most constraints select [sheet styles](#sheet-style). They can take several forms:
-
-- A list of sheet styles. This is the most exact form.
-- A contest. The profile takes every sheet style that carries the contest, and only those styles. This is the usual form, because most audits look at one contest.
-- A [sheet position](#sheet-position), such as the first sheet of every ballot. This form is broad. Sheet position 2 of one ballot style can carry different contests from sheet position 2 of another.
-- A party, in a primary election. It selects the sheet styles of that party's ballots.
-
-Some constraints are not part of any style:
-
-- A voting group, such as mail, early voting, in-person election day or provisional. Sheets of the same style are cast in every group.
-- An [archive](#archive-zip-archive).
-- [BMD sheets](#bmd-sheet) or [hand-marked](#hand-marked-paper-ballot) sheets.
-
-A constraint on sheet position applies to the physical sheet. A BMD sheet can stand for several [cards](#card). So a profile of sheet position 1 takes in every BMD sheet, with the contests of all its cards.
-
-A profile by contest covers every sheet of the contest being audited, and no other sheets. A profile of sheet position 1 can take in first sheets that do not carry that contest.
-
-The metadata comes from the [CVR](#cast-vote-record-cvr) and from the image files. The votes are never used. CVRs differ in how much metadata they carry. Some give each sheet's style, sheet position, group and BMD status. Others give no style or card code at all. Then the [card_code](#card_code) is read from the image of each sheet. A card code says nothing about contests or sheet position until its style is [mapped](#mapping). So a profile that avoids mapping the whole election needs a CVR that carries the styles.
-
-AuditEngine supports these constraints today: contests, archives, sheet positions, BMD or hand-marked sheets, and lists of sheet styles to keep or drop. It cannot yet filter on party or voting group.
+See [Profiles](profiles.md) for the details and an example.
 
 <h3 id="protected-voters">Protected Voters</h3>
 
@@ -808,11 +800,11 @@ There is much confusion about "SHA" files that may be included with other files 
 <h3 id="sheet">Sheet</h3>
 
 
-One piece of paper. A [ballot](#ballot) may have several sheets. In the San Francisco 2024 election, 412,231 ballots had 1,604,380 sheets. Each sheet has two [pages](#page), and each [image](#ballot-image) is the scanned picture of one page. One image file often holds both pages of a sheet.
+One physical sheet of paper, with both sides. A [ballot](#ballot) can have several sheets. In the San Francisco 2024 election, 412,231 ballots had 1,604,380 sheets. Each sheet has two [pages](#page), and each [image](#ballot-image) is the scanned picture of one page. One image file often holds both pages of a sheet.
 
-In the comparison process, the number of sheets shown in tables is not necessarily a direct sum because a single sheet may include multiple contest variants. Also, depending on the number of sheets included in a single logical ballot, the number of ballots cast may be less than the total number of sheets. This discrepancy may be hard to predict because subsequent sheets are commonly not included in the logical ballot cast. Counting the first sheet will usually produce a pretty accurate number, but even then, some voters do not include the first sheet.
+A voter may cast only some of the sheets, so the number of sheets does not predict the number of ballots. Nearly every ballot includes its first sheet, so the first sheets come close to the ballots cast. Some voters leave out even the first sheet.
 
-To complicate matters further, a BMD prints a voter's whole ballot on one sheet, even when a [hand-marked ballot](#hand-marked-paper-ballot) of the same style has several sheets. See [BMD Sheet](#bmd-sheet).
+A BMD prints a voter's whole ballot on one sheet, even when a [hand-marked ballot](#hand-marked-paper-ballot) of the same style has several sheets. See [BMD Sheet](#bmd-sheet).
 
 <h3 id="sheet-position">Sheet Position</h3>
 
@@ -849,9 +841,14 @@ A browser-based application that assists with the mapping of the contests and op
 
 An Undervote occurs when a voter does not vote for as many options as is possible in a contest. The number of undervotes is the number that is not voted. So if a voter can vote for up to 3 in a contest, and only one option is selected, then the number of undervotes in that contest is 2. AuditEngine will correctly interpret many marks that would be considered undervotes by voting systems, such as when ovals are circled or if a checkmark does not actually get inside the oval, or very light marks.
 
-<h3 id="unprocessed-sheets">Unprocessed Sheets</h3>
+<h3 id="unprocessed-sheets">Unprocessed Sheet</h3>
 
-Sheets that were NOT successfully processed by AuditEngine, generally due to images that are damaged due to scanner jitter when the sheet is not evenly fed through the scanner, barcodes that were corrupted and unreliable, or BMD ballots that were not perfectly read by AuditEngine using [OCR (optical character recognition)](#optical-character-recognition-ocr). Cleaning the scanner rollers can help to avoid corrupted images. AuditEngine does not track the number of contests on unprocessed sheets. If a large number of ballots are unprocessed from a specific voting machine scanner, then additional maintenance or retiring that scanner may be called for. Ballots that were Unprocessed were not necessarily improperly evaluated by the voting system.
+
+A [sheet](#sheet) AuditEngine could not process.
+
+The usual causes are an image stretched when the sheet fed unevenly through the scanner, a damaged barcode, or a BMD sheet whose text could not be read by [OCR](#optical-character-recognition-ocr). Clean scanner rollers help avoid stretched images.
+
+AuditEngine counts no contests on an unprocessed sheet. Many unprocessed sheets from one scanner may mean it needs maintenance. An unprocessed sheet was not necessarily misread by the voting system.
 
 ### User Permissions
 
@@ -961,13 +958,13 @@ How the work will be done in an audit, particularly when working in concert with
 <h3 id="write-in">Write-in</h3>
 
 
-If the write-in [target](#target) is marked or if the [Write-in Area](#write-in-area) is filled in, then it is considered that the voter intended to write-in the name for a write-in candidate. How this is handled is specific to different states, but most often, the written-in name must also be from a list of qualified write-in candidates.
+A contest where the voter marked the write-in [target](#target) or wrote a name in the [write-in area](#write-in-area).
 
-Write-ins on [BMD ballots](#ballot-marking-device-bmd) do not need human-eye adjudication because the names are keyed in.
+States differ in how they count write-ins. Most count a name only if it is a qualified write-in candidate. A written name can also be a listed candidate, and then the vote goes to that candidate. So the write-ins of a close contest should be examined.
 
-The name written-in should be examined in close contests even if there were no candidates that were qualified as write-ins for this contest, because the name written-in may be of a listed candidate, and if so, then the vote is accepted for that listed candidate. In cases when an overvote is initially detected and the written-in name is one of the listed candidates, it should be a single vote for that candidate. How this is handled is very state-specific.
+A [BMD](#ballot-marking-device-bmd) sheet has the name keyed in, so it needs no review of handwriting.
 
-Write-ins normally account for about 80% of [Contest Variants](#contest-variant). Since write-ins are very commonly misunderstood by voters, their use should be minimized.
+Write-ins are often the largest group of [contest variants](#contest-variant). Voters often misunderstand write-ins, so their use should be kept to a minimum.
 
 <h3 id="write-in-area">Write-in Area</h3>
 

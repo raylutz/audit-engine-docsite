@@ -24,6 +24,7 @@ nav:
 #        - Voter Intent Guide:             user-guide/voter_intent_guide.md
 #        - Pricing Guidelines:             user-guide/prices.md
         - FAQs:                           user-guide/auditengine_faqs.md            # https://copswiki.org/Common/AuditEngineFAQs
+        - Profiles:                       user-guide/profiles.md
         - Glossary:                       user-guide/glossary.md
     - Community:
         - In the News:                    community/in_the_news.md
