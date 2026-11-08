@@ -715,7 +715,7 @@ One side of a [sheet](#sheet), if sheets are printed on both sides. If a ballot 
 <h3 id="partially-agreed-sheets">Variants Removed Sheet / Partially Agreed Sheet</h3>
 
 
-The Reconciliation Report calls these variants removed sheets. A variants removed sheet has at least one [contest variant](#contest-variant). Its contest variants are moved to records of their own.
+A sheet with at least one [contest variant](#contest-variant). Its contest variants are moved to records of their own. The Reconciliation Report calls it a variants removed sheet.
 
 What remains are the sheet's other contests, which agree. If every contest is a variant, no contests remain.
 
