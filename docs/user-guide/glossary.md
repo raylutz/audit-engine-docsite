@@ -214,6 +214,8 @@ A logical sheet, as the [CVR](#cast-vote-record-cvr) records it. A hand-marked s
 <h3 id="card_code">card_code</h3>
 
 
+The style code given on a sheet, typically a proprietary [barcode](#barcode) on [hand-marked ballots](#hand-marked-paper-ballot).
+
 This term is defined by AuditEngine to refer to an integer or binary code encoded on a ballot sheet, sometimes on each side of the sheet, using barcodes or other encoding, which can be used to determine the *[Ballot Style](#ballot-style)*. The _card_code_ might be directly used as the *style_num*, or there may be a conversion utilized. The _card_code_ is generally not exposed to election staff that use the [EMS](#election-management-system-ems) to design the election, and is assigned to ballots by the EMS usually without the knowledge of the EMS user. These numbers are specific to a given county and different counties may use (unfortunately) the same *card_code*s to mean different styles. 
 
 <h3 id="cast-vote-record-cvr">Cast Vote Record (CVR)</h3>
@@ -522,6 +524,8 @@ We recommend the free Windows Application _QuickHash_ to prepare a Hash Manifest
 
 <h3 id="hexstyle">Hexstyle</h3>
 
+AuditEngine's own internal representation of a style. It is equivalent to listing the contests on the ballot.
+
 Each vendor and each county can use an arbitrary method for identifying styles, typically by number. The number is just a label, and does not provide information about what contests exist on the ballot. Therefore, we have defined a method of describing the style, essentially by listing the contests that exist on that ballot. We call this the **hexstyle**, even though the form of the indicator may not use hex digits.
 
 **TYPE 1: hexidecimal encoded bitmap:**
@@ -691,6 +695,11 @@ See '_[Adjudicated](#adjudicated-modified-record)_'.
 
 A [sheet](#sheet) with no [contest variants](#contest-variant). Every contest on it agrees. It may have agreed undervotes.
 
+<h3 id="official-results">Official Results</h3>
+
+
+Each contest's totals as the county reports them. They are not derived from the [CVR](#cast-vote-record-cvr).
+
 <h3 id="optical-character-recognition-ocr">Optical Character Recognition (OCR)</h3>
 
 
@@ -719,6 +728,11 @@ A sheet with at least one [contest variant](#contest-variant). Its contest varia
 
 What remains are the sheet's other contests, which agree. If every contest is a variant, no contests remain.
 
+<h3 id="party">Party</h3>
+
+
+A political party. In a partisan primary, a voter's party sets the [ballot style](#ballot-style), along with the [precinct](#precinct).
+
 <h3 id="personal-identifying-information-pii">Personal Identifying Information (PII)</h3>
 
 
@@ -740,6 +754,11 @@ The operation of AuditEngine is divided into a series of [stages](#stage), where
 
 
 Voting machines that are used in polling places typically have a _poll-tape report_ which is printed out by poll workers during an election, and frequently is posted at the polling site with a signed copy turned into the election office. _Digital Poll Tapes_ can be produced by [ES&S](#election-systems-&-software-es&s) voting systems. These are an exact copy of the report produced by the voting system scanner but they are provided as a PDF, LST or TXT files. These files can be processed by AuditEngine to provide another check of the results of the election by comparing the aggregated results for each precinct with the final aggregated report. This audit is not available for [Dominion](#dominion-voting-systems-dominion) systems.
+
+<h3 id="precinct">Precinct</h3>
+
+
+A voting area. The voters of a precinct get the same contests, apart from [party](#party) in a primary.
 
 <h3 id="profile">Profile</h3>
 
@@ -815,6 +834,11 @@ Which sheet of its [ballot](#ballot) a sheet is. In San Francisco it runs from 1
 
 
 The style of one [sheet](#sheet). It is what _style_num_ holds. A [ballot style](#ballot-style) is the set of sheet styles that make up one ballot.
+
+<h3 id="sheets-cast">Sheets Cast</h3>
+
+
+The number of [sheets](#sheet) in the [CVR](#cast-vote-record-cvr). Each CVR record is one sheet. See also [Ballots Cast](#ballots-cast-number-of).
 
 <h3 id="stage">Stage</h3>
 
