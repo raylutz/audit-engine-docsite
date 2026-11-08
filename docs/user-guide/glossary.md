@@ -731,13 +731,14 @@ A profile helps whenever the interest is one contest in a large election. An exa
 
 In the March 3, 2020 primary, Long Beach voted on Measure A, which extended a 1% sales tax indefinitely. It passed by 16 votes, 49,676 to 49,660. A citizens' group, the Long Beach Reform Coalition, asked for a recount. Los Angeles County had moved to vote centers, where a voter can cast a ballot anywhere in the county. So the Long Beach ballots were mixed with over 2 million others. The county's published table put a hand recount at $15,000 to $24,000. Its estimate to find the Long Beach ballots alone was over $187,000, and the total came to nearly $240,000. The recount stopped, and a court later upheld the charges. ([Long Beach Post](https://lbpost.com/news/costs-of-recounts-fate-of-measure-a-could-hinge-on-challenge-to-countys-new-recount-rules))
 
-With the county's ballot images and CVR, AuditEngine could audit that one contest without finding or sorting any paper. A profile narrows the county to Long Beach, and then to the sheet styles that carry Measure A. Every Long Beach ballot carried the measure, so here the two give the same sheets. AuditEngine then audits only those sheets.
+With the county's ballot images and CVR, AuditEngine could audit that one contest without finding or sorting any paper. A profile selects the sheet styles that carry Measure A, and only those sheets. AuditEngine then audits every sheet of the contest, and no others.
 
 A profile is a set of constraints. Each constraint is a filter on the [metadata](#metadata) of each sheet. Applying the profile to every sheet in the election gives the profiled set. That is the set of sheets the audit processes, with the image files of each sheet. The profile is the constraints. The profiled set is what they select.
 
 Most constraints select [sheet styles](#sheet-style). They can take several forms:
 
 - A list of sheet styles. This is the most exact form.
+- A contest. The profile takes every sheet style that carries the contest, and only those styles. This is the usual form, because most audits look at one contest.
 - A [sheet position](#sheet-position), such as the first sheet of every ballot. This form is broad. Sheet position 2 of one ballot style can carry different contests from sheet position 2 of another.
 - A party, in a primary election. It selects the sheet styles of that party's ballots.
 
@@ -749,9 +750,11 @@ Some constraints are not part of any style:
 
 A constraint on sheet position applies to the physical sheet. A BMD sheet can stand for several [cards](#card). So a profile of sheet position 1 takes in every BMD sheet, with the contests of all its cards.
 
+A profile by contest covers every sheet of the contest being audited, and no other sheets. A profile of sheet position 1 can take in first sheets that do not carry that contest.
+
 The metadata comes from the [CVR](#cast-vote-record-cvr) and from the image files. The votes are never used. CVRs differ in how much metadata they carry. Some give each sheet's style, sheet position, group and BMD status. Others give no style or card code at all. Then the [card_code](#card_code) is read from the image of each sheet. A card code says nothing about contests or sheet position until its style is [mapped](#mapping). So a profile that avoids mapping the whole election needs a CVR that carries the styles.
 
-AuditEngine supports these constraints today: archives, sheet positions, BMD or hand-marked sheets, and lists of sheet styles to keep or drop. It cannot yet filter on party or voting group.
+AuditEngine supports these constraints today: contests, archives, sheet positions, BMD or hand-marked sheets, and lists of sheet styles to keep or drop. It cannot yet filter on party or voting group.
 
 <h3 id="protected-voters">Protected Voters</h3>
 
