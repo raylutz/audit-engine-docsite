@@ -45,6 +45,15 @@ AuditEngine works in four phases. It uses two sets of files from the election of
 
 More detail is in [How AuditEngine Works](user-guide/auditengine-background-doc.md).
 
+## The Voting System and AuditEngine
+This block diagram shows the voting system above, and AuditEngine below.
+
+The upper block shows the operation of the voting system, which scans hand-marked paper ballots and creates ballot images, which are then analyzed to extract the vote and create cast-vote records. Those can be totalled up to create the election results.
+
+The lower block shows how AuditEngine accepts ballot images, and then performs style analysis, to provide a map of the contests and options to where the bubbles are. The ballots are then fully processed to extract the vote and then these cast vote records are compared with the official records. Discrepancies can then be reviewed using our Adjudicator App if the election is close enough to require that.
+
+<img src="https://copswiki.org/w/pub/Common/AuditEngine/AuditEngine High level flow chart.png" alt="AuditEngine High level flow chart.png" width='800'/>
+
 ## How It Works
 ### Getting the data together
 First, the data must be assembled for use by AuditEngine. Most of this is already produced and available by Election Officials.
