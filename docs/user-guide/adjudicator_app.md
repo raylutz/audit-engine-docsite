@@ -8,6 +8,7 @@ The AdjudiTally App provides a browser-based user interface to review ballot ima
 
 Please review the following concepts in the Glossary:
 
+
 - [Ballot Image](glossary.md#ballot-image)
 - [Ballot Variant](glossary.md#ballot-variant)
 - [Cast Vote Record (CVR)](glossary.md#cast-vote-record-cvr)
@@ -18,6 +19,7 @@ Please review the following concepts in the Glossary:
 ## Major Modes
 
 This same app is used in several major modes of operation:
+
 
 - **[Adjudicator](#adjudicator-mode)** - In this mode, records that are either ballot variants or contest variants are provided for review, and the user can enter the interpretation of voter intent. Please note that nonvariant ballots are not reviewed in this process.
 - **[Tally](#tally-mode) -** This application can be used to independently tally from a set of ballot images. In this mode, there is no reference to any voting-system cast vote record.
@@ -33,6 +35,7 @@ In this mode, records that are either ballot variants or contest variants are pr
 
 Please notice the following major panes:
 
+
 1. **Job selection, Filters, and Search** -- in this block the audit project can be selected and records filtered and searched.
 2. **Ballot/Contest List** -- in this list, the ballot and contest is listed which is considered a variant for review.
 3. **Interpretation** -- In this pane, the interpretation by the Voting System and by AuditEngine is shown, and the actual interpretation can be entered by the user.
@@ -42,27 +45,28 @@ Please notice the following major panes:
 
 The process of adjudication can be summarized as follows:
 
+
 1. **Job Selection:** The top selector box selects the job to be processed, typically in STATE_County_YYYYMMDD format.
 
 2. **Data Source:** There are two sources:
 
-   1. **audit_variants:** Choose this option when running in cooperative workflow, and the results have not been compared with the CVR. In this mode, there are no "disagreed" records, but there are still gray-flags, overvotes and write-ins. These can be reviewed to generate the best possible independent tabulation prior to receiving the CVR.
-   2. **cmpcvr:** Choose this option when running in public oversight workflow, or after the CVR has been received in cooperative workflow. This will allow comparision with the Voting System results.
+    1. **audit_variants:** Choose this option when running in cooperative workflow, and the results have not been compared with the CVR. In this mode, there are no "disagreed" records, but there are still gray-flags, overvotes and write-ins. These can be reviewed to generate the best possible independent tabulation prior to receiving the CVR.
+    2. **cmpcvr:** Choose this option when running in public oversight workflow, or after the CVR has been received in cooperative workflow. This will allow comparision with the Voting System results.
 
 3. **Record Type:** There are three possible variant types:
 
-   1. contest_variants
-   2. ballot_variants
-   3. nonvariants
+    1. contest_variants
+    2. ballot_variants
+    3. nonvariants
 
 4. **Filters**: Filters can be established to focus variant types, contests, or precincts.
 
-   1. Contest - Can choose one or many contests, or all (no filters)
-   2. Precinct - Can choose one or many precincts, or all (no filters)
-   3. Adjudicated - Can choose those already or not yet adjudicated.
-   4. Tag - Can choose from any records arbitrarily tagged.
-   5. Variant Group - Can choose from records based on their attributes (See table below)
-   6. Choose "Apply"
+    1. Contest - Can choose one or many contests, or all (no filters)
+    2. Precinct - Can choose one or many precincts, or all (no filters)
+    3. Adjudicated - Can choose those already or not yet adjudicated.
+    4. Tag - Can choose from any records arbitrarily tagged.
+    5. Variant Group - Can choose from records based on their attributes (See table below)
+    6. Choose "Apply"
 
 5. **Select Ballot:** Click on the ballot number to select a ballot for review.
 
@@ -70,11 +74,11 @@ The process of adjudication can be summarized as follows:
 
 7. **Choose correct evaluation:** 
 
-   In the center pane, choose either:
+    In the center pane, choose either:
 
-   1. **VotingSystem**, if the vote checked in that column is correct.
-   2. **AuditEngine**, if the vote checked in that columns is correct and the Voting System is not correct.
-   3. **Direct**, if neither the Voting System or AuditEngine are correct. Then, check mark the correct vote in that column.
+    1. **VotingSystem**, if the vote checked in that column is correct.
+    2. **AuditEngine**, if the vote checked in that columns is correct and the Voting System is not correct.
+    3. **Direct**, if neither the Voting System or AuditEngine are correct. Then, check mark the correct vote in that column.
 
 8. **Click "Checked"** -- This can be done right away if there is only one worker. Alternatively, a second worker can check the work of the first worker and checkmark "Checked".
 
@@ -186,6 +190,7 @@ Note: The current implementation of this mode is incorrect. The goal will be to 
 ### Ballot Viewer Verification Procedure
 
 One use of the ballot viewer is to hand-verify the cast vote record is correct when compared with the ballot images. This requires the CVR but does not require that AuditEngine is run, and there is no AuditEngine evaluation. The following procedure can be used.
+
 
 1. Choose Job
 2. Choose all ballots

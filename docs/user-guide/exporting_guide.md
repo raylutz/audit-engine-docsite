@@ -2,7 +2,7 @@
 title: Exporting Guide for AuditEngine
 summary: Step-by-step instructions for Exporting from both ES&S and Dominion Voting Systems.
 authors:
-    - Ray Lutz
+- Ray Lutz
 date: 2021-09-28
 remote_url: https://docs.google.com/document/d/1qeuAtmNBhLL2KLUUtJPgtq5rzyjq1QTzBuaO4HlJwDY/edit?usp=sharing
 remote_url2: https://docs.google.com/document/d/1rAW6JRnaaP8949ALVcPp0Kg5vd9gjfJVKjL7ZppB2oE/edit?usp=sharing
@@ -38,13 +38,13 @@ See also
 
 - [Sending Election Data to AuditEngine](sending_data.md) -- Includes:
 
-  - Archiving the Data
-  - Creating a Hash Manifest File
-  - Providing the data:
-    - Posting the data - Election officials are now opting to post the data once for all requesters.
-    - Uploading - We can provide a county-specific upload link so they files can be easily uploaded.
-    - Using USB Thumbdrives
-    - Using a "Jump Drive"
+    - Archiving the Data
+    - Creating a Hash Manifest File
+    - Providing the data:
+        - Posting the data - Election officials are now opting to post the data once for all requesters.
+        - Uploading - We can provide a county-specific upload link so they files can be easily uploaded.
+        - Using USB Thumbdrives
+        - Using a "Jump Drive"
 
 
 

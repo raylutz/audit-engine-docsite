@@ -53,6 +53,7 @@ Some counties may post their data for everyone. This is the case, for example, i
 
 For example: 
 
+
 - CA: CPRA (California Public Records Act)
 - CO: CORA (Colorado Open Records Act)
 - NJ: OPRA (Open Records Act)
@@ -67,6 +68,7 @@ It is recommended that you both email this in, and if you are local to the offic
 
 We have the following guides to help them export and provide the data to AuditEngine.
 
+
 - [Dominion Exporting Guide](dom_exporting_guide.md)
 
 - [ES&S Exporting Guide](ess_exporting_guide.md)
@@ -76,14 +78,14 @@ We have the following guides to help them export and provide the data to AuditEn
 ### Sending the data to AuditEngine
 
 - [Sending Election Data to AuditEngine](sending_data.md) -- Includes:
-  - Archiving the Data
-  - Creating a Hash Manifest File
-  - Providing the data:
-    - Posting the data - Election officials are now opting to post the data once for all requesters.
-    - Uploading - We can provide a county-specific upload link so they files can be easily uploaded.
-      - Note: To generate this link, the District must be created in AuditEngine. Then edit the District Properties and click [Request Link] to generate a general link for this district, suitable for any election
-    - Using USB Thumbdrives
-    - Using a "Jump Drive"
+    - Archiving the Data
+    - Creating a Hash Manifest File
+    - Providing the data:
+        - Posting the data - Election officials are now opting to post the data once for all requesters.
+        - Uploading - We can provide a county-specific upload link so they files can be easily uploaded.
+            - Note: To generate this link, the District must be created in AuditEngine. Then edit the District Properties and click [Request Link] to generate a general link for this district, suitable for any election
+        - Using USB Thumbdrives
+        - Using a "Jump Drive"
 
 ## Create an Election on AuditEngine
 

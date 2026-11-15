@@ -8,6 +8,7 @@ The Job Settings File is a .csv file that is easy to edit, to provide the variou
 You will be asked to specify the vendor, and then you will be asked for a number of values that will mainly be used for generating the report, and are not available from the data itself.
 
 The settings that typically can be set at this time are as follows:
+
 -  **vendor** -- either "ES&S" or "Dominion"
 -  **district_bias_desc** -- This is a string description of the district bias, based on the turnout, such as "Dark Red", "Dark Blue", "Leans Red", etc.
 - **district_population** -- The total population of the district in a recent report.
@@ -32,13 +33,14 @@ Automapping is feasible when we have ballot style masters, and if the ballot_con
 
 There are three options for generating the EIF:
 
+
 1. **If the CVR is available:** In the case of public oversight workflow, the CVR may be available early in the process. If this is the case, then:
-   - Use stage '**cvr_to_eif**' to generate the `DRAFT_EIF_(job_name).csv` file in the params folder. 
-   - Reviewed and edit this file as needed to create the `EIF_(job_name).csv` file
-   - Run stage '**parse_eif**' to parse the EIF file to create the parse report and create "`cache/contests_dod.json`".
+    - Use stage '**cvr_to_eif**' to generate the `DRAFT_EIF_(job_name).csv` file in the params folder. 
+    - Reviewed and edit this file as needed to create the `EIF_(job_name).csv` file
+    - Run stage '**parse_eif**' to parse the EIF file to create the parse report and create "`cache/contests_dod.json`".
 2. **If the CVR is not available, but LAT data is:** This is the case for cooperative workflow. It is essential that all contests and options are available in the official order, and the expected LAT results are normally provided in an `xlsx` file. Parsing this file will provide the EIF, as follows:
-   - Use state '**noncvr_to_eif**' to generate the  `DRAFT_EIF_(job_name).csv` file in the params folder.
-   - Continue with the steps outlined above
+    - Use state '**noncvr_to_eif**' to generate the  `DRAFT_EIF_(job_name).csv` file in the params folder.
+    - Continue with the steps outlined above
 3. **If the CVR is not available and LAT data is not available:** The EIF will have to be hand-generated. Start with the file EIF_Blank.csv and hand-edit the entries. These can be found typically by referring to the official results. If the CVR is never expected to be available, then it is not necessary to make sure the names are the same. Then use **parse_eif**.
 
 | **Column Name**                | **Data<br>type**  |  **Description**  |
