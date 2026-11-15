@@ -26,8 +26,27 @@ AuditEngine is an election auditing platform which performs "Ballot Image Auditi
   than the official voting systems by 93% on contests where we have located a disagreement (excluding corrupted ballot images). Also exposed in this report is the fact that the Election Systems & Software (ES&S) Election Management System (EMS) uses two internal tabulations that do not agree! This seems like it could be a security risk.
   (Read the report and watch four videos on this page.)
 
-## Simplified Block Diagram
-The following block diagram should help your understanding of how AuditEngine works. 
+## How AuditEngine Works
+
+<a href="images/auditengine_overview.png"><img src="images/auditengine_overview.png" alt="AuditEngine in four phases: Index, Map, Extract, Compare" style="display: block; width: 420px; max-width: 100%; margin: 0 auto 1em auto;" /></a>
+
+AuditEngine works in four phases. It uses two sets of files from the election office.
+
+- The [Cast Vote Records (CVR)](user-guide/glossary.md#cast-vote-record-cvr) give a record for each sheet. Each record holds the votes the voting system found, and metadata such as precinct, ballot style and voting group.
+- The Ballot Image Archive (BIA) holds the images of each sheet, front and back, in one or more ZIP archives.
+
+**1. Index.** AuditEngine combines the metadata from the CVR and the images into one index. It does not use the votes in the CVR. It reads each image for the style codes printed on it. It finds which sheets are hand-marked and which are BMD sheets. It checks for repeated ballot IDs and duplicate images.
+
+**2. Map.** AuditEngine maps where each oval is, and which contest and option it stands for. It does not rely on the voting system's map, or on its QR codes and barcodes. Proofs of the map are reviewed by eye.
+
+**3. Extract.** AuditEngine reads the votes from the original images. On a hand-marked sheet, it judges each mark. On a BMD sheet, it reads the printed text, not the QR code or barcode.
+
+**4. Compare.** Only now do the CVR votes enter. AuditEngine compares its votes with the CVR, sheet by sheet. The Reconciliation Report shows each difference, for review.
+
+More detail is in [How AuditEngine Works](user-guide/auditengine-background-doc.md).
+
+## The Voting System and AuditEngine
+This block diagram shows the voting system above, and AuditEngine below.
 
 The upper block shows the operation of the voting system, which scans hand-marked paper ballots and creates ballot images, which are then analyzed to extract the vote and create cast-vote records. Those can be totalled up to create the election results.
 
