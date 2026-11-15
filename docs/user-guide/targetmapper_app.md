@@ -9,6 +9,7 @@ The TargetMapper App provides a browser-based user interface to review ballot st
 
 Please review the following concepts in the Glossary:
 
+
 - [Audit Job](glossary.md#audit-job)
 - [Ballot Style](glossary.md#ballot-style)
 - [Cast Vote Record (CVR)](glossary.md#cast-vote-record-cvr)
@@ -22,6 +23,7 @@ Please review the following concepts in the Glossary:
 
 Prior to using TargetMapper, there are a number of steps that must be taken:
 
+
 1. The [District Record](glossary.md#district-record), [Election Record](glossary.md#election-record) and [Audit Job](glossary.md#audit-job) must be set up in the AuditEngine browser app. 
 2. The [Job Settings](glossary.md#job-settings) for this audit must specify 'workflow' as 'public_oversight', and 'ballot_style_masters' must not be specified.
 3. [User Permissions](glossary.md#user-permissions) for the user that will be using TargetMapper must be set up in the user permissions panel to include this audit.
@@ -33,6 +35,7 @@ Prior to using TargetMapper, there are a number of steps that must be taken:
 <img src="https://s3.amazonaws.com/auditengine.org/docs/images/targetmapper_layout.png" alt="Target Mapper Layout">
 
 There are three major panes in the layout of the application
+
 
 1. **Ballot Image pane** -- This pane will show one side of one ballot style template.
     1. The image can be zoomed in, panned, and rotated using the mouse, scroll wheel and dragging gestures.
@@ -118,6 +121,7 @@ There are three major panes in the layout of the application
 
 There are a number of nuances and details for special case, but primarily, the workflow is as follows:
 
+
 1. **Process Audit Pipeline to build_target_mapper_package** -- this will generate the files in the /map folder. Also must run the stage 'update_system_status_stage' so TargetMapper can see that the package has been built.
 2. **Run TargetMapper** -- TargetMapper can be run at the link https://mapper.auditengine.org
 3. **Select the Job** -- Select the job to be worked on in the Job List.
@@ -125,9 +129,9 @@ There are a number of nuances and details for special case, but primarily, the w
     2. Each worker can be assigned a range of styles to work on and to one page or the other or both.
     3. Select the desired job from the 'Job List' pull down menu. If you don't see the job there, then click the refresh button.
     4. If the job still is not in the list: 
-       1. Check that the election and audit job have been defined in the engine.auditengine.org browser application.
-       2. Check that the user has sufficient permissions for this specific job.
-       3. Check that the stages of the audit have been run through "build_targetmapper_package" and "update_system_status_stage".
+        1. Check that the election and audit job have been defined in the engine.auditengine.org browser application.
+        2. Check that the user has sufficient permissions for this specific job.
+        3. Check that the stages of the audit have been run through "build_targetmapper_package" and "update_system_status_stage".
 4. **Select The Next Style in the Style List** -- Click on the style and page to be mapped. That will bring up the style template image.
 5. **Select the Next Contest in the Contest/Options List** -- Click on the next contest to be mapped. All contests for both sides of the template will be listed.
 6. **Find the oval for that contest and option** -- Use the mouse to click the oval to place the target indicator on the image.
@@ -148,6 +152,7 @@ At the end of editing, use "Save All" to save the mapping.
 ## Optimizations
 
 Although the primary flow will normally work, there are a number of optimizations that can help to accelerate the process.
+
 
 1. **Copy and Paste** -- Very frequently, one ballot style will be identical to or very much like the next. In such a case, you can use "Copy" and the "Paste" to paste the copied style on this template. It will only paste the current page. Note that if a contest does not exist on a template, it will not be pasted, but if the contest is in a different location, it may be mapped to the wrong location.
 2. **Clear** -- this control will simply clear the mapping from this page. Commonly, this is used before a paste.
@@ -200,10 +205,10 @@ Use this list to select the job to be mapped. The items will be shown in the lis
 
 - **Edit Code Spec** - This provides the definition of a location on the face of the ballot which will be extracted using OCR and provided in a variable. Currently, the following can be defined:
 
-  - pstyle - printed style
-  - precinct
+    - pstyle - printed style
+    - precinct
 
-  This functionality should allow using the mouse to define the region.
+        This functionality should allow using the mouse to define the region.
 
 - **Edit Target Position Spec** -- This function provides a means to adjust the exact position of the target with respect to the snapgrid. Select the default spec and adjust if needed.
 
@@ -214,6 +219,7 @@ Use this list to select the job to be mapped. The items will be shown in the lis
 ### User Lock
 
 To avoid users stepping on each-other's work, the application will be locked for a specific user. There are two functions:
+
 
 - **Request Lock** - If the job is locked by another user, you can request that they release their lock.
 - **Release Lock** - If you have a lock on the job, you can release your lock so another user can work on it.
@@ -232,6 +238,7 @@ There are a number of special operations that deviate from the primary flow and 
 
 For normal operations, the list of contests is defined for each style. This will limit the contests in the contest-options pane to only those that are defined. However, if the contests are not defined for each style, then it is most convenient to obtain this information from the mapping process. This can commonly occur when no CVR exists. Please note: Running in this mode will require more diligence because one extremely helpful piece of information is missing.
 
+
 1. The difference in operation is that the next contest must be more carefully checked each time and not just use "Next" to go to the next contest.
 2. The pie chart symbol in the style list normally shows the completion of each style (both pages) will it not know when the full set of contests has been mapped, so this symbol may not ever show completion (green checkmark)
 3. Make sure job settings includes 'define_style_to_contests_from_map' = TRUE
@@ -241,6 +248,7 @@ For normal operations, the list of contests is defined for each style. This will
 ### Change Contests on a style template
 
 If **styles-to-contests** IS available, then the contests in each style will be predetermined. Normally, you can just go through each contest provided for that style and fill it in. However, sometimes, there will be a mistake in the **style-to-contests** definition. In that case, we can override the contest that are defined for that style.
+
 
 1. In the **Contest/Option** list, checkmark **[ ] Show All**.  This will provide all the contests in the election.
 2. Find the correct contest that is on the ballot in the **Contest/Option** list. Click **+** (plus sign) to open it.
@@ -261,6 +269,7 @@ In the case shown here, the ballot style is for **TOWNSHIP OF EVESHAM D-12.** Th
 
 It is fairly common for an initial set of styles to be defined, and the mapping completed for those styles, and then later, additional styles are added.
 
+
 1. Consider the case when ballot_id numbers are used twice in the project for different ballots. Assume that these were initially thought to be repeats of the same ballots, but later, it was determined that the ballots that use the same numbers are of different ballots. Then, the ballot_id values can be modified based on the set so these no longer have the same identifiers. Further, we assume that additional styles are found among the newly renamed ballots.
 2. The stages of AuditEngine should be re-run and ballots style templates generated. The new styles should have distinctive style identifiers. Run the stage "build_targetmapper_package" and generate a new package for TargetMapper.
 3. Click "File - Update Database". This should then show the new styles in the Style List.
@@ -268,6 +277,7 @@ It is fairly common for an initial set of styles to be defined, and the mapping 
 ### Adopt an existing Targetmap from another job
 
 Sometime a targetmap needs to be adopted from a prior job and then enhanced in the current job. This can occur when the prior job is locked, and we do not want to modify it, and then us it in the current job with enhancements. For this special operation, use the following procedure:
+
 
 1. In AuditEngine settings, set the '**adopt_from_jobname**' to the core job name of the prior job that the targetmap should be adopted from.
 2. In AuditEngine settings, set '**enable_adopt_targetmap**' to True. This will pull in the target map from the other location and create the file '**adopted_targetmap.json**' in the current job.
