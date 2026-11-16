@@ -28,6 +28,20 @@ As with the post-election submission described below, the pre-election submissio
 
 For ease of handling, please archive the ballot image data into ZIP archives. Each zip archive should be less than about 10GB or so for easy handling, or generally up to about 50,000 ballot sheets. But we don't mind if they are larger. Of course, if you use flash drives, they should be smaller than the capacity of those flash drives. If you are uploading, files about 5 to 10 GB are the easiest to handle, particularly if you have slower internet speeds. 
 
+### Redacted ballots
+
+Some districts redact marks on ballot images, such as a voter's initials next to a vote.
+A redaction is usually a black block over the mark.
+You apply the redactions after the voting system has processed the ballots.
+We receive the redacted images before we do our processing.
+
+The black blocks make it easy to see where the redactions are.
+But a block can cover a voting target or extend into it.
+Then it interferes with our processing.
+
+If any ballots have redactions, please send a separate description of where the redaction blocks are.
+With it, we can white out the blocks in our copies before we process them.
+
 We recommend the free utility 7-zip.org, because the Windows integrated zipper and extractor can be very slow. (Most particularly, avoid right-clicking on any zip folder in Windows or it can take almost forever!) However, if you use this utility, please use the industry standard ` .zip` format rather than the proprietary ` .7z` format. This is very important for our application to use this data, and is a requirement. Also, do not double-zip the data.
 
 Dominion Cast Vote Records in JSON format should also be combined into one ZIP archive as there may be many hundreds or thousands of files. ES&S Cast Vote Records in .xlsx format can be provided without zipping. There are up to 99,999 ballot images per file, so there may be a few files, and zipping is optional. Ballot Style Masters (PDFs) should be included in one zip archive.

@@ -159,6 +159,8 @@ Nothing in an image proves who cast it.
 A name written on a ballot does not prove who voted it, as anyone could write some other name.
 Sometimes people mistakenly initial changes.
 Some districts redact marks of this type by adding a black block in that area of the image.
+A block can interfere with reading a vote, so we ask for a list of where the blocks are.
+See [Redacted ballots](sending_data.md#redacted-ballots).
 
 Rare ballot styles are a risk to privacy.
 If only a few voters receive a style, other data might reveal how they voted.
