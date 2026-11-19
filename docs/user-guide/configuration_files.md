@@ -13,7 +13,6 @@ The settings that typically can be set at this time are as follows:
 -  **district_bias_desc** -- This is a string description of the district bias, based on the turnout, such as "Dark Red", "Dark Blue", "Leans Red", etc.
 - **district_population** -- The total population of the district in a recent report.
 - **district_population_year** -- The year of the district_population value
-- **election_name** -- This is the longer name of the 
 - **election_name** -- Human readable string that describes the election, like "San Francisco CA Consolidated Presidential Primary, 2020"
 - **district_name** -- Human readable string that describes the district, like "San Francisco CA"
 - **election_year_and_type** -- Human readable string that describes the election year and type, like: "Consolidated Presidential Primary, 2020"
